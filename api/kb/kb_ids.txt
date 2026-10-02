@@ -1,0 +1,76 @@
+peanut: peanut
+tree_nut: tree nut
+milk: milk
+egg: egg
+wheat: wheat
+soy: soy
+fish: fish
+shellfish: shellfish
+sesame: sesame
+gluten: gluten
+lactose: lactose
+mustard: mustard
+sulfite: sulfites
+celery: celery
+lupin: lupin
+corn: corn
+kiwi: kiwi
+gelatin: gelatin
+collagen: collagen
+carmine: carmine
+honey: honey
+beeswax: beeswax
+shellac: shellac
+lanolin: lanolin
+insect: insect
+natural_flavors: natural flavors
+mono_diglycerides: mono- and diglycerides
+ribonucleotides: disodium inosinate / guanylate
+enzymes: enzymes
+animal_rennet: rennet
+vitamin_d3: vitamin D3
+l_cysteine: L-cysteine
+squalene: squalene
+pork: pork
+lard: lard
+beef: beef
+tallow: tallow
+meat: meat
+poultry: poultry
+alcohol: alcohol
+root_vegetables: root vegetables
+onion: onion
+garlic: garlic
+animal_ingredient: animal ingredient (Open Food Facts)
+meat_or_fish: meat or fish (Open Food Facts)
+red_40: Red 40
+yellow_5: Yellow 5
+yellow_6: Yellow 6
+blue_1: Blue 1
+blue_2: Blue 2
+green_3: Green 3
+red_3: Red 3
+citrus_red_2: Citrus Red 2
+other_azo_dyes: synthetic dye
+artificial_colors: artificial colors
+phosphates: phosphate additives
+potassium_additives: potassium additives
+fast_sugars: sugar
+caffeine: caffeine
+palm_oil: palm oil
+fragrance: fragrance
+methylisothiazolinone: methylisothiazolinone
+methylchloroisothiazolinone: methylchloroisothiazolinone
+formaldehyde_releasers: formaldehyde releaser
+sodium_lauryl_sulfate: sodium lauryl sulfate
+retinoids: retinoid
+xylitol: xylitol
+chocolate: chocolate
+grape: grapes or raisins
+macadamia: macadamia nuts
+yeast_dough: raw yeast dough
+grapefruit: grapefruit
+seville_orange: Seville orange
+pomelo: pomelo
+tangelo: tangelo
+vitamin_k_foods: vitamin K-rich greens

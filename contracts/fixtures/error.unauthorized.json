@@ -1,0 +1,8 @@
+{
+  "error": {
+    "code": "unauthorized",
+    "message": "Your sign-in expired. Please sign in again.",
+    "next": "sign_in",
+    "request_id": null
+  }
+}

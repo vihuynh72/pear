@@ -1,0 +1,20 @@
+{
+  "chips": [
+    {
+      "group": "allergies",
+      "id": "sesame",
+      "level": "strict"
+    },
+    {
+      "group": "skin",
+      "id": "eczema",
+      "level": null
+    },
+    {
+      "group": "diets",
+      "id": "vegan",
+      "level": null
+    }
+  ],
+  "unmatched": []
+}

@@ -1,0 +1,42 @@
+{
+  "_comment": "DEMO ONLY: fake but well-formed EAN-13 / photo key, not a real product. Used by api/scripts/gen_fixtures.py and POST /debug/evaluate {\"demo\": \"<file stem>\"}.",
+  "key": "obf:0000000000055",
+  "source": "open_beauty_facts",
+  "code": "0000000000055",
+  "name": "Kids Gentle Body Wash",
+  "brand": "Pear Demo Care",
+  "category": "cosmetic",
+  "product_type": "rinse_off",
+  "image_url": "https://placehold.co/600x600/png?text=Kids+Body+Wash",
+  "quantity": "12 fl oz",
+  "label_language": "en",
+  "photo_kind": null,
+  "matched_by": "barcode",
+  "ingredients": [
+    "Water",
+    "Cocamidopropyl Betaine",
+    "Sodium Laureth Sulfate",
+    "Glycerin",
+    "Citric Acid",
+    "Sodium Chloride",
+    "Methylisothiazolinone"
+  ],
+  "ingredients_text": "Water, Cocamidopropyl Betaine, Sodium Laureth Sulfate, Glycerin, Citric Acid, Sodium Chloride, Methylisothiazolinone.",
+  "contains_text": null,
+  "may_contain_text": null,
+  "allergens_tags": [],
+  "traces_tags": [],
+  "additives_tags": [],
+  "analysis_tags": [],
+  "labels_tags": [],
+  "categories_tags": [
+    "en:hygiene",
+    "en:body",
+    "en:shower-gels"
+  ],
+  "category_main": "en:shower-gels",
+  "nutrition": null,
+  "legibility": "full",
+  "data_confidence": "high",
+  "fetched_at": "2026-10-02T18:00:00Z"
+}

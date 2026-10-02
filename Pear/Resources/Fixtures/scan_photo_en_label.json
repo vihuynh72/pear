@@ -1,0 +1,106 @@
+{
+  "product": {
+    "key": "photo:67af19d45980",
+    "name": "Golden Sesame Crackers",
+    "brand": "",
+    "category": "food",
+    "product_type": null,
+    "image_url": null,
+    "source": "photo",
+    "photo_kind": "ingredients",
+    "data_confidence": "high",
+    "less_sure": false,
+    "ask_for_ingredients": false,
+    "ingredients": [
+      "ENRICHED WHEAT FLOUR (WHEAT FLOUR, NIACIN, REDUCED IRON, THIAMINE MONONITRATE, RIBOFLAVIN, FOLIC ACID)",
+      "SESAME SEEDS",
+      "SUNFLOWER OIL",
+      "SUGAR",
+      "SALT",
+      "SOY LECITHIN",
+      "BAKING SODA"
+    ],
+    "contains": [
+      "gluten",
+      "sesame",
+      "soy",
+      "wheat"
+    ],
+    "may_contain": [
+      "peanut",
+      "tree_nuts"
+    ],
+    "certifications": [],
+    "label_language": "en"
+  },
+  "verdicts": [
+    {
+      "member_id": "m_linh",
+      "state": "RIPE",
+      "label": "Ripe",
+      "reasons": [],
+      "score": null
+    },
+    {
+      "member_id": "m_ba",
+      "state": "RIPE",
+      "label": "Chín",
+      "reasons": [
+        {
+          "code": "health.sodium",
+          "text": "Hơi nhiều muối (12% nhu cầu mỗi ngày)",
+          "language": "vi",
+          "severity": "note",
+          "matched": [],
+          "source": "fda_nutrition_dv"
+        }
+      ],
+      "score": null
+    },
+    {
+      "member_id": "m_mia",
+      "state": "ALLERGY",
+      "label": "Allergy",
+      "reasons": [
+        {
+          "code": "allergen.sesame",
+          "text": "Contains sesame (sesame seeds)",
+          "language": "en",
+          "severity": "hard",
+          "matched": [
+            "SESAME SEEDS",
+            "SESAME"
+          ],
+          "source": "fda_major_allergens"
+        },
+        {
+          "code": "allergen.peanut.may_contain",
+          "text": "May contain peanuts",
+          "language": "en",
+          "severity": "hard",
+          "matched": [
+            "PEANUTS"
+          ],
+          "source": "fda_major_allergens"
+        }
+      ],
+      "score": null
+    },
+    {
+      "member_id": "m_leo",
+      "state": "RIPE",
+      "label": "Madura",
+      "reasons": [],
+      "score": null
+    }
+  ],
+  "headline": {
+    "text": "Not for Mia: contains sesame. Fine for Linh, Bà and Leo.",
+    "language": "en"
+  },
+  "timings_ms": {
+    "read": 2703,
+    "rules": 0,
+    "total": 2705
+  }
+}

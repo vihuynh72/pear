@@ -1,0 +1,16 @@
+# Pear API runtime dependencies (Cloud Run image installs exactly this file).
+# Resolved with uv on 2026-10-02. google-adk 2.3.0 caps opentelemetry-api at 1.42.1,
+# which is why fastapi is 0.141.1 (0.142 needs otel-api >= 1.44).
+fastapi==0.141.1
+uvicorn[standard]==0.54.0
+httpx[http2]==0.28.1
+pydantic==2.13.5
+python-multipart==0.0.32
+google-genai==2.28.0
+google-cloud-firestore==2.34.0
+firebase-admin==7.7.0
+google-adk==2.3.0
+opentelemetry-api==1.42.1
+opentelemetry-sdk==1.42.1
+opentelemetry-exporter-gcp-trace==1.15.0
+opentelemetry-instrumentation-fastapi==0.63b1

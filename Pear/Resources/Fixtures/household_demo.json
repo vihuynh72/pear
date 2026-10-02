@@ -1,0 +1,98 @@
+{
+  "household_id": "hh_demo",
+  "owner_language": "en",
+  "member_limit": 5,
+  "members": [
+    {
+      "id": "m_linh",
+      "type": "person",
+      "species": null,
+      "name": "Linh",
+      "age_group": "adult",
+      "languages": [
+        "en",
+        "vi"
+      ],
+      "allergies": [],
+      "conditions": [],
+      "pregnant": false,
+      "skin": [
+        "fragrance_sensitivity"
+      ],
+      "diets": [],
+      "less_of": [],
+      "avoid_dyes": false,
+      "medications": []
+    },
+    {
+      "id": "m_ba",
+      "type": "person",
+      "species": null,
+      "name": "Bà",
+      "age_group": "65+",
+      "languages": [
+        "vi"
+      ],
+      "allergies": [],
+      "conditions": [
+        "high_blood_pressure",
+        "prediabetes"
+      ],
+      "pregnant": false,
+      "skin": [],
+      "diets": [],
+      "less_of": [],
+      "avoid_dyes": false,
+      "medications": []
+    },
+    {
+      "id": "m_mia",
+      "type": "person",
+      "species": null,
+      "name": "Mia",
+      "age_group": "kid",
+      "languages": [
+        "en"
+      ],
+      "allergies": [
+        {
+          "id": "peanut",
+          "level": "strict"
+        },
+        {
+          "id": "sesame",
+          "level": "strict"
+        }
+      ],
+      "conditions": [],
+      "pregnant": false,
+      "skin": [
+        "eczema"
+      ],
+      "diets": [],
+      "less_of": [],
+      "avoid_dyes": true,
+      "medications": []
+    },
+    {
+      "id": "m_leo",
+      "type": "person",
+      "species": null,
+      "name": "Leo",
+      "age_group": "teen",
+      "languages": [
+        "es"
+      ],
+      "allergies": [],
+      "conditions": [],
+      "pregnant": false,
+      "skin": [],
+      "diets": [
+        "vegan"
+      ],
+      "less_of": [],
+      "avoid_dyes": false,
+      "medications": []
+    }
+  ]
+}

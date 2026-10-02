@@ -1,0 +1,8 @@
+{
+  "error": {
+    "code": "not_found",
+    "message": "We couldn't find this barcode. Snap the ingredients?",
+    "next": "take_photo",
+    "request_id": null
+  }
+}

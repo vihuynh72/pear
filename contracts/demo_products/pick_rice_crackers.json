@@ -1,0 +1,56 @@
+{
+  "_comment": "DEMO ONLY: fake but well-formed EAN-13 / photo key, not a real product. Used by api/scripts/gen_fixtures.py and POST /debug/evaluate {\"demo\": \"<file stem>\"}.",
+  "key": "off:0000000000093",
+  "source": "open_food_facts",
+  "code": "0000000000093",
+  "name": "Plain Rice Crackers",
+  "brand": "Pear Demo Pantry",
+  "category": "food",
+  "product_type": null,
+  "image_url": "https://placehold.co/600x600/png?text=Rice+Crackers",
+  "quantity": "100 g",
+  "label_language": "en",
+  "photo_kind": null,
+  "matched_by": "barcode",
+  "ingredients": [
+    "rice",
+    "sunflower oil",
+    "sea salt"
+  ],
+  "ingredients_text": "Rice, sunflower oil, sea salt.",
+  "contains_text": null,
+  "may_contain_text": null,
+  "allergens_tags": [],
+  "traces_tags": [],
+  "additives_tags": [],
+  "analysis_tags": [
+    "en:palm-oil-free",
+    "en:vegan",
+    "en:vegetarian"
+  ],
+  "labels_tags": [
+    "en:gluten-free"
+  ],
+  "categories_tags": [
+    "en:snacks",
+    "en:salty-snacks",
+    "en:appetizers",
+    "en:crackers",
+    "en:rice-crackers"
+  ],
+  "category_main": "en:crackers",
+  "nutrition": {
+    "basis": "serving",
+    "sodium_mg": 80,
+    "sodium_dv": 3,
+    "added_sugars_g": 0,
+    "added_sugars_dv": 0,
+    "sugars_g": 0,
+    "sat_fat_g": 0,
+    "sat_fat_dv": 0,
+    "caffeine_mg": null
+  },
+  "legibility": "full",
+  "data_confidence": "high",
+  "fetched_at": "2026-10-02T18:00:00Z"
+}

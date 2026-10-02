@@ -1,0 +1,137 @@
+{
+  "product": {
+    "key": "off:0000000000031",
+    "name": "Fruity Gummy Bears",
+    "brand": "Pear Demo Sweets",
+    "category": "food",
+    "product_type": null,
+    "image_url": "https://placehold.co/600x600/png?text=Gummy+Bears",
+    "source": "open_food_facts",
+    "photo_kind": null,
+    "data_confidence": "high",
+    "less_sure": false,
+    "ask_for_ingredients": false,
+    "ingredients": [
+      "corn syrup",
+      "sugar",
+      "gelatin",
+      "citric acid",
+      "natural flavors",
+      "Red 40",
+      "carnauba wax"
+    ],
+    "contains": [
+      "corn"
+    ],
+    "may_contain": [],
+    "certifications": [],
+    "label_language": "en",
+    "code": "0000000000031",
+    "quantity": "141 g",
+    "nutrition": {
+      "basis": "serving",
+      "sodium_mg": 10.0,
+      "sodium_dv": 0.0,
+      "added_sugars_g": 21.0,
+      "added_sugars_dv": 42.0,
+      "sugars_g": 21.0,
+      "sat_fat_g": 0.0,
+      "sat_fat_dv": 0.0,
+      "caffeine_mg": null
+    },
+    "matched_by": "barcode"
+  },
+  "verdicts": [
+    {
+      "member_id": "m_linh",
+      "state": "RIPE",
+      "label": "Ripe",
+      "reasons": [],
+      "score": null
+    },
+    {
+      "member_id": "m_ba",
+      "state": "SKIP",
+      "label": "Skip it",
+      "reasons": [
+        {
+          "code": "signal.added_sugars",
+          "text": "Rất nhiều đường (42% nhu cầu mỗi ngày)",
+          "language": "vi",
+          "severity": "soft",
+          "matched": [],
+          "source": "fda_nutrition_dv"
+        },
+        {
+          "code": "signal.fast_sugars",
+          "text": "Đường nằm trong mấy thành phần đầu (corn syrup, sugar)",
+          "language": "vi",
+          "severity": "soft",
+          "matched": [
+            "corn syrup",
+            "sugar"
+          ],
+          "source": "fda_nutrition_dv"
+        }
+      ],
+      "score": null
+    },
+    {
+      "member_id": "m_mia",
+      "state": "RIPE",
+      "label": "Ripe",
+      "reasons": [
+        {
+          "code": "signal.dyes",
+          "text": "Synthetic dyes (Red 40)",
+          "language": "en",
+          "severity": "note",
+          "matched": [
+            "Red 40"
+          ],
+          "source": "cspi_dyes"
+        },
+        {
+          "code": "confidence.check_label",
+          "text": "From a database. Check the label.",
+          "language": "en",
+          "severity": "note",
+          "matched": [],
+          "source": null
+        }
+      ],
+      "score": null
+    },
+    {
+      "member_id": "m_leo",
+      "state": "DIET",
+      "label": "Not vegan",
+      "reasons": [
+        {
+          "code": "diet.vegan",
+          "text": "No es vegano: gelatin",
+          "language": "es",
+          "severity": "hard",
+          "matched": [
+            "gelatin"
+          ],
+          "source": "pear_diet_rules"
+        }
+      ],
+      "score": null
+    }
+  ],
+  "headline": {
+    "text": "Not vegan for Leo: gelatin. Fine for Linh and Mia.",
+    "language": "en"
+  },
+  "timings_ms": {
+    "cache": 41,
+    "lookup": 486,
+    "normalize": 3,
+    "rules": 2,
+    "total": 548
+  },
+  "request_id": null,
+  "debug": null
+}

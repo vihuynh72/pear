@@ -1,0 +1,424 @@
+{
+  "cases": [
+    {
+      "name": "whey powder triggers strict milk and is not vegan",
+      "tags": ["allergen", "p0", "milk"],
+      "product": {"key": "test:en-whey", "source": "photo", "photo_kind": "ingredients", "category": "food",
+                  "ingredients": ["sugar", "whey powder", "cocoa", "salt"], "legibility": "full"},
+      "members": ["m_leo"],
+      "extra_members": [{"id": "m_ana", "name": "Ana", "allergies": [{"id": "milk", "level": "strict"}]}],
+      "expect": {
+        "m_ana": {"state": "ALLERGY", "label": "Allergy", "codes_include": ["allergen.milk"], "matched_include": ["whey"]},
+        "m_leo": {"state": "DIET", "label": "Not vegan", "codes_include": ["diet.vegan"], "matched_include": ["whey"]}
+      }
+    },
+    {
+      "name": "casein triggers strict milk",
+      "tags": ["allergen", "p0", "milk"],
+      "product": {"key": "test:en-casein", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["water", "casein", "sunflower oil"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_ana", "name": "Ana", "allergies": [{"id": "milk", "level": "strict"}]}],
+      "expect": {"m_ana": {"state": "ALLERGY", "label": "Allergy", "codes_include": ["allergen.milk"], "matched_include": ["casein"]}}
+    },
+    {
+      "name": "sodium caseinate in a non-dairy creamer triggers strict milk",
+      "tags": ["allergen", "p0", "milk"],
+      "product": {"key": "test:en-caseinate", "source": "open_food_facts", "name": "Non-Dairy Creamer",
+                  "ingredients": ["corn syrup solids", "coconut oil", "sodium caseinate", "dipotassium phosphate"],
+                  "legibility": "full"},
+      "members": ["m_leo"],
+      "extra_members": [{"id": "m_ana", "name": "Ana", "allergies": [{"id": "milk", "level": "strict"}]}],
+      "expect": {
+        "m_ana": {"state": "ALLERGY", "label": "Allergy", "codes_include": ["allergen.milk"], "matched_include": ["caseinate"]},
+        "m_leo": {"state": "DIET", "label": "Not vegan", "codes_include": ["diet.vegan"], "matched_include": ["caseinate"]}
+      }
+    },
+    {
+      "name": "ghee triggers strict milk",
+      "tags": ["allergen", "p0", "milk"],
+      "product": {"key": "test:en-ghee", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["basmati rice", "ghee", "cumin", "salt"], "legibility": "full"},
+      "members": ["m_leo"],
+      "extra_members": [{"id": "m_ana", "name": "Ana", "allergies": [{"id": "milk", "level": "strict"}]}],
+      "expect": {
+        "m_ana": {"state": "ALLERGY", "codes_include": ["allergen.milk"], "matched_include": ["ghee"]},
+        "m_leo": {"state": "DIET", "codes_include": ["diet.vegan"], "matched_include": ["ghee"]}
+      }
+    },
+    {
+      "name": "lactose triggers strict milk and strict lactose",
+      "tags": ["allergen", "milk"],
+      "product": {"key": "test:en-lactose", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["potato starch", "lactose", "salt"], "legibility": "full"},
+      "members": [],
+      "extra_members": [
+        {"id": "m_ana", "name": "Ana", "allergies": [{"id": "milk", "level": "strict"}]},
+        {"id": "m_lu", "name": "Lu", "allergies": [{"id": "lactose", "level": "strict"}]}
+      ],
+      "expect": {
+        "m_ana": {"state": "ALLERGY", "codes_include": ["allergen.milk"], "matched_include": ["lactose"]},
+        "m_lu": {"state": "ALLERGY", "codes_include": ["allergen.lactose"], "matched_include": ["lactose"]}
+      }
+    },
+    {
+      "name": "butter triggers strict milk",
+      "tags": ["allergen", "milk"],
+      "product": {"key": "test:en-butter", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["wheat flour", "butter", "sugar", "salt"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_ana", "name": "Ana", "allergies": [{"id": "milk", "level": "strict"}]}],
+      "expect": {"m_ana": {"state": "ALLERGY", "codes_include": ["allergen.milk"], "matched_include": ["butter"]}}
+    },
+    {
+      "name": "tahini triggers strict sesame for Mia only",
+      "tags": ["allergen", "p0", "sesame"],
+      "product": {"key": "test:en-tahini", "source": "open_food_facts", "category": "food",
+                  "ingredients": ["chickpeas", "tahini", "lemon juice", "garlic", "salt"], "legibility": "full"},
+      "members": ["m_linh", "m_mia", "m_leo"],
+      "expect": {
+        "m_mia": {"state": "ALLERGY", "label": "Allergy", "codes_include": ["allergen.sesame"], "matched_include": ["tahini"]},
+        "m_linh": {"state": "RIPE"},
+        "m_leo": {"state": "RIPE"}
+      },
+      "headline_contains": ["Mia"]
+    },
+    {
+      "name": "arachis oil triggers strict peanut",
+      "tags": ["allergen", "p0", "peanut"],
+      "product": {"key": "test:en-arachis", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["rice", "arachis oil", "salt"], "legibility": "full"},
+      "members": ["m_mia"],
+      "expect": {"m_mia": {"state": "ALLERGY", "label": "Allergy", "codes_include": ["allergen.peanut"], "matched_include": ["arachis"]}}
+    },
+    {
+      "name": "groundnuts trigger strict peanut",
+      "tags": ["allergen", "p0", "peanut"],
+      "product": {"key": "test:en-groundnut", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["roasted groundnuts", "chilli", "salt"], "legibility": "full"},
+      "members": ["m_mia", "m_linh"],
+      "expect": {
+        "m_mia": {"state": "ALLERGY", "codes_include": ["allergen.peanut"], "matched_include": ["groundnut"]},
+        "m_linh": {"state": "RIPE"}
+      }
+    },
+    {
+      "name": "benne seeds trigger strict sesame",
+      "tags": ["allergen", "sesame"],
+      "product": {"key": "test:en-benne", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["wheat flour", "benne seeds", "butter"], "legibility": "full"},
+      "members": ["m_mia"],
+      "expect": {"m_mia": {"state": "ALLERGY", "codes_include": ["allergen.sesame"], "matched_include": ["benne"]}}
+    },
+    {
+      "name": "sesame oil inside a seasoning sub-ingredient list",
+      "tags": ["allergen", "sesame", "subingredients"],
+      "product": {"key": "test:en-seasoning", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["rice", "seasoning (salt, sesame oil, garlic powder)"], "legibility": "full"},
+      "members": ["m_mia"],
+      "expect": {"m_mia": {"state": "ALLERGY", "codes_include": ["allergen.sesame"], "matched_include": ["sesame"]}}
+    },
+    {
+      "name": "milk inside chocolate (sugar, cocoa butter, milk)",
+      "tags": ["allergen", "p0", "milk", "subingredients"],
+      "product": {"key": "test:en-choc-sub", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["sugar", "chocolate (sugar, cocoa butter, milk)", "wheat flour"], "legibility": "full"},
+      "members": ["m_mia", "m_leo"],
+      "extra_members": [{"id": "m_ana", "name": "Ana", "allergies": [{"id": "milk", "level": "strict"}]}],
+      "expect": {
+        "m_ana": {"state": "ALLERGY", "label": "Allergy", "codes_include": ["allergen.milk"], "matched_include": ["milk"]},
+        "m_leo": {"state": "DIET", "label": "Not vegan", "codes_include": ["diet.vegan"], "matched_include": ["milk"]},
+        "m_mia": {"state": "RIPE", "codes_exclude": ["allergen."]}
+      }
+    },
+    {
+      "name": "may contain tree nuts statement -> May contain",
+      "tags": ["allergen", "p0", "may_contain", "tree_nut"],
+      "product": {"key": "test:en-mc-treenuts", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["dark chocolate (cocoa mass, sugar, cocoa butter)"],
+                  "may_contain_text": "May contain tree nuts.", "legibility": "full"},
+      "members": ["m_mia"],
+      "extra_members": [{"id": "m_tom", "name": "Tom", "allergies": [{"id": "tree_nut", "level": "strict"}]}],
+      "expect": {
+        "m_tom": {"state": "ALLERGY", "label": "May contain", "codes_include": ["allergen.tree_nut.may_contain"],
+                  "codes_exclude": ["allergen.tree_nut"]},
+        "m_mia": {"state": "RIPE", "codes_exclude": ["allergen."]}
+      }
+    },
+    {
+      "name": "processed in a facility that also processes peanuts -> May contain",
+      "tags": ["allergen", "p0", "may_contain", "peanut"],
+      "product": {"key": "test:en-facility", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["rolled oats", "cane sugar", "sunflower oil"],
+                  "may_contain_text": "Processed in a facility that also processes peanuts.", "legibility": "full"},
+      "members": ["m_mia", "m_linh"],
+      "expect": {
+        "m_mia": {"state": "ALLERGY", "label": "May contain", "codes_include": ["allergen.peanut.may_contain"],
+                  "codes_exclude": ["allergen.peanut"], "matched_include": ["peanut"]},
+        "m_linh": {"state": "RIPE"}
+      }
+    },
+    {
+      "name": "may contain sentence embedded at the end of the ingredient list",
+      "tags": ["allergen", "p0", "may_contain", "peanut", "sesame"],
+      "product": {"key": "test:en-embedded-mc", "source": "open_food_facts",
+                  "ingredients": ["wheat flour", "sugar", "palm oil", "salt", "may contain traces of peanuts and sesame"],
+                  "legibility": "full"},
+      "members": ["m_mia", "m_linh"],
+      "expect": {
+        "m_mia": {"state": "ALLERGY", "label": "May contain",
+                  "codes_include": ["allergen.peanut.may_contain", "allergen.sesame.may_contain"],
+                  "codes_exclude": ["allergen.peanut", "allergen.sesame"]},
+        "m_linh": {"state": "RIPE"}
+      }
+    },
+    {
+      "name": "contains statement alone triggers strict peanut",
+      "tags": ["allergen", "p0", "peanut", "statement"],
+      "product": {"key": "test:en-contains-only", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["rice", "sugar", "salt"], "contains_text": "Contains: peanuts.", "legibility": "full"},
+      "members": ["m_mia"],
+      "expect": {"m_mia": {"state": "ALLERGY", "label": "Allergy", "codes_include": ["allergen.peanut"],
+                           "codes_exclude": ["allergen.peanut.may_contain"]}}
+    },
+    {
+      "name": "contains milk plus may contain peanuts are parsed separately",
+      "tags": ["allergen", "p0", "may_contain", "statement"],
+      "product": {"key": "test:en-contains-and-mc", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["wheat flour", "milk powder", "sugar"], "contains_text": "Contains: wheat, milk.",
+                  "may_contain_text": "May contain peanuts.", "legibility": "full"},
+      "members": ["m_mia"],
+      "extra_members": [{"id": "m_ana", "name": "Ana", "allergies": [{"id": "milk", "level": "strict"}]}],
+      "expect": {
+        "m_ana": {"state": "ALLERGY", "label": "Allergy", "codes_include": ["allergen.milk"], "codes_exclude": ["allergen.milk.may_contain"]},
+        "m_mia": {"state": "ALLERGY", "label": "May contain", "codes_include": ["allergen.peanut.may_contain"],
+                  "codes_exclude": ["allergen.peanut", "allergen.sesame."]}
+      }
+    },
+    {
+      "name": "EGGS in capitals and plural triggers strict egg",
+      "tags": ["allergen", "p0", "egg", "variants"],
+      "product": {"key": "test:en-EGGS", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["WHEAT FLOUR", "EGGS", "SUGAR"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_eli", "name": "Eli", "allergies": [{"id": "egg", "level": "strict"}]}],
+      "expect": {"m_eli": {"state": "ALLERGY", "codes_include": ["allergen.egg"], "matched_include": ["eggs"]}}
+    },
+    {
+      "name": "Peanuts capitalised plural triggers strict peanut",
+      "tags": ["allergen", "p0", "peanut", "variants"],
+      "product": {"key": "test:en-Peanuts", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["Peanuts", "Salt"], "legibility": "full"},
+      "members": ["m_mia"],
+      "expect": {"m_mia": {"state": "ALLERGY", "codes_include": ["allergen.peanut"], "matched_include": ["peanuts"]}}
+    },
+    {
+      "name": "almonds plural triggers strict tree nut",
+      "tags": ["allergen", "p0", "tree_nut", "variants"],
+      "product": {"key": "test:en-almonds", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["almonds", "sea salt"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_tom", "name": "Tom", "allergies": [{"id": "tree_nut", "level": "strict"}]}],
+      "expect": {"m_tom": {"state": "ALLERGY", "codes_include": ["allergen.tree_nut"], "matched_include": ["almond"]}}
+    },
+    {
+      "name": "SESAME SEEDS and SOY SAUCE (WATER, SOYBEANS, WHEAT, SALT) in capitals",
+      "tags": ["allergen", "p0", "sesame", "variants", "subingredients"],
+      "product": {"key": "test:en-caps-multi", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["RICE", "SESAME SEEDS", "SOY SAUCE (WATER, SOYBEANS, WHEAT, SALT)"], "legibility": "full"},
+      "members": ["m_mia"],
+      "extra_members": [
+        {"id": "m_soo", "name": "Soo", "allergies": [{"id": "soy", "level": "strict"}]},
+        {"id": "m_wen", "name": "Wen", "allergies": [{"id": "wheat", "level": "strict"}]}
+      ],
+      "expect": {
+        "m_mia": {"state": "ALLERGY", "codes_include": ["allergen.sesame"], "matched_include": ["sesame"]},
+        "m_soo": {"state": "ALLERGY", "codes_include": ["allergen.soy"]},
+        "m_wen": {"state": "ALLERGY", "codes_include": ["allergen.wheat"], "matched_include": ["wheat"]}
+      }
+    },
+    {
+      "name": "cashews and pistachios trigger strict tree nut",
+      "tags": ["allergen", "tree_nut", "variants"],
+      "product": {"key": "test:en-cashew", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["cashews", "pistachios", "salt"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_tom", "name": "Tom", "allergies": [{"id": "tree_nut", "level": "strict"}]}],
+      "expect": {"m_tom": {"state": "ALLERGY", "codes_include": ["allergen.tree_nut"], "matched_include": ["cashew", "pistachio"]}}
+    },
+    {
+      "name": "almonds inside marzipan (sugar, almonds)",
+      "tags": ["allergen", "tree_nut", "subingredients"],
+      "product": {"key": "test:en-marzipan", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["marzipan (sugar, almonds)", "dark chocolate"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_tom", "name": "Tom", "allergies": [{"id": "tree_nut", "level": "strict"}]}],
+      "expect": {"m_tom": {"state": "ALLERGY", "codes_include": ["allergen.tree_nut"], "matched_include": ["almond"]}}
+    },
+    {
+      "name": "shrimp triggers strict shellfish",
+      "tags": ["allergen", "p0", "shellfish"],
+      "product": {"key": "test:en-shrimp", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["shrimp", "garlic", "olive oil"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_kai", "name": "Kai", "allergies": [{"id": "shellfish", "level": "strict"}]}],
+      "expect": {"m_kai": {"state": "ALLERGY", "codes_include": ["allergen.shellfish"], "matched_include": ["shrimp"]}}
+    },
+    {
+      "name": "prawns and crab trigger strict shellfish",
+      "tags": ["allergen", "shellfish", "variants"],
+      "product": {"key": "test:en-prawns", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["rice", "prawns", "crab meat"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_kai", "name": "Kai", "allergies": [{"id": "shellfish", "level": "strict"}]}],
+      "expect": {"m_kai": {"state": "ALLERGY", "codes_include": ["allergen.shellfish"], "matched_include": ["prawn", "crab"]}}
+    },
+    {
+      "name": "anchovies in Worcestershire sauce trigger strict fish",
+      "tags": ["allergen", "fish"],
+      "product": {"key": "test:en-anchovy", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["vinegar", "molasses", "anchovies", "tamarind"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_finn", "name": "Finn", "allergies": [{"id": "fish", "level": "strict"}]}],
+      "expect": {"m_finn": {"state": "ALLERGY", "codes_include": ["allergen.fish"], "matched_include": ["anchov"]}}
+    },
+    {
+      "name": "soy lecithin triggers strict soy",
+      "tags": ["allergen", "p0", "soy"],
+      "product": {"key": "test:en-soy-lecithin", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["sugar", "cocoa butter", "soy lecithin"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_soo", "name": "Soo", "allergies": [{"id": "soy", "level": "strict"}]}],
+      "expect": {"m_soo": {"state": "ALLERGY", "codes_include": ["allergen.soy"], "matched_include": ["soy"]}}
+    },
+    {
+      "name": "plain lecithin is a possible soy hit",
+      "tags": ["allergen", "soy", "possible"],
+      "product": {"key": "test:en-lecithin", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["sugar", "cocoa mass", "lecithin"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_soo", "name": "Soo", "allergies": [{"id": "soy", "level": "strict"}]}],
+      "expect": {"m_soo": {"state": "ALLERGY", "codes_include": ["allergen.soy.possible"], "matched_include": ["lecithin"]}}
+    },
+    {
+      "name": "wheat flour triggers wheat and implies gluten",
+      "tags": ["allergen", "p0", "wheat", "gluten"],
+      "product": {"key": "test:en-wheat", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["wheat flour", "water", "yeast"], "legibility": "full"},
+      "members": [],
+      "extra_members": [
+        {"id": "m_wen", "name": "Wen", "allergies": [{"id": "wheat", "level": "strict"}]},
+        {"id": "m_gia", "name": "Gia", "allergies": [{"id": "gluten", "level": "strict"}]}
+      ],
+      "expect": {
+        "m_wen": {"state": "ALLERGY", "codes_include": ["allergen.wheat"], "matched_include": ["wheat"]},
+        "m_gia": {"state": "ALLERGY", "codes_include": ["allergen.gluten"]}
+      }
+    },
+    {
+      "name": "barley is gluten but not wheat",
+      "tags": ["allergen", "gluten"],
+      "product": {"key": "test:en-barley", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["pearl barley", "water", "salt"], "legibility": "full"},
+      "members": [],
+      "extra_members": [
+        {"id": "m_wen", "name": "Wen", "allergies": [{"id": "wheat", "level": "strict"}]},
+        {"id": "m_gia", "name": "Gia", "allergies": [{"id": "gluten", "level": "strict"}]}
+      ],
+      "expect": {
+        "m_gia": {"state": "ALLERGY", "codes_include": ["allergen.gluten"], "matched_include": ["barley"]},
+        "m_wen": {"state": "RIPE", "codes_exclude": ["allergen.wheat"]}
+      }
+    },
+    {
+      "name": "semolina is wheat",
+      "tags": ["allergen", "wheat"],
+      "product": {"key": "test:en-semolina", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["semolina", "water"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_wen", "name": "Wen", "allergies": [{"id": "wheat", "level": "strict"}]}],
+      "expect": {"m_wen": {"state": "ALLERGY", "codes_include": ["allergen.wheat"], "matched_include": ["semolina"]}}
+    },
+    {
+      "name": "lysozyme (from egg) in cheese triggers strict egg",
+      "tags": ["allergen", "egg", "subingredients"],
+      "product": {"key": "test:en-lysozyme", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["pasteurised milk", "salt", "rennet", "lysozyme (from egg)"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_eli", "name": "Eli", "allergies": [{"id": "egg", "level": "strict"}]}],
+      "expect": {"m_eli": {"state": "ALLERGY", "codes_include": ["allergen.egg"], "matched_include": ["egg"]}}
+    },
+    {
+      "name": "allergy alias tree_nuts resolves to tree_nut",
+      "tags": ["allergen", "tree_nut", "alias"],
+      "product": {"key": "test:en-alias-treenuts", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["hazelnuts", "sugar", "cocoa"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_tom", "name": "Tom", "allergies": [{"id": "tree_nuts", "level": "strict"}]}],
+      "expect": {"m_tom": {"state": "ALLERGY", "codes_include": ["allergen.tree_nut"], "matched_include": ["hazelnut"]}}
+    },
+    {
+      "name": "allergy shorthand string dairy resolves to strict milk",
+      "tags": ["allergen", "milk", "alias"],
+      "product": {"key": "test:en-alias-dairy", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["skim milk", "live cultures"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_ana", "name": "Ana", "allergies": ["dairy"]}],
+      "expect": {"m_ana": {"state": "ALLERGY", "codes_include": ["allergen.milk"], "matched_include": ["milk"]}}
+    },
+    {
+      "name": "mustard seeds trigger strict mustard",
+      "tags": ["allergen", "mustard"],
+      "product": {"key": "test:en-mustard", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["water", "mustard seeds", "vinegar", "salt"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_mo", "name": "Mo", "allergies": [{"id": "mustard", "level": "strict"}]}],
+      "expect": {"m_mo": {"state": "ALLERGY", "codes_include": ["allergen.mustard"], "matched_include": ["mustard"]}}
+    },
+    {
+      "name": "celery seed triggers strict celery",
+      "tags": ["allergen", "celery"],
+      "product": {"key": "test:en-celery", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["tomatoes", "celery seed", "salt"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_cy", "name": "Cy", "allergies": [{"id": "celery", "level": "strict"}]}],
+      "expect": {"m_cy": {"state": "ALLERGY", "codes_include": ["allergen.celery"], "matched_include": ["celery"]}}
+    },
+    {
+      "name": "sodium metabisulfite triggers strict sulfite",
+      "tags": ["allergen", "sulfite"],
+      "product": {"key": "test:en-sulfite", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["dried apricots", "sodium metabisulfite"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_sue", "name": "Sue", "allergies": [{"id": "sulfites", "level": "strict"}]}],
+      "expect": {"m_sue": {"state": "ALLERGY", "codes_include": ["allergen.sulfite"], "matched_include": ["metabisulfite"]}}
+    },
+    {
+      "name": "maize starch triggers strict corn",
+      "tags": ["allergen", "corn"],
+      "product": {"key": "test:en-maize", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["maize starch", "sugar"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_cora", "name": "Cora", "allergies": [{"id": "corn", "level": "strict"}]}],
+      "expect": {"m_cora": {"state": "ALLERGY", "codes_include": ["allergen.corn"], "matched_include": ["maize"]}}
+    },
+    {
+      "name": "lupin flour triggers strict lupin",
+      "tags": ["allergen", "lupin"],
+      "product": {"key": "test:en-lupin", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["rice", "lupin flour", "water"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_lupe", "name": "Lupe", "allergies": [{"id": "lupin", "level": "strict"}]}],
+      "expect": {"m_lupe": {"state": "ALLERGY", "codes_include": ["allergen.lupin"], "matched_include": ["lupin"]}}
+    },
+    {
+      "name": "kiwi fruit triggers strict kiwi",
+      "tags": ["allergen", "kiwi"],
+      "product": {"key": "test:en-kiwi", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["kiwi fruit", "sugar", "pectin"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_kiki", "name": "Kiki", "allergies": [{"id": "kiwi", "level": "strict"}]}],
+      "expect": {"m_kiki": {"state": "ALLERGY", "codes_include": ["allergen.kiwi"], "matched_include": ["kiwi"]}}
+    }
+  ]
+}

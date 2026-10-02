@@ -1,0 +1,62 @@
+{
+  "_comment": "DEMO ONLY: fake but well-formed EAN-13 / photo key, not a real product. Used by api/scripts/gen_fixtures.py and POST /debug/evaluate {\"demo\": \"<file stem>\"}.",
+  "key": "off:0000000000031",
+  "source": "open_food_facts",
+  "code": "0000000000031",
+  "name": "Fruity Gummy Bears",
+  "brand": "Pear Demo Sweets",
+  "category": "food",
+  "product_type": null,
+  "image_url": "https://placehold.co/600x600/png?text=Gummy+Bears",
+  "quantity": "141 g",
+  "label_language": "en",
+  "photo_kind": null,
+  "matched_by": "barcode",
+  "ingredients": [
+    "corn syrup",
+    "sugar",
+    "gelatin",
+    "citric acid",
+    "natural flavors",
+    "Red 40",
+    "carnauba wax"
+  ],
+  "ingredients_text": "Corn syrup, sugar, gelatin, citric acid, natural flavors, Red 40, carnauba wax.",
+  "contains_text": null,
+  "may_contain_text": null,
+  "allergens_tags": [],
+  "traces_tags": [],
+  "additives_tags": [
+    "en:e330",
+    "en:e129",
+    "en:e903"
+  ],
+  "analysis_tags": [
+    "en:palm-oil-free",
+    "en:non-vegan",
+    "en:non-vegetarian"
+  ],
+  "labels_tags": [],
+  "categories_tags": [
+    "en:snacks",
+    "en:sweet-snacks",
+    "en:confectioneries",
+    "en:candies",
+    "en:gummies"
+  ],
+  "category_main": "en:gummies",
+  "nutrition": {
+    "basis": "serving",
+    "sodium_mg": 10,
+    "sodium_dv": 0,
+    "added_sugars_g": 21,
+    "added_sugars_dv": 42,
+    "sugars_g": 21,
+    "sat_fat_g": 0,
+    "sat_fat_dv": 0,
+    "caffeine_mg": null
+  },
+  "legibility": "full",
+  "data_confidence": "high",
+  "fetched_at": "2026-10-02T18:00:00Z"
+}

@@ -1,0 +1,7 @@
+{
+  "error": {
+    "code": "unreadable",
+    "message": "That barcode didn't scan right. Try again.",
+    "next": "retake"
+  }
+}

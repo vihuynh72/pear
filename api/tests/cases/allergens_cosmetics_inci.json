@@ -1,0 +1,119 @@
+{
+  "cases": [
+    {
+      "name": "INCI Arachis Hypogaea Oil in a lotion is peanut",
+      "tags": ["allergen", "p0", "inci", "peanut"],
+      "product": {"key": "test:inci-arachis", "source": "photo", "photo_kind": "ingredients", "category": "cosmetic",
+                  "product_type": "leave_on", "ingredients": ["Aqua", "Arachis Hypogaea Oil", "Tocopherol"], "legibility": "full"},
+      "members": ["m_linh", "m_mia"],
+      "expect": {
+        "m_mia": {"state": "ALLERGY", "label": "Allergy", "codes_include": ["allergen.peanut"], "matched_include": ["arachis"]},
+        "m_linh": {"state": "RIPE"}
+      }
+    },
+    {
+      "name": "INCI Sesamum Indicum Seed Oil is sesame",
+      "tags": ["allergen", "p0", "inci", "sesame"],
+      "product": {"key": "test:inci-sesamum", "source": "photo", "photo_kind": "ingredients", "category": "cosmetic",
+                  "product_type": "leave_on", "ingredients": ["Aqua", "Sesamum Indicum Seed Oil", "Tocopherol"], "legibility": "full"},
+      "members": ["m_mia"],
+      "expect": {"m_mia": {"state": "ALLERGY", "codes_include": ["allergen.sesame"], "matched_include": ["sesamum"]}}
+    },
+    {
+      "name": "INCI Prunus Amygdalus Dulcis Oil (sweet almond) is tree nut",
+      "tags": ["allergen", "p0", "inci", "tree_nut"],
+      "product": {"key": "test:inci-amygdalus", "source": "photo", "photo_kind": "ingredients", "category": "cosmetic",
+                  "product_type": "rinse_off", "ingredients": ["Aqua", "Coco-Glucoside", "Prunus Amygdalus Dulcis Oil"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_tom", "name": "Tom", "allergies": [{"id": "tree_nut", "level": "strict"}]}],
+      "expect": {"m_tom": {"state": "ALLERGY", "codes_include": ["allergen.tree_nut"], "matched_include": ["amygdalus"]}}
+    },
+    {
+      "name": "INCI Triticum Vulgare Germ Oil is wheat",
+      "tags": ["allergen", "p0", "inci", "wheat"],
+      "product": {"key": "test:inci-triticum", "source": "photo", "photo_kind": "ingredients", "category": "cosmetic",
+                  "product_type": "leave_on", "ingredients": ["Aqua", "Triticum Vulgare Germ Oil", "Tocopherol"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_wen", "name": "Wen", "allergies": [{"id": "wheat", "level": "strict"}]}],
+      "expect": {"m_wen": {"state": "ALLERGY", "codes_include": ["allergen.wheat"], "matched_include": ["triticum"]}}
+    },
+    {
+      "name": "INCI Glycine Soja Oil is soy",
+      "tags": ["allergen", "inci", "soy"],
+      "product": {"key": "test:inci-glycine", "source": "photo", "photo_kind": "ingredients", "category": "cosmetic",
+                  "product_type": "leave_on", "ingredients": ["Aqua", "Glycine Soja Oil", "Tocopherol"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_soo", "name": "Soo", "allergies": [{"id": "soy", "level": "strict"}]}],
+      "expect": {"m_soo": {"state": "ALLERGY", "codes_include": ["allergen.soy"], "matched_include": ["soja"]}}
+    },
+    {
+      "name": "Hydrolyzed Wheat Protein in a shampoo is wheat",
+      "tags": ["allergen", "inci", "wheat"],
+      "product": {"key": "test:inci-hwp", "source": "photo", "photo_kind": "ingredients", "category": "cosmetic",
+                  "product_type": "rinse_off", "ingredients": ["Aqua", "Coco-Glucoside", "Hydrolyzed Wheat Protein"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_wen", "name": "Wen", "allergies": [{"id": "wheat", "level": "strict"}]}],
+      "expect": {"m_wen": {"state": "ALLERGY", "codes_include": ["allergen.wheat"], "matched_include": ["wheat"]}}
+    },
+    {
+      "name": "Parfum in a leave-on cream: Linh (fragrance sensitivity) and Mia (eczema) score 80",
+      "tags": ["inci", "skin", "scoring"],
+      "product": {"key": "test:inci-parfum", "source": "photo", "photo_kind": "ingredients", "category": "cosmetic",
+                  "product_type": "leave_on", "ingredients": ["Aqua", "Caprylic/Capric Triglyceride", "Parfum"], "legibility": "full"},
+      "members": ["m_linh", "m_mia"],
+      "expect": {
+        "m_linh": {"state": "EASY", "label": "Easy does it", "codes_include": ["signal."], "matched_include": ["parfum"],
+                   "score_min": 79.5, "score_max": 80.5},
+        "m_mia": {"state": "EASY", "codes_include": ["signal."], "matched_include": ["parfum"], "score_min": 79.5, "score_max": 80.5}
+      }
+    },
+    {
+      "name": "Methylisothiazolinone in a leave-on cream: Mia skip (weight 45), Linh ripe",
+      "tags": ["inci", "skin", "scoring"],
+      "product": {"key": "test:inci-mit", "source": "photo", "photo_kind": "ingredients", "category": "cosmetic",
+                  "product_type": "leave_on", "ingredients": ["Aqua", "Glycerin", "Methylisothiazolinone"], "legibility": "full"},
+      "members": ["m_linh", "m_mia"],
+      "expect": {
+        "m_mia": {"state": "SKIP", "label": "Skip it", "codes_include": ["signal."], "matched_include": ["methylisothiazolinone"],
+                  "score_min": 54.5, "score_max": 55.5},
+        "m_linh": {"state": "RIPE", "codes_exclude": ["signal."]}
+      }
+    },
+    {
+      "name": "DMDM Hydantoin (formaldehyde releaser) in a leave-on cream: Mia skip",
+      "tags": ["inci", "skin", "scoring"],
+      "product": {"key": "test:inci-dmdm", "source": "photo", "photo_kind": "ingredients", "category": "cosmetic",
+                  "product_type": "leave_on", "ingredients": ["Aqua", "Glycerin", "DMDM Hydantoin"], "legibility": "full"},
+      "members": ["m_mia"],
+      "expect": {"m_mia": {"state": "SKIP", "codes_include": ["signal."], "matched_include": ["dmdm"], "score_min": 54.5, "score_max": 55.5}}
+    },
+    {
+      "name": "Retinol in a leave-on cream for a pregnant member: skip",
+      "tags": ["inci", "pregnancy", "scoring"],
+      "product": {"key": "test:inci-retinol", "source": "photo", "photo_kind": "ingredients", "category": "cosmetic",
+                  "product_type": "leave_on", "ingredients": ["Aqua", "Squalane", "Retinol"], "legibility": "full"},
+      "members": ["m_linh"],
+      "extra_members": [{"id": "m_mai", "name": "Mai", "pregnant": true}],
+      "expect": {
+        "m_mai": {"state": "SKIP", "codes_include": ["signal."], "matched_include": ["retinol"], "score_min": 54.5, "score_max": 55.5},
+        "m_linh": {"state": "RIPE", "codes_exclude": ["signal."]}
+      }
+    },
+    {
+      "name": "Lanolin and beeswax lip balm is not vegan",
+      "tags": ["inci", "diet"],
+      "product": {"key": "test:inci-lanolin", "source": "photo", "photo_kind": "ingredients", "category": "cosmetic",
+                  "product_type": "leave_on", "ingredients": ["Lanolin", "Cera Alba (Beeswax)", "Ricinus Communis Seed Oil"], "legibility": "full"},
+      "members": ["m_leo"],
+      "expect": {"m_leo": {"state": "DIET", "label": "Not vegan", "codes_include": ["diet.vegan"], "matched_include": ["lanolin", "beeswax"]}}
+    },
+    {
+      "name": "Sodium Lauryl Sulfate in a rinse-off wash: Mia 95, still ripe",
+      "tags": ["inci", "skin", "scoring"],
+      "product": {"key": "test:inci-sls", "source": "photo", "photo_kind": "ingredients", "category": "cosmetic",
+                  "product_type": "rinse_off", "ingredients": ["Aqua", "Sodium Lauryl Sulfate", "Sodium Chloride"], "legibility": "full"},
+      "members": ["m_mia"],
+      "expect": {"m_mia": {"state": "RIPE", "codes_include": ["signal."], "matched_include": ["lauryl"], "score_min": 94.5, "score_max": 95.5}}
+    }
+  ]
+}

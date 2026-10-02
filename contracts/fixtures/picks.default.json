@@ -1,0 +1,103 @@
+{
+  "items": [
+    {
+      "product": {
+        "key": "off:0000000000062",
+        "name": "Lightly Salted Brown Rice Cakes",
+        "brand": "Pear Demo Pantry",
+        "image_url": "https://placehold.co/600x600/png?text=Brown+Rice+Cakes",
+        "category": "food"
+      },
+      "verdicts": [
+        {
+          "member_id": "m_linh",
+          "state": "RIPE",
+          "label": "Ripe"
+        },
+        {
+          "member_id": "m_ba",
+          "state": "RIPE",
+          "label": "Ripe"
+        },
+        {
+          "member_id": "m_mia",
+          "state": "RIPE",
+          "label": "Ripe"
+        },
+        {
+          "member_id": "m_leo",
+          "state": "RIPE",
+          "label": "Ripe"
+        }
+      ]
+    },
+    {
+      "product": {
+        "key": "off:0000000000093",
+        "name": "Plain Rice Crackers",
+        "brand": "Pear Demo Pantry",
+        "image_url": "https://placehold.co/600x600/png?text=Rice+Crackers",
+        "category": "food"
+      },
+      "verdicts": [
+        {
+          "member_id": "m_linh",
+          "state": "RIPE",
+          "label": "Ripe"
+        },
+        {
+          "member_id": "m_ba",
+          "state": "RIPE",
+          "label": "Ripe"
+        },
+        {
+          "member_id": "m_mia",
+          "state": "RIPE",
+          "label": "Ripe"
+        },
+        {
+          "member_id": "m_leo",
+          "state": "RIPE",
+          "label": "Ripe"
+        }
+      ]
+    },
+    {
+      "product": {
+        "key": "off:0000000000109",
+        "name": "Sea Salt Corn Tortilla Chips",
+        "brand": "Pear Demo Pantry",
+        "image_url": "https://placehold.co/600x600/png?text=Corn+Tortilla+Chips",
+        "category": "food"
+      },
+      "verdicts": [
+        {
+          "member_id": "m_linh",
+          "state": "RIPE",
+          "label": "Ripe"
+        },
+        {
+          "member_id": "m_ba",
+          "state": "EASY",
+          "label": "Easy does it"
+        },
+        {
+          "member_id": "m_mia",
+          "state": "RIPE",
+          "label": "Ripe"
+        },
+        {
+          "member_id": "m_leo",
+          "state": "RIPE",
+          "label": "Ripe"
+        }
+      ]
+    }
+  ],
+  "prefetched": true,
+  "timings_ms": {
+    "wait": 40,
+    "total": 60
+  },
+  "request_id": null
+}

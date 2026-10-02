@@ -1,0 +1,24 @@
+[project]
+name = "pear-api"
+version = "0.3.0"
+requires-python = ">=3.12"
+description = "Pear API: barcode / label photo / question -> per-person verdicts"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+addopts = "-q"
+markers = [
+    "live: hits real external services (Open Food Facts, Gemini); run with `make test-live`",
+    "allergen: the no-missed-allergen gate (plan 8.7); run with `make test-allergens`",
+]
+
+[tool.ruff]
+line-length = 110
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "ASYNC"]
+ignore = ["E501", "B008"]

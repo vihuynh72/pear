@@ -1,0 +1,94 @@
+{
+  "product": {
+    "key": "obf:0000000000055",
+    "name": "Kids Gentle Body Wash",
+    "brand": "Pear Demo Care",
+    "category": "cosmetic",
+    "product_type": "rinse_off",
+    "image_url": "https://placehold.co/600x600/png?text=Kids+Body+Wash",
+    "source": "open_beauty_facts",
+    "photo_kind": null,
+    "data_confidence": "high",
+    "less_sure": false,
+    "ask_for_ingredients": false,
+    "ingredients": [
+      "Water",
+      "Cocamidopropyl Betaine",
+      "Sodium Laureth Sulfate",
+      "Glycerin",
+      "Citric Acid",
+      "Sodium Chloride",
+      "Methylisothiazolinone"
+    ],
+    "contains": [],
+    "may_contain": [],
+    "certifications": [],
+    "label_language": "en",
+    "code": "0000000000055",
+    "quantity": "12 fl oz",
+    "nutrition": null,
+    "matched_by": "barcode"
+  },
+  "verdicts": [
+    {
+      "member_id": "m_linh",
+      "state": "RIPE",
+      "label": "Ripe",
+      "reasons": [],
+      "score": null
+    },
+    {
+      "member_id": "m_ba",
+      "state": "RIPE",
+      "label": "Ripe",
+      "reasons": [],
+      "score": null
+    },
+    {
+      "member_id": "m_mia",
+      "state": "EASY",
+      "label": "Easy does it",
+      "reasons": [
+        {
+          "code": "signal.methylisothiazolinone",
+          "text": "Skin allergen: Methylisothiazolinone",
+          "language": "en",
+          "severity": "soft",
+          "matched": [
+            "Methylisothiazolinone"
+          ],
+          "source": "nacdg_patch_test"
+        },
+        {
+          "code": "confidence.check_label",
+          "text": "From a database. Check the label.",
+          "language": "en",
+          "severity": "note",
+          "matched": [],
+          "source": null
+        }
+      ],
+      "score": null
+    },
+    {
+      "member_id": "m_leo",
+      "state": "RIPE",
+      "label": "Ripe",
+      "reasons": [],
+      "score": null
+    }
+  ],
+  "headline": {
+    "text": "Easy does it for Mia: skin allergen. Fine for Linh, Bà and Leo.",
+    "language": "en"
+  },
+  "timings_ms": {
+    "cache": 41,
+    "lookup": 486,
+    "normalize": 3,
+    "rules": 2,
+    "total": 548
+  },
+  "request_id": null,
+  "debug": null
+}

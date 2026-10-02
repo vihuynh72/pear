@@ -1,0 +1,116 @@
+{
+  "product": {
+    "key": "photo:3c8e1f0a7b62",
+    "name": "Oat & Honey Bar",
+    "brand": "Pear Demo Pantry",
+    "category": "food",
+    "product_type": null,
+    "image_url": null,
+    "source": "photo",
+    "photo_kind": "ingredients",
+    "data_confidence": "high",
+    "less_sure": false,
+    "ask_for_ingredients": false,
+    "ingredients": [
+      "rolled oats",
+      "honey",
+      "almonds",
+      "brown rice syrup",
+      "sea salt"
+    ],
+    "contains": [
+      "tree_nut"
+    ],
+    "may_contain": [],
+    "certifications": [
+      "vegan"
+    ],
+    "label_language": "en",
+    "code": null,
+    "quantity": "40 g",
+    "nutrition": {
+      "basis": "serving",
+      "sodium_mg": 60.0,
+      "sodium_dv": 3.0,
+      "added_sugars_g": 10.0,
+      "added_sugars_dv": 20.0,
+      "sugars_g": 11.0,
+      "sat_fat_g": 1.0,
+      "sat_fat_dv": 5.0,
+      "caffeine_mg": null
+    },
+    "matched_by": "photo"
+  },
+  "verdicts": [
+    {
+      "member_id": "m_linh",
+      "state": "RIPE",
+      "label": "Ripe",
+      "reasons": [],
+      "score": null
+    },
+    {
+      "member_id": "m_ba",
+      "state": "EASY",
+      "label": "Easy does it",
+      "reasons": [
+        {
+          "code": "signal.added_sugars",
+          "text": "Nhiều đường (20% nhu cầu mỗi ngày)",
+          "language": "vi",
+          "severity": "soft",
+          "matched": [],
+          "source": "fda_nutrition_dv"
+        },
+        {
+          "code": "signal.fast_sugars",
+          "text": "Đường nằm trong mấy thành phần đầu (honey)",
+          "language": "vi",
+          "severity": "soft",
+          "matched": [
+            "honey"
+          ],
+          "source": "fda_nutrition_dv"
+        }
+      ],
+      "score": null
+    },
+    {
+      "member_id": "m_mia",
+      "state": "RIPE",
+      "label": "Ripe",
+      "reasons": [],
+      "score": null
+    },
+    {
+      "member_id": "m_leo",
+      "state": "DIET",
+      "label": "Check",
+      "reasons": [
+        {
+          "code": "diet.vegan.check",
+          "text": "Revisa: la etiqueta dice vegano pero lleva honey",
+          "language": "es",
+          "severity": "hard",
+          "matched": [
+            "honey"
+          ],
+          "source": "pear_diet_rules"
+        }
+      ],
+      "score": null
+    }
+  ],
+  "headline": {
+    "text": "Check for Leo: label says vegan but lists honey. Fine for Linh and Mia.",
+    "language": "en"
+  },
+  "timings_ms": {
+    "label_reader": 1720,
+    "normalize": 3,
+    "rules": 2,
+    "total": 1790
+  },
+  "request_id": null,
+  "debug": null
+}

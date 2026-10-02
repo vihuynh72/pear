@@ -1,0 +1,11 @@
+data: {"member_id": "m_linh", "language": "en", "text": "No problems found for Linh."}
+
+data: {"member_id": "m_ba", "language": "vi", "text": "Không thấy vấn đề gì cho Bà."}
+
+data: {"member_id": "m_mia", "language": "en", "text": "Not for Mia: it has sesame seeds and may contain peanuts."}
+
+data: {"member_id": "m_leo", "language": "es", "text": "No encontramos problemas para Leo."}
+
+event: done
+data: {}
+

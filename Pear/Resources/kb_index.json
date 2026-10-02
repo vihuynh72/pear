@@ -1,0 +1,2106 @@
+{
+ "version": 1,
+ "languages": [
+  "en",
+  "vi",
+  "es"
+ ],
+ "groups": {
+  "allergies": [
+   {
+    "id": "peanut",
+    "label": {
+     "en": "Peanut",
+     "vi": "Đậu phộng",
+     "es": "Maní"
+    },
+    "synonyms": {
+     "en": [
+      "peanut",
+      "peanuts",
+      "peanut oil",
+      "peanut butter",
+      "peanut flour",
+      "peanut protein",
+      "peanut paste",
+      "peanut sauce",
+      "arachis oil",
+      "arachis hypogaea",
+      "arachis",
+      "groundnut",
+      "groundnuts",
+      "groundnut oil",
+      "goober",
+      "goobers",
+      "goober peas",
+      "monkey nuts",
+      "beer nuts",
+      "mandelonas",
+      "nut",
+      "nuts",
+      "mixed nuts",
+      "nut butter",
+      "nut oil",
+      "nut paste"
+     ],
+     "vi": [
+      "đậu phộng",
+      "đậu phụng",
+      "lạc",
+      "hạt lạc",
+      "củ lạc",
+      "dầu lạc",
+      "dầu đậu phộng",
+      "bơ đậu phộng",
+      "bơ lạc",
+      "kẹo lạc"
+     ],
+     "es": [
+      "cacahuete",
+      "cacahuetes",
+      "cacahuate",
+      "cacahuates",
+      "maní",
+      "manís",
+      "manises",
+      "aceite de cacahuete",
+      "aceite de cacahuate",
+      "aceite de maní",
+      "mantequilla de maní",
+      "mantequilla de cacahuate",
+      "mantequilla de cacahuete",
+      "crema de cacahuete",
+      "crema de cacahuate",
+      "crema de maní",
+      "frutos secos"
+     ]
+    }
+   },
+   {
+    "id": "tree_nuts",
+    "label": {
+     "en": "Tree nuts",
+     "vi": "Các loại hạt",
+     "es": "Nueces de árbol"
+    },
+    "synonyms": {
+     "en": [
+      "tree nut",
+      "tree nuts",
+      "nut",
+      "nuts",
+      "mixed nuts",
+      "nut butter",
+      "nut oil",
+      "nut paste",
+      "nut meal",
+      "almond",
+      "almonds",
+      "almond flour",
+      "almond meal",
+      "almond milk",
+      "almond butter",
+      "almond oil",
+      "almond paste",
+      "almond extract",
+      "sweet almond oil",
+      "prunus amygdalus dulcis",
+      "prunus dulcis",
+      "cashew",
+      "cashews",
+      "cashew butter",
+      "anacardium occidentale",
+      "walnut",
+      "walnuts",
+      "juglans regia",
+      "juglans nigra",
+      "pecan",
+      "pecans",
+      "carya illinoinensis",
+      "pistachio",
+      "pistachios",
+      "pistacia vera",
+      "hazelnut",
+      "hazelnuts",
+      "filbert",
+      "filberts",
+      "corylus avellana",
+      "macadamia",
+      "macadamias",
+      "macadamia nut",
+      "macadamia nuts",
+      "macadamia ternifolia",
+      "macadamia integrifolia",
+      "brazil nut",
+      "brazil nuts",
+      "bertholletia excelsa",
+      "pine nut",
+      "pine nuts",
+      "pignoli",
+      "pignolia",
+      "pili nut",
+      "praline",
+      "pralines",
+      "marzipan",
+      "frangipane",
+      "gianduja",
+      "nougat",
+      "nutella"
+     ],
+     "vi": [
+      "hạnh nhân",
+      "hạt hạnh nhân",
+      "sữa hạnh nhân",
+      "bột hạnh nhân",
+      "dầu hạnh nhân",
+      "hạt điều",
+      "điều rang",
+      "bơ hạt điều",
+      "óc chó",
+      "hạt óc chó",
+      "quả óc chó",
+      "hồ đào",
+      "hạt hồ đào",
+      "hạt dẻ cười",
+      "hạt phỉ",
+      "hạt mắc ca",
+      "mắc ca",
+      "macca",
+      "hạt macca",
+      "hạt thông",
+      "hạt brazil",
+      "quả hạch",
+      "các loại hạt",
+      "hạt có vỏ cứng"
+     ],
+     "es": [
+      "nuez",
+      "nueces",
+      "nueces de árbol",
+      "frutos secos",
+      "frutos de cáscara",
+      "almendra",
+      "almendras",
+      "harina de almendra",
+      "harina de almendras",
+      "leche de almendra",
+      "leche de almendras",
+      "aceite de almendra",
+      "aceite de almendras",
+      "anacardo",
+      "anacardos",
+      "marañón",
+      "merey",
+      "nuez de la india",
+      "castaña de cajú",
+      "nogal",
+      "pecana",
+      "pecanas",
+      "nuez pecana",
+      "pacana",
+      "pistacho",
+      "pistachos",
+      "avellana",
+      "avellanas",
+      "macadamia",
+      "nuez de macadamia",
+      "nueces de macadamia",
+      "nuez de brasil",
+      "nueces de brasil",
+      "castaña de pará",
+      "castaña de brasil",
+      "piñón",
+      "piñones",
+      "mazapán",
+      "praliné",
+      "turrón"
+     ]
+    }
+   },
+   {
+    "id": "milk",
+    "label": {
+     "en": "Milk",
+     "vi": "Sữa",
+     "es": "Leche"
+    },
+    "synonyms": {
+     "en": [
+      "milk",
+      "milks",
+      "whole milk",
+      "skim milk",
+      "skimmed milk",
+      "nonfat milk",
+      "low fat milk",
+      "milk powder",
+      "powdered milk",
+      "dried milk",
+      "dry milk",
+      "milk solids",
+      "nonfat milk solids",
+      "milk protein",
+      "milk proteins",
+      "milk protein concentrate",
+      "milk fat",
+      "milkfat",
+      "butterfat",
+      "anhydrous milk fat",
+      "butter",
+      "butter oil",
+      "cultured butter",
+      "buttermilk",
+      "cream",
+      "sour cream",
+      "heavy cream",
+      "whipping cream",
+      "cheese",
+      "cheeses",
+      "cheddar",
+      "parmesan",
+      "mozzarella",
+      "ricotta",
+      "cottage cheese",
+      "cream cheese",
+      "yogurt",
+      "yoghurt",
+      "kefir",
+      "whey",
+      "whey protein",
+      "whey protein concentrate",
+      "whey protein isolate",
+      "whey powder",
+      "sweet whey",
+      "casein",
+      "caseins",
+      "caseinate",
+      "caseinates",
+      "sodium caseinate",
+      "calcium caseinate",
+      "potassium caseinate",
+      "magnesium caseinate",
+      "rennet casein",
+      "lactalbumin",
+      "lactoglobulin",
+      "lactoferrin",
+      "lactulose",
+      "lactose",
+      "ghee",
+      "curd",
+      "curds",
+      "custard",
+      "dairy",
+      "half and half",
+      "condensed milk",
+      "sweetened condensed milk",
+      "evaporated milk",
+      "ice cream",
+      "paneer",
+      "quark",
+      "recaldent",
+      "milk chocolate",
+      "lac",
+      "malted milk",
+      "milk sugar",
+      "lactose monohydrate"
+     ],
+     "vi": [
+      "sữa",
+      "sữa bột",
+      "bột sữa",
+      "sữa tươi",
+      "sữa đặc",
+      "sữa đặc có đường",
+      "sữa béo",
+      "sữa tách béo",
+      "váng sữa",
+      "kem sữa",
+      "kem",
+      "whey",
+      "đạm whey",
+      "đạm sữa",
+      "protein sữa",
+      "chất béo sữa",
+      "bơ",
+      "bơ sữa",
+      "bơ lạt",
+      "phô mai",
+      "pho mát",
+      "phó mát",
+      "sữa chua",
+      "casein",
+      "cazein",
+      "lactose",
+      "đường sữa",
+      "ghee",
+      "đường lactose"
+     ],
+     "es": [
+      "leche",
+      "leche en polvo",
+      "leche entera",
+      "leche desnatada",
+      "leche descremada",
+      "sólidos lácteos",
+      "sólidos de leche",
+      "proteína de leche",
+      "proteínas de leche",
+      "proteína láctea",
+      "proteínas lácteas",
+      "lácteo",
+      "lácteos",
+      "lactosuero",
+      "suero de leche",
+      "suero lácteo",
+      "caseína",
+      "caseinato",
+      "caseinato de sodio",
+      "caseinato sódico",
+      "caseinato de calcio",
+      "mantequilla",
+      "mantequilla clarificada",
+      "manteca",
+      "nata",
+      "crema de leche",
+      "queso",
+      "quesos",
+      "requesón",
+      "yogur",
+      "yogurt",
+      "yogures",
+      "kéfir",
+      "lactosa",
+      "ghee",
+      "grasa láctea",
+      "grasa de leche",
+      "leche condensada",
+      "leche evaporada",
+      "cuajada",
+      "helado",
+      "azúcar de leche"
+     ]
+    }
+   },
+   {
+    "id": "egg",
+    "label": {
+     "en": "Egg",
+     "vi": "Trứng",
+     "es": "Huevo"
+    },
+    "synonyms": {
+     "en": [
+      "egg",
+      "eggs",
+      "egg white",
+      "egg whites",
+      "egg yolk",
+      "egg yolks",
+      "whole egg",
+      "whole eggs",
+      "dried egg",
+      "dried eggs",
+      "powdered egg",
+      "egg powder",
+      "egg solids",
+      "liquid egg",
+      "albumin",
+      "albumen",
+      "ovalbumin",
+      "ovomucoid",
+      "ovomucin",
+      "ovovitellin",
+      "ovotransferrin",
+      "ovoglobulin",
+      "livetin",
+      "lysozyme",
+      "e1105",
+      "mayonnaise",
+      "mayo",
+      "meringue",
+      "eggnog",
+      "surimi"
+     ],
+     "vi": [
+      "trứng",
+      "trứng gà",
+      "trứng vịt",
+      "trứng cút",
+      "lòng trắng trứng",
+      "lòng đỏ trứng",
+      "bột trứng",
+      "albumin",
+      "mayonnaise",
+      "sốt mayonnaise",
+      "xốt mayonnaise"
+     ],
+     "es": [
+      "huevo",
+      "huevos",
+      "clara de huevo",
+      "claras de huevo",
+      "yema de huevo",
+      "yemas de huevo",
+      "huevo en polvo",
+      "huevo entero",
+      "ovoalbúmina",
+      "albúmina",
+      "lisozima",
+      "mayonesa",
+      "merengue"
+     ]
+    }
+   },
+   {
+    "id": "wheat",
+    "label": {
+     "en": "Wheat",
+     "vi": "Lúa mì",
+     "es": "Trigo"
+    },
+    "synonyms": {
+     "en": [
+      "wheat",
+      "wheat flour",
+      "whole wheat",
+      "whole wheat flour",
+      "whole grain wheat",
+      "wheat starch",
+      "wheat protein",
+      "wheat gluten",
+      "vital wheat gluten",
+      "hydrolyzed wheat protein",
+      "hydrolysed wheat protein",
+      "wheat germ",
+      "wheat bran",
+      "wheat berries",
+      "flour",
+      "enriched flour",
+      "enriched wheat flour",
+      "bleached flour",
+      "unbleached flour",
+      "all purpose flour",
+      "bread flour",
+      "cake flour",
+      "pastry flour",
+      "self rising flour",
+      "self raising flour",
+      "graham flour",
+      "semolina",
+      "durum",
+      "durum wheat",
+      "durum wheat semolina",
+      "spelt",
+      "farina",
+      "couscous",
+      "seitan",
+      "bulgur",
+      "bulgar",
+      "einkorn",
+      "emmer",
+      "farro",
+      "kamut",
+      "khorasan",
+      "freekeh",
+      "triticum",
+      "triticum vulgare",
+      "triticum aestivum",
+      "triticum durum",
+      "breadcrumbs",
+      "bread crumbs",
+      "panko",
+      "cracker meal",
+      "matzo",
+      "matzoh",
+      "matzah"
+     ],
+     "vi": [
+      "lúa mì",
+      "bột mì",
+      "bột lúa mì",
+      "bột mì đa dụng",
+      "bột mì nguyên cám",
+      "tinh bột mì",
+      "tinh bột lúa mì",
+      "gluten lúa mì",
+      "đạm lúa mì",
+      "mì căn",
+      "bột bánh mì",
+      "vụn bánh mì",
+      "bánh mì",
+      "mì sợi",
+      "sợi mì",
+      "vắt mì",
+      "mì ống",
+      "mì ăn liền",
+      "lúa mì cứng"
+     ],
+     "es": [
+      "trigo",
+      "harina de trigo",
+      "harina",
+      "harina enriquecida",
+      "harina integral",
+      "harina integral de trigo",
+      "sémola",
+      "sémola de trigo",
+      "trigo duro",
+      "trigo integral",
+      "espelta",
+      "escanda",
+      "cuscús",
+      "seitán",
+      "salvado de trigo",
+      "germen de trigo",
+      "almidón de trigo",
+      "gluten de trigo",
+      "proteína de trigo",
+      "pan rallado",
+      "kamut",
+      "bulgur"
+     ]
+    }
+   },
+   {
+    "id": "gluten",
+    "label": {
+     "en": "Gluten",
+     "vi": "Gluten",
+     "es": "Gluten"
+    },
+    "synonyms": {
+     "en": [
+      "gluten",
+      "barley",
+      "barley flour",
+      "barley malt",
+      "malted barley",
+      "pearl barley",
+      "hordeum vulgare",
+      "malt",
+      "malt extract",
+      "malt syrup",
+      "malt vinegar",
+      "malt flavoring",
+      "malt flavouring",
+      "malted milk",
+      "rye",
+      "rye flour",
+      "secale cereale",
+      "triticale",
+      "brewer's yeast",
+      "brewers yeast",
+      "celiac",
+      "coeliac",
+      "celiac disease"
+     ],
+     "vi": [
+      "gluten",
+      "lúa mạch",
+      "lúa mạch đen",
+      "mạch nha",
+      "bột lúa mạch",
+      "bệnh celiac"
+     ],
+     "es": [
+      "gluten",
+      "cebada",
+      "harina de cebada",
+      "malta",
+      "extracto de malta",
+      "jarabe de malta",
+      "centeno",
+      "harina de centeno",
+      "triticale",
+      "celiaquía",
+      "celíaco",
+      "celíaca"
+     ]
+    }
+   },
+   {
+    "id": "soy",
+    "label": {
+     "en": "Soy",
+     "vi": "Đậu nành",
+     "es": "Soja"
+    },
+    "synonyms": {
+     "en": [
+      "soy",
+      "soya",
+      "soybean",
+      "soybeans",
+      "soy bean",
+      "soy beans",
+      "soya bean",
+      "soy flour",
+      "soya flour",
+      "soy protein",
+      "soy protein isolate",
+      "soy protein concentrate",
+      "isolated soy protein",
+      "textured soy protein",
+      "textured vegetable protein",
+      "tvp",
+      "hydrolyzed soy protein",
+      "soy lecithin",
+      "soya lecithin",
+      "soybean lecithin",
+      "soy sauce",
+      "shoyu",
+      "tamari",
+      "miso",
+      "tempeh",
+      "tofu",
+      "edamame",
+      "natto",
+      "okara",
+      "yuba",
+      "soy milk",
+      "soymilk",
+      "soybean oil",
+      "soy oil",
+      "glycine max"
+     ],
+     "vi": [
+      "đậu nành",
+      "đậu tương",
+      "hạt đậu nành",
+      "nước tương",
+      "xì dầu",
+      "tàu hũ",
+      "tàu hủ",
+      "đậu phụ",
+      "đậu hũ",
+      "chao",
+      "sữa đậu nành",
+      "lecithin đậu nành",
+      "lecithin từ đậu nành",
+      "bột đậu nành",
+      "đạm đậu nành",
+      "protein đậu nành",
+      "dầu đậu nành",
+      "miso",
+      "tương miso",
+      "tempeh"
+     ],
+     "es": [
+      "soja",
+      "soya",
+      "frijol de soja",
+      "frijol de soya",
+      "haba de soja",
+      "salsa de soja",
+      "salsa de soya",
+      "lecitina de soja",
+      "lecitina de soya",
+      "proteína de soja",
+      "proteína de soya",
+      "harina de soja",
+      "harina de soya",
+      "aceite de soja",
+      "aceite de soya",
+      "leche de soja",
+      "leche de soya",
+      "tofu",
+      "miso",
+      "tempeh",
+      "edamame"
+     ]
+    }
+   },
+   {
+    "id": "fish",
+    "label": {
+     "en": "Fish",
+     "vi": "Cá",
+     "es": "Pescado"
+    },
+    "synonyms": {
+     "en": [
+      "fish",
+      "fish sauce",
+      "fish oil",
+      "fish gelatin",
+      "fish gelatine",
+      "fish extract",
+      "fish stock",
+      "fish paste",
+      "fish powder",
+      "fish protein",
+      "anchovy",
+      "anchovies",
+      "salmon",
+      "tuna",
+      "cod",
+      "cod liver oil",
+      "haddock",
+      "pollock",
+      "pollack",
+      "tilapia",
+      "sardine",
+      "sardines",
+      "mackerel",
+      "herring",
+      "trout",
+      "bass",
+      "catfish",
+      "halibut",
+      "flounder",
+      "snapper",
+      "grouper",
+      "mahi mahi",
+      "swordfish",
+      "perch",
+      "carp",
+      "whitefish",
+      "hake",
+      "bonito",
+      "katsuobushi",
+      "dashi",
+      "surimi",
+      "caviar",
+      "roe",
+      "fish roe",
+      "eel",
+      "basa",
+      "pangasius",
+      "worcestershire sauce",
+      "seafood"
+     ],
+     "vi": [
+      "cá",
+      "nước mắm",
+      "mắm",
+      "mắm nêm",
+      "cá cơm",
+      "cá hồi",
+      "cá ngừ",
+      "cá thu",
+      "cá tuyết",
+      "cá basa",
+      "cá tra",
+      "cá rô phi",
+      "cá mòi",
+      "dầu cá",
+      "bột cá",
+      "chả cá",
+      "trứng cá",
+      "cá khô",
+      "nước cốt cá",
+      "hải sản"
+     ],
+     "es": [
+      "pescado",
+      "pescados",
+      "anchoa",
+      "anchoas",
+      "boquerón",
+      "boquerones",
+      "salmón",
+      "atún",
+      "bacalao",
+      "merluza",
+      "sardina",
+      "sardinas",
+      "caballa",
+      "arenque",
+      "trucha",
+      "tilapia",
+      "abadejo",
+      "bonito",
+      "lenguado",
+      "aceite de pescado",
+      "salsa de pescado",
+      "caldo de pescado",
+      "surimi",
+      "caviar",
+      "huevas",
+      "anguila"
+     ]
+    }
+   },
+   {
+    "id": "shellfish",
+    "label": {
+     "en": "Shellfish",
+     "vi": "Hải sản có vỏ",
+     "es": "Mariscos"
+    },
+    "synonyms": {
+     "en": [
+      "shellfish",
+      "crustacean",
+      "crustaceans",
+      "crustacean shellfish",
+      "shrimp",
+      "shrimps",
+      "prawn",
+      "prawns",
+      "crab",
+      "crabs",
+      "crabmeat",
+      "crab meat",
+      "lobster",
+      "lobsters",
+      "crayfish",
+      "crawfish",
+      "langoustine",
+      "langoustines",
+      "langostino",
+      "krill",
+      "scampi",
+      "shrimp paste",
+      "shrimp powder",
+      "dried shrimp",
+      "seafood",
+      "glucosamine"
+     ],
+     "vi": [
+      "tôm",
+      "tôm khô",
+      "tôm hùm",
+      "tép",
+      "tôm tít",
+      "mắm tôm",
+      "mắm ruốc",
+      "bột tôm",
+      "chả tôm",
+      "cua",
+      "ghẹ",
+      "gạch cua",
+      "giáp xác",
+      "hải sản"
+     ],
+     "es": [
+      "marisco",
+      "mariscos",
+      "crustáceo",
+      "crustáceos",
+      "camarón",
+      "camarones",
+      "gamba",
+      "gambas",
+      "langostino",
+      "langostinos",
+      "cangrejo",
+      "cangrejos",
+      "jaiba",
+      "langosta",
+      "langostas",
+      "cigala",
+      "cigalas",
+      "bogavante",
+      "krill",
+      "pasta de camarón"
+     ]
+    }
+   },
+   {
+    "id": "molluscs",
+    "label": {
+     "en": "Molluscs",
+     "vi": "Nhuyễn thể",
+     "es": "Moluscos"
+    },
+    "synonyms": {
+     "en": [
+      "mollusc",
+      "molluscs",
+      "mollusk",
+      "mollusks",
+      "clam",
+      "clams",
+      "clam juice",
+      "oyster",
+      "oysters",
+      "oyster sauce",
+      "oyster extract",
+      "mussel",
+      "mussels",
+      "scallop",
+      "scallops",
+      "squid",
+      "calamari",
+      "octopus",
+      "cuttlefish",
+      "snail",
+      "snails",
+      "escargot",
+      "abalone",
+      "whelk",
+      "periwinkle",
+      "cockle",
+      "cockles",
+      "conch",
+      "seafood"
+     ],
+     "vi": [
+      "mực",
+      "bạch tuộc",
+      "sò",
+      "sò điệp",
+      "hàu",
+      "nghêu",
+      "ngao",
+      "hến",
+      "vẹm",
+      "ốc",
+      "bào ngư",
+      "dầu hào",
+      "sốt hàu",
+      "nước sốt hàu",
+      "hải sản"
+     ],
+     "es": [
+      "molusco",
+      "moluscos",
+      "almeja",
+      "almejas",
+      "ostra",
+      "ostras",
+      "ostión",
+      "ostiones",
+      "mejillón",
+      "mejillones",
+      "vieira",
+      "vieiras",
+      "calamar",
+      "calamares",
+      "pulpo",
+      "sepia",
+      "caracol",
+      "caracoles",
+      "abulón",
+      "berberecho",
+      "berberechos",
+      "salsa de ostras",
+      "salsa de ostión"
+     ]
+    }
+   },
+   {
+    "id": "sesame",
+    "label": {
+     "en": "Sesame",
+     "vi": "Mè",
+     "es": "Sésamo"
+    },
+    "synonyms": {
+     "en": [
+      "sesame",
+      "sesame seed",
+      "sesame seeds",
+      "sesame oil",
+      "toasted sesame oil",
+      "sesame paste",
+      "sesame flour",
+      "sesame salt",
+      "tahini",
+      "tahina",
+      "tahineh",
+      "benne",
+      "benne seed",
+      "benne seeds",
+      "benniseed",
+      "gingelly",
+      "gingelly oil",
+      "til",
+      "sesamol",
+      "sesamum indicum",
+      "gomasio",
+      "halvah",
+      "halva",
+      "za'atar",
+      "zaatar"
+     ],
+     "vi": [
+      "mè",
+      "hạt mè",
+      "mè trắng",
+      "mè đen",
+      "dầu mè",
+      "vừng",
+      "hạt vừng",
+      "dầu vừng",
+      "muối mè",
+      "muối vừng",
+      "kẹo mè",
+      "kẹo vừng"
+     ],
+     "es": [
+      "sésamo",
+      "sesamo",
+      "semillas de sésamo",
+      "semilla de sésamo",
+      "semillas de sesamo",
+      "aceite de sésamo",
+      "aceite de sesamo",
+      "ajonjolí",
+      "ajonjoli",
+      "semillas de ajonjolí",
+      "aceite de ajonjolí",
+      "tahini",
+      "tahina"
+     ]
+    }
+   },
+   {
+    "id": "lactose",
+    "label": {
+     "en": "Lactose",
+     "vi": "Lactose",
+     "es": "Lactosa"
+    },
+    "synonyms": {
+     "en": [
+      "lactose",
+      "milk sugar",
+      "lactose monohydrate"
+     ],
+     "vi": [
+      "lactose",
+      "đường sữa",
+      "đường lactose"
+     ],
+     "es": [
+      "lactosa",
+      "azúcar de leche"
+     ]
+    }
+   },
+   {
+    "id": "mustard",
+    "label": {
+     "en": "Mustard",
+     "vi": "Mù tạt",
+     "es": "Mostaza"
+    },
+    "synonyms": {
+     "en": [
+      "mustard",
+      "mustard seed",
+      "mustard seeds",
+      "mustard flour",
+      "mustard oil",
+      "mustard powder",
+      "mustard bran",
+      "mustard greens",
+      "dijon",
+      "brassica juncea",
+      "brassica nigra",
+      "sinapis alba"
+     ],
+     "vi": [
+      "mù tạt",
+      "mù tạc",
+      "hạt mù tạt",
+      "bột mù tạt"
+     ],
+     "es": [
+      "mostaza",
+      "semillas de mostaza",
+      "semilla de mostaza",
+      "mostaza en polvo"
+     ]
+    }
+   },
+   {
+    "id": "sulfites",
+    "label": {
+     "en": "Sulfites",
+     "vi": "Sulfit",
+     "es": "Sulfitos"
+    },
+    "synonyms": {
+     "en": [
+      "sulfite",
+      "sulfites",
+      "sulphite",
+      "sulphites",
+      "sulfur dioxide",
+      "sulphur dioxide",
+      "sodium sulfite",
+      "sodium sulphite",
+      "sodium bisulfite",
+      "sodium bisulphite",
+      "sodium metabisulfite",
+      "sodium metabisulphite",
+      "potassium metabisulfite",
+      "potassium metabisulphite",
+      "potassium bisulfite",
+      "calcium sulfite",
+      "calcium bisulfite",
+      "metabisulfite",
+      "metabisulphite",
+      "bisulfite",
+      "sulfiting agents",
+      "e220",
+      "e221",
+      "e222",
+      "e223",
+      "e224",
+      "e225",
+      "e226",
+      "e227",
+      "e228"
+     ],
+     "vi": [
+      "sulfit",
+      "sunfit",
+      "lưu huỳnh đioxit",
+      "lưu huỳnh dioxit",
+      "natri metabisulfit",
+      "kali metabisulfit",
+      "natri bisulfit",
+      "natri sulfit"
+     ],
+     "es": [
+      "sulfito",
+      "sulfitos",
+      "dióxido de azufre",
+      "anhídrido sulfuroso",
+      "metabisulfito",
+      "metabisulfito de sodio",
+      "metabisulfito sódico",
+      "metabisulfito de potasio",
+      "bisulfito de sodio",
+      "sulfito de sodio"
+     ]
+    }
+   },
+   {
+    "id": "celery",
+    "label": {
+     "en": "Celery",
+     "vi": "Cần tây",
+     "es": "Apio"
+    },
+    "synonyms": {
+     "en": [
+      "celery",
+      "celeriac",
+      "celery seed",
+      "celery seeds",
+      "celery salt",
+      "celery powder",
+      "celery juice",
+      "celery extract",
+      "apium graveolens"
+     ],
+     "vi": [
+      "cần tây",
+      "hạt cần tây",
+      "bột cần tây"
+     ],
+     "es": [
+      "apio",
+      "apionabo",
+      "semillas de apio",
+      "sal de apio"
+     ]
+    }
+   },
+   {
+    "id": "lupin",
+    "label": {
+     "en": "Lupin",
+     "vi": "Đậu lupin",
+     "es": "Altramuz"
+    },
+    "synonyms": {
+     "en": [
+      "lupin",
+      "lupine",
+      "lupins",
+      "lupini",
+      "lupin flour",
+      "lupin protein",
+      "lupinus"
+     ],
+     "vi": [
+      "đậu lupin",
+      "lupin",
+      "bột lupin"
+     ],
+     "es": [
+      "altramuz",
+      "altramuces",
+      "lupino",
+      "harina de altramuz"
+     ]
+    }
+   },
+   {
+    "id": "corn",
+    "label": {
+     "en": "Corn",
+     "vi": "Bắp",
+     "es": "Maíz"
+    },
+    "synonyms": {
+     "en": [
+      "corn",
+      "maize",
+      "cornstarch",
+      "corn starch",
+      "corn syrup",
+      "corn syrup solids",
+      "high fructose corn syrup",
+      "corn flour",
+      "cornflour",
+      "cornmeal",
+      "corn meal",
+      "corn oil",
+      "corn protein",
+      "corn gluten",
+      "corn masa",
+      "masa harina",
+      "hominy",
+      "polenta",
+      "grits",
+      "popcorn",
+      "zea mays"
+     ],
+     "vi": [
+      "bắp",
+      "ngô",
+      "bột bắp",
+      "bột ngô",
+      "tinh bột bắp",
+      "tinh bột ngô",
+      "siro bắp",
+      "xi rô bắp",
+      "siro ngô",
+      "dầu bắp",
+      "dầu ngô",
+      "bắp rang"
+     ],
+     "es": [
+      "maíz",
+      "almidón de maíz",
+      "fécula de maíz",
+      "maicena",
+      "harina de maíz",
+      "jarabe de maíz",
+      "jarabe de maíz de alta fructosa",
+      "aceite de maíz",
+      "elote",
+      "palomitas",
+      "sémola de maíz",
+      "masa de maíz"
+     ]
+    }
+   },
+   {
+    "id": "kiwi",
+    "label": {
+     "en": "Kiwi",
+     "vi": "Kiwi",
+     "es": "Kiwi"
+    },
+    "synonyms": {
+     "en": [
+      "kiwi",
+      "kiwis",
+      "kiwifruit",
+      "kiwi fruit",
+      "actinidia",
+      "actinidia chinensis",
+      "actinidia deliciosa",
+      "chinese gooseberry"
+     ],
+     "vi": [
+      "kiwi",
+      "quả kiwi",
+      "trái kiwi"
+     ],
+     "es": [
+      "kiwi",
+      "kiwis",
+      "kivi"
+     ]
+    }
+   }
+  ],
+  "conditions": [
+   {
+    "id": "high_blood_pressure",
+    "label": {
+     "en": "High blood pressure",
+     "vi": "Huyết áp cao",
+     "es": "Presión alta"
+    },
+    "synonyms": {
+     "en": [
+      "high blood pressure",
+      "hypertension",
+      "high bp",
+      "hbp"
+     ],
+     "vi": [
+      "huyết áp cao",
+      "cao huyết áp",
+      "tăng huyết áp"
+     ],
+     "es": [
+      "presión alta",
+      "presión arterial alta",
+      "hipertensión",
+      "tensión alta"
+     ]
+    }
+   },
+   {
+    "id": "diabetes",
+    "label": {
+     "en": "Diabetes",
+     "vi": "Tiểu đường",
+     "es": "Diabetes"
+    },
+    "synonyms": {
+     "en": [
+      "diabetes",
+      "diabetic",
+      "type 2 diabetes",
+      "type 1 diabetes"
+     ],
+     "vi": [
+      "tiểu đường",
+      "đái tháo đường",
+      "bệnh tiểu đường"
+     ],
+     "es": [
+      "diabetes",
+      "diabético",
+      "diabética"
+     ]
+    }
+   },
+   {
+    "id": "prediabetes",
+    "label": {
+     "en": "Prediabetes",
+     "vi": "Tiền tiểu đường",
+     "es": "Prediabetes"
+    },
+    "synonyms": {
+     "en": [
+      "prediabetes",
+      "pre-diabetes",
+      "prediabetic",
+      "borderline diabetes"
+     ],
+     "vi": [
+      "tiền tiểu đường",
+      "tiền đái tháo đường"
+     ],
+     "es": [
+      "prediabetes",
+      "prediabético",
+      "prediabética"
+     ]
+    }
+   },
+   {
+    "id": "high_cholesterol",
+    "label": {
+     "en": "High cholesterol",
+     "vi": "Mỡ máu cao",
+     "es": "Colesterol alto"
+    },
+    "synonyms": {
+     "en": [
+      "high cholesterol",
+      "cholesterol",
+      "hyperlipidemia"
+     ],
+     "vi": [
+      "mỡ máu cao",
+      "mỡ máu",
+      "cholesterol cao",
+      "máu nhiễm mỡ"
+     ],
+     "es": [
+      "colesterol alto",
+      "colesterol"
+     ]
+    }
+   },
+   {
+    "id": "kidney_disease",
+    "label": {
+     "en": "Kidney disease",
+     "vi": "Bệnh thận",
+     "es": "Enfermedad renal"
+    },
+    "synonyms": {
+     "en": [
+      "kidney disease",
+      "ckd",
+      "chronic kidney disease",
+      "kidney problems",
+      "renal disease",
+      "dialysis"
+     ],
+     "vi": [
+      "bệnh thận",
+      "suy thận",
+      "thận yếu",
+      "chạy thận"
+     ],
+     "es": [
+      "enfermedad renal",
+      "insuficiencia renal",
+      "enfermedad de los riñones",
+      "diálisis"
+     ]
+    }
+   },
+   {
+    "id": "heart_disease",
+    "label": {
+     "en": "Heart disease",
+     "vi": "Bệnh tim",
+     "es": "Enfermedad cardíaca"
+    },
+    "synonyms": {
+     "en": [
+      "heart disease",
+      "heart condition",
+      "cardiovascular disease",
+      "heart problems"
+     ],
+     "vi": [
+      "bệnh tim",
+      "tim mạch",
+      "bệnh tim mạch"
+     ],
+     "es": [
+      "enfermedad cardíaca",
+      "enfermedad del corazón",
+      "cardiopatía",
+      "problemas del corazón"
+     ]
+    }
+   },
+   {
+    "id": "pregnant",
+    "label": {
+     "en": "Pregnant",
+     "vi": "Mang thai",
+     "es": "Embarazada"
+    },
+    "synonyms": {
+     "en": [
+      "pregnant",
+      "pregnancy",
+      "expecting"
+     ],
+     "vi": [
+      "mang thai",
+      "có thai",
+      "có bầu",
+      "bầu"
+     ],
+     "es": [
+      "embarazada",
+      "embarazo"
+     ]
+    },
+    "member_field": "pregnant"
+   }
+  ],
+  "skin": [
+   {
+    "id": "eczema",
+    "label": {
+     "en": "Eczema",
+     "vi": "Chàm",
+     "es": "Eccema"
+    },
+    "synonyms": {
+     "en": [
+      "eczema",
+      "atopic dermatitis",
+      "dermatitis",
+      "atopic skin"
+     ],
+     "vi": [
+      "chàm",
+      "bệnh chàm",
+      "viêm da cơ địa",
+      "chàm sữa"
+     ],
+     "es": [
+      "eccema",
+      "eczema",
+      "dermatitis atópica",
+      "dermatitis"
+     ]
+    }
+   },
+   {
+    "id": "psoriasis",
+    "label": {
+     "en": "Psoriasis",
+     "vi": "Vảy nến",
+     "es": "Psoriasis"
+    },
+    "synonyms": {
+     "en": [
+      "psoriasis"
+     ],
+     "vi": [
+      "vảy nến",
+      "bệnh vảy nến"
+     ],
+     "es": [
+      "psoriasis"
+     ]
+    }
+   },
+   {
+    "id": "sensitive_skin",
+    "label": {
+     "en": "Sensitive skin",
+     "vi": "Da nhạy cảm",
+     "es": "Piel sensible"
+    },
+    "synonyms": {
+     "en": [
+      "sensitive skin",
+      "skin sensitivity",
+      "easily irritated skin"
+     ],
+     "vi": [
+      "da nhạy cảm",
+      "da dễ kích ứng"
+     ],
+     "es": [
+      "piel sensible",
+      "piel delicada"
+     ]
+    }
+   },
+   {
+    "id": "acne_prone",
+    "label": {
+     "en": "Acne-prone",
+     "vi": "Da dễ nổi mụn",
+     "es": "Tendencia al acné"
+    },
+    "synonyms": {
+     "en": [
+      "acne",
+      "acne prone",
+      "acne-prone",
+      "breakouts",
+      "pimples"
+     ],
+     "vi": [
+      "da dễ nổi mụn",
+      "da mụn",
+      "mụn",
+      "mụn trứng cá"
+     ],
+     "es": [
+      "acné",
+      "tendencia al acné",
+      "piel acneica",
+      "granos"
+     ]
+    }
+   },
+   {
+    "id": "rosacea",
+    "label": {
+     "en": "Rosacea",
+     "vi": "Chứng đỏ mặt",
+     "es": "Rosácea"
+    },
+    "synonyms": {
+     "en": [
+      "rosacea"
+     ],
+     "vi": [
+      "chứng đỏ mặt",
+      "rosacea",
+      "bệnh đỏ mặt"
+     ],
+     "es": [
+      "rosácea",
+      "rosacea"
+     ]
+    }
+   },
+   {
+    "id": "fragrance_sensitivity",
+    "label": {
+     "en": "Fragrance sensitivity",
+     "vi": "Nhạy cảm với hương liệu",
+     "es": "Sensibilidad a fragancias"
+    },
+    "synonyms": {
+     "en": [
+      "fragrance sensitivity",
+      "fragrance sensitive",
+      "fragrance allergy",
+      "perfume allergy",
+      "scent sensitivity",
+      "no fragrance",
+      "fragrance free"
+     ],
+     "vi": [
+      "nhạy cảm với hương liệu",
+      "nhạy cảm hương liệu",
+      "dị ứng hương liệu",
+      "dị ứng nước hoa"
+     ],
+     "es": [
+      "sensibilidad a fragancias",
+      "sensibilidad a las fragancias",
+      "alergia a fragancias",
+      "alergia al perfume",
+      "sin fragancia"
+     ]
+    }
+   }
+  ],
+  "diets": [
+   {
+    "id": "vegetarian",
+    "label": {
+     "en": "Vegetarian",
+     "vi": "Ăn chay",
+     "es": "Vegetariano"
+    },
+    "synonyms": {
+     "en": [
+      "vegetarian",
+      "veggie",
+      "lacto ovo vegetarian",
+      "no meat"
+     ],
+     "vi": [
+      "ăn chay",
+      "chay",
+      "không ăn thịt"
+     ],
+     "es": [
+      "vegetariano",
+      "vegetariana",
+      "sin carne"
+     ]
+    }
+   },
+   {
+    "id": "vegan",
+    "label": {
+     "en": "Vegan",
+     "vi": "Thuần chay",
+     "es": "Vegano"
+    },
+    "synonyms": {
+     "en": [
+      "vegan",
+      "plant based",
+      "plant-based",
+      "no animal products"
+     ],
+     "vi": [
+      "thuần chay",
+      "ăn thuần chay"
+     ],
+     "es": [
+      "vegano",
+      "vegana",
+      "veganismo"
+     ]
+    }
+   },
+   {
+    "id": "pescatarian",
+    "label": {
+     "en": "Pescatarian",
+     "vi": "Ăn chay có cá",
+     "es": "Pescetariano"
+    },
+    "synonyms": {
+     "en": [
+      "pescatarian",
+      "pescetarian"
+     ],
+     "vi": [
+      "chay có cá",
+      "ăn chay có cá"
+     ],
+     "es": [
+      "pescetariano",
+      "pescetariana",
+      "pescatariano",
+      "pescatariana"
+     ]
+    }
+   },
+   {
+    "id": "halal",
+    "label": {
+     "en": "Halal",
+     "vi": "Halal",
+     "es": "Halal"
+    },
+    "synonyms": {
+     "en": [
+      "halal",
+      "no pork or alcohol"
+     ],
+     "vi": [
+      "halal",
+      "hồi giáo"
+     ],
+     "es": [
+      "halal"
+     ]
+    }
+   },
+   {
+    "id": "kosher",
+    "label": {
+     "en": "Kosher",
+     "vi": "Kosher",
+     "es": "Kosher"
+    },
+    "synonyms": {
+     "en": [
+      "kosher"
+     ],
+     "vi": [
+      "kosher"
+     ],
+     "es": [
+      "kosher",
+      "kósher"
+     ]
+    }
+   },
+   {
+    "id": "no_pork",
+    "label": {
+     "en": "No pork",
+     "vi": "Không thịt heo",
+     "es": "Sin cerdo"
+    },
+    "synonyms": {
+     "en": [
+      "no pork",
+      "pork free",
+      "avoid pork"
+     ],
+     "vi": [
+      "không thịt heo",
+      "không ăn thịt heo",
+      "không thịt lợn",
+      "không ăn thịt lợn"
+     ],
+     "es": [
+      "sin cerdo",
+      "no cerdo",
+      "no como cerdo"
+     ]
+    }
+   },
+   {
+    "id": "no_beef",
+    "label": {
+     "en": "No beef",
+     "vi": "Không thịt bò",
+     "es": "Sin res"
+    },
+    "synonyms": {
+     "en": [
+      "no beef",
+      "beef free",
+      "avoid beef"
+     ],
+     "vi": [
+      "không thịt bò",
+      "không ăn thịt bò",
+      "không ăn bò"
+     ],
+     "es": [
+      "sin res",
+      "sin carne de res",
+      "no res",
+      "no como res"
+     ]
+    }
+   },
+   {
+    "id": "no_alcohol",
+    "label": {
+     "en": "No alcohol",
+     "vi": "Không cồn",
+     "es": "Sin alcohol"
+    },
+    "synonyms": {
+     "en": [
+      "no alcohol",
+      "alcohol free",
+      "avoid alcohol"
+     ],
+     "vi": [
+      "không cồn",
+      "không rượu",
+      "không uống rượu"
+     ],
+     "es": [
+      "sin alcohol",
+      "no alcohol"
+     ]
+    }
+   },
+   {
+    "id": "jain",
+    "label": {
+     "en": "Jain",
+     "vi": "Chay Jain",
+     "es": "Jainista"
+    },
+    "synonyms": {
+     "en": [
+      "jain",
+      "jain diet"
+     ],
+     "vi": [
+      "chay jain",
+      "jain"
+     ],
+     "es": [
+      "jainista",
+      "jain",
+      "dieta jainista"
+     ]
+    }
+   },
+   {
+    "id": "buddhist_vegetarian",
+    "label": {
+     "en": "Buddhist vegetarian",
+     "vi": "Chay Phật giáo",
+     "es": "Vegetariano budista"
+    },
+    "synonyms": {
+     "en": [
+      "buddhist vegetarian",
+      "buddhist"
+     ],
+     "vi": [
+      "chay phật giáo",
+      "ăn chay phật giáo",
+      "chay ngũ vị tân",
+      "ăn chay trường"
+     ],
+     "es": [
+      "vegetariano budista",
+      "vegetariana budista",
+      "budista"
+     ]
+    }
+   },
+   {
+    "id": "gluten_free",
+    "label": {
+     "en": "Gluten-free",
+     "vi": "Không gluten",
+     "es": "Sin gluten"
+    },
+    "synonyms": {
+     "en": [
+      "gluten free",
+      "gluten-free",
+      "no gluten"
+     ],
+     "vi": [
+      "không gluten",
+      "không có gluten"
+     ],
+     "es": [
+      "sin gluten",
+      "libre de gluten"
+     ]
+    }
+   }
+  ],
+  "less_of": [
+   {
+    "id": "sugar",
+    "label": {
+     "en": "Less sugar",
+     "vi": "Ít đường",
+     "es": "Menos azúcar"
+    },
+    "synonyms": {
+     "en": [
+      "less sugar",
+      "low sugar",
+      "sugar",
+      "cut sugar"
+     ],
+     "vi": [
+      "ít đường",
+      "giảm đường",
+      "hạn chế đường"
+     ],
+     "es": [
+      "menos azúcar",
+      "poco azúcar",
+      "azúcar"
+     ]
+    }
+   },
+   {
+    "id": "sodium",
+    "label": {
+     "en": "Less sodium",
+     "vi": "Ít muối",
+     "es": "Menos sodio"
+    },
+    "synonyms": {
+     "en": [
+      "less sodium",
+      "low sodium",
+      "less salt",
+      "low salt",
+      "sodium",
+      "salt"
+     ],
+     "vi": [
+      "ít muối",
+      "giảm muối",
+      "ăn nhạt",
+      "ít natri"
+     ],
+     "es": [
+      "menos sodio",
+      "poco sodio",
+      "menos sal",
+      "poca sal",
+      "sodio",
+      "sal"
+     ]
+    }
+   },
+   {
+    "id": "saturated_fat",
+    "label": {
+     "en": "Less saturated fat",
+     "vi": "Ít chất béo bão hòa",
+     "es": "Menos grasa saturada"
+    },
+    "synonyms": {
+     "en": [
+      "less saturated fat",
+      "low saturated fat",
+      "saturated fat",
+      "less fat",
+      "low fat"
+     ],
+     "vi": [
+      "ít chất béo bão hòa",
+      "ít béo",
+      "giảm béo",
+      "chất béo bão hòa"
+     ],
+     "es": [
+      "menos grasa saturada",
+      "grasa saturada",
+      "menos grasa",
+      "poca grasa"
+     ]
+    }
+   },
+   {
+    "id": "caffeine",
+    "label": {
+     "en": "Less caffeine",
+     "vi": "Ít caffeine",
+     "es": "Menos cafeína"
+    },
+    "synonyms": {
+     "en": [
+      "less caffeine",
+      "no caffeine",
+      "caffeine",
+      "decaf"
+     ],
+     "vi": [
+      "ít caffeine",
+      "không caffeine",
+      "ít cà phê"
+     ],
+     "es": [
+      "menos cafeína",
+      "sin cafeína",
+      "cafeína"
+     ]
+    }
+   },
+   {
+    "id": "artificial_dyes",
+    "label": {
+     "en": "No artificial dyes",
+     "vi": "Không phẩm màu",
+     "es": "Sin colorantes"
+    },
+    "synonyms": {
+     "en": [
+      "artificial dyes",
+      "no artificial dyes",
+      "food dyes",
+      "dyes",
+      "artificial colors",
+      "no dyes"
+     ],
+     "vi": [
+      "phẩm màu",
+      "không phẩm màu",
+      "phẩm màu nhân tạo",
+      "màu nhân tạo"
+     ],
+     "es": [
+      "colorantes",
+      "sin colorantes",
+      "colorantes artificiales"
+     ]
+    }
+   },
+   {
+    "id": "palm_oil",
+    "label": {
+     "en": "Less palm oil",
+     "vi": "Ít dầu cọ",
+     "es": "Menos aceite de palma"
+    },
+    "synonyms": {
+     "en": [
+      "palm oil",
+      "less palm oil",
+      "no palm oil"
+     ],
+     "vi": [
+      "dầu cọ",
+      "ít dầu cọ",
+      "không dầu cọ"
+     ],
+     "es": [
+      "aceite de palma",
+      "sin aceite de palma",
+      "menos aceite de palma"
+     ]
+    }
+   }
+  ]
+ }
+}

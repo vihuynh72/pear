@@ -1,0 +1,2669 @@
+{
+ "version": "2026-10-02",
+ "items": [
+  {
+   "id": "peanut",
+   "aliases": [
+    "peanuts",
+    "groundnut",
+    "groundnuts"
+   ],
+   "label": {
+    "en": "peanut",
+    "vi": "đậu phộng",
+    "es": "cacahuate"
+   },
+   "label_many": {
+    "en": "peanuts",
+    "es": "cacahuates"
+   },
+   "synonyms": {
+    "en": [
+     "peanut allergy"
+    ],
+    "vi": [
+     "lạc",
+     "dị ứng đậu phộng"
+    ],
+    "es": [
+     "maní",
+     "cacahuate"
+    ]
+   },
+   "terms": {
+    "en": [
+     "peanut",
+     "peanut oil",
+     "peanut butter",
+     "peanut flour",
+     "peanut protein",
+     "peanut paste",
+     "peanut sauce",
+     "peanut brittle",
+     "hydrolyzed peanut protein",
+     "groundnut",
+     "groundnut oil",
+     "arachis oil",
+     "arachis",
+     "monkey nut",
+     "beer nut",
+     "goober",
+     "goober pea",
+     "mandelona",
+     "satay sauce",
+     "cold pressed peanut oil",
+     "roasted peanut",
+     "earthnut oil",
+     "earth nut oil"
+    ],
+    "vi": [
+     "đậu phộng",
+     "đậu phụng",
+     "lạc",
+     "dầu lạc",
+     "dầu đậu phộng",
+     "dầu đậu phụng",
+     "bơ đậu phộng",
+     "bơ lạc",
+     "hạt lạc",
+     "củ lạc",
+     "kẹo lạc",
+     "dau phong",
+     "dau phung",
+     "đậu phọng",
+     "bơ đậu phọng",
+     "dầu đậu phọng",
+     "kẹo đậu phọng",
+     "đậu phọng rang",
+     "dầu phộng",
+     "dầu phụng",
+     "đậu phụng rang",
+     "lạc rang",
+     "đậu phộng rang",
+     "lạc rang muối"
+    ],
+    "es": [
+     "cacahuete",
+     "cacahuetes",
+     "cacahuate",
+     "cacahuates",
+     "maní",
+     "manises",
+     "mani",
+     "aceite de cacahuete",
+     "aceite de cacahuate",
+     "aceite de maní",
+     "mantequilla de maní",
+     "mantequilla de cacahuate",
+     "mantequilla de cacahuete",
+     "crema de cacahuete",
+     "crema de cacahuate",
+     "harina de cacahuete"
+    ],
+    "inci": [
+     "arachis hypogaea",
+     "arachis hypogaea oil",
+     "arachis hypogaea (peanut) oil",
+     "peanut glycerides"
+    ],
+    "fr": [
+     "arachide",
+     "arachides",
+     "cacahuète",
+     "cacahuètes",
+     "huile d'arachide"
+    ],
+    "de": [
+     "erdnuss",
+     "erdnüsse",
+     "erdnussöl"
+    ]
+   },
+   "possible_terms": {
+    "en": [
+     "nuts",
+     "nut",
+     "mixed nuts",
+     "earth nut",
+     "earthnut",
+     "nut pieces",
+     "nut butter",
+     "nut meal",
+     "nut paste",
+     "nut oil",
+     "nut flour",
+     "natural nut flavor",
+     "natural nut flavour",
+     "nut extract",
+     "mole sauce",
+     "mole poblano",
+     "satay",
+     "pad thai sauce"
+    ],
+    "vi": [
+     "các loại hạt",
+     "hạt dinh dưỡng"
+    ],
+    "es": [
+     "frutos secos"
+    ]
+   },
+   "e_numbers": [],
+   "off_tags": [
+    "en:peanuts",
+    "en:peanut"
+   ],
+   "implies": [],
+   "source": "fda_major_allergens",
+   "off_tags_possible": [
+    "en:nuts",
+    "en:nut"
+   ]
+  },
+  {
+   "id": "tree_nut",
+   "aliases": [
+    "tree_nuts",
+    "treenut",
+    "treenuts",
+    "nuts",
+    "tree nut"
+   ],
+   "label": {
+    "en": "tree nut",
+    "vi": "các loại hạt",
+    "es": "frutos secos"
+   },
+   "label_many": {
+    "en": "tree nuts",
+    "vi": "các loại hạt",
+    "es": "frutos secos"
+   },
+   "synonyms": {
+    "en": [
+     "nuts",
+     "nut allergy",
+     "tree nuts"
+    ],
+    "vi": [
+     "hạt",
+     "các loại hạt",
+     "quả hạch"
+    ],
+    "es": [
+     "frutos secos",
+     "frutos de cáscara",
+     "nueces"
+    ]
+   },
+   "terms": {
+    "en": [
+     "tree nut",
+     "tree nuts",
+     "nut",
+     "nuts",
+     "mixed nuts",
+     "almond",
+     "almond flour",
+     "almond meal",
+     "almond butter",
+     "almond milk",
+     "almond oil",
+     "almond extract",
+     "almond paste",
+     "sweet almond oil",
+     "marzipan",
+     "amaretto",
+     "cashew",
+     "cashew nut",
+     "cashew butter",
+     "walnut",
+     "walnut oil",
+     "black walnut",
+     "pecan",
+     "pecan nut",
+     "pistachio",
+     "pistachio nut",
+     "hazelnut",
+     "hazelnut oil",
+     "hazelnut paste",
+     "filbert",
+     "macadamia",
+     "macadamia nut",
+     "macadamia oil",
+     "brazil nut",
+     "pine nut",
+     "pignoli",
+     "pignolia",
+     "pinyon",
+     "pinon",
+     "praline",
+     "gianduja",
+     "nut butter",
+     "nut paste",
+     "nut meal",
+     "nut oil",
+     "nut pieces",
+     "nut flour",
+     "nutella",
+     "chestnut",
+     "chestnut flour",
+     "beechnut",
+     "butternut",
+     "hickory nut",
+     "ginkgo nut",
+     "nangai",
+     "frangipane",
+     "anacardium occidentale",
+     "macadamia nuts",
+     "gianduia",
+     "heartnut",
+     "pignons"
+    ],
+    "vi": [
+     "hạnh nhân",
+     "bột hạnh nhân",
+     "sữa hạnh nhân",
+     "dầu hạnh nhân",
+     "hạt điều",
+     "bơ hạt điều",
+     "óc chó",
+     "quả óc chó",
+     "hạt óc chó",
+     "hồ đào",
+     "hạt hồ đào",
+     "hạt dẻ cười",
+     "hồ trăn",
+     "hạt phỉ",
+     "quả phỉ",
+     "hạt mắc ca",
+     "mắc ca",
+     "macca",
+     "hạt macca",
+     "hạt thông",
+     "hạt dẻ",
+     "quả hạch",
+     "hạt brazil",
+     "hanh nhan",
+     "hat dieu",
+     "oc cho"
+    ],
+    "es": [
+     "almendra",
+     "almendras",
+     "harina de almendra",
+     "leche de almendras",
+     "leche de almendra",
+     "aceite de almendras",
+     "mazapán",
+     "anacardo",
+     "anacardos",
+     "castaña de cajú",
+     "merey",
+     "nuez",
+     "nueces",
+     "nuez de nogal",
+     "pecana",
+     "nuez pecana",
+     "pistacho",
+     "pistachos",
+     "avellana",
+     "avellanas",
+     "nuez de macadamia",
+     "nueces de macadamia",
+     "macadamia",
+     "nuez de brasil",
+     "nueces de brasil",
+     "piñón",
+     "piñones",
+     "castaña",
+     "castañas",
+     "praliné",
+     "frutos secos",
+     "frutos de cáscara",
+     "crema de avellanas",
+     "marañón",
+     "marañones",
+     "nuez de la india",
+     "turrón"
+    ],
+    "inci": [
+     "prunus amygdalus dulcis",
+     "prunus amygdalus dulcis oil",
+     "prunus dulcis",
+     "juglans regia",
+     "juglans regia seed oil",
+     "corylus avellana",
+     "corylus avellana seed oil",
+     "macadamia ternifolia",
+     "macadamia integrifolia",
+     "macadamia ternifolia seed oil",
+     "pistacia vera",
+     "bertholletia excelsa",
+     "carya illinoinensis",
+     "castanea sativa",
+     "anacardium occidentale",
+     "juglans nigra",
+     "juglans nigra shell powder",
+     "pinus koraiensis",
+     "pinus koraiensis seed oil",
+     "pinus pinea seed oil",
+     "corylus americana",
+     "corylus americana seed oil",
+     "carya ovata"
+    ],
+    "fr": [
+     "noisette",
+     "noisettes",
+     "amande",
+     "amandes",
+     "noix",
+     "noix de cajou",
+     "pistache",
+     "pistaches",
+     "fruits à coque"
+    ],
+    "de": [
+     "haselnuss",
+     "haselnüsse",
+     "mandel",
+     "mandeln",
+     "walnuss",
+     "cashewkerne",
+     "schalenfrüchte"
+    ]
+   },
+   "possible_terms": {
+    "en": [
+     "coconut",
+     "coconut oil",
+     "coconut milk",
+     "coconut cream",
+     "coconut flour",
+     "coconut water",
+     "coconut sugar",
+     "desiccated coconut",
+     "shredded coconut",
+     "coconut flakes",
+     "creamed coconut",
+     "shea",
+     "shea butter",
+     "shea nut",
+     "shea oil",
+     "argan oil",
+     "kukui nut oil",
+     "natural nut flavor",
+     "pesto",
+     "nougat",
+     "nata de coco",
+     "baklava",
+     "natural nut flavour",
+     "nut extract"
+    ],
+    "vi": [
+     "dừa",
+     "cơm dừa",
+     "nước cốt dừa",
+     "sữa dừa",
+     "dầu dừa",
+     "cùi dừa",
+     "bơ hạt mỡ",
+     "các loại hạt",
+     "đường dừa"
+    ],
+    "es": [
+     "coco",
+     "aceite de coco",
+     "leche de coco",
+     "crema de coco",
+     "coco rallado",
+     "manteca de karité",
+     "karité",
+     "nata de coco"
+    ],
+    "inci": [
+     "cocos nucifera",
+     "cocos nucifera oil",
+     "butyrospermum parkii",
+     "butyrospermum parkii butter",
+     "vitellaria paradoxa",
+     "argania spinosa",
+     "argania spinosa kernel oil",
+     "butyrospermum parkii (shea) butter",
+     "butyrospermum parkii (shea butter)",
+     "shea nut butter",
+     "cocos nucifera (coconut) milk",
+     "cocos nucifera (coconut) oil",
+     "cocos nucifera (coconut) butter",
+     "cocos nucifera (coconut) fruit juice"
+    ]
+   },
+   "e_numbers": [],
+   "off_tags": [
+    "en:nuts",
+    "en:tree-nuts",
+    "en:almonds",
+    "en:hazelnuts",
+    "en:walnuts",
+    "en:cashew-nuts",
+    "en:pecan-nuts",
+    "en:pistachio-nuts",
+    "en:macadamia-nuts",
+    "en:brazil-nuts"
+   ],
+   "implies": [],
+   "source": "fda_allergen_guidance_2025"
+  },
+  {
+   "id": "milk",
+   "aliases": [
+    "dairy",
+    "milk_protein",
+    "cows_milk",
+    "cow_milk"
+   ],
+   "label": {
+    "en": "milk",
+    "vi": "sữa",
+    "es": "leche"
+   },
+   "synonyms": {
+    "en": [
+     "dairy",
+     "milk allergy",
+     "cow's milk"
+    ],
+    "vi": [
+     "sữa bò",
+     "dị ứng sữa"
+    ],
+    "es": [
+     "lácteos",
+     "leche de vaca"
+    ]
+   },
+   "terms": {
+    "en": [
+     "milk",
+     "whole milk",
+     "skim milk",
+     "skimmed milk",
+     "nonfat milk",
+     "low fat milk",
+     "milk powder",
+     "dried milk",
+     "dry milk",
+     "nonfat dry milk",
+     "milk solids",
+     "nonfat milk solids",
+     "milk protein",
+     "milk protein concentrate",
+     "milk fat",
+     "milkfat",
+     "anhydrous milk fat",
+     "butter oil",
+     "milk chocolate",
+     "white chocolate",
+     "condensed milk",
+     "evaporated milk",
+     "sweetened condensed milk",
+     "buttermilk",
+     "butter",
+     "butterfat",
+     "ghee",
+     "cream",
+     "sour cream",
+     "heavy cream",
+     "whipping cream",
+     "half and half",
+     "ice cream",
+     "creme fraiche",
+     "crème fraîche",
+     "cheese",
+     "cheese powder",
+     "cream cheese",
+     "cottage cheese",
+     "mozzarella",
+     "cheddar",
+     "parmesan",
+     "ricotta",
+     "mascarpone",
+     "gouda",
+     "feta",
+     "brie",
+     "paneer",
+     "quark",
+     "skyr",
+     "curd",
+     "curds",
+     "yogurt",
+     "yoghurt",
+     "kefir",
+     "whey",
+     "whey powder",
+     "whey protein",
+     "whey protein concentrate",
+     "whey protein isolate",
+     "sweet whey",
+     "casein",
+     "caseinate",
+     "caseinates",
+     "sodium caseinate",
+     "calcium caseinate",
+     "potassium caseinate",
+     "magnesium caseinate",
+     "rennet casein",
+     "acid casein",
+     "hydrolyzed casein",
+     "lactalbumin",
+     "lactalbumin phosphate",
+     "lactoglobulin",
+     "lactoferrin",
+     "lactose",
+     "lactulose",
+     "milk sugar",
+     "custard",
+     "dulce de leche",
+     "dairy",
+     "dairy product",
+     "dairy solids",
+     "malted milk",
+     "goat milk",
+     "goat's milk",
+     "sheep milk",
+     "eggnog",
+     "galactooligosaccharides",
+     "hydrolyzed milk protein",
+     "hydrolysed milk protein",
+     "recaldent",
+     "tagatose",
+     "nutella",
+     "lactose monohydrate",
+     "anhydrous lactose",
+     "lactose anhydrous",
+     "pecorino",
+     "pecorino romano",
+     "romano",
+     "romano cheese",
+     "asiago",
+     "provolone",
+     "labneh",
+     "parmigiano",
+     "parmigiano reggiano",
+     "grana padano",
+     "cheese cultures and enzymes"
+    ],
+    "vi": [
+     "sữa",
+     "sữa bò",
+     "sữa tươi",
+     "sữa bột",
+     "bột sữa",
+     "sữa đặc",
+     "sữa tách béo",
+     "sữa nguyên kem",
+     "sữa chua",
+     "bơ",
+     "bơ sữa",
+     "bơ lạt",
+     "bơ mặn",
+     "phô mai",
+     "phô-mai",
+     "pho mát",
+     "kem sữa",
+     "kem tươi",
+     "váng sữa",
+     "whey",
+     "đạm sữa",
+     "đạm whey",
+     "chất béo sữa",
+     "casein",
+     "lactose",
+     "đường lactose",
+     "đường sữa",
+     "sữa dê",
+     "kem phô mai",
+     "phomai",
+     "phômai",
+     "phô mát",
+     "bột phomai",
+     "bột phô mai",
+     "yaourt",
+     "phó mát"
+    ],
+    "es": [
+     "leche",
+     "leche entera",
+     "leche desnatada",
+     "leche descremada",
+     "leche en polvo",
+     "leche condensada",
+     "leche evaporada",
+     "suero de leche",
+     "lactosuero",
+     "suero lácteo",
+     "mantequilla",
+     "manteca de leche",
+     "queso",
+     "quesos",
+     "queso crema",
+     "requesón",
+     "nata",
+     "crema de leche",
+     "crema",
+     "yogur",
+     "yogurt",
+     "kéfir",
+     "caseína",
+     "caseinato",
+     "caseinato de sodio",
+     "caseinato sódico",
+     "proteína de leche",
+     "proteínas lácteas",
+     "lácteos",
+     "derivados lácteos",
+     "sólidos lácteos",
+     "grasa láctea",
+     "lactosa",
+     "cuajada",
+     "leche de cabra",
+     "chocolate con leche",
+     "dulce de leche",
+     "natillas",
+     "suero",
+     "suero lácteo en polvo",
+     "suero de leche en polvo",
+     "proteína de suero",
+     "proteína de suero de leche",
+     "grasa butírica"
+    ],
+    "inci": [
+     "lac",
+     "lactis proteinum",
+     "lactis lipida",
+     "hydrolyzed milk protein",
+     "milk protein",
+     "lactis proteinum hydrolysatum",
+     "butyrum",
+     "lactose",
+     "yogurt extract"
+    ],
+    "fr": [
+     "lait",
+     "lait écrémé",
+     "lait en poudre",
+     "beurre",
+     "crème",
+     "fromage",
+     "lactosérum",
+     "petit-lait",
+     "babeurre"
+    ],
+    "de": [
+     "milch",
+     "vollmilch",
+     "magermilch",
+     "milchpulver",
+     "butter",
+     "sahne",
+     "käse",
+     "molke",
+     "milcheiweiß"
+    ]
+   },
+   "possible_terms": {
+    "en": [
+     "butterscotch",
+     "caramel",
+     "nougat",
+     "margarine",
+     "non-dairy creamer",
+     "creamer",
+     "natural butter flavor",
+     "butter flavor",
+     "pudding",
+     "ganache",
+     "toffee"
+    ],
+    "vi": [
+     "kem",
+     "bơ thực vật",
+     "kem béo",
+     "bột kem"
+    ],
+    "es": [
+     "margarina",
+     "crema batida",
+     "manteca"
+    ]
+   },
+   "e_numbers": [],
+   "e_numbers_possible": [
+    "E966"
+   ],
+   "off_tags": [
+    "en:milk",
+    "en:dairy",
+    "en:lactose"
+   ],
+   "implies": [
+    "lactose"
+   ],
+   "source": "fda_major_allergens"
+  },
+  {
+   "id": "egg",
+   "aliases": [
+    "eggs",
+    "egg_white",
+    "egg_yolk"
+   ],
+   "label": {
+    "en": "egg",
+    "vi": "trứng",
+    "es": "huevo"
+   },
+   "label_many": {
+    "en": "eggs",
+    "es": "huevo"
+   },
+   "synonyms": {
+    "en": [
+     "eggs",
+     "egg allergy"
+    ],
+    "vi": [
+     "dị ứng trứng"
+    ],
+    "es": [
+     "huevos"
+    ]
+   },
+   "terms": {
+    "en": [
+     "egg",
+     "eggs",
+     "whole egg",
+     "egg white",
+     "egg whites",
+     "egg yolk",
+     "egg yolks",
+     "egg powder",
+     "dried egg",
+     "dried egg white",
+     "egg solids",
+     "egg albumen",
+     "egg protein",
+     "egg lecithin",
+     "egg noodle",
+     "egg pasta",
+     "chicken egg",
+     "free range egg",
+     "albumin",
+     "albumen",
+     "ovalbumin",
+     "ovomucoid",
+     "ovomucin",
+     "ovotransferrin",
+     "ovovitellin",
+     "ovoglobulin",
+     "livetin",
+     "vitellin",
+     "lysozyme",
+     "egg lysozyme",
+     "mayonnaise",
+     "mayo",
+     "meringue",
+     "eggnog",
+     "aioli",
+     "hollandaise",
+     "custard",
+     "egg wash",
+     "surimi with egg"
+    ],
+    "vi": [
+     "trứng",
+     "trứng gà",
+     "trứng vịt",
+     "trứng cút",
+     "lòng trắng trứng",
+     "lòng đỏ trứng",
+     "bột trứng",
+     "trứng muối",
+     "sốt mayonnaise",
+     "mayonnaise",
+     "albumin",
+     "mayonaise"
+    ],
+    "es": [
+     "huevo",
+     "huevos",
+     "clara de huevo",
+     "claras de huevo",
+     "clara",
+     "yema",
+     "yema de huevo",
+     "huevo en polvo",
+     "huevo entero",
+     "albúmina",
+     "ovoalbúmina",
+     "lisozima",
+     "mayonesa",
+     "merengue",
+     "huevo de gallina",
+     "ovoproductos",
+     "derivados del huevo",
+     "derivados de huevo"
+    ],
+    "inci": [
+     "ovum",
+     "egg extract",
+     "egg yolk extract",
+     "albumen",
+     "ovalbumin",
+     "hydrolyzed egg protein"
+    ],
+    "fr": [
+     "oeuf",
+     "oeufs",
+     "œuf",
+     "œufs",
+     "blanc d'oeuf",
+     "jaune d'oeuf"
+    ],
+    "de": [
+     "eier",
+     "hühnerei",
+     "vollei",
+     "eigelb",
+     "eiweiß"
+    ]
+   },
+   "possible_terms": {
+    "en": [
+     "lecithin from egg"
+    ]
+   },
+   "e_numbers": [
+    "E1105"
+   ],
+   "off_tags": [
+    "en:eggs",
+    "en:egg"
+   ],
+   "implies": [],
+   "source": "fda_major_allergens"
+  },
+  {
+   "id": "wheat",
+   "aliases": [
+    "wheat_allergy"
+   ],
+   "label": {
+    "en": "wheat",
+    "vi": "lúa mì",
+    "es": "trigo"
+   },
+   "synonyms": {
+    "en": [
+     "wheat allergy"
+    ],
+    "vi": [
+     "bột mì"
+    ],
+    "es": [
+     "harina de trigo"
+    ]
+   },
+   "terms": {
+    "en": [
+     "wheat",
+     "wheat flour",
+     "whole wheat",
+     "whole wheat flour",
+     "whole grain wheat",
+     "enriched flour",
+     "enriched wheat flour",
+     "bleached flour",
+     "unbleached flour",
+     "all-purpose flour",
+     "all purpose flour",
+     "bread flour",
+     "cake flour",
+     "pastry flour",
+     "self-raising flour",
+     "self-rising flour",
+     "plain flour",
+     "wheat starch",
+     "modified wheat starch",
+     "wheat protein",
+     "hydrolyzed wheat protein",
+     "hydrolysed wheat protein",
+     "wheat germ",
+     "wheat bran",
+     "wheat gluten",
+     "vital wheat gluten",
+     "wheat berries",
+     "cracked wheat",
+     "semolina",
+     "durum",
+     "durum wheat",
+     "durum wheat semolina",
+     "spelt",
+     "farro",
+     "kamut",
+     "khorasan",
+     "einkorn",
+     "emmer",
+     "bulgur",
+     "bulghur",
+     "couscous",
+     "seitan",
+     "graham",
+     "graham flour",
+     "triticale",
+     "freekeh",
+     "farina",
+     "matzo",
+     "matzah",
+     "matza",
+     "panko",
+     "breadcrumbs",
+     "bread crumbs",
+     "cracker meal",
+     "udon",
+     "wheat noodle",
+     "wheat noodles",
+     "wheat dextrin",
+     "wheat maltodextrin",
+     "sprouted wheat",
+     "orzo",
+     "matzoh",
+     "matzoh meal",
+     "matzo meal",
+     "atta",
+     "atta flour",
+     "sooji",
+     "suji",
+     "rava",
+     "maida"
+    ],
+    "vi": [
+     "lúa mì",
+     "bột mì",
+     "bột lúa mì",
+     "tinh bột mì",
+     "tinh bột lúa mì",
+     "gluten lúa mì",
+     "bột mì đa dụng",
+     "bánh mì",
+     "bột chiên xù",
+     "mì căn",
+     "bot mi",
+     "lua mi",
+     "bột mỳ",
+     "lúa mỳ",
+     "bánh mỳ",
+     "tinh bột mỳ",
+     "bột chiên giòn",
+     "bột mỳ đa dụng"
+    ],
+    "es": [
+     "trigo",
+     "harina de trigo",
+     "harina de trigo integral",
+     "harina enriquecida",
+     "trigo integral",
+     "sémola",
+     "sémola de trigo",
+     "semolina",
+     "trigo duro",
+     "espelta",
+     "escanda",
+     "cuscús",
+     "bulgur",
+     "salvado de trigo",
+     "germen de trigo",
+     "almidón de trigo",
+     "gluten de trigo",
+     "proteína de trigo",
+     "pan rallado"
+    ],
+    "inci": [
+     "triticum vulgare",
+     "triticum aestivum",
+     "triticum durum",
+     "triticum spelta",
+     "triticum vulgare germ oil",
+     "triticum vulgare bran extract",
+     "hydrolyzed wheat protein",
+     "hydrolyzed wheat starch",
+     "wheat germ oil",
+     "wheat amino acids"
+    ],
+    "fr": [
+     "blé",
+     "farine de blé",
+     "froment",
+     "semoule de blé"
+    ],
+    "de": [
+     "weizen",
+     "weizenmehl",
+     "dinkel",
+     "hartweizengrieß"
+    ]
+   },
+   "possible_terms": {
+    "en": [
+     "flour",
+     "dextrin",
+     "soy sauce",
+     "shoyu",
+     "teriyaki sauce",
+     "hydrolyzed vegetable protein",
+     "hydrolysed vegetable protein",
+     "cereal",
+     "cereals",
+     "starch (wheat)",
+     "breading",
+     "batter",
+     "croutons",
+     "crackers",
+     "biscuit",
+     "cookie",
+     "wafer",
+     "pastry",
+     "noodle",
+     "dumpling wrapper",
+     "gluten",
+     "bread",
+     "pasta",
+     "noodles",
+     "egg noodle",
+     "egg noodles",
+     "egg pasta",
+     "tempura",
+     "tempura flakes",
+     "tempura batter",
+     "phyllo",
+     "filo",
+     "phyllo dough",
+     "filo pastry",
+     "filo dough",
+     "wonton",
+     "wonton wrapper",
+     "wonton wrappers",
+     "pie crust",
+     "pizza dough",
+     "naan",
+     "bagel",
+     "croissant",
+     "cake pieces",
+     "brownie pieces",
+     "cookie pieces",
+     "bread dough",
+     "ramen",
+     "tabbouleh",
+     "wheatgrass",
+     "gochujang"
+    ],
+    "vi": [
+     "mì",
+     "nước tương",
+     "xì dầu",
+     "bánh quy",
+     "vỏ bánh",
+     "mì sợi",
+     "mỳ",
+     "sợi mỳ",
+     "mỳ ăn liền",
+     "mỳ tôm"
+    ],
+    "es": [
+     "harina",
+     "salsa de soja",
+     "salsa de soya",
+     "galleta",
+     "galletas",
+     "rebozado",
+     "empanado",
+     "cereales",
+     "pan",
+     "pasta",
+     "fideos"
+    ]
+   },
+   "e_numbers": [],
+   "off_tags": [
+    "en:wheat"
+   ],
+   "off_tags_possible": [
+    "en:gluten",
+    "en:cereals-containing-gluten"
+   ],
+   "implies": [
+    "gluten"
+   ],
+   "source": "fda_major_allergens"
+  },
+  {
+   "id": "soy",
+   "aliases": [
+    "soya",
+    "soybean",
+    "soybeans",
+    "soy_bean"
+   ],
+   "label": {
+    "en": "soy",
+    "vi": "đậu nành",
+    "es": "soja"
+   },
+   "synonyms": {
+    "en": [
+     "soya",
+     "soybean",
+     "soy allergy"
+    ],
+    "vi": [
+     "đậu tương",
+     "đỗ tương"
+    ],
+    "es": [
+     "soya"
+    ]
+   },
+   "terms": {
+    "en": [
+     "soy",
+     "soya",
+     "soybean",
+     "soybeans",
+     "soy bean",
+     "soya bean",
+     "soy protein",
+     "soy protein isolate",
+     "soy protein concentrate",
+     "isolated soy protein",
+     "soy flour",
+     "soya flour",
+     "soy lecithin",
+     "soya lecithin",
+     "soy sauce",
+     "soya sauce",
+     "soy milk",
+     "soya milk",
+     "soy nuts",
+     "soy fiber",
+     "soy grits",
+     "textured soy protein",
+     "textured vegetable protein",
+     "tvp",
+     "hydrolyzed soy protein",
+     "tofu",
+     "edamame",
+     "miso",
+     "tempeh",
+     "natto",
+     "shoyu",
+     "tamari",
+     "yuba",
+     "okara",
+     "kinako",
+     "bean curd",
+     "soybean paste",
+     "doenjang",
+     "fermented soybean",
+     "liquid aminos",
+     "kecap manis",
+     "kecap",
+     "black bean sauce"
+    ],
+    "vi": [
+     "đậu nành",
+     "đỗ tương",
+     "đậu tương",
+     "nước tương",
+     "xì dầu",
+     "xì-dầu",
+     "đậu phụ",
+     "đậu hũ",
+     "tàu hũ",
+     "tào phớ",
+     "tàu hủ",
+     "sữa đậu nành",
+     "dầu đậu nành",
+     "lecithin đậu nành",
+     "bột đậu nành",
+     "đạm đậu nành",
+     "tương đậu nành",
+     "chao",
+     "tương miso",
+     "dau nanh",
+     "đậu hủ",
+     "váng đậu",
+     "phù trúc",
+     "tàu hũ ky",
+     "tàu hủ ky"
+    ],
+    "es": [
+     "soja",
+     "soya",
+     "salsa de soja",
+     "salsa de soya",
+     "lecitina de soja",
+     "lecitina de soya",
+     "proteína de soja",
+     "proteína de soya",
+     "harina de soja",
+     "leche de soja",
+     "bebida de soja",
+     "tofu",
+     "edamame",
+     "miso",
+     "tempeh",
+     "habas de soja",
+     "frijol de soya"
+    ],
+    "inci": [
+     "glycine soja",
+     "glycine max",
+     "glycine soja oil",
+     "glycine soja seed extract",
+     "hydrolyzed soy protein",
+     "soy isoflavones"
+    ],
+    "fr": [
+     "soja",
+     "lécithine de soja"
+    ],
+    "de": [
+     "soja",
+     "sojalecithin",
+     "sojabohnen"
+    ]
+   },
+   "possible_terms": {
+    "en": [
+     "lecithin",
+     "lecithins",
+     "soybean oil",
+     "soy oil",
+     "soya oil",
+     "vegetable oil (soy)",
+     "hydrolyzed vegetable protein",
+     "hydrolysed vegetable protein",
+     "vegetable protein",
+     "plant protein",
+     "teriyaki sauce",
+     "hoisin sauce",
+     "vegetable shortening",
+     "gochujang",
+     "ponzu"
+    ],
+    "vi": [
+     "lecithin",
+     "lecitin",
+     "tương"
+    ],
+    "es": [
+     "lecitina",
+     "lecitinas",
+     "aceite de soja",
+     "aceite de soya",
+     "proteína vegetal"
+    ]
+   },
+   "e_numbers": [],
+   "e_numbers_possible": [
+    "E322",
+    "E426",
+    "E479b"
+   ],
+   "off_tags": [
+    "en:soybeans",
+    "en:soy",
+    "en:soya"
+   ],
+   "implies": [],
+   "source": "fda_major_allergens"
+  },
+  {
+   "id": "fish",
+   "aliases": [
+    "fin_fish",
+    "finfish"
+   ],
+   "label": {
+    "en": "fish",
+    "vi": "cá",
+    "es": "pescado"
+   },
+   "synonyms": {
+    "en": [
+     "fish allergy",
+     "seafood"
+    ],
+    "vi": [
+     "hải sản"
+    ],
+    "es": [
+     "mariscos"
+    ]
+   },
+   "terms": {
+    "en": [
+     "fish",
+     "fish sauce",
+     "fish oil",
+     "fish gelatin",
+     "fish gelatine",
+     "fish extract",
+     "fish stock",
+     "fish broth",
+     "fish powder",
+     "fish protein",
+     "fish collagen",
+     "fish roe",
+     "roe",
+     "caviar",
+     "cod",
+     "cod liver oil",
+     "salmon",
+     "tuna",
+     "anchovy",
+     "anchovies",
+     "anchovy paste",
+     "sardine",
+     "mackerel",
+     "tilapia",
+     "haddock",
+     "hake",
+     "pollock",
+     "pollack",
+     "herring",
+     "trout",
+     "catfish",
+     "halibut",
+     "flounder",
+     "snapper",
+     "swordfish",
+     "mahi mahi",
+     "carp",
+     "eel",
+     "bonito",
+     "bonito flakes",
+     "katsuobushi",
+     "dashi",
+     "surimi",
+     "imitation crab",
+     "crab stick",
+     "fish ball",
+     "fish cake",
+     "worcestershire sauce",
+     "worcestershire",
+     "isinglass",
+     "pangasius",
+     "basa",
+     "sprat",
+     "whitebait",
+     "pilchard",
+     "omega-3 fish oil",
+     "swai",
+     "whiting",
+     "rockfish",
+     "pacific rockfish",
+     "grouper",
+     "sea bass",
+     "striped bass",
+     "bass",
+     "perch",
+     "walleye",
+     "pike",
+     "sole",
+     "mahimahi",
+     "mahi-mahi",
+     "branzino",
+     "barramundi",
+     "monkfish",
+     "arctic char",
+     "sablefish",
+     "black cod",
+     "orange roughy",
+     "yellowtail",
+     "hamachi",
+     "sturgeon",
+     "turbot",
+     "lingcod",
+     "cobia",
+     "pompano",
+     "wahoo",
+     "shad",
+     "lox",
+     "unagi",
+     "tobiko",
+     "ikura",
+     "masago",
+     "smelt",
+     "capelin",
+     "nam pla",
+     "patis",
+     "shark",
+     "shark liver oil",
+     "shark cartilage",
+     "marine collagen",
+     "hydrolyzed marine collagen",
+     "surimi with egg",
+     "surimi with egg white"
+    ],
+    "vi": [
+     "cá",
+     "nước mắm",
+     "mắm",
+     "mắm nêm",
+     "dầu cá",
+     "bột cá",
+     "chả cá",
+     "cá cơm",
+     "cá ngừ",
+     "cá hồi",
+     "cá thu",
+     "cá basa",
+     "cá tra",
+     "cá rô phi",
+     "cá trích",
+     "cá mòi",
+     "cá viên",
+     "chả cá viên",
+     "nuoc mam",
+     "lươn",
+     "cá mập"
+    ],
+    "es": [
+     "pescado",
+     "pescados",
+     "anchoa",
+     "anchoas",
+     "boquerón",
+     "boquerones",
+     "atún",
+     "salmón",
+     "bacalao",
+     "sardina",
+     "sardinas",
+     "caballa",
+     "merluza",
+     "trucha",
+     "abadejo",
+     "arenque",
+     "salsa de pescado",
+     "aceite de pescado",
+     "gelatina de pescado",
+     "surimi",
+     "caldo de pescado",
+     "huevas de pescado",
+     "tiburón",
+     "aceite de hígado de tiburón"
+    ],
+    "inci": [
+     "piscum collagen",
+     "hydrolyzed fish collagen",
+     "fish glycerides",
+     "salmo salar extract",
+     "piscum iecur oil"
+    ],
+    "fr": [
+     "poisson",
+     "poissons",
+     "anchois",
+     "thon",
+     "saumon"
+    ],
+    "de": [
+     "fisch",
+     "sardellen",
+     "thunfisch",
+     "lachs"
+    ]
+   },
+   "possible_terms": {
+    "en": [
+     "omega-3",
+     "omega 3",
+     "dha",
+     "caesar dressing",
+     "seafood",
+     "seafood flavor",
+     "fish flavor",
+     "seafood extract",
+     "squalene",
+     "bagoong"
+    ],
+    "vi": [
+     "hải sản"
+    ],
+    "es": [
+     "mariscos",
+     "omega 3"
+    ]
+   },
+   "e_numbers": [],
+   "off_tags": [
+    "en:fish"
+   ],
+   "implies": [],
+   "source": "fda_major_allergens"
+  },
+  {
+   "id": "shellfish",
+   "aliases": [
+    "crustacean",
+    "crustaceans",
+    "crustacean_shellfish",
+    "mollusc",
+    "molluscs",
+    "mollusk",
+    "mollusks",
+    "shell_fish"
+   ],
+   "label": {
+    "en": "shellfish",
+    "vi": "hải sản có vỏ",
+    "es": "mariscos"
+   },
+   "synonyms": {
+    "en": [
+     "crustacean",
+     "shrimp allergy",
+     "mollusc"
+    ],
+    "vi": [
+     "tôm cua",
+     "giáp xác",
+     "nhuyễn thể"
+    ],
+    "es": [
+     "crustáceos",
+     "moluscos"
+    ]
+   },
+   "terms": {
+    "en": [
+     "shellfish",
+     "crustacean",
+     "crustaceans",
+     "shrimp",
+     "prawn",
+     "prawns",
+     "crab",
+     "crabmeat",
+     "crab meat",
+     "crab extract",
+     "lobster",
+     "crayfish",
+     "crawfish",
+     "krill",
+     "scampi",
+     "langoustine",
+     "shrimp paste",
+     "shrimp powder",
+     "dried shrimp",
+     "shrimp extract",
+     "prawn crackers",
+     "shrimp chips",
+     "mollusc",
+     "molluscs",
+     "mollusk",
+     "mollusks",
+     "clam",
+     "clams",
+     "clam juice",
+     "mussel",
+     "mussels",
+     "oyster",
+     "oysters",
+     "oyster sauce",
+     "oyster extract",
+     "scallop",
+     "scallops",
+     "squid",
+     "octopus",
+     "cuttlefish",
+     "calamari",
+     "abalone",
+     "cockle",
+     "cockles",
+     "whelk",
+     "periwinkle",
+     "snail",
+     "escargot",
+     "sea urchin",
+     "conch",
+     "krill oil",
+     "crawdad",
+     "geoduck",
+     "quahog",
+     "limpet",
+     "barnacle",
+     "langouste",
+     "tomalley",
+     "belacan",
+     "kapi"
+    ],
+    "vi": [
+     "tôm",
+     "tép",
+     "cua",
+     "ghẹ",
+     "mắm tôm",
+     "mắm ruốc",
+     "ruốc",
+     "tôm khô",
+     "bột tôm",
+     "tôm hùm",
+     "nghêu",
+     "ngao",
+     "sò",
+     "sò điệp",
+     "hến",
+     "mực",
+     "bạch tuộc",
+     "hàu",
+     "ốc",
+     "dầu hào",
+     "bánh phồng tôm",
+     "tôm he",
+     "tôm sú",
+     "bào ngư",
+     "điệp",
+     "bề bề"
+    ],
+    "es": [
+     "camarón",
+     "camarones",
+     "gamba",
+     "gambas",
+     "langosta",
+     "langostino",
+     "langostinos",
+     "cangrejo",
+     "cangrejos",
+     "cigala",
+     "cigalas",
+     "almeja",
+     "almejas",
+     "mejillón",
+     "mejillones",
+     "ostra",
+     "ostras",
+     "ostión",
+     "ostiones",
+     "vieira",
+     "vieiras",
+     "calamar",
+     "calamares",
+     "pulpo",
+     "sepia",
+     "salsa de ostras",
+     "marisco",
+     "mariscos",
+     "crustáceos",
+     "moluscos",
+     "caracol",
+     "caracoles",
+     "pasta de camarón",
+     "jaiba",
+     "berberechos",
+     "berberecho",
+     "navajas",
+     "navaja",
+     "chipirones",
+     "chipirón"
+    ],
+    "inci": [
+     "chitosan",
+     "hydrolyzed oyster shell",
+     "ostrea shell extract"
+    ],
+    "fr": [
+     "crustacés",
+     "crevette",
+     "crevettes",
+     "mollusques",
+     "moules",
+     "huîtres"
+    ],
+    "de": [
+     "krebstiere",
+     "garnelen",
+     "weichtiere",
+     "muscheln"
+    ]
+   },
+   "possible_terms": {
+    "en": [
+     "glucosamine",
+     "glucosamine sulfate",
+     "glucosamine hydrochloride",
+     "chitosan",
+     "chitin",
+     "seafood",
+     "seafood flavor",
+     "seafood extract",
+     "calcium (oyster shell)",
+     "oyster shell calcium",
+     "bouillabaisse",
+     "crab stick",
+     "imitation crab",
+     "surimi",
+     "bagoong"
+    ],
+    "vi": [
+     "hải sản",
+     "glucosamine"
+    ],
+    "es": [
+     "glucosamina",
+     "quitosano"
+    ]
+   },
+   "e_numbers": [],
+   "off_tags": [
+    "en:crustaceans",
+    "en:molluscs",
+    "en:shellfish",
+    "en:crustacean",
+    "en:mollusc"
+   ],
+   "implies": [],
+   "source": "fda_major_allergens"
+  },
+  {
+   "id": "sesame",
+   "aliases": [
+    "sesame_seed",
+    "sesame_seeds"
+   ],
+   "label": {
+    "en": "sesame",
+    "vi": "mè",
+    "es": "sésamo"
+   },
+   "synonyms": {
+    "en": [
+     "sesame seeds",
+     "sesame allergy"
+    ],
+    "vi": [
+     "vừng"
+    ],
+    "es": [
+     "ajonjolí"
+    ]
+   },
+   "terms": {
+    "en": [
+     "sesame",
+     "sesame seed",
+     "sesame seeds",
+     "sesame oil",
+     "toasted sesame oil",
+     "sesame paste",
+     "sesame flour",
+     "sesame butter",
+     "toasted sesame",
+     "black sesame",
+     "white sesame",
+     "tahini",
+     "tahina",
+     "tehina",
+     "benne",
+     "benne seed",
+     "benniseed",
+     "gingelly",
+     "gingelly oil",
+     "til",
+     "til oil",
+     "sesamol",
+     "gomasio",
+     "halva",
+     "halvah",
+     "simsim",
+     "gomashio"
+    ],
+    "vi": [
+     "mè",
+     "vừng",
+     "dầu mè",
+     "dầu vừng",
+     "hạt mè",
+     "hạt vừng",
+     "muối mè",
+     "muối vừng",
+     "mè đen",
+     "mè trắng",
+     "vừng đen",
+     "vừng trắng",
+     "kẹo mè",
+     "bánh mè",
+     "xốt mè",
+     "sốt mè",
+     "mè rang",
+     "vừng rang"
+    ],
+    "es": [
+     "sésamo",
+     "sesamo",
+     "ajonjolí",
+     "ajonjoli",
+     "semillas de sésamo",
+     "semilla de sésamo",
+     "aceite de sésamo",
+     "aceite de ajonjolí",
+     "pasta de sésamo",
+     "tahina",
+     "tahini"
+    ],
+    "inci": [
+     "sesamum indicum",
+     "sesamum indicum oil",
+     "sesamum indicum seed oil",
+     "sesamum indicum (sesame) seed oil"
+    ],
+    "fr": [
+     "sésame",
+     "graines de sésame"
+    ],
+    "de": [
+     "sesam",
+     "sesamsamen"
+    ]
+   },
+   "possible_terms": {
+    "en": [
+     "za'atar",
+     "zaatar",
+     "furikake",
+     "hummus",
+     "dukkah",
+     "everything bagel seasoning",
+     "shichimi",
+     "shichimi togarashi"
+    ],
+    "es": [
+     "hummus"
+    ],
+    "vi": []
+   },
+   "e_numbers": [],
+   "off_tags": [
+    "en:sesame-seeds",
+    "en:sesame"
+   ],
+   "implies": [],
+   "source": "fda_major_allergens"
+  },
+  {
+   "id": "gluten",
+   "aliases": [
+    "celiac",
+    "coeliac",
+    "celiac_disease",
+    "gluten_intolerance"
+   ],
+   "label": {
+    "en": "gluten",
+    "vi": "gluten",
+    "es": "gluten"
+   },
+   "synonyms": {
+    "en": [
+     "celiac",
+     "coeliac",
+     "celiac disease",
+     "gluten intolerance"
+    ],
+    "vi": [
+     "bệnh celiac",
+     "không dung nạp gluten"
+    ],
+    "es": [
+     "celiaquía",
+     "celíaco"
+    ]
+   },
+   "terms": {
+    "en": [
+     "gluten",
+     "barley",
+     "barley malt",
+     "malted barley",
+     "barley flour",
+     "barley flakes",
+     "pearl barley",
+     "barley grass",
+     "rye",
+     "rye flour",
+     "rye bread",
+     "malt",
+     "malt extract",
+     "malt syrup",
+     "malt flavoring",
+     "malt flavouring",
+     "malt vinegar",
+     "malted milk",
+     "brewer's yeast",
+     "brewers yeast",
+     "triticale",
+     "beer",
+     "ale",
+     "lager",
+     "stout",
+     "hordeum vulgare",
+     "secale cereale",
+     "hydrolyzed barley protein"
+    ],
+    "vi": [
+     "gluten",
+     "lúa mạch",
+     "lúa mạch đen",
+     "mạch nha",
+     "chiết xuất mạch nha",
+     "bia",
+     "men bia",
+     "đại mạch"
+    ],
+    "es": [
+     "gluten",
+     "cebada",
+     "centeno",
+     "malta",
+     "extracto de malta",
+     "jarabe de malta",
+     "vinagre de malta",
+     "cerveza",
+     "levadura de cerveza",
+     "harina de centeno",
+     "harina de cebada"
+    ],
+    "inci": [
+     "hordeum vulgare",
+     "hordeum vulgare extract",
+     "secale cereale"
+    ],
+    "fr": [
+     "orge",
+     "seigle",
+     "malt d'orge"
+    ],
+    "de": [
+     "gerste",
+     "roggen",
+     "gerstenmalz"
+    ]
+   },
+   "possible_terms": {
+    "en": [
+     "oat",
+     "oats",
+     "oatmeal",
+     "oat flour",
+     "oat bran",
+     "oat fiber",
+     "oat milk",
+     "rolled oats",
+     "oat flakes",
+     "avena sativa",
+     "colloidal oatmeal",
+     "avena sativa kernel flour",
+     "avena sativa (oat) kernel flour"
+    ],
+    "vi": [
+     "yến mạch",
+     "bột yến mạch",
+     "sữa yến mạch"
+    ],
+    "es": [
+     "avena",
+     "copos de avena",
+     "harina de avena",
+     "leche de avena",
+     "bebida de avena"
+    ],
+    "fr": [
+     "avoine"
+    ],
+    "inci": [
+     "avena sativa (oat) kernel milk",
+     "avena sativa (oat) kernel flour",
+     "avena sativa (oat) kernel extract"
+    ]
+   },
+   "e_numbers": [],
+   "off_tags": [
+    "en:gluten",
+    "en:cereals-containing-gluten",
+    "en:barley",
+    "en:rye"
+   ],
+   "off_tags_possible": [
+    "en:oats"
+   ],
+   "implies": [],
+   "source": "fda_major_allergens"
+  },
+  {
+   "id": "lactose",
+   "aliases": [
+    "lactose_intolerance"
+   ],
+   "label": {
+    "en": "lactose",
+    "vi": "lactose",
+    "es": "lactosa"
+   },
+   "synonyms": {
+    "en": [
+     "lactose intolerance",
+     "lactose intolerant"
+    ],
+    "vi": [
+     "không dung nạp lactose",
+     "đường sữa"
+    ],
+    "es": [
+     "intolerancia a la lactosa"
+    ]
+   },
+   "terms": {
+    "en": [
+     "lactose",
+     "milk sugar",
+     "lactose monohydrate",
+     "anhydrous lactose"
+    ],
+    "vi": [
+     "lactose",
+     "đường lactose",
+     "đường sữa"
+    ],
+    "es": [
+     "lactosa"
+    ]
+   },
+   "possible_terms": {
+    "en": [
+     "lactitol"
+    ]
+   },
+   "e_numbers": [],
+   "e_numbers_possible": [
+    "E966"
+   ],
+   "off_tags": [
+    "en:lactose"
+   ],
+   "implies": [],
+   "source": "eu_fic_annex_ii"
+  },
+  {
+   "id": "mustard",
+   "aliases": [
+    "mustard_seed"
+   ],
+   "label": {
+    "en": "mustard",
+    "vi": "mù tạt",
+    "es": "mostaza"
+   },
+   "synonyms": {
+    "en": [
+     "mustard seed"
+    ],
+    "vi": [
+     "mù tạc"
+    ],
+    "es": []
+   },
+   "terms": {
+    "en": [
+     "mustard",
+     "mustard seed",
+     "mustard seeds",
+     "mustard flour",
+     "mustard oil",
+     "mustard powder",
+     "ground mustard",
+     "mustard bran",
+     "dijon",
+     "dijon mustard",
+     "yellow mustard",
+     "brown mustard",
+     "mustard greens",
+     "brassica juncea",
+     "sinapis alba",
+     "brassica nigra"
+    ],
+    "vi": [
+     "mù tạt",
+     "mù tạc",
+     "hạt mù tạt",
+     "hạt cải",
+     "sốt mù tạt"
+    ],
+    "es": [
+     "mostaza",
+     "semillas de mostaza",
+     "harina de mostaza",
+     "aceite de mostaza"
+    ],
+    "inci": [
+     "sinapis alba seed extract",
+     "brassica juncea seed oil",
+     "brassica alba",
+     "brassica alba seed extract"
+    ],
+    "fr": [
+     "moutarde"
+    ],
+    "de": [
+     "senf"
+    ]
+   },
+   "possible_terms": {
+    "en": [
+     "spices"
+    ]
+   },
+   "e_numbers": [],
+   "off_tags": [
+    "en:mustard"
+   ],
+   "implies": [],
+   "source": "eu_fic_annex_ii"
+  },
+  {
+   "id": "sulfite",
+   "aliases": [
+    "sulfites",
+    "sulphite",
+    "sulphites",
+    "sulfur_dioxide",
+    "sulphur_dioxide"
+   ],
+   "label": {
+    "en": "sulfites",
+    "vi": "sulfit",
+    "es": "sulfitos"
+   },
+   "label_many": {
+    "en": "sulfites"
+   },
+   "synonyms": {
+    "en": [
+     "sulphites",
+     "sulfur dioxide"
+    ],
+    "vi": [
+     "lưu huỳnh đioxit"
+    ],
+    "es": [
+     "dióxido de azufre"
+    ]
+   },
+   "terms": {
+    "en": [
+     "sulfite",
+     "sulfites",
+     "sulphite",
+     "sulphites",
+     "sulfur dioxide",
+     "sulphur dioxide",
+     "sodium sulfite",
+     "sodium sulphite",
+     "sodium bisulfite",
+     "sodium bisulphite",
+     "sodium hydrogen sulfite",
+     "sodium metabisulfite",
+     "sodium metabisulphite",
+     "potassium metabisulfite",
+     "potassium metabisulphite",
+     "potassium bisulfite",
+     "potassium bisulphite",
+     "potassium sulfite",
+     "calcium sulfite",
+     "calcium bisulfite",
+     "calcium hydrogen sulfite",
+     "sulfiting agents",
+     "sulphiting agents",
+     "sulfured",
+     "sulphured"
+    ],
+    "vi": [
+     "sulfit",
+     "sunfit",
+     "lưu huỳnh đioxit",
+     "lưu huỳnh dioxit",
+     "natri metabisulfit",
+     "natri bisulfit",
+     "kali metabisulfit"
+    ],
+    "es": [
+     "sulfito",
+     "sulfitos",
+     "dióxido de azufre",
+     "anhídrido sulfuroso",
+     "metabisulfito de sodio",
+     "metabisulfito sódico",
+     "bisulfito de sodio",
+     "sulfito de sodio",
+     "metabisulfito de potasio",
+     "metabisulfito",
+     "metabisulfito potásico",
+     "bisulfito",
+     "bisulfito de potasio"
+    ],
+    "inci": [
+     "sodium sulfite",
+     "sodium metabisulfite",
+     "sodium bisulfite"
+    ],
+    "fr": [
+     "sulfites",
+     "anhydride sulfureux"
+    ],
+    "de": [
+     "sulfite",
+     "schwefeldioxid"
+    ]
+   },
+   "possible_terms": {
+    "en": [
+     "dried apricots",
+     "wine vinegar",
+     "wine",
+     "red wine",
+     "white wine",
+     "red wine vinegar",
+     "white wine vinegar",
+     "cooking wine",
+     "rice wine",
+     "port wine",
+     "shaoxing wine",
+     "balsamic vinegar",
+     "golden raisins",
+     "sherry vinegar",
+     "champagne vinegar"
+    ],
+    "es": []
+   },
+   "e_numbers": [
+    "E220",
+    "E221",
+    "E222",
+    "E223",
+    "E224",
+    "E225",
+    "E226",
+    "E227",
+    "E228"
+   ],
+   "off_tags": [
+    "en:sulphur-dioxide-and-sulphites",
+    "en:sulfites",
+    "en:sulphites"
+   ],
+   "implies": [],
+   "source": "eu_fic_annex_ii"
+  },
+  {
+   "id": "celery",
+   "aliases": [
+    "celeriac"
+   ],
+   "label": {
+    "en": "celery",
+    "vi": "cần tây",
+    "es": "apio"
+   },
+   "synonyms": {
+    "en": [
+     "celeriac"
+    ],
+    "vi": [],
+    "es": []
+   },
+   "terms": {
+    "en": [
+     "celery",
+     "celeriac",
+     "celery seed",
+     "celery salt",
+     "celery powder",
+     "celery extract",
+     "celery juice",
+     "celery juice powder",
+     "celery root",
+     "apium graveolens"
+    ],
+    "vi": [
+     "cần tây",
+     "hạt cần tây",
+     "muối cần tây"
+    ],
+    "es": [
+     "apio",
+     "apionabo",
+     "semillas de apio",
+     "sal de apio",
+     "apio nabo"
+    ],
+    "fr": [
+     "céleri"
+    ],
+    "de": [
+     "sellerie"
+    ]
+   },
+   "possible_terms": {
+    "en": [
+     "vegetable broth",
+     "vegetable stock",
+     "spices",
+     "natural flavors",
+     "natural flavor",
+     "natural flavour",
+     "natural flavours",
+     "natural flavoring",
+     "natural flavorings",
+     "natural flavouring"
+    ],
+    "es": []
+   },
+   "e_numbers": [],
+   "off_tags": [
+    "en:celery"
+   ],
+   "implies": [],
+   "source": "eu_fic_annex_ii"
+  },
+  {
+   "id": "lupin",
+   "aliases": [
+    "lupine",
+    "lupini"
+   ],
+   "label": {
+    "en": "lupin",
+    "vi": "đậu lupin",
+    "es": "altramuz"
+   },
+   "synonyms": {
+    "en": [
+     "lupine"
+    ],
+    "vi": [
+     "lupin"
+    ],
+    "es": [
+     "lupino"
+    ]
+   },
+   "terms": {
+    "en": [
+     "lupin",
+     "lupine",
+     "lupin flour",
+     "lupine flour",
+     "lupini",
+     "lupini beans",
+     "lupin protein",
+     "lupinus",
+     "lupinus albus"
+    ],
+    "vi": [
+     "đậu lupin",
+     "lupin",
+     "bột lupin"
+    ],
+    "es": [
+     "altramuz",
+     "altramuces",
+     "lupino",
+     "harina de altramuz",
+     "chocho",
+     "chochos"
+    ],
+    "fr": [
+     "lupin"
+    ],
+    "de": [
+     "lupine",
+     "lupinen"
+    ]
+   },
+   "possible_terms": {},
+   "e_numbers": [],
+   "off_tags": [
+    "en:lupin"
+   ],
+   "implies": [],
+   "source": "eu_fic_annex_ii"
+  },
+  {
+   "id": "corn",
+   "aliases": [
+    "maize",
+    "corn_allergy"
+   ],
+   "label": {
+    "en": "corn",
+    "vi": "bắp",
+    "es": "maíz"
+   },
+   "synonyms": {
+    "en": [
+     "maize"
+    ],
+    "vi": [
+     "ngô"
+    ],
+    "es": [
+     "elote",
+     "choclo"
+    ]
+   },
+   "terms": {
+    "en": [
+     "corn",
+     "maize",
+     "cornstarch",
+     "corn starch",
+     "maize starch",
+     "corn flour",
+     "cornflour",
+     "cornmeal",
+     "corn meal",
+     "corn syrup",
+     "corn syrup solids",
+     "high fructose corn syrup",
+     "high-fructose corn syrup",
+     "hfcs",
+     "corn oil",
+     "corn gluten",
+     "corn bran",
+     "corn fiber",
+     "corn masa",
+     "masa harina",
+     "popcorn",
+     "polenta",
+     "grits",
+     "hominy",
+     "sweetcorn",
+     "sweet corn",
+     "corn flakes",
+     "cornflakes",
+     "corn chips",
+     "tortilla chips",
+     "corn tortilla",
+     "zea mays",
+     "corn maltodextrin",
+     "corn dextrose",
+     "zein"
+    ],
+    "vi": [
+     "bắp",
+     "ngô",
+     "tinh bột bắp",
+     "tinh bột ngô",
+     "bột bắp",
+     "bột ngô",
+     "siro bắp",
+     "si rô bắp",
+     "siro ngô",
+     "dầu bắp",
+     "dầu ngô",
+     "bắp rang",
+     "ngô ngọt"
+    ],
+    "es": [
+     "maíz",
+     "maiz",
+     "almidón de maíz",
+     "fécula de maíz",
+     "maicena",
+     "harina de maíz",
+     "jarabe de maíz",
+     "jarabe de maíz de alta fructosa",
+     "aceite de maíz",
+     "palomitas",
+     "polenta",
+     "elote",
+     "choclo",
+     "tortilla de maíz"
+    ],
+    "inci": [
+     "zea mays",
+     "zea mays starch",
+     "zea mays (corn) starch",
+     "zea mays oil"
+    ]
+   },
+   "possible_terms": {
+    "en": [
+     "dextrose",
+     "maltodextrin",
+     "glucose syrup",
+     "glucose",
+     "modified food starch",
+     "modified starch",
+     "food starch",
+     "starch",
+     "vegetable starch",
+     "sorbitol",
+     "dextrin",
+     "masa",
+     "glucose-fructose syrup",
+     "fructose-glucose syrup"
+    ],
+    "vi": [
+     "tinh bột",
+     "tinh bột biến tính",
+     "maltodextrin",
+     "dextrose",
+     "siro glucose",
+     "si rô glucose",
+     "đường glucose"
+    ],
+    "es": [
+     "dextrosa",
+     "maltodextrina",
+     "jarabe de glucosa",
+     "almidón",
+     "almidón modificado",
+     "glucosa",
+     "jarabe de glucosa y fructosa",
+     "jarabe de glucosa-fructosa"
+    ]
+   },
+   "e_numbers": [],
+   "e_numbers_possible": [
+    "E1404",
+    "E1410",
+    "E1412",
+    "E1413",
+    "E1414",
+    "E1420",
+    "E1422",
+    "E1440",
+    "E1442",
+    "E1450",
+    "E420"
+   ],
+   "off_tags": [
+    "en:corn",
+    "en:maize"
+   ],
+   "implies": [],
+   "source": "fda_major_allergens"
+  },
+  {
+   "id": "kiwi",
+   "aliases": [
+    "kiwifruit",
+    "kiwi_fruit"
+   ],
+   "label": {
+    "en": "kiwi",
+    "vi": "kiwi",
+    "es": "kiwi"
+   },
+   "label_many": {
+    "en": "kiwi"
+   },
+   "synonyms": {
+    "en": [
+     "kiwifruit"
+    ],
+    "vi": [
+     "quả kiwi"
+    ],
+    "es": []
+   },
+   "terms": {
+    "en": [
+     "kiwi",
+     "kiwifruit",
+     "kiwi fruit",
+     "kiwi extract",
+     "kiwi juice",
+     "golden kiwi",
+     "actinidia chinensis",
+     "actinidia deliciosa",
+     "chinese gooseberry"
+    ],
+    "vi": [
+     "kiwi",
+     "quả kiwi",
+     "trái kiwi"
+    ],
+    "es": [
+     "kiwi",
+     "kiwis"
+    ],
+    "inci": [
+     "actinidia chinensis fruit extract",
+     "actinidia deliciosa fruit extract"
+    ]
+   },
+   "possible_terms": {},
+   "e_numbers": [],
+   "off_tags": [
+    "en:kiwi"
+   ],
+   "implies": [],
+   "source": "fda_major_allergens"
+  }
+ ]
+}

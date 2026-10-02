@@ -1,0 +1,306 @@
+{
+  "cases": [
+    {
+      "name": "plan 8.4 example 1: Bà and noodles at 38% DV sodium -> 75 EASY",
+      "tags": ["scoring", "p0", "plan_example"],
+      "product": {"key": "test:sc-ba-noodles", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["wheat flour", "palm oil", "salt", "monosodium glutamate", "garlic powder"], "legibility": "full",
+                  "nutrition": {"sodium_mg": 874, "sodium_dv": 38}},
+      "members": ["m_linh", "m_ba"],
+      "expect": {
+        "m_ba": {"state": "EASY", "label": "Easy does it", "codes_include": ["signal.sodium"], "score_min": 74.5, "score_max": 75.5},
+        "m_linh": {"state": "RIPE", "codes_exclude": ["signal."]}
+      }
+    },
+    {
+      "name": "plan 8.4 example 2: plus 25% DV added sugars -> 50 SKIP",
+      "tags": ["scoring", "p0", "plan_example"],
+      "product": {"key": "test:sc-ba-noodles-sugar", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["wheat flour", "palm oil", "salt", "sugar", "garlic powder"], "legibility": "full",
+                  "nutrition": {"sodium_mg": 874, "sodium_dv": 38, "added_sugars_g": 12.5, "added_sugars_dv": 25}},
+      "members": ["m_ba"],
+      "expect": {"m_ba": {"state": "SKIP", "label": "Skip it", "codes_include": ["signal."],
+                          "score_min": 49.5, "score_max": 50.5}}
+    },
+    {
+      "name": "plan 8.4 example 3: Mia and a leave-on lotion with methylisothiazolinone and fragrance -> 35 SKIP",
+      "tags": ["scoring", "p0", "plan_example", "skin"],
+      "product": {"key": "test:sc-mia-lotion", "source": "photo", "photo_kind": "ingredients", "category": "cosmetic",
+                  "product_type": "leave_on", "ingredients": ["Aqua", "Glycerin", "Fragrance", "Methylisothiazolinone"],
+                  "legibility": "full"},
+      "members": ["m_linh", "m_mia"],
+      "expect": {
+        "m_mia": {"state": "SKIP", "label": "Skip it", "codes_include": ["signal."],
+                  "matched_include": ["methylisothiazolinone", "fragrance"], "score_min": 34.5, "score_max": 35.5},
+        "m_linh": {"state": "EASY", "codes_include": ["signal."], "matched_include": ["fragrance"], "score_min": 79.5, "score_max": 80.5}
+      },
+      "headline_contains": ["Skip it for Mia"]
+    },
+    {
+      "name": "plan 8.4 example 4: Mia and a rinse-off wash with methylisothiazolinone -> 77.5 EASY",
+      "tags": ["scoring", "p0", "plan_example", "skin", "rinse_off"],
+      "product": {"key": "test:sc-mia-wash", "source": "photo", "photo_kind": "ingredients", "category": "cosmetic",
+                  "product_type": "rinse_off", "ingredients": ["Aqua", "Coco-Glucoside", "Glycerin", "Methylisothiazolinone"],
+                  "legibility": "full"},
+      "members": ["m_mia"],
+      "expect": {"m_mia": {"state": "EASY", "label": "Easy does it", "codes_include": ["signal."],
+                           "matched_include": ["methylisothiazolinone"], "score_min": 77.0, "score_max": 78.0}}
+    },
+    {
+      "name": "plan 8.4 example 5: Linh and a rinse-off shampoo with fragrance -> 90 RIPE with a note",
+      "tags": ["scoring", "p0", "plan_example", "skin", "rinse_off"],
+      "product": {"key": "test:sc-linh-shampoo", "source": "photo", "photo_kind": "ingredients", "category": "cosmetic",
+                  "product_type": "rinse_off", "ingredients": ["Aqua", "Coco-Glucoside", "Fragrance"], "legibility": "full"},
+      "members": ["m_linh"],
+      "expect": {"m_linh": {"state": "RIPE", "label": "Ripe", "codes_include": ["signal."], "matched_include": ["fragrance"],
+                            "score_min": 89.5, "score_max": 90.5}}
+    },
+    {
+      "name": "leniency: one 25-weight hit at 40%+ DV (penalty 40) stays EASY",
+      "tags": ["scoring", "p0", "leniency"],
+      "product": {"key": "test:sc-lenient-single", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["wheat flour", "palm oil", "salt"], "legibility": "full",
+                  "nutrition": {"sodium_mg": 1035, "sodium_dv": 45}},
+      "members": ["m_ba"],
+      "expect": {"m_ba": {"state": "EASY", "codes_include": ["signal."], "score_min": 59.5, "score_max": 60.5}}
+    },
+    {
+      "name": "leniency: one real issue plus a small one (7.5) is clamped to EASY",
+      "tags": ["scoring", "leniency"],
+      "why": "sodium 45% DV -> 40, added sugars 10% DV -> 25 x 0.3 = 7.5 (not a real issue, < 10): raw 52.5, but SKIP needs a weight-45 hit or two real issues.",
+      "product": {"key": "test:sc-lenient-small", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["wheat flour", "palm oil", "salt", "sugar"], "legibility": "full",
+                  "nutrition": {"sodium_mg": 1035, "sodium_dv": 45, "added_sugars_g": 5, "added_sugars_dv": 10}},
+      "members": ["m_ba"],
+      "expect": {"m_ba": {"state": "EASY", "codes_include": ["signal."], "score_min": 52.0, "score_max": 60.5}}
+    },
+    {
+      "name": "amount under 5% DV adds no penalty",
+      "tags": ["scoring", "amount"],
+      "product": {"key": "test:sc-dv-low", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["rice", "water", "salt"], "legibility": "full", "nutrition": {"sodium_mg": 90, "sodium_dv": 4}},
+      "members": ["m_ba"],
+      "expect": {"m_ba": {"state": "RIPE", "score_min": 99.5, "score_max": 100}}
+    },
+    {
+      "name": "amount 5-19% DV is a 0.3 factor (25 x 0.3 = 7.5)",
+      "tags": ["scoring", "amount"],
+      "product": {"key": "test:sc-dv-mid", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["rice", "water", "salt"], "legibility": "full", "nutrition": {"sodium_mg": 230, "sodium_dv": 10}},
+      "members": ["m_ba"],
+      "expect": {"m_ba": {"state": "RIPE", "score_min": 92.0, "score_max": 93.0}}
+    },
+    {
+      "name": "less-of goal is a 0.5 context (sodium 38% DV -> 87.5 RIPE)",
+      "tags": ["scoring", "less_of"],
+      "product": {"key": "test:sc-lessof-sodium", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["wheat flour", "palm oil", "salt"], "legibility": "full",
+                  "nutrition": {"sodium_mg": 874, "sodium_dv": 38}},
+      "members": [],
+      "extra_members": [{"id": "m_lou", "name": "Lou", "less_of": ["sodium"]}],
+      "expect": {"m_lou": {"state": "RIPE", "codes_include": ["signal."], "score_min": 87.0, "score_max": 88.0}}
+    },
+    {
+      "name": "two less-of goals (sodium 38%, added sugars 25%) -> 75 EASY",
+      "tags": ["scoring", "less_of"],
+      "product": {"key": "test:sc-lessof-two", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["wheat flour", "palm oil", "salt", "sugar"], "legibility": "full",
+                  "nutrition": {"sodium_mg": 874, "sodium_dv": 38, "added_sugars_g": 12.5, "added_sugars_dv": 25}},
+      "members": [],
+      "extra_members": [{"id": "m_lou", "name": "Lou", "less_of": ["sodium", "sugar"]}],
+      "expect": {"m_lou": {"state": "EASY", "codes_include": ["signal."], "score_min": 74.5, "score_max": 75.5}}
+    },
+    {
+      "name": "context is the max of condition and less-of, not the sum",
+      "tags": ["scoring", "context"],
+      "product": {"key": "test:sc-context-max", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["wheat flour", "palm oil", "salt"], "legibility": "full",
+                  "nutrition": {"sodium_mg": 874, "sodium_dv": 38}},
+      "members": [],
+      "extra_members": [{"id": "m_hal", "name": "Hal", "conditions": ["high_blood_pressure"], "less_of": ["sodium"]}],
+      "expect": {"m_hal": {"state": "EASY", "codes_include": ["signal."], "score_min": 74.5, "score_max": 75.5}}
+    },
+    {
+      "name": "condition alias hypertension behaves like high_blood_pressure",
+      "tags": ["scoring", "alias"],
+      "product": {"key": "test:sc-hypertension", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["wheat flour", "palm oil", "salt"], "legibility": "full",
+                  "nutrition": {"sodium_mg": 874, "sodium_dv": 38}},
+      "members": [],
+      "extra_members": [{"id": "m_hy", "name": "Hy", "conditions": ["hypertension"]}],
+      "expect": {"m_hy": {"state": "EASY", "codes_include": ["signal."], "score_min": 74.5, "score_max": 75.5}}
+    },
+    {
+      "name": "single weight-45 hit (leave-on methylisothiazolinone) may SKIP",
+      "tags": ["scoring", "skin", "leniency"],
+      "product": {"key": "test:sc-mit-only", "source": "photo", "photo_kind": "ingredients", "category": "cosmetic",
+                  "product_type": "leave_on", "ingredients": ["Aqua", "Glycerin", "Methylisothiazolinone"], "legibility": "full"},
+      "members": ["m_mia"],
+      "expect": {"m_mia": {"state": "SKIP", "codes_include": ["signal."], "score_min": 54.5, "score_max": 55.5}}
+    },
+    {
+      "name": "kidney disease + phosphate additive -> 80 EASY",
+      "tags": ["scoring", "kidney"],
+      "product": {"key": "test:sc-kidney-phosphate", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["chicken", "water", "disodium phosphate"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_kim", "name": "Kim", "conditions": ["kidney_disease"]}],
+      "expect": {"m_kim": {"state": "EASY", "codes_include": ["signal."], "matched_include": ["phosphate"],
+                           "score_min": 79.5, "score_max": 80.5}}
+    },
+    {
+      "name": "potassium limit + potassium chloride -> 70 EASY",
+      "tags": ["scoring", "kidney"],
+      "product": {"key": "test:sc-potassium", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["water", "potassium chloride", "spices"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_pat", "name": "Pat", "conditions": ["kidney_potassium_limit"]}],
+      "expect": {"m_pat": {"state": "EASY", "codes_include": ["signal."], "matched_include": ["potassium chloride"],
+                           "score_min": 69.5, "score_max": 70.5}}
+    },
+    {
+      "name": "pregnancy condition + retinol in a rinse-off -> 77.5 EASY",
+      "tags": ["scoring", "pregnancy", "rinse_off"],
+      "product": {"key": "test:sc-retinol-rinse", "source": "photo", "photo_kind": "ingredients", "category": "cosmetic",
+                  "product_type": "rinse_off", "ingredients": ["Aqua", "Coco-Glucoside", "Retinol"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_mai", "name": "Mai", "conditions": ["pregnancy"]}],
+      "expect": {"m_mai": {"state": "EASY", "codes_include": ["signal."], "matched_include": ["retinol"],
+                           "score_min": 77.0, "score_max": 78.0}}
+    },
+    {
+      "name": "pregnancy + caffeine ingredient (15) -> 85, still RIPE",
+      "tags": ["scoring", "pregnancy"],
+      "product": {"key": "test:sc-caffeine", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["carbonated water", "citric acid", "caffeine"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_mai", "name": "Mai", "pregnant": true}],
+      "expect": {"m_mai": {"state": "RIPE", "codes_include": ["signal."], "matched_include": ["caffeine"],
+                           "score_min": 84.5, "score_max": 85.5}}
+    },
+    {
+      "name": "fast sugars in the first 3 ingredients for prediabetes (10) -> 90 RIPE",
+      "tags": ["scoring", "sugar"],
+      "product": {"key": "test:sc-fast-sugars", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["sugar", "glucose syrup", "rice"], "legibility": "full"},
+      "members": ["m_ba"],
+      "expect": {"m_ba": {"state": "RIPE", "codes_include": ["signal."], "matched_include": ["sugar"],
+                          "score_min": 89.5, "score_max": 90.5}}
+    },
+    {
+      "name": "sugar only in 4th place is not a fast-sugars hit",
+      "tags": ["scoring", "sugar"],
+      "product": {"key": "test:sc-sugar-4th", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["rice", "water", "vinegar", "sugar"], "legibility": "full"},
+      "members": ["m_ba"],
+      "expect": {"m_ba": {"state": "RIPE", "score_min": 99.5, "score_max": 100}}
+    },
+    {
+      "name": "high cholesterol + saturated fat 25% DV -> 80 EASY",
+      "tags": ["scoring", "sat_fat"],
+      "product": {"key": "test:sc-satfat", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["coconut oil", "rice flour", "salt"], "legibility": "full",
+                  "nutrition": {"sat_fat_g": 5, "sat_fat_dv": 25}},
+      "members": [],
+      "extra_members": [{"id": "m_hal", "name": "Hal", "conditions": ["high_cholesterol"]}],
+      "expect": {"m_hal": {"state": "EASY", "codes_include": ["signal."], "score_min": 79.5, "score_max": 80.5}}
+    },
+    {
+      "name": "heart disease + sodium 25% + saturated fat 25% (two real issues) -> 55 SKIP",
+      "tags": ["scoring", "sat_fat"],
+      "product": {"key": "test:sc-heart", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["pork rind", "salt", "spices"], "legibility": "full",
+                  "nutrition": {"sodium_mg": 575, "sodium_dv": 25, "sat_fat_g": 5, "sat_fat_dv": 25}},
+      "members": [],
+      "extra_members": [{"id": "m_hart", "name": "Hart", "conditions": ["heart_disease"]}],
+      "expect": {"m_hart": {"state": "SKIP", "codes_include": ["signal."], "score_min": 54.5, "score_max": 55.5}}
+    },
+    {
+      "name": "dye E129 for Mia (dyes on) -> 85 RIPE with a signal; Linh (dyes off) no signal",
+      "tags": ["scoring", "p0", "dyes", "e_number"],
+      "product": {"key": "test:sc-e129", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["sugar", "gelling agent (pectin)", "colour (E129)"], "legibility": "full"},
+      "members": ["m_linh", "m_mia"],
+      "expect": {
+        "m_mia": {"state": "RIPE", "codes_include": ["signal."], "matched_include": ["e129"], "score_min": 84.5, "score_max": 85.5},
+        "m_linh": {"state": "RIPE", "codes_exclude": ["signal."]}
+      }
+    },
+    {
+      "name": "dye Allura Red AC for Mia vs Linh",
+      "tags": ["scoring", "dyes"],
+      "product": {"key": "test:sc-allura", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["sugar", "water", "Allura Red AC"], "legibility": "full"},
+      "members": ["m_linh", "m_mia"],
+      "expect": {
+        "m_mia": {"state": "RIPE", "codes_include": ["signal."], "matched_include": ["allura"], "score_min": 84.5, "score_max": 85.5},
+        "m_linh": {"state": "RIPE", "codes_exclude": ["signal."]}
+      }
+    },
+    {
+      "name": "dye FD&C Yellow No. 5 for Mia vs Linh",
+      "tags": ["scoring", "dyes"],
+      "product": {"key": "test:sc-yellow5", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["corn syrup", "water", "FD&C Yellow No. 5"], "legibility": "full"},
+      "members": ["m_linh", "m_mia"],
+      "expect": {
+        "m_mia": {"state": "RIPE", "codes_include": ["signal."], "matched_include": ["yellow"], "score_min": 84.5, "score_max": 85.5},
+        "m_linh": {"state": "RIPE", "codes_exclude": ["signal."]}
+      }
+    },
+    {
+      "name": "dye tartrazine for Mia vs Linh",
+      "tags": ["scoring", "dyes"],
+      "product": {"key": "test:sc-tartrazine", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["sugar", "water", "tartrazine"], "legibility": "full"},
+      "members": ["m_linh", "m_mia"],
+      "expect": {
+        "m_mia": {"state": "RIPE", "codes_include": ["signal."], "matched_include": ["tartrazine"], "score_min": 84.5, "score_max": 85.5},
+        "m_linh": {"state": "RIPE", "codes_exclude": ["signal."]}
+      }
+    },
+    {
+      "name": "OFF additives_tags en:e129 alone is a dye signal for Mia",
+      "tags": ["scoring", "dyes", "tags"],
+      "product": {"key": "off:0000000000208", "source": "open_food_facts",
+                  "ingredients": ["sugar", "glucose syrup", "colour"], "additives_tags": ["en:e129"], "legibility": "full"},
+      "members": ["m_linh", "m_mia"],
+      "expect": {
+        "m_mia": {"state": "RIPE", "codes_include": ["signal."]},
+        "m_linh": {"state": "RIPE", "codes_exclude": ["signal."]}
+      }
+    },
+    {
+      "name": "several dyes for Mia are all named",
+      "tags": ["scoring", "dyes"],
+      "product": {"key": "test:sc-multi-dye", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["sugar", "corn syrup", "citric acid", "Red 40", "Yellow 5", "Blue 1"], "legibility": "full"},
+      "members": ["m_mia"],
+      "expect": {"m_mia": {"state_in": ["RIPE", "EASY", "SKIP"], "codes_include": ["signal."], "matched_include": ["red 40", "yellow 5"]}}
+    },
+    {
+      "name": "less_of artificial_dyes turns dyes on for an adult",
+      "tags": ["scoring", "dyes"],
+      "product": {"key": "test:sc-dyes-lessof", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["sugar", "water", "Red 40"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_dee", "name": "Dee", "age_group": "adult", "avoid_dyes": false, "less_of": ["artificial_dyes"]}],
+      "expect": {"m_dee": {"state": "RIPE", "codes_include": ["signal."], "matched_include": ["red 40"]}}
+    },
+    {
+      "name": "avoid_dyes null: on for a kid, off for an adult",
+      "tags": ["scoring", "dyes"],
+      "product": {"key": "test:sc-dyes-default", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["sugar", "water", "Red 40"], "legibility": "full"},
+      "members": [],
+      "extra_members": [
+        {"id": "m_kit", "name": "Kit", "age_group": "kid", "avoid_dyes": null},
+        {"id": "m_ada", "name": "Ada", "age_group": "adult", "avoid_dyes": null}
+      ],
+      "expect": {
+        "m_kit": {"state": "RIPE", "codes_include": ["signal."], "matched_include": ["red 40"]},
+        "m_ada": {"state": "RIPE", "codes_exclude": ["signal."]}
+      }
+    }
+  ]
+}

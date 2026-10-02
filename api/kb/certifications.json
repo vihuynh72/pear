@@ -1,0 +1,24 @@
+{
+  "version": "2026-10-02",
+  "items": [
+    {"id": "vegan", "label": {"en": "vegan", "vi": "thuần chay", "es": "vegano"},
+     "terms": {"en": ["vegan", "certified vegan", "100% vegan", "vegan society", "suitable for vegans", "plant based certified", "certified plant based"], "vi": ["thuần chay", "chay hoàn toàn"],
+               "es": ["vegano", "vegana", "apto para veganos", "certificado vegano"]},
+     "off_tags": ["en:vegan", "en:vegan-society", "en:certified-vegan", "en:vegan-action", "en:european-vegetarian-union-vegan"], "source": "open_food_facts"},
+    {"id": "vegetarian", "label": {"en": "vegetarian", "vi": "chay", "es": "vegetariano"},
+     "terms": {"en": ["vegetarian", "suitable for vegetarians", "certified vegetarian", "vegetarian society approved"], "vi": ["chay", "đồ chay", "ăn chay"], "es": ["vegetariano", "vegetariana", "apto para vegetarianos"]},
+     "off_tags": ["en:vegetarian", "en:european-vegetarian-union-vegetarian", "en:vegetarian-society"], "source": "open_food_facts"},
+    {"id": "halal", "label": {"en": "halal", "vi": "halal", "es": "halal"},
+     "terms": {"en": ["halal", "certified halal", "halal certified"], "vi": ["halal"], "es": ["halal", "certificado halal"]},
+     "off_tags": ["en:halal"], "source": "open_food_facts"},
+    {"id": "kosher", "label": {"en": "kosher", "vi": "kosher", "es": "kosher"},
+     "terms": {"en": ["kosher", "certified kosher", "ou", "ou-d", "ou pareve", "pareve", "parve", "ok kosher", "star-k", "kof-k"], "vi": ["kosher"], "es": ["kosher", "certificado kosher"]},
+     "off_tags": ["en:kosher", "en:kosher-parve", "en:orthodox-union-kosher"], "source": "open_food_facts"},
+    {"id": "gluten_free", "label": {"en": "gluten-free", "vi": "không gluten", "es": "sin gluten"},
+     "terms": {"en": ["gluten free", "gluten-free", "certified gluten-free", "certified gluten free", "gfco"], "vi": ["không chứa gluten", "không gluten"], "es": ["sin gluten", "libre de gluten"]},
+     "off_tags": ["en:gluten-free", "en:no-gluten", "en:certified-gluten-free", "en:crossed-grain-symbol"], "source": "open_food_facts"},
+    {"id": "organic", "label": {"en": "organic", "vi": "hữu cơ", "es": "orgánico"},
+     "terms": {"en": ["organic", "usda organic", "certified organic", "eu organic"], "vi": ["hữu cơ"], "es": ["orgánico", "orgánica", "ecológico", "ecológica", "bio"]},
+     "off_tags": ["en:organic", "en:usda-organic", "en:eu-organic", "fr:ab-agriculture-biologique"], "source": "open_food_facts"}
+  ]
+}

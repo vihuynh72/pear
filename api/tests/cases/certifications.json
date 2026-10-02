@@ -1,0 +1,108 @@
+{
+  "cases": [
+    {
+      "name": "vegan cert on the label settles natural flavors (no DIET flag, cert note)",
+      "tags": ["cert", "p0", "vegan"],
+      "product": {"key": "test:ct-vegan-natflav", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["water", "cane sugar", "natural flavors"], "certifications_text": ["Certified Vegan"],
+                  "legibility": "full"},
+      "members": ["m_leo"],
+      "expect": {"m_leo": {"state": "RIPE", "notes_include": ["cert.vegan"], "codes_exclude": ["diet."]}}
+    },
+    {
+      "name": "OFF labels_tags en:vegan settles natural flavors",
+      "tags": ["cert", "vegan", "tags"],
+      "product": {"key": "off:0000000000185", "source": "open_food_facts",
+                  "ingredients": ["oat drink (water, oats)", "natural flavors"], "labels_tags": ["en:vegan"], "legibility": "full"},
+      "members": ["m_leo"],
+      "expect": {"m_leo": {"state": "RIPE", "notes_include": ["cert.vegan"], "codes_exclude": ["diet."]}}
+    },
+    {
+      "name": "vegan cert with no conflicting ingredient -> RIPE with a Certified note",
+      "tags": ["cert", "vegan"],
+      "product": {"key": "test:ct-vegan-clean", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["dates", "almonds", "cocoa powder"], "certifications_text": ["Vegan"], "legibility": "full"},
+      "members": ["m_leo"],
+      "expect": {"m_leo": {"state": "RIPE", "notes_include": ["cert.vegan"], "codes_exclude": ["diet."]}}
+    },
+    {
+      "name": "honey on a vegan label -> DIET Check",
+      "tags": ["cert", "p0", "vegan"],
+      "product": {"key": "test:ct-vegan-honey", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["rolled oats", "honey", "sunflower oil"], "certifications_text": ["Certified Vegan"],
+                  "legibility": "full"},
+      "members": ["m_leo"],
+      "expect": {"m_leo": {"state": "DIET", "label": "Check", "codes_include": ["diet.vegan.check"], "matched_include": ["honey"]}}
+    },
+    {
+      "name": "whey on a vegan label -> DIET Check, and the milk allergy still shows",
+      "tags": ["cert", "vegan", "allergen"],
+      "product": {"key": "test:ct-vegan-whey", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["sugar", "whey", "cocoa"], "certifications_text": ["Vegan"], "legibility": "full"},
+      "members": ["m_leo"],
+      "extra_members": [{"id": "m_ana", "name": "Ana", "allergies": [{"id": "milk", "level": "strict"}]}],
+      "expect": {
+        "m_leo": {"state": "DIET", "label": "Check", "codes_include": ["diet.vegan.check"], "matched_include": ["whey"]},
+        "m_ana": {"state": "ALLERGY", "label": "Allergy", "codes_include": ["allergen.milk"]}
+      }
+    },
+    {
+      "name": "vegan cert never hides a may contain milk for a strict allergy",
+      "tags": ["cert", "allergen", "may_contain"],
+      "product": {"key": "test:ct-vegan-mc-milk", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["cocoa mass", "sugar", "cocoa butter"], "may_contain_text": "May contain milk.",
+                  "certifications_text": ["Certified Vegan"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_ana", "name": "Ana", "allergies": [{"id": "milk", "level": "strict"}]}],
+      "expect": {"m_ana": {"state": "ALLERGY", "label": "May contain", "codes_include": ["allergen.milk.may_contain"]}}
+    },
+    {
+      "name": "halal cert settles gelatin of unknown source",
+      "tags": ["cert", "halal"],
+      "product": {"key": "test:ct-halal-gelatin", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["sugar", "gelatin", "citric acid"], "certifications_text": ["Halal"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_omar", "name": "Omar", "diets": ["halal"]}],
+      "expect": {"m_omar": {"state": "RIPE", "notes_include": ["cert.halal"], "codes_exclude": ["diet."]}}
+    },
+    {
+      "name": "OFF labels_tags en:halal settles gelatin",
+      "tags": ["cert", "halal", "tags"],
+      "product": {"key": "off:0000000000192", "source": "open_food_facts",
+                  "ingredients": ["glucose syrup", "sugar", "gelatin"], "labels_tags": ["en:halal"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_omar", "name": "Omar", "diets": ["halal"]}],
+      "expect": {"m_omar": {"state": "RIPE", "notes_include": ["cert.halal"], "codes_exclude": ["diet."]}}
+    },
+    {
+      "name": "pork on a halal label -> DIET Check",
+      "tags": ["cert", "halal"],
+      "product": {"key": "test:ct-halal-pork", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["pork", "salt", "spices"], "certifications_text": ["Halal"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_omar", "name": "Omar", "diets": ["halal"]}],
+      "expect": {"m_omar": {"state": "DIET", "label": "Check", "codes_include": ["diet.halal.check"], "matched_include": ["pork"]}}
+    },
+    {
+      "name": "a halal cert does not settle vegan maybes",
+      "tags": ["cert", "vegan", "halal"],
+      "product": {"key": "test:ct-halal-not-vegan", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["water", "cane sugar", "natural flavors"], "certifications_text": ["Halal"], "legibility": "full"},
+      "members": ["m_leo"],
+      "extra_members": [{"id": "m_omar", "name": "Omar", "diets": ["halal"]}],
+      "expect": {
+        "m_leo": {"state": "DIET", "label": "Maybe not vegan", "codes_include": ["diet.vegan.maybe"], "codes_exclude": ["cert.vegan"]},
+        "m_omar": {"state": "RIPE", "codes_exclude": ["diet."]}
+      }
+    },
+    {
+      "name": "kosher cert settles gelatin",
+      "tags": ["cert", "kosher"],
+      "product": {"key": "test:ct-kosher-gelatin", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["sugar", "gelatin", "citric acid"], "certifications_text": ["Kosher"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_dov", "name": "Dov", "diets": ["kosher"]}],
+      "expect": {"m_dov": {"state": "RIPE", "notes_include": ["cert.kosher"], "codes_exclude": ["diet."]}}
+    }
+  ]
+}

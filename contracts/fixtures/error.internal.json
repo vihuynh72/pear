@@ -1,0 +1,8 @@
+{
+  "error": {
+    "code": "internal",
+    "message": "Something went wrong. Try again?",
+    "next": "retry",
+    "request_id": null
+  }
+}

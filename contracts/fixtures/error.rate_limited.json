@@ -1,0 +1,8 @@
+{
+  "error": {
+    "code": "rate_limited",
+    "message": "Pear is busy right now. Try again in a moment.",
+    "next": "retry",
+    "request_id": null
+  }
+}

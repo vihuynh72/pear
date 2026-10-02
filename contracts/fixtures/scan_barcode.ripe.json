@@ -1,0 +1,100 @@
+{
+  "product": {
+    "key": "off:0000000000062",
+    "name": "Lightly Salted Brown Rice Cakes",
+    "brand": "Pear Demo Pantry",
+    "category": "food",
+    "product_type": null,
+    "image_url": "https://placehold.co/600x600/png?text=Brown+Rice+Cakes",
+    "source": "open_food_facts",
+    "photo_kind": null,
+    "data_confidence": "high",
+    "less_sure": false,
+    "ask_for_ingredients": false,
+    "ingredients": [
+      "whole grain brown rice",
+      "salt"
+    ],
+    "contains": [],
+    "may_contain": [],
+    "certifications": [
+      "vegan",
+      "gluten_free"
+    ],
+    "label_language": "en",
+    "code": "0000000000062",
+    "quantity": "139 g",
+    "nutrition": {
+      "basis": "serving",
+      "sodium_mg": 50.0,
+      "sodium_dv": 2.0,
+      "added_sugars_g": 0.0,
+      "added_sugars_dv": 0.0,
+      "sugars_g": 0.0,
+      "sat_fat_g": 0.0,
+      "sat_fat_dv": 0.0,
+      "caffeine_mg": null
+    },
+    "matched_by": "barcode"
+  },
+  "verdicts": [
+    {
+      "member_id": "m_linh",
+      "state": "RIPE",
+      "label": "Ripe",
+      "reasons": [],
+      "score": null
+    },
+    {
+      "member_id": "m_ba",
+      "state": "RIPE",
+      "label": "Ripe",
+      "reasons": [],
+      "score": null
+    },
+    {
+      "member_id": "m_mia",
+      "state": "RIPE",
+      "label": "Ripe",
+      "reasons": [
+        {
+          "code": "confidence.check_label",
+          "text": "From a database. Check the label.",
+          "language": "en",
+          "severity": "note",
+          "matched": [],
+          "source": null
+        }
+      ],
+      "score": null
+    },
+    {
+      "member_id": "m_leo",
+      "state": "RIPE",
+      "label": "Ripe",
+      "reasons": [
+        {
+          "code": "cert.vegan",
+          "text": "Certificado vegano",
+          "language": "es",
+          "severity": "note",
+          "matched": [],
+          "source": "pear_diet_rules"
+        }
+      ],
+      "score": null
+    }
+  ],
+  "headline": {
+    "text": "Ripe for everyone. Go for it.",
+    "language": "en"
+  },
+  "timings_ms": {
+    "cache": 36,
+    "normalize": 2,
+    "rules": 2,
+    "total": 61
+  },
+  "request_id": null,
+  "debug": null
+}

@@ -1,0 +1,225 @@
+{
+  "query": "",
+  "suggestions": [
+    {
+      "group": "allergies",
+      "id": "peanut",
+      "label": "peanut",
+      "labels": {
+        "en": "peanut",
+        "vi": "đậu phộng",
+        "es": "cacahuate"
+      },
+      "score": 1.0
+    },
+    {
+      "group": "allergies",
+      "id": "tree_nut",
+      "label": "tree nuts",
+      "labels": {
+        "en": "tree nuts",
+        "vi": "các loại hạt",
+        "es": "frutos secos"
+      },
+      "score": 1.0
+    },
+    {
+      "group": "allergies",
+      "id": "milk",
+      "label": "milk",
+      "labels": {
+        "en": "milk",
+        "vi": "sữa",
+        "es": "leche"
+      },
+      "score": 1.0
+    },
+    {
+      "group": "allergies",
+      "id": "egg",
+      "label": "egg",
+      "labels": {
+        "en": "egg",
+        "vi": "trứng",
+        "es": "huevo"
+      },
+      "score": 1.0
+    },
+    {
+      "group": "allergies",
+      "id": "wheat",
+      "label": "wheat",
+      "labels": {
+        "en": "wheat",
+        "vi": "lúa mì",
+        "es": "trigo"
+      },
+      "score": 1.0
+    },
+    {
+      "group": "allergies",
+      "id": "soy",
+      "label": "soy",
+      "labels": {
+        "en": "soy",
+        "vi": "đậu nành",
+        "es": "soja"
+      },
+      "score": 1.0
+    },
+    {
+      "group": "allergies",
+      "id": "fish",
+      "label": "fish",
+      "labels": {
+        "en": "fish",
+        "vi": "cá",
+        "es": "pescado"
+      },
+      "score": 1.0
+    },
+    {
+      "group": "allergies",
+      "id": "shellfish",
+      "label": "shellfish",
+      "labels": {
+        "en": "shellfish",
+        "vi": "hải sản có vỏ",
+        "es": "mariscos"
+      },
+      "score": 1.0
+    },
+    {
+      "group": "allergies",
+      "id": "sesame",
+      "label": "sesame",
+      "labels": {
+        "en": "sesame",
+        "vi": "mè",
+        "es": "sésamo"
+      },
+      "score": 1.0
+    },
+    {
+      "group": "allergies",
+      "id": "gluten",
+      "label": "gluten (celiac)",
+      "labels": {
+        "en": "gluten (celiac)",
+        "vi": "gluten (bệnh celiac)",
+        "es": "gluten (celiaquía)"
+      },
+      "score": 1.0
+    },
+    {
+      "group": "conditions",
+      "id": "high_blood_pressure",
+      "label": "high blood pressure",
+      "labels": {
+        "en": "high blood pressure",
+        "vi": "huyết áp cao",
+        "es": "presión arterial alta"
+      },
+      "score": 1.0
+    },
+    {
+      "group": "conditions",
+      "id": "diabetes",
+      "label": "diabetes",
+      "labels": {
+        "en": "diabetes",
+        "vi": "tiểu đường",
+        "es": "diabetes"
+      },
+      "score": 1.0
+    },
+    {
+      "group": "conditions",
+      "id": "prediabetes",
+      "label": "prediabetes",
+      "labels": {
+        "en": "prediabetes",
+        "vi": "tiền tiểu đường",
+        "es": "prediabetes"
+      },
+      "score": 1.0
+    },
+    {
+      "group": "skin",
+      "id": "eczema",
+      "label": "eczema",
+      "labels": {
+        "en": "eczema",
+        "vi": "chàm",
+        "es": "eccema"
+      },
+      "score": 1.0
+    },
+    {
+      "group": "skin",
+      "id": "fragrance_sensitivity",
+      "label": "fragrance sensitivity",
+      "labels": {
+        "en": "fragrance sensitivity",
+        "vi": "nhạy cảm với hương liệu",
+        "es": "sensibilidad a las fragancias"
+      },
+      "score": 1.0
+    },
+    {
+      "group": "diets",
+      "id": "vegan",
+      "label": "vegan",
+      "labels": {
+        "en": "vegan",
+        "vi": "thuần chay",
+        "es": "vegano"
+      },
+      "score": 1.0
+    },
+    {
+      "group": "diets",
+      "id": "halal",
+      "label": "halal",
+      "labels": {
+        "en": "halal",
+        "vi": "halal",
+        "es": "halal"
+      },
+      "score": 1.0
+    },
+    {
+      "group": "less_of",
+      "id": "sodium",
+      "label": "sodium",
+      "labels": {
+        "en": "sodium",
+        "vi": "natri (muối)",
+        "es": "sodio"
+      },
+      "score": 1.0
+    },
+    {
+      "group": "less_of",
+      "id": "sugar",
+      "label": "sugar",
+      "labels": {
+        "en": "sugar",
+        "vi": "đường",
+        "es": "azúcar"
+      },
+      "score": 1.0
+    },
+    {
+      "group": "less_of",
+      "id": "artificial_dyes",
+      "label": "artificial dyes",
+      "labels": {
+        "en": "artificial dyes",
+        "vi": "phẩm màu nhân tạo",
+        "es": "colorantes artificiales"
+      },
+      "score": 1.0
+    }
+  ]
+}

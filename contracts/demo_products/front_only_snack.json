@@ -1,0 +1,65 @@
+{
+  "_comment": "DEMO ONLY: fake but well-formed EAN-13 / photo key, not a real product. Used by api/scripts/gen_fixtures.py and POST /debug/evaluate {\"demo\": \"<file stem>\"}.",
+  "key": "off:0000000000086",
+  "source": "open_food_facts",
+  "code": "0000000000086",
+  "name": "Oat Crunch Granola Bites",
+  "brand": "Pear Demo Pantry",
+  "category": "food",
+  "product_type": null,
+  "image_url": "https://placehold.co/600x600/png?text=Granola+Bites",
+  "quantity": "198 g",
+  "label_language": "en",
+  "photo_kind": "front_only",
+  "matched_by": "name",
+  "ingredients": [
+    "whole grain oats",
+    "cane sugar",
+    "sunflower oil",
+    "rice flour",
+    "honey",
+    "salt",
+    "soy lecithin",
+    "natural flavor"
+  ],
+  "ingredients_text": "Whole grain oats, cane sugar, sunflower oil, rice flour, honey, salt, soy lecithin, natural flavor.",
+  "contains_text": "Contains: soy.",
+  "may_contain_text": "May contain peanuts and tree nuts.",
+  "allergens_tags": [
+    "en:soybeans"
+  ],
+  "traces_tags": [
+    "en:peanuts",
+    "en:nuts"
+  ],
+  "additives_tags": [
+    "en:e322"
+  ],
+  "analysis_tags": [
+    "en:palm-oil-free",
+    "en:non-vegan",
+    "en:vegetarian"
+  ],
+  "labels_tags": [],
+  "categories_tags": [
+    "en:snacks",
+    "en:sweet-snacks",
+    "en:cereal-bars",
+    "en:granola-bites"
+  ],
+  "category_main": "en:granola-bites",
+  "nutrition": {
+    "basis": "serving",
+    "sodium_mg": 95,
+    "sodium_dv": 4,
+    "added_sugars_g": 9,
+    "added_sugars_dv": 18,
+    "sugars_g": 10,
+    "sat_fat_g": 1,
+    "sat_fat_dv": 5,
+    "caffeine_mg": null
+  },
+  "legibility": "full",
+  "data_confidence": "medium",
+  "fetched_at": "2026-10-02T18:00:00Z"
+}

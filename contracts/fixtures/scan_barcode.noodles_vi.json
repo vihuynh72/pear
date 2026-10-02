@@ -1,0 +1,124 @@
+{
+  "product": {
+    "key": "off:0000000000024",
+    "name": "Mì Tôm Chua Cay",
+    "brand": "Pear Demo Foods",
+    "category": "food",
+    "product_type": null,
+    "image_url": "https://placehold.co/600x600/png?text=Mi+Tom+Chua+Cay",
+    "source": "open_food_facts",
+    "photo_kind": null,
+    "data_confidence": "high",
+    "less_sure": false,
+    "ask_for_ingredients": false,
+    "ingredients": [
+      "bột mì",
+      "dầu cọ",
+      "tinh bột khoai mì",
+      "muối",
+      "đường",
+      "bột nước tương (đậu nành)",
+      "bột tôm (2%)",
+      "chất điều vị (mononatri glutamat 621)",
+      "tỏi",
+      "ớt",
+      "hành lá"
+    ],
+    "contains": [
+      "wheat",
+      "soy",
+      "shellfish",
+      "gluten"
+    ],
+    "may_contain": [],
+    "certifications": [],
+    "label_language": "vi",
+    "code": "0000000000024",
+    "quantity": "75 g",
+    "nutrition": {
+      "basis": "serving",
+      "sodium_mg": 870.0,
+      "sodium_dv": 38.0,
+      "added_sugars_g": 2.0,
+      "added_sugars_dv": 4.0,
+      "sugars_g": 3.0,
+      "sat_fat_g": 6.5,
+      "sat_fat_dv": 33.0,
+      "caffeine_mg": null
+    },
+    "matched_by": "barcode"
+  },
+  "verdicts": [
+    {
+      "member_id": "m_linh",
+      "state": "RIPE",
+      "label": "Ripe",
+      "reasons": [],
+      "score": null
+    },
+    {
+      "member_id": "m_ba",
+      "state": "EASY",
+      "label": "Easy does it",
+      "reasons": [
+        {
+          "code": "signal.sodium",
+          "text": "Nhiều muối (38% nhu cầu mỗi ngày)",
+          "language": "vi",
+          "severity": "soft",
+          "matched": [],
+          "source": "fda_nutrition_dv"
+        }
+      ],
+      "score": null
+    },
+    {
+      "member_id": "m_mia",
+      "state": "RIPE",
+      "label": "Ripe",
+      "reasons": [
+        {
+          "code": "confidence.check_label",
+          "text": "From a database. Check the label.",
+          "language": "en",
+          "severity": "note",
+          "matched": [],
+          "source": null
+        }
+      ],
+      "score": null
+    },
+    {
+      "member_id": "m_leo",
+      "state": "DIET",
+      "label": "Not vegan",
+      "reasons": [
+        {
+          "code": "diet.vegan",
+          "text": "No es vegano: bột tôm",
+          "language": "es",
+          "severity": "hard",
+          "matched": [
+            "bột tôm",
+            "tôm"
+          ],
+          "source": "pear_diet_rules"
+        }
+      ],
+      "score": null
+    }
+  ],
+  "headline": {
+    "text": "Not vegan for Leo: bột tôm. Fine for Linh and Mia.",
+    "language": "en"
+  },
+  "timings_ms": {
+    "cache": 41,
+    "lookup": 486,
+    "normalize": 3,
+    "rules": 2,
+    "total": 548
+  },
+  "request_id": null,
+  "debug": null
+}

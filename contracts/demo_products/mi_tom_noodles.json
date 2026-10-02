@@ -1,0 +1,68 @@
+{
+  "_comment": "DEMO ONLY: fake but well-formed EAN-13 / photo key, not a real product. Used by api/scripts/gen_fixtures.py and POST /debug/evaluate {\"demo\": \"<file stem>\"}.",
+  "key": "off:0000000000024",
+  "source": "open_food_facts",
+  "code": "0000000000024",
+  "name": "Mì Tôm Chua Cay",
+  "brand": "Pear Demo Foods",
+  "category": "food",
+  "product_type": null,
+  "image_url": "https://placehold.co/600x600/png?text=Mi+Tom+Chua+Cay",
+  "quantity": "75 g",
+  "label_language": "vi",
+  "photo_kind": null,
+  "matched_by": "barcode",
+  "ingredients": [
+    "bột mì",
+    "dầu cọ",
+    "tinh bột khoai mì",
+    "muối",
+    "đường",
+    "bột nước tương (đậu nành)",
+    "bột tôm (2%)",
+    "chất điều vị (mononatri glutamat 621)",
+    "tỏi",
+    "ớt",
+    "hành lá"
+  ],
+  "ingredients_text": "Vắt mì: bột mì, dầu cọ, tinh bột khoai mì, muối. Gói gia vị: đường, bột nước tương (đậu nành), bột tôm (2%), chất điều vị (mononatri glutamat 621), tỏi, ớt, hành lá.",
+  "contains_text": "Sản phẩm có chứa: lúa mì, đậu nành, tôm.",
+  "may_contain_text": null,
+  "allergens_tags": [
+    "en:gluten",
+    "en:soybeans",
+    "en:crustaceans"
+  ],
+  "traces_tags": [],
+  "additives_tags": [
+    "en:e621"
+  ],
+  "analysis_tags": [
+    "en:palm-oil",
+    "en:non-vegan",
+    "en:non-vegetarian"
+  ],
+  "labels_tags": [],
+  "categories_tags": [
+    "en:plant-based-foods-and-beverages",
+    "en:cereals-and-potatoes",
+    "en:pastas",
+    "en:noodles",
+    "en:instant-noodles"
+  ],
+  "category_main": "en:instant-noodles",
+  "nutrition": {
+    "basis": "serving",
+    "sodium_mg": 870,
+    "sodium_dv": 38,
+    "added_sugars_g": 2,
+    "added_sugars_dv": 4,
+    "sugars_g": 3,
+    "sat_fat_g": 6.5,
+    "sat_fat_dv": 33,
+    "caffeine_mg": null
+  },
+  "legibility": "full",
+  "data_confidence": "high",
+  "fetched_at": "2026-10-02T18:00:00Z"
+}

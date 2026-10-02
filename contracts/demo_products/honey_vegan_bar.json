@@ -1,0 +1,55 @@
+{
+  "_comment": "DEMO ONLY: fake but well-formed EAN-13 / photo key, not a real product. Used by api/scripts/gen_fixtures.py and POST /debug/evaluate {\"demo\": \"<file stem>\"}.",
+  "key": "photo:3c8e1f0a7b62",
+  "source": "photo",
+  "code": null,
+  "name": "Oat & Honey Bar",
+  "brand": "Pear Demo Pantry",
+  "category": "food",
+  "product_type": null,
+  "image_url": null,
+  "quantity": "40 g",
+  "label_language": "en",
+  "photo_kind": "ingredients",
+  "matched_by": "photo",
+  "ingredients": [
+    "rolled oats",
+    "honey",
+    "almonds",
+    "brown rice syrup",
+    "sea salt"
+  ],
+  "ingredients_text": "Rolled oats, honey, almonds, brown rice syrup, sea salt.",
+  "contains_text": "Contains: almonds.",
+  "may_contain_text": null,
+  "model_kb_ids": [
+    [],
+    [
+      "honey"
+    ],
+    [
+      "tree_nut"
+    ],
+    [
+      "fast_sugars"
+    ],
+    []
+  ],
+  "certifications_text": [
+    "Certified Vegan"
+  ],
+  "nutrition": {
+    "basis": "serving",
+    "sodium_mg": 60,
+    "sodium_dv": 3,
+    "added_sugars_g": 10,
+    "added_sugars_dv": 20,
+    "sugars_g": 11,
+    "sat_fat_g": 1,
+    "sat_fat_dv": 5,
+    "caffeine_mg": null
+  },
+  "legibility": "full",
+  "data_confidence": "high",
+  "fetched_at": "2026-10-02T18:00:00Z"
+}

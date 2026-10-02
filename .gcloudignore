@@ -1,0 +1,46 @@
+# Files NOT uploaded by `gcloud run deploy --source .` (gitignore syntax, anchored with /).
+# Keep: Dockerfile, .dockerignore, api/, contracts/ (fixtures, demo_products, kb_index.json).
+# Debug: `gcloud meta list-files-for-upload` from the repo root prints exactly what uploads.
+
+.gcloudignore
+
+# --- VCS / tooling ---
+.git/
+.gitignore
+.github/
+.claude/
+.idea/
+.vscode/
+.DS_Store
+
+# --- iOS app (developed separately) ---
+/Pear/
+/Pear.xcodeproj/
+/contracts/swift/
+*.xcodeproj/
+xcuserdata/
+DerivedData/
+
+# --- Python caches and envs ---
+/api/.venv/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# --- docs and local-only files ---
+/docs/
+/infra/
+
+# --- secrets: never uploaded (plan 7.9) ---
+.env
+.env.*
+*.plist
+GoogleService-Info.plist
+*service-account*.json
+*-key.json
+*.pem
+*.p12

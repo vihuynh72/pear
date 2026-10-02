@@ -1,0 +1,47 @@
+{
+  "_comment": "DEMO ONLY: fake but well-formed EAN-13 / photo key, not a real product. Used by api/scripts/gen_fixtures.py and POST /debug/evaluate {\"demo\": \"<file stem>\"}.",
+  "key": "photo:5f2c9a1be0d4",
+  "source": "photo",
+  "code": null,
+  "name": "Kids Daily Moisture Lotion",
+  "brand": "Pear Demo Care",
+  "category": "cosmetic",
+  "product_type": "leave_on",
+  "image_url": null,
+  "quantity": "8 fl oz",
+  "label_language": "en",
+  "photo_kind": "ingredients",
+  "matched_by": "photo",
+  "ingredients": [
+    "Water",
+    "Glycerin",
+    "Cetearyl Alcohol",
+    "Caprylic/Capric Triglyceride",
+    "Dimethicone",
+    "Fragrance",
+    "Phenoxyethanol",
+    "Methylisothiazolinone"
+  ],
+  "ingredients_text": "Water, Glycerin, Cetearyl Alcohol, Caprylic/Capric Triglyceride, Dimethicone, Fragrance, Phenoxyethanol, Methylisothiazolinone.",
+  "contains_text": null,
+  "may_contain_text": null,
+  "model_kb_ids": [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+      "fragrance"
+    ],
+    [],
+    [
+      "methylisothiazolinone"
+    ]
+  ],
+  "certifications_text": [],
+  "nutrition": null,
+  "legibility": "full",
+  "data_confidence": "high",
+  "fetched_at": "2026-10-02T18:00:00Z"
+}

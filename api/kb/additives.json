@@ -1,0 +1,1092 @@
+{
+ "version": "2026-10-02",
+ "items": [
+  {
+   "id": "red_40",
+   "group": "synthetic_dyes",
+   "label": {
+    "en": "Red 40",
+    "vi": "phẩm đỏ 40",
+    "es": "rojo 40"
+   },
+   "terms": {
+    "en": [
+     "red 40",
+     "red no 40",
+     "red no. 40",
+     "red #40",
+     "red no.40",
+     "fd&c red 40",
+     "fd&c red no. 40",
+     "fd&c red no 40",
+     "fd&c red #40",
+     "red 40 lake",
+     "allura red",
+     "allura red ac"
+    ],
+    "vi": [
+     "đỏ allura",
+     "màu đỏ allura",
+     "phẩm đỏ allura"
+    ],
+    "es": [
+     "rojo allura",
+     "rojo allura ac",
+     "rojo 40"
+    ],
+    "inci": [
+     "ci 16035"
+    ]
+   },
+   "e_numbers": [
+    "E129"
+   ],
+   "off_tags": [
+    "en:e129"
+   ],
+   "source": "cspi_dyes"
+  },
+  {
+   "id": "yellow_5",
+   "group": "synthetic_dyes",
+   "label": {
+    "en": "Yellow 5",
+    "vi": "phẩm vàng tartrazin",
+    "es": "tartrazina"
+   },
+   "terms": {
+    "en": [
+     "yellow 5",
+     "yellow no 5",
+     "yellow no. 5",
+     "yellow #5",
+     "fd&c yellow 5",
+     "fd&c yellow no. 5",
+     "fd&c yellow #5",
+     "yellow 5 lake",
+     "tartrazine"
+    ],
+    "vi": [
+     "tartrazin",
+     "tartrazine",
+     "màu vàng tartrazin"
+    ],
+    "es": [
+     "tartrazina",
+     "amarillo 5",
+     "amarillo tartrazina",
+     "tartracina"
+    ],
+    "inci": [
+     "ci 19140"
+    ]
+   },
+   "e_numbers": [
+    "E102"
+   ],
+   "off_tags": [
+    "en:e102"
+   ],
+   "source": "cspi_dyes"
+  },
+  {
+   "id": "yellow_6",
+   "group": "synthetic_dyes",
+   "label": {
+    "en": "Yellow 6",
+    "vi": "phẩm vàng hoàng hôn",
+    "es": "amarillo ocaso"
+   },
+   "terms": {
+    "en": [
+     "yellow 6",
+     "yellow no 6",
+     "yellow no. 6",
+     "yellow #6",
+     "fd&c yellow 6",
+     "fd&c yellow no. 6",
+     "fd&c yellow #6",
+     "yellow 6 lake",
+     "sunset yellow",
+     "sunset yellow fcf"
+    ],
+    "vi": [
+     "vàng hoàng hôn",
+     "sunset yellow"
+    ],
+    "es": [
+     "amarillo ocaso",
+     "amarillo ocaso fcf",
+     "amarillo 6"
+    ],
+    "inci": [
+     "ci 15985"
+    ]
+   },
+   "e_numbers": [
+    "E110"
+   ],
+   "off_tags": [
+    "en:e110"
+   ],
+   "source": "cspi_dyes"
+  },
+  {
+   "id": "blue_1",
+   "group": "synthetic_dyes",
+   "label": {
+    "en": "Blue 1",
+    "vi": "phẩm xanh brilliant",
+    "es": "azul brillante"
+   },
+   "terms": {
+    "en": [
+     "blue 1",
+     "blue no 1",
+     "blue no. 1",
+     "blue #1",
+     "fd&c blue 1",
+     "fd&c blue no. 1",
+     "fd&c blue #1",
+     "blue 1 lake",
+     "brilliant blue",
+     "brilliant blue fcf"
+    ],
+    "vi": [
+     "xanh brilliant",
+     "brilliant blue"
+    ],
+    "es": [
+     "azul brillante",
+     "azul brillante fcf",
+     "azul 1"
+    ],
+    "inci": [
+     "ci 42090"
+    ]
+   },
+   "e_numbers": [
+    "E133"
+   ],
+   "off_tags": [
+    "en:e133"
+   ],
+   "source": "cspi_dyes"
+  },
+  {
+   "id": "blue_2",
+   "group": "synthetic_dyes",
+   "label": {
+    "en": "Blue 2",
+    "vi": "phẩm xanh indigotin",
+    "es": "indigotina"
+   },
+   "terms": {
+    "en": [
+     "blue 2",
+     "blue no 2",
+     "blue no. 2",
+     "blue #2",
+     "fd&c blue 2",
+     "fd&c blue no. 2",
+     "blue 2 lake",
+     "indigotine",
+     "indigo carmine",
+     "indigotin"
+    ],
+    "vi": [
+     "indigotin",
+     "indigo carmine"
+    ],
+    "es": [
+     "indigotina",
+     "índigo carmín",
+     "indigo carmín",
+     "azul 2"
+    ],
+    "inci": [
+     "ci 73015"
+    ]
+   },
+   "e_numbers": [
+    "E132"
+   ],
+   "off_tags": [
+    "en:e132"
+   ],
+   "source": "cspi_dyes"
+  },
+  {
+   "id": "green_3",
+   "group": "synthetic_dyes",
+   "label": {
+    "en": "Green 3",
+    "vi": "phẩm xanh lá fast green",
+    "es": "verde rápido"
+   },
+   "terms": {
+    "en": [
+     "green 3",
+     "green no 3",
+     "green no. 3",
+     "green #3",
+     "fd&c green 3",
+     "fd&c green no. 3",
+     "fast green",
+     "fast green fcf"
+    ],
+    "es": [
+     "verde rápido",
+     "verde 3"
+    ],
+    "inci": [
+     "ci 42053"
+    ]
+   },
+   "e_numbers": [
+    "E143"
+   ],
+   "off_tags": [
+    "en:e143"
+   ],
+   "source": "cspi_dyes"
+  },
+  {
+   "id": "red_3",
+   "group": "synthetic_dyes",
+   "label": {
+    "en": "Red 3",
+    "vi": "phẩm đỏ erythrosine",
+    "es": "eritrosina"
+   },
+   "terms": {
+    "en": [
+     "red 3",
+     "red no 3",
+     "red no. 3",
+     "red #3",
+     "fd&c red 3",
+     "fd&c red no. 3",
+     "erythrosine",
+     "erythrosin",
+     "erythrosine b"
+    ],
+    "vi": [
+     "erythrosin",
+     "erythrosine"
+    ],
+    "es": [
+     "eritrosina",
+     "rojo 3"
+    ],
+    "inci": [
+     "ci 45430"
+    ]
+   },
+   "e_numbers": [
+    "E127"
+   ],
+   "off_tags": [
+    "en:e127"
+   ],
+   "source": "cspi_dyes"
+  },
+  {
+   "id": "citrus_red_2",
+   "group": "synthetic_dyes",
+   "label": {
+    "en": "Citrus Red 2",
+    "vi": "phẩm đỏ citrus",
+    "es": "rojo cítrico 2"
+   },
+   "terms": {
+    "en": [
+     "citrus red 2",
+     "citrus red no. 2",
+     "orange b"
+    ],
+    "es": [
+     "rojo cítrico 2"
+    ]
+   },
+   "e_numbers": [
+    "E121"
+   ],
+   "source": "cspi_dyes"
+  },
+  {
+   "id": "other_azo_dyes",
+   "group": "synthetic_dyes",
+   "label": {
+    "en": "synthetic dye",
+    "vi": "phẩm màu tổng hợp",
+    "es": "colorante sintético"
+   },
+   "terms": {
+    "en": [
+     "quinoline yellow",
+     "carmoisine",
+     "azorubine",
+     "ponceau 4r",
+     "ponceau",
+     "brilliant black",
+     "brilliant black bn",
+     "brown ht",
+     "patent blue",
+     "green s",
+     "allura red lake",
+     "lithol rubine"
+    ],
+    "es": [
+     "amarillo de quinoleína",
+     "azorrubina",
+     "carmoisina",
+     "ponceau 4r",
+     "negro brillante"
+    ],
+    "inci": [
+     "ci 47005",
+     "ci 14720",
+     "ci 16255",
+     "ci 28440",
+     "ci 15850",
+     "ci 42051",
+     "ci 44090"
+    ]
+   },
+   "e_numbers": [
+    "E104",
+    "E122",
+    "E123",
+    "E124",
+    "E128",
+    "E131",
+    "E142",
+    "E151",
+    "E154",
+    "E155",
+    "E180"
+   ],
+   "source": "cspi_dyes"
+  },
+  {
+   "id": "artificial_colors",
+   "group": "synthetic_dyes",
+   "label": {
+    "en": "artificial colors",
+    "vi": "phẩm màu nhân tạo",
+    "es": "colorantes artificiales"
+   },
+   "terms": {
+    "en": [
+     "artificial color",
+     "artificial colors",
+     "artificial colour",
+     "artificial colours",
+     "artificial coloring",
+     "artificial colouring",
+     "artificial food coloring",
+     "synthetic color",
+     "synthetic dye",
+     "fd&c colors",
+     "color added",
+     "colors added"
+    ],
+    "vi": [
+     "phẩm màu nhân tạo",
+     "phẩm màu tổng hợp",
+     "màu tổng hợp"
+    ],
+    "es": [
+     "colorante artificial",
+     "colorantes artificiales",
+     "colorantes sintéticos"
+    ]
+   },
+   "source": "cspi_dyes"
+  },
+  {
+   "id": "phosphates",
+   "label": {
+    "en": "phosphate additives",
+    "vi": "phụ gia phốt phát",
+    "es": "aditivos de fosfato"
+   },
+   "terms": {
+    "en": [
+     "phosphate",
+     "phosphates",
+     "polyphosphate",
+     "polyphosphates",
+     "pyrophosphate",
+     "diphosphate",
+     "diphosphates",
+     "triphosphate",
+     "triphosphates",
+     "sodium phosphate",
+     "disodium phosphate",
+     "trisodium phosphate",
+     "monosodium phosphate",
+     "sodium tripolyphosphate",
+     "sodium hexametaphosphate",
+     "sodium acid pyrophosphate",
+     "tetrasodium pyrophosphate",
+     "disodium pyrophosphate",
+     "sodium aluminum phosphate",
+     "sodium aluminium phosphate",
+     "calcium phosphate",
+     "dicalcium phosphate",
+     "tricalcium phosphate",
+     "monocalcium phosphate",
+     "potassium phosphate",
+     "dipotassium phosphate",
+     "tripotassium phosphate",
+     "monopotassium phosphate",
+     "magnesium phosphate",
+     "ammonium phosphate",
+     "phosphoric acid",
+     "calcium acid pyrophosphate"
+    ],
+    "vi": [
+     "phốt phát",
+     "photphat",
+     "phosphat",
+     "natri phosphat",
+     "natri tripolyphosphat",
+     "dinatri phosphat",
+     "canxi phosphat",
+     "kali phosphat",
+     "axit photphoric",
+     "axit phosphoric"
+    ],
+    "es": [
+     "fosfato",
+     "fosfatos",
+     "polifosfato",
+     "polifosfatos",
+     "pirofosfato",
+     "difosfato",
+     "difosfatos",
+     "trifosfato",
+     "fosfato de sodio",
+     "fosfato disódico",
+     "fosfato trisódico",
+     "fosfato de calcio",
+     "fosfato tricálcico",
+     "fosfato de potasio",
+     "fosfato dipotásico",
+     "ácido fosfórico",
+     "tripolifosfato de sodio",
+     "hexametafosfato de sodio"
+    ]
+   },
+   "e_numbers": [
+    "E338",
+    "E339",
+    "E340",
+    "E341",
+    "E342",
+    "E343",
+    "E450",
+    "E451",
+    "E452",
+    "E541",
+    "E1410",
+    "E1412",
+    "E1413",
+    "E1414",
+    "E442"
+   ],
+   "source": "nkf_phosphorus"
+  },
+  {
+   "id": "potassium_additives",
+   "label": {
+    "en": "potassium additives",
+    "vi": "phụ gia kali",
+    "es": "aditivos de potasio"
+   },
+   "terms": {
+    "en": [
+     "potassium chloride",
+     "potassium lactate",
+     "potassium citrate",
+     "tripotassium citrate",
+     "potassium sorbate",
+     "potassium benzoate",
+     "potassium phosphate",
+     "dipotassium phosphate",
+     "tripotassium phosphate",
+     "monopotassium phosphate",
+     "potassium bicarbonate",
+     "potassium carbonate",
+     "potassium alginate",
+     "potassium glutamate",
+     "potassium acetate",
+     "potassium tartrate",
+     "potassium hydroxide",
+     "potassium malate",
+     "potassium gluconate",
+     "potassium salt",
+     "salt substitute",
+     "lite salt",
+     "potassium metabisulfite"
+    ],
+    "vi": [
+     "kali clorua",
+     "kali clorid",
+     "kali lactat",
+     "kali citrat",
+     "kali sorbat",
+     "kali benzoat",
+     "kali phosphat",
+     "kali cacbonat",
+     "muối kali"
+    ],
+    "es": [
+     "cloruro de potasio",
+     "cloruro potásico",
+     "lactato de potasio",
+     "citrato de potasio",
+     "sorbato de potasio",
+     "sorbato potásico",
+     "benzoato de potasio",
+     "fosfato de potasio",
+     "fosfato dipotásico",
+     "carbonato de potasio",
+     "sal de potasio",
+     "sustituto de sal"
+    ]
+   },
+   "e_numbers": [
+    "E508",
+    "E326",
+    "E332",
+    "E202",
+    "E212",
+    "E340",
+    "E501",
+    "E515",
+    "E525",
+    "E536",
+    "E402",
+    "E622",
+    "E261",
+    "E351",
+    "E357",
+    "E224",
+    "E228"
+   ],
+   "source": "niddk_ckd"
+  },
+  {
+   "id": "fast_sugars",
+   "label": {
+    "en": "sugar",
+    "vi": "đường",
+    "es": "azúcar"
+   },
+   "terms": {
+    "en": [
+     "sugar",
+     "sugars",
+     "cane sugar",
+     "brown sugar",
+     "raw sugar",
+     "white sugar",
+     "powdered sugar",
+     "icing sugar",
+     "invert sugar",
+     "invert syrup",
+     "glucose",
+     "glucose syrup",
+     "glucose-fructose syrup",
+     "fructose-glucose syrup",
+     "corn syrup",
+     "corn syrup solids",
+     "high fructose corn syrup",
+     "high-fructose corn syrup",
+     "hfcs",
+     "dextrose",
+     "maltodextrin",
+     "fructose",
+     "sucrose",
+     "maltose",
+     "syrup",
+     "rice syrup",
+     "brown rice syrup",
+     "malt syrup",
+     "tapioca syrup",
+     "honey",
+     "molasses",
+     "agave syrup",
+     "agave nectar",
+     "maple syrup",
+     "cane juice",
+     "evaporated cane juice",
+     "cane syrup",
+     "treacle",
+     "golden syrup",
+     "date syrup",
+     "coconut sugar",
+     "palm sugar",
+     "caramel",
+     "fruit juice concentrate",
+     "beet sugar",
+     "turbinado",
+     "demerara",
+     "muscovado"
+    ],
+    "vi": [
+     "đường",
+     "đường mía",
+     "đường trắng",
+     "đường nâu",
+     "đường cát",
+     "đường kính",
+     "đường phèn",
+     "đường thốt nốt",
+     "đường glucose",
+     "đường fructose",
+     "siro glucose",
+     "si rô glucose",
+     "siro",
+     "mạch nha",
+     "mật mía",
+     "mật ong",
+     "đường bột",
+     "đường dừa"
+    ],
+    "es": [
+     "azúcar",
+     "azúcares",
+     "azúcar de caña",
+     "azúcar moreno",
+     "azúcar morena",
+     "azúcar glas",
+     "azúcar invertido",
+     "jarabe de glucosa",
+     "jarabe de glucosa y fructosa",
+     "glucosa",
+     "dextrosa",
+     "fructosa",
+     "sacarosa",
+     "maltodextrina",
+     "jarabe de maíz",
+     "jarabe de maíz de alta fructosa",
+     "jarabe",
+     "melaza",
+     "panela",
+     "piloncillo",
+     "miel",
+     "jarabe de agave",
+     "jarabe de arce"
+    ]
+   },
+   "source": "fda_nutrition_dv"
+  },
+  {
+   "id": "caffeine",
+   "label": {
+    "en": "caffeine",
+    "vi": "caffeine",
+    "es": "cafeína"
+   },
+   "terms": {
+    "en": [
+     "caffeine",
+     "caffeine anhydrous",
+     "coffee",
+     "coffee extract",
+     "instant coffee",
+     "espresso",
+     "green coffee",
+     "green coffee extract",
+     "guarana",
+     "guarana extract",
+     "yerba mate",
+     "mate",
+     "kola nut",
+     "cola nut",
+     "matcha",
+     "green tea extract",
+     "black tea",
+     "black tea extract",
+     "green tea",
+     "brewed green tea"
+    ],
+    "vi": [
+     "caffeine",
+     "cafein",
+     "cà phê",
+     "cafe",
+     "bột cà phê",
+     "chiết xuất cà phê",
+     "trà xanh",
+     "bột trà xanh",
+     "matcha",
+     "trà đen",
+     "hồng trà"
+    ],
+    "es": [
+     "cafeína",
+     "café",
+     "café soluble",
+     "extracto de café",
+     "guaraná",
+     "yerba mate",
+     "té verde",
+     "extracto de té verde",
+     "té negro"
+    ]
+   },
+   "source": "acog_pregnancy",
+   "possible_terms": {
+    "en": [
+     "cola"
+    ]
+   }
+  },
+  {
+   "id": "palm_oil",
+   "label": {
+    "en": "palm oil",
+    "vi": "dầu cọ",
+    "es": "aceite de palma"
+   },
+   "terms": {
+    "en": [
+     "palm oil",
+     "palm kernel oil",
+     "palm fat",
+     "palm olein",
+     "palmolein",
+     "palm stearin",
+     "palm kernel fat",
+     "hydrogenated palm oil",
+     "hydrogenated palm kernel oil",
+     "fractionated palm kernel oil",
+     "red palm oil",
+     "vegetable oil (palm)",
+     "sodium palmate",
+     "sodium palm kernelate",
+     "elaeis guineensis",
+     "elaeis guineensis oil",
+     "elaeis guineensis (palm) oil"
+    ],
+    "vi": [
+     "dầu cọ",
+     "dầu cọ tinh luyện",
+     "dầu hạt cọ",
+     "dầu palm",
+     "dầu olein",
+     "shortening cọ"
+    ],
+    "es": [
+     "aceite de palma",
+     "aceite de palmiste",
+     "grasa de palma",
+     "palmiste",
+     "oleína de palma",
+     "estearina de palma"
+    ]
+   },
+   "source": "open_food_facts"
+  },
+  {
+   "id": "fragrance",
+   "label": {
+    "en": "fragrance",
+    "vi": "hương liệu",
+    "es": "fragancia"
+   },
+   "terms": {
+    "en": [
+     "fragrance",
+     "fragrances",
+     "parfum",
+     "perfume",
+     "fragrance (parfum)",
+     "parfum (fragrance)",
+     "aroma",
+     "masking fragrance",
+     "fragrance oil",
+     "fragrance blend",
+     "essential oil blend",
+     "perfume oil"
+    ],
+    "vi": [
+     "hương liệu",
+     "nước hoa",
+     "hương thơm",
+     "chất tạo hương",
+     "tinh dầu thơm"
+    ],
+    "es": [
+     "fragancia",
+     "perfume",
+     "parfum",
+     "aroma"
+    ]
+   },
+   "possible_terms": {
+    "en": [
+     "limonene",
+     "linalool",
+     "citral",
+     "geraniol",
+     "eugenol",
+     "isoeugenol",
+     "coumarin",
+     "citronellol",
+     "hexyl cinnamal",
+     "benzyl salicylate",
+     "benzyl benzoate",
+     "benzyl alcohol",
+     "amyl cinnamal",
+     "cinnamal",
+     "cinnamyl alcohol",
+     "farnesol",
+     "hydroxycitronellal",
+     "butylphenyl methylpropional",
+     "alpha-isomethyl ionone",
+     "anise alcohol",
+     "benzyl cinnamate",
+     "methyl 2-octynoate",
+     "evernia prunastri",
+     "oakmoss",
+     "lavender oil",
+     "essential oil",
+     "essential oils"
+    ],
+    "vi": [
+     "tinh dầu"
+    ],
+    "es": [
+     "aceites esenciales"
+    ]
+   },
+   "source": "aad_fragrance_free"
+  },
+  {
+   "id": "methylisothiazolinone",
+   "label": {
+    "en": "methylisothiazolinone",
+    "vi": "methylisothiazolinone",
+    "es": "metilisotiazolinona"
+   },
+   "terms": {
+    "en": [
+     "methylisothiazolinone",
+     "methylisothiazolinone (mi)",
+     "2-methyl-4-isothiazolin-3-one",
+     "methylisothiazolone",
+     "kathon cg",
+     "neolone"
+    ],
+    "es": [
+     "metilisotiazolinona"
+    ],
+    "vi": [
+     "methylisothiazolinone"
+    ]
+   },
+   "source": "nacdg_patch_test"
+  },
+  {
+   "id": "methylchloroisothiazolinone",
+   "label": {
+    "en": "methylchloroisothiazolinone",
+    "vi": "methylchloroisothiazolinone",
+    "es": "metilcloroisotiazolinona"
+   },
+   "terms": {
+    "en": [
+     "methylchloroisothiazolinone",
+     "methylchloroisothiazolinone (mci)",
+     "5-chloro-2-methyl-4-isothiazolin-3-one",
+     "kathon cg",
+     "mci/mi"
+    ],
+    "es": [
+     "metilcloroisotiazolinona"
+    ],
+    "vi": [
+     "methylchloroisothiazolinone"
+    ]
+   },
+   "source": "nacdg_patch_test"
+  },
+  {
+   "id": "formaldehyde_releasers",
+   "label": {
+    "en": "formaldehyde releaser",
+    "vi": "chất giải phóng formaldehyde",
+    "es": "liberador de formaldehído"
+   },
+   "terms": {
+    "en": [
+     "dmdm hydantoin",
+     "imidazolidinyl urea",
+     "diazolidinyl urea",
+     "quaternium-15",
+     "quaternium 15",
+     "bronopol",
+     "2-bromo-2-nitropropane-1,3-diol",
+     "sodium hydroxymethylglycinate",
+     "formaldehyde",
+     "formalin",
+     "methylene glycol",
+     "benzylhemiformal",
+     "5-bromo-5-nitro-1,3-dioxane",
+     "glyoxal",
+     "polyoxymethylene urea",
+     "hydroxymethylglycinate"
+    ],
+    "vi": [
+     "formaldehyde",
+     "formalin",
+     "fomanđêhít"
+    ],
+    "es": [
+     "formaldehído",
+     "dmdm hidantoína",
+     "imidazolidinil urea",
+     "diazolidinil urea"
+    ]
+   },
+   "source": "wa_formaldehyde_releasers"
+  },
+  {
+   "id": "sodium_lauryl_sulfate",
+   "label": {
+    "en": "sodium lauryl sulfate",
+    "vi": "sodium lauryl sulfate",
+    "es": "laurilsulfato de sodio"
+   },
+   "terms": {
+    "en": [
+     "sodium lauryl sulfate",
+     "sodium lauryl sulphate",
+     "sodium laurilsulfate",
+     "sodium dodecyl sulfate",
+     "sls"
+    ],
+    "vi": [
+     "sodium lauryl sulfate",
+     "natri lauryl sulfat"
+    ],
+    "es": [
+     "laurilsulfato de sodio",
+     "lauril sulfato de sodio",
+     "laurilsulfato sódico"
+    ]
+   },
+   "source": "nea_contact_dermatitis"
+  },
+  {
+   "id": "retinoids",
+   "label": {
+    "en": "retinoid",
+    "vi": "retinoid",
+    "es": "retinoide"
+   },
+   "terms": {
+    "en": [
+     "retinol",
+     "retinyl palmitate",
+     "retinyl acetate",
+     "retinyl propionate",
+     "retinyl linoleate",
+     "retinal",
+     "retinaldehyde",
+     "tretinoin",
+     "adapalene",
+     "tazarotene",
+     "isotretinoin",
+     "hydroxypinacolone retinoate",
+     "retinyl retinoate",
+     "retinoic acid",
+     "retinoid",
+     "retinoids"
+    ],
+    "vi": [
+     "retinol",
+     "retinoid",
+     "tretinoin"
+    ],
+    "es": [
+     "retinol",
+     "palmitato de retinilo",
+     "retinoide",
+     "retinoides",
+     "tretinoína",
+     "adapaleno"
+    ]
+   },
+   "source": "acog_pregnancy"
+  },
+  {
+   "id": "neutral.claims",
+   "neutral": true,
+   "source": "pear_matcher",
+   "terms": {
+    "en": [
+     "no artificial colors",
+     "no artificial colours",
+     "no artificial dyes",
+     "no artificial colors or flavors",
+     "no artificial flavors or colors",
+     "no artificial flavours or colours",
+     "no synthetic dyes",
+     "no synthetic colors",
+     "free from artificial colours",
+     "free from artificial colors",
+     "no added sugars",
+     "no refined sugar",
+     "no refined sugars",
+     "no high fructose corn syrup",
+     "no hfcs",
+     "no palm oil",
+     "palm oil free",
+     "palm oil-free",
+     "no phosphates",
+     "phosphate-free",
+     "phosphate free",
+     "no parabens",
+     "no sls",
+     "sls-free",
+     "sls free",
+     "no fragrance",
+     "unscented",
+     "fragrance-free formula",
+     "no retinol",
+     "retinol-free",
+     "caffeine-free",
+     "caffeine free",
+     "decaffeinated",
+     "decaf",
+     "bakuchiol",
+     "no msg"
+    ],
+    "vi": [
+     "không phẩm màu",
+     "không chứa phẩm màu",
+     "không chất bảo quản",
+     "không dầu cọ",
+     "không caffeine",
+     "không hương liệu tổng hợp"
+    ],
+    "es": [
+     "sin colorantes",
+     "sin colorantes artificiales",
+     "sin aceite de palma",
+     "sin cafeína",
+     "descafeinado",
+     "sin fosfatos",
+     "sin parabenos"
+    ]
+   }
+  }
+ ]
+}

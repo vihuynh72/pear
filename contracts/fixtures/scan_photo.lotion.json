@@ -1,0 +1,107 @@
+{
+  "product": {
+    "key": "photo:5f2c9a1be0d4",
+    "name": "Kids Daily Moisture Lotion",
+    "brand": "Pear Demo Care",
+    "category": "cosmetic",
+    "product_type": "leave_on",
+    "image_url": null,
+    "source": "photo",
+    "photo_kind": "ingredients",
+    "data_confidence": "high",
+    "less_sure": false,
+    "ask_for_ingredients": false,
+    "ingredients": [
+      "Water",
+      "Glycerin",
+      "Cetearyl Alcohol",
+      "Caprylic/Capric Triglyceride",
+      "Dimethicone",
+      "Fragrance",
+      "Phenoxyethanol",
+      "Methylisothiazolinone"
+    ],
+    "contains": [],
+    "may_contain": [],
+    "certifications": [],
+    "label_language": "en",
+    "code": null,
+    "quantity": "8 fl oz",
+    "nutrition": null,
+    "matched_by": "photo"
+  },
+  "verdicts": [
+    {
+      "member_id": "m_linh",
+      "state": "EASY",
+      "label": "Easy does it",
+      "reasons": [
+        {
+          "code": "signal.fragrance",
+          "text": "Fragrance",
+          "language": "en",
+          "severity": "soft",
+          "matched": [
+            "Fragrance"
+          ],
+          "source": "aad_fragrance_free"
+        }
+      ],
+      "score": null
+    },
+    {
+      "member_id": "m_ba",
+      "state": "RIPE",
+      "label": "Ripe",
+      "reasons": [],
+      "score": null
+    },
+    {
+      "member_id": "m_mia",
+      "state": "SKIP",
+      "label": "Skip it",
+      "reasons": [
+        {
+          "code": "signal.methylisothiazolinone",
+          "text": "Skin allergen: Methylisothiazolinone",
+          "language": "en",
+          "severity": "soft",
+          "matched": [
+            "Methylisothiazolinone"
+          ],
+          "source": "nacdg_patch_test"
+        },
+        {
+          "code": "signal.fragrance",
+          "text": "Fragrance",
+          "language": "en",
+          "severity": "soft",
+          "matched": [
+            "Fragrance"
+          ],
+          "source": "aad_fragrance_free"
+        }
+      ],
+      "score": null
+    },
+    {
+      "member_id": "m_leo",
+      "state": "RIPE",
+      "label": "Ripe",
+      "reasons": [],
+      "score": null
+    }
+  ],
+  "headline": {
+    "text": "Skip it for Mia: skin allergen. Fine for Bà and Leo.",
+    "language": "en"
+  },
+  "timings_ms": {
+    "label_reader": 1720,
+    "normalize": 3,
+    "rules": 2,
+    "total": 1790
+  },
+  "request_id": null,
+  "debug": null
+}

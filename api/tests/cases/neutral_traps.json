@@ -1,0 +1,222 @@
+{
+  "cases": [
+    {
+      "name": "coconut milk is not milk",
+      "tags": ["neutral", "p0", "milk"],
+      "product": {"key": "test:nt-coconut-milk", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["coconut milk", "water", "guar gum"], "legibility": "full"},
+      "members": ["m_leo"],
+      "extra_members": [{"id": "m_ana", "name": "Ana", "allergies": [{"id": "milk", "level": "strict"}]}],
+      "expect": {
+        "m_ana": {"state": "RIPE", "codes_exclude": ["allergen."]},
+        "m_leo": {"state": "RIPE", "codes_exclude": ["diet."]}
+      }
+    },
+    {
+      "name": "cocoa butter is not milk",
+      "tags": ["neutral", "p0", "milk"],
+      "product": {"key": "test:nt-cocoa-butter", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["cocoa mass", "cocoa butter", "cane sugar"], "legibility": "full"},
+      "members": ["m_leo"],
+      "extra_members": [{"id": "m_ana", "name": "Ana", "allergies": [{"id": "milk", "level": "strict"}]}],
+      "expect": {
+        "m_ana": {"state": "RIPE", "codes_exclude": ["allergen."]},
+        "m_leo": {"state": "RIPE", "codes_exclude": ["diet."]}
+      }
+    },
+    {
+      "name": "buckwheat is not wheat (or gluten)",
+      "tags": ["neutral", "p0", "wheat"],
+      "product": {"key": "test:nt-buckwheat", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["buckwheat", "water", "sea salt"], "legibility": "full"},
+      "members": [],
+      "extra_members": [
+        {"id": "m_wen", "name": "Wen", "allergies": [{"id": "wheat", "level": "strict"}]},
+        {"id": "m_gia", "name": "Gia", "allergies": [{"id": "gluten", "level": "strict"}]}
+      ],
+      "expect": {
+        "m_wen": {"state": "RIPE", "codes_exclude": ["allergen."]},
+        "m_gia": {"state": "RIPE", "codes_exclude": ["allergen."]}
+      }
+    },
+    {
+      "name": "eggplant is not egg",
+      "tags": ["neutral", "p0", "egg"],
+      "product": {"key": "test:nt-eggplant", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["eggplant", "olive oil", "garlic", "salt"], "legibility": "full"},
+      "members": ["m_leo"],
+      "extra_members": [{"id": "m_eli", "name": "Eli", "allergies": [{"id": "egg", "level": "strict"}]}],
+      "expect": {
+        "m_eli": {"state": "RIPE", "codes_exclude": ["allergen."]},
+        "m_leo": {"state": "RIPE", "codes_exclude": ["diet."]}
+      }
+    },
+    {
+      "name": "nutmeg is not a tree nut",
+      "tags": ["neutral", "p0", "tree_nut"],
+      "product": {"key": "test:nt-nutmeg", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["pumpkin", "cinnamon", "nutmeg", "cloves"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_tom", "name": "Tom", "allergies": [{"id": "tree_nut", "level": "strict"}]}],
+      "expect": {"m_tom": {"state": "RIPE", "codes_exclude": ["allergen."]}}
+    },
+    {
+      "name": "cream of tartar is not milk",
+      "tags": ["neutral", "p0", "milk"],
+      "product": {"key": "test:nt-tartar", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["corn starch", "cream of tartar", "baking soda"], "legibility": "full"},
+      "members": ["m_leo"],
+      "extra_members": [{"id": "m_ana", "name": "Ana", "allergies": [{"id": "milk", "level": "strict"}]}],
+      "expect": {
+        "m_ana": {"state": "RIPE", "codes_exclude": ["allergen."]},
+        "m_leo": {"state": "RIPE", "codes_exclude": ["diet."]}
+      }
+    },
+    {
+      "name": "a peanut-free facility statement alone is not peanut",
+      "tags": ["neutral", "p0", "peanut", "statement"],
+      "product": {"key": "test:nt-peanut-free", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["sunflower seed butter", "sugar", "salt"],
+                  "may_contain_text": "Made in a peanut-free facility.", "legibility": "full"},
+      "members": ["m_linh", "m_mia"],
+      "expect": {
+        "m_mia": {"state": "RIPE", "codes_exclude": ["allergen."]},
+        "m_linh": {"state": "RIPE"}
+      }
+    },
+    {
+      "name": "water chestnuts are not tree nuts",
+      "tags": ["neutral", "tree_nut", "variants"],
+      "product": {"key": "test:nt-water-chestnut", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["water chestnuts", "water", "salt"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_tom", "name": "Tom", "allergies": [{"id": "tree_nut", "level": "strict"}]}],
+      "expect": {"m_tom": {"state": "RIPE", "codes_exclude": ["allergen."]}}
+    },
+    {
+      "name": "shea butter in a lotion is not milk",
+      "tags": ["neutral", "milk", "inci"],
+      "product": {"key": "test:nt-shea", "source": "photo", "photo_kind": "ingredients", "category": "cosmetic",
+                  "product_type": "leave_on", "ingredients": ["Water", "Shea Butter", "Tocopherol"], "legibility": "full"},
+      "members": ["m_linh", "m_leo"],
+      "extra_members": [{"id": "m_ana", "name": "Ana", "allergies": [{"id": "milk", "level": "strict"}]}],
+      "expect": {
+        "m_ana": {"state": "RIPE", "codes_exclude": ["allergen."]},
+        "m_leo": {"state": "RIPE", "codes_exclude": ["diet."]},
+        "m_linh": {"state": "RIPE"}
+      }
+    },
+    {
+      "name": "a gluten-free claim inside an ingredient is not gluten",
+      "tags": ["neutral", "gluten"],
+      "product": {"key": "test:nt-gluten-free", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["gluten-free whole grain brown rice", "water", "sea salt"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_gia", "name": "Gia", "allergies": [{"id": "gluten", "level": "strict"}]}],
+      "expect": {"m_gia": {"state": "RIPE", "codes_exclude": ["allergen."]}}
+    },
+    {
+      "name": "a milk-free claim inside an ingredient is not milk",
+      "tags": ["neutral", "milk"],
+      "product": {"key": "test:nt-milk-free", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["milk-free cocoa blend (cocoa powder, sugar)", "salt"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_ana", "name": "Ana", "allergies": [{"id": "milk", "level": "strict"}]}],
+      "expect": {"m_ana": {"state": "RIPE", "codes_exclude": ["allergen."]}}
+    },
+    {
+      "name": "vi me (tamarind, no grave accent) is not mè (sesame)",
+      "tags": ["neutral", "vi", "sesame"],
+      "product": {"key": "test:nt-vi-tamarind", "source": "photo", "photo_kind": "ingredients", "label_language": "vi",
+                  "ingredients": ["nước", "đường", "me"], "legibility": "full"},
+      "members": ["m_mia"],
+      "expect": {"m_mia": {"state": "RIPE", "codes_exclude": ["allergen."]}}
+    },
+    {
+      "name": "sunflower seeds are not sesame",
+      "tags": ["neutral", "sesame"],
+      "product": {"key": "test:nt-sunflower", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["sunflower seeds", "salt"], "legibility": "full"},
+      "members": ["m_mia"],
+      "expect": {"m_mia": {"state": "RIPE", "codes_exclude": ["allergen."]}}
+    },
+    {
+      "name": "anti-trap: almond milk IS tree nut (and is not dairy)",
+      "tags": ["allergen", "p0", "tree_nut", "anti_trap"],
+      "product": {"key": "test:at-almond-milk", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["almond milk (water, almonds)", "sea salt"], "legibility": "full"},
+      "members": ["m_leo"],
+      "extra_members": [
+        {"id": "m_tom", "name": "Tom", "allergies": [{"id": "tree_nut", "level": "strict"}]},
+        {"id": "m_ana", "name": "Ana", "allergies": [{"id": "milk", "level": "strict"}]}
+      ],
+      "expect": {
+        "m_tom": {"state": "ALLERGY", "label": "Allergy", "codes_include": ["allergen.tree_nut"], "matched_include": ["almond"]},
+        "m_ana": {"state": "RIPE", "codes_exclude": ["allergen.milk", "allergen.milk.possible"]},
+        "m_leo": {"state": "RIPE", "codes_exclude": ["diet."]}
+      }
+    },
+    {
+      "name": "anti-trap: soy milk IS soy (and is not dairy)",
+      "tags": ["allergen", "p0", "soy", "anti_trap"],
+      "product": {"key": "test:at-soy-milk", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["soy milk (water, soybeans)", "cane sugar"], "legibility": "full"},
+      "members": ["m_leo"],
+      "extra_members": [
+        {"id": "m_soo", "name": "Soo", "allergies": [{"id": "soy", "level": "strict"}]},
+        {"id": "m_ana", "name": "Ana", "allergies": [{"id": "milk", "level": "strict"}]}
+      ],
+      "expect": {
+        "m_soo": {"state": "ALLERGY", "label": "Allergy", "codes_include": ["allergen.soy"], "matched_include": ["soy"]},
+        "m_ana": {"state": "RIPE", "codes_exclude": ["allergen.milk", "allergen.milk.possible"]},
+        "m_leo": {"state": "RIPE", "codes_exclude": ["diet."]}
+      }
+    },
+    {
+      "name": "anti-trap: peanut butter IS peanut and is not milk",
+      "tags": ["allergen", "p0", "peanut", "anti_trap"],
+      "product": {"key": "test:at-peanut-butter", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["peanut butter", "salt"], "legibility": "full"},
+      "members": ["m_mia", "m_leo"],
+      "extra_members": [{"id": "m_ana", "name": "Ana", "allergies": [{"id": "milk", "level": "strict"}]}],
+      "expect": {
+        "m_mia": {"state": "ALLERGY", "label": "Allergy", "codes_include": ["allergen.peanut"], "matched_include": ["peanut"]},
+        "m_ana": {"state": "RIPE", "codes_exclude": ["allergen.milk", "allergen.milk.possible"]},
+        "m_leo": {"state": "RIPE", "codes_exclude": ["diet."]}
+      }
+    },
+    {
+      "name": "anti-trap: milk chocolate IS milk",
+      "tags": ["allergen", "p0", "milk", "anti_trap"],
+      "product": {"key": "test:at-milk-choc", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["milk chocolate", "raisins"], "legibility": "full"},
+      "members": ["m_leo"],
+      "extra_members": [{"id": "m_ana", "name": "Ana", "allergies": [{"id": "milk", "level": "strict"}]}],
+      "expect": {
+        "m_ana": {"state": "ALLERGY", "label": "Allergy", "codes_include": ["allergen.milk"], "matched_include": ["milk"]},
+        "m_leo": {"state": "DIET", "label": "Not vegan", "codes_include": ["diet.vegan"]}
+      }
+    },
+    {
+      "name": "anti-trap: buttermilk IS milk",
+      "tags": ["allergen", "p0", "milk", "anti_trap"],
+      "product": {"key": "test:at-buttermilk", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["wheat flour", "buttermilk", "baking soda"], "legibility": "full"},
+      "members": ["m_leo"],
+      "extra_members": [{"id": "m_ana", "name": "Ana", "allergies": [{"id": "milk", "level": "strict"}]}],
+      "expect": {
+        "m_ana": {"state": "ALLERGY", "codes_include": ["allergen.milk"], "matched_include": ["buttermilk"]},
+        "m_leo": {"state": "DIET", "codes_include": ["diet.vegan"]}
+      }
+    },
+    {
+      "name": "anti-trap: a neutral coconut milk does not hide whey next to it",
+      "tags": ["allergen", "milk", "anti_trap"],
+      "product": {"key": "test:at-coconut-whey", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["coconut milk", "whey", "sugar"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_ana", "name": "Ana", "allergies": [{"id": "milk", "level": "strict"}]}],
+      "expect": {"m_ana": {"state": "ALLERGY", "codes_include": ["allergen.milk"], "matched_include": ["whey"]}}
+    }
+  ]
+}

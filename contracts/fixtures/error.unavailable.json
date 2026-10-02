@@ -1,0 +1,8 @@
+{
+  "error": {
+    "code": "unavailable",
+    "message": "Pear's AI reader isn't reachable right now. Barcodes still work.",
+    "next": "retry",
+    "request_id": null
+  }
+}

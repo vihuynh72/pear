@@ -1,0 +1,147 @@
+{
+  "cases": [
+    {
+      "name": "OFF allergens_tags en:sesame-seeds with no ingredient list -> ALLERGY",
+      "tags": ["allergen", "p0", "tags", "sesame"],
+      "why": "Tag hits have no printed words, so reason.matched may be empty. Sesame is known from tags; milk can't be ruled out without a list, so strict milk is UNSURE (plan 8.7.3).",
+      "product": {"key": "off:0000000000017", "source": "open_food_facts", "name": "Sesame snaps",
+                  "ingredients": [], "allergens_tags": ["en:sesame-seeds"], "legibility": "missing"},
+      "members": ["m_linh", "m_mia"],
+      "extra_members": [{"id": "m_ana", "name": "Ana", "allergies": [{"id": "milk", "level": "strict"}]}],
+      "expect": {
+        "m_mia": {"state": "ALLERGY", "label": "Allergy", "codes_include": ["allergen.sesame"]},
+        "m_ana": {"state": "UNSURE", "label": "Unsure", "codes_include": ["confidence.unsure"]},
+        "m_linh": {"state": "RIPE"}
+      }
+    },
+    {
+      "name": "OFF allergens_tags en:peanuts when the text list never says peanut",
+      "tags": ["allergen", "p0", "tags", "peanut"],
+      "product": {"key": "off:0000000000024", "source": "open_food_facts",
+                  "ingredients": ["sugar", "cocoa butter", "emulsifier"], "allergens_tags": ["en:peanuts"], "legibility": "full"},
+      "members": ["m_mia"],
+      "expect": {"m_mia": {"state": "ALLERGY", "label": "Allergy", "codes_include": ["allergen.peanut"],
+                           "codes_exclude": ["allergen.peanut.may_contain"]}}
+    },
+    {
+      "name": "OFF traces_tags en:peanuts only -> May contain",
+      "tags": ["allergen", "p0", "tags", "may_contain"],
+      "product": {"key": "off:0000000000031", "source": "open_food_facts",
+                  "ingredients": ["wheat flour", "sugar", "palm oil"], "traces_tags": ["en:peanuts"], "legibility": "full"},
+      "members": ["m_linh", "m_mia"],
+      "expect": {
+        "m_mia": {"state": "ALLERGY", "label": "May contain", "codes_include": ["allergen.peanut.may_contain"],
+                  "codes_exclude": ["allergen.peanut"]},
+        "m_linh": {"state": "RIPE"}
+      }
+    },
+    {
+      "name": "OFF traces_tags en:sesame-seeds only -> May contain",
+      "tags": ["allergen", "tags", "may_contain"],
+      "product": {"key": "off:0000000000048", "source": "open_food_facts",
+                  "ingredients": ["rice", "salt"], "traces_tags": ["en:sesame-seeds"], "legibility": "full"},
+      "members": ["m_mia"],
+      "expect": {"m_mia": {"state": "ALLERGY", "label": "May contain", "codes_include": ["allergen.sesame.may_contain"],
+                           "codes_exclude": ["allergen.sesame"]}}
+    },
+    {
+      "name": "OFF traces_tags en:nuts -> tree nut May contain",
+      "tags": ["allergen", "tags", "may_contain", "tree_nut"],
+      "product": {"key": "off:0000000000055", "source": "open_food_facts",
+                  "ingredients": ["sugar", "cocoa mass", "cocoa butter"], "traces_tags": ["en:nuts"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_tom", "name": "Tom", "allergies": [{"id": "tree_nut", "level": "strict"}]}],
+      "expect": {"m_tom": {"state": "ALLERGY", "label": "May contain", "codes_include": ["allergen.tree_nut.may_contain"]}}
+    },
+    {
+      "name": "OFF allergens_tags en:milk -> strict milk ALLERGY",
+      "tags": ["allergen", "tags", "milk"],
+      "product": {"key": "off:0000000000062", "source": "open_food_facts",
+                  "ingredients": ["sugar", "cocoa butter", "emulsifier"], "allergens_tags": ["en:milk"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_ana", "name": "Ana", "allergies": [{"id": "milk", "level": "strict"}]}],
+      "expect": {"m_ana": {"state": "ALLERGY", "label": "Allergy", "codes_include": ["allergen.milk"]}}
+    },
+    {
+      "name": "OFF allergens_tags en:gluten -> strict gluten ALLERGY",
+      "tags": ["allergen", "tags", "gluten"],
+      "product": {"key": "off:0000000000079", "source": "open_food_facts",
+                  "ingredients": ["rice", "malt extract", "salt"], "allergens_tags": ["en:gluten"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_gia", "name": "Gia", "allergies": [{"id": "gluten", "level": "strict"}]}],
+      "expect": {"m_gia": {"state": "ALLERGY", "codes_include": ["allergen.gluten"]}}
+    },
+    {
+      "name": "OFF allergens_tags en:soybeans -> strict soy ALLERGY",
+      "tags": ["allergen", "tags", "soy"],
+      "product": {"key": "off:0000000000086", "source": "open_food_facts",
+                  "ingredients": ["water", "salt"], "allergens_tags": ["en:soybeans"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_soo", "name": "Soo", "allergies": [{"id": "soy", "level": "strict"}]}],
+      "expect": {"m_soo": {"state": "ALLERGY", "codes_include": ["allergen.soy"]}}
+    },
+    {
+      "name": "allergen in both allergens_tags and traces_tags shows Allergy, not May contain",
+      "tags": ["allergen", "tags", "peanut"],
+      "product": {"key": "off:0000000000093", "source": "open_food_facts",
+                  "ingredients": ["sugar", "peanuts", "salt"], "allergens_tags": ["en:peanuts"], "traces_tags": ["en:peanuts"],
+                  "legibility": "full"},
+      "members": ["m_mia"],
+      "expect": {"m_mia": {"state": "ALLERGY", "label": "Allergy", "codes_include": ["allergen.peanut"], "matched_include": ["peanut"]}}
+    },
+    {
+      "name": "made on shared equipment with sesame -> May contain",
+      "tags": ["allergen", "statement", "may_contain"],
+      "product": {"key": "test:st-shared", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["corn", "sunflower oil", "salt"],
+                  "may_contain_text": "Made on shared equipment that also processes sesame.", "legibility": "full"},
+      "members": ["m_mia"],
+      "expect": {"m_mia": {"state": "ALLERGY", "label": "May contain", "codes_include": ["allergen.sesame.may_contain"],
+                           "codes_exclude": ["allergen.sesame"]}}
+    },
+    {
+      "name": "OFF traces_tags en:milk: strict May contain, Ingredients-only gets a trace note",
+      "tags": ["allergen", "tags", "may_contain", "sensitive"],
+      "product": {"key": "off:0000000000109", "source": "open_food_facts",
+                  "ingredients": ["sugar", "cocoa mass", "cocoa butter"], "traces_tags": ["en:milk"], "legibility": "full"},
+      "members": [],
+      "extra_members": [
+        {"id": "m_ana", "name": "Ana", "allergies": [{"id": "milk", "level": "strict"}]},
+        {"id": "m_sam", "name": "Sam", "allergies": [{"id": "milk", "level": "sensitive"}]}
+      ],
+      "expect": {
+        "m_ana": {"state": "ALLERGY", "label": "May contain", "codes_include": ["allergen.milk.may_contain"]},
+        "m_sam": {"state": "RIPE", "notes_include": ["allergen.milk.trace_note"],
+                  "codes_exclude": ["allergen.milk", "allergen.milk.may_contain", "allergen.milk.possible"]}
+      }
+    },
+    {
+      "name": "CONTAINS: WHEAT, SOY in capitals",
+      "tags": ["allergen", "statement", "variants"],
+      "product": {"key": "test:st-caps", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["rice", "water", "salt"], "contains_text": "CONTAINS: WHEAT, SOY.", "legibility": "full"},
+      "members": [],
+      "extra_members": [
+        {"id": "m_wen", "name": "Wen", "allergies": [{"id": "wheat", "level": "strict"}]},
+        {"id": "m_soo", "name": "Soo", "allergies": [{"id": "soy", "level": "strict"}]}
+      ],
+      "expect": {
+        "m_wen": {"state": "ALLERGY", "label": "Allergy", "codes_include": ["allergen.wheat"]},
+        "m_soo": {"state": "ALLERGY", "label": "Allergy", "codes_include": ["allergen.soy"]}
+      }
+    },
+    {
+      "name": "may contain peanuts and/or tree nuts covers both",
+      "tags": ["allergen", "statement", "may_contain"],
+      "product": {"key": "test:st-andor", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["oat flakes", "honey", "sunflower oil"],
+                  "may_contain_text": "May contain peanuts and/or tree nuts.", "legibility": "full"},
+      "members": ["m_mia"],
+      "extra_members": [{"id": "m_tom", "name": "Tom", "allergies": [{"id": "tree_nut", "level": "strict"}]}],
+      "expect": {
+        "m_mia": {"state": "ALLERGY", "label": "May contain", "codes_include": ["allergen.peanut.may_contain"]},
+        "m_tom": {"state": "ALLERGY", "label": "May contain", "codes_include": ["allergen.tree_nut.may_contain"]}
+      }
+    }
+  ]
+}

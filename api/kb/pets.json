@@ -1,0 +1,35 @@
+{
+  "version": "2026-10-02",
+  "items": [
+    {"id": "xylitol", "label": {"en": "xylitol", "vi": "xylitol", "es": "xilitol"},
+     "terms": {"en": ["xylitol", "birch sugar", "birch xylitol"], "vi": ["xylitol", "đường xylitol"], "es": ["xilitol", "azúcar de abedul"]},
+     "e_numbers": ["E967"], "source": "aspca_people_foods"},
+    {"id": "chocolate", "label": {"en": "chocolate", "vi": "sô cô la", "es": "chocolate"},
+     "terms": {"en": ["chocolate", "dark chocolate", "milk chocolate", "baking chocolate", "chocolate chips", "chocolate liquor", "cocoa", "cocoa powder", "cocoa solids", "cocoa mass", "cocoa liquor",
+                      "cocoa nibs", "cacao", "cacao powder", "cacao nibs", "unsweetened chocolate", "cocoa extract", "white chocolate"],
+               "vi": ["sô cô la", "socola", "sôcôla", "chocolate", "ca cao", "cacao", "bột ca cao", "bột cacao"],
+               "es": ["chocolate", "cacao", "cacao en polvo", "chocolate negro", "chocolate amargo", "pasta de cacao", "chocolate con leche"]},
+     "source": "aspca_people_foods"},
+    {"id": "grape", "label": {"en": "grapes or raisins", "vi": "nho hoặc nho khô", "es": "uvas o pasas"},
+     "terms": {"en": ["grape", "grapes", "raisin", "raisins", "sultana", "sultanas", "currant", "currants", "zante currants", "grape juice", "grape juice concentrate", "grape skin extract", "grape seed extract"],
+               "vi": ["nho", "nho khô", "nước nho", "quả nho"], "es": ["uva", "uvas", "pasas", "uvas pasas", "pasa", "jugo de uva", "zumo de uva", "mosto"]},
+     "source": "aspca_people_foods"},
+    {"id": "macadamia", "label": {"en": "macadamia nuts", "vi": "hạt mắc ca", "es": "nueces de macadamia"},
+     "terms": {"en": ["macadamia", "macadamia nut", "macadamia nuts", "macadamia oil"], "vi": ["hạt mắc ca", "mắc ca", "macca", "hạt macca"], "es": ["macadamia", "nuez de macadamia", "nueces de macadamia"],
+               "inci": ["macadamia ternifolia", "macadamia integrifolia", "macadamia ternifolia seed oil"]},
+     "source": "aspca_people_foods"},
+    {"id": "yeast_dough", "label": {"en": "raw yeast dough", "vi": "bột nhào men sống", "es": "masa cruda con levadura"},
+     "terms": {"en": ["yeast dough", "raw dough", "raw yeast dough", "unbaked dough", "pizza dough", "bread dough"], "vi": ["bột nhào sống"], "es": ["masa cruda", "masa de pan cruda"]},
+     "source": "aspca_people_foods"}
+  ],
+  "toxins": [
+    {"id": "xylitol", "kb_ids": ["xylitol"], "species": ["dog", "cat"], "source": "aspca_people_foods"},
+    {"id": "chocolate", "kb_ids": ["chocolate"], "species": ["dog", "cat"], "source": "aspca_people_foods"},
+    {"id": "caffeine", "kb_ids": ["caffeine"], "species": ["dog", "cat"], "source": "aspca_people_foods"},
+    {"id": "grapes", "kb_ids": ["grape"], "species": ["dog", "cat"], "source": "aspca_people_foods"},
+    {"id": "allium", "kb_ids": ["onion", "garlic"], "species": ["dog", "cat"], "source": "aspca_people_foods"},
+    {"id": "macadamia", "kb_ids": ["macadamia"], "species": ["dog"], "source": "aspca_people_foods"},
+    {"id": "alcohol", "kb_ids": ["alcohol"], "species": ["dog", "cat"], "source": "aspca_people_foods"},
+    {"id": "yeast_dough", "kb_ids": ["yeast_dough"], "species": ["dog", "cat"], "source": "aspca_people_foods"}
+  ]
+}

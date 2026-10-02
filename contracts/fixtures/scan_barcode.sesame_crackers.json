@@ -1,0 +1,109 @@
+{
+  "product": {
+    "key": "off:0000000000017",
+    "name": "Sesame Crackers",
+    "brand": "Pear Demo Pantry",
+    "category": "food",
+    "product_type": null,
+    "image_url": "https://placehold.co/600x600/png?text=Sesame+Crackers",
+    "source": "open_food_facts",
+    "photo_kind": null,
+    "data_confidence": "high",
+    "less_sure": false,
+    "ask_for_ingredients": false,
+    "ingredients": [
+      "wheat flour",
+      "sesame seeds",
+      "salt"
+    ],
+    "contains": [
+      "wheat",
+      "sesame",
+      "gluten"
+    ],
+    "may_contain": [
+      "peanut"
+    ],
+    "certifications": [],
+    "label_language": "en",
+    "code": "0000000000017",
+    "quantity": "113 g",
+    "nutrition": {
+      "basis": "serving",
+      "sodium_mg": 95.0,
+      "sodium_dv": 4.0,
+      "added_sugars_g": 0.0,
+      "added_sugars_dv": 0.0,
+      "sugars_g": 0.0,
+      "sat_fat_g": 0.5,
+      "sat_fat_dv": 3.0,
+      "caffeine_mg": null
+    },
+    "matched_by": "barcode"
+  },
+  "verdicts": [
+    {
+      "member_id": "m_linh",
+      "state": "RIPE",
+      "label": "Ripe",
+      "reasons": [],
+      "score": null
+    },
+    {
+      "member_id": "m_ba",
+      "state": "RIPE",
+      "label": "Ripe",
+      "reasons": [],
+      "score": null
+    },
+    {
+      "member_id": "m_mia",
+      "state": "ALLERGY",
+      "label": "Allergy",
+      "reasons": [
+        {
+          "code": "allergen.sesame",
+          "text": "Contains sesame (sesame seeds)",
+          "language": "en",
+          "severity": "hard",
+          "matched": [
+            "sesame seeds",
+            "sesame"
+          ],
+          "source": "fda_major_allergens"
+        },
+        {
+          "code": "allergen.peanut.may_contain",
+          "text": "May contain peanuts",
+          "language": "en",
+          "severity": "hard",
+          "matched": [
+            "peanuts"
+          ],
+          "source": "fda_major_allergens"
+        }
+      ],
+      "score": null
+    },
+    {
+      "member_id": "m_leo",
+      "state": "RIPE",
+      "label": "Ripe",
+      "reasons": [],
+      "score": null
+    }
+  ],
+  "headline": {
+    "text": "Not for Mia: contains sesame, may contain peanuts. Fine for Linh, Bà and Leo.",
+    "language": "en"
+  },
+  "timings_ms": {
+    "cache": 41,
+    "lookup": 486,
+    "normalize": 3,
+    "rules": 2,
+    "total": 548
+  },
+  "request_id": null,
+  "debug": null
+}

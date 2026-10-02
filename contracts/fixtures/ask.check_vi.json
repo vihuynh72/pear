@@ -1,0 +1,104 @@
+{
+  "transcript": "Bà ăn mì này được không?",
+  "language": "vi",
+  "intent": "check",
+  "product_query": "mì",
+  "member_ids": [
+    "m_ba"
+  ],
+  "next": "result",
+  "answer": {
+    "text": "Bà nên ăn ít thôi: nhiều muối (38% nhu cầu mỗi ngày).",
+    "language": "vi"
+  },
+  "scan_result": {
+    "product": {
+      "key": "off:0000000000024",
+      "name": "Mì Tôm Chua Cay",
+      "brand": "Pear Demo Foods",
+      "category": "food",
+      "product_type": null,
+      "image_url": "https://placehold.co/600x600/png?text=Mi+Tom+Chua+Cay",
+      "source": "open_food_facts",
+      "photo_kind": null,
+      "data_confidence": "high",
+      "less_sure": false,
+      "ask_for_ingredients": false,
+      "ingredients": [
+        "bột mì",
+        "dầu cọ",
+        "tinh bột khoai mì",
+        "muối",
+        "đường",
+        "bột nước tương (đậu nành)",
+        "bột tôm (2%)",
+        "chất điều vị (mononatri glutamat 621)",
+        "tỏi",
+        "ớt",
+        "hành lá"
+      ],
+      "contains": [
+        "wheat",
+        "soy",
+        "shellfish",
+        "gluten"
+      ],
+      "may_contain": [],
+      "certifications": [],
+      "label_language": "vi",
+      "code": "0000000000024",
+      "quantity": "75 g",
+      "nutrition": {
+        "basis": "serving",
+        "sodium_mg": 870.0,
+        "sodium_dv": 38.0,
+        "added_sugars_g": 2.0,
+        "added_sugars_dv": 4.0,
+        "sugars_g": 3.0,
+        "sat_fat_g": 6.5,
+        "sat_fat_dv": 33.0,
+        "caffeine_mg": null
+      },
+      "matched_by": "barcode"
+    },
+    "verdicts": [
+      {
+        "member_id": "m_ba",
+        "state": "EASY",
+        "label": "Easy does it",
+        "reasons": [
+          {
+            "code": "signal.sodium",
+            "text": "Nhiều muối (38% nhu cầu mỗi ngày)",
+            "language": "vi",
+            "severity": "soft",
+            "matched": [],
+            "source": "fda_nutrition_dv"
+          }
+        ],
+        "score": null
+      }
+    ],
+    "headline": {
+      "text": "Easy does it for Bà: high sodium.",
+      "language": "en"
+    },
+    "timings_ms": {
+      "resolve": 46,
+      "normalize": 2,
+      "rules": 1,
+      "total": 49
+    },
+    "request_id": null,
+    "debug": null
+  },
+  "picks": null,
+  "timings_ms": {
+    "question_reader": 712,
+    "resolve": 46,
+    "rules": 1,
+    "total": 781
+  },
+  "request_id": null,
+  "debug": null
+}

@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "service": "pear-api",
+  "version": "0.3.0+dev",
+  "env": "local",
+  "region": "us-central1",
+  "store": "memory",
+  "gemini": "ok",
+  "auth": "optional",
+  "ask_engine": "adk",
+  "kb_version": "mock0001",
+  "uptime_s": 42,
+  "features": {
+    "picks": true,
+    "vector": true,
+    "prices": true,
+    "explain": true,
+    "enrich": true,
+    "scan_log": true,
+    "fdc": true
+  }
+}

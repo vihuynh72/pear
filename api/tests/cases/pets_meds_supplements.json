@@ -1,0 +1,158 @@
+{
+  "cases": [
+    {
+      "name": "dog + xylitol -> Toxic for dogs",
+      "tags": ["pet", "p0"],
+      "product": {"key": "test:pt-xylitol", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["xylitol", "gum base", "peppermint oil"], "legibility": "full"},
+      "members": ["m_linh"],
+      "extra_members": [{"id": "m_bo", "type": "pet", "species": "dog", "name": "Bo"}],
+      "expect": {
+        "m_bo": {"state": "ALLERGY", "label": "Toxic for dogs", "codes_include": ["pet."], "matched_include": ["xylitol"]},
+        "m_linh": {"state": "RIPE", "codes_exclude": ["pet."]}
+      }
+    },
+    {
+      "name": "dog + chocolate -> Toxic for dogs",
+      "tags": ["pet"],
+      "product": {"key": "test:pt-chocolate", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["sugar", "chocolate", "rice crisps"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_bo", "type": "pet", "species": "dog", "name": "Bo"}],
+      "expect": {"m_bo": {"state": "ALLERGY", "label": "Toxic for dogs", "codes_include": ["pet."], "matched_include": ["chocolate"]}}
+    },
+    {
+      "name": "dog + raisins -> Toxic for dogs",
+      "tags": ["pet"],
+      "product": {"key": "test:pt-raisins", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["rolled oats", "raisins", "cinnamon"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_bo", "type": "pet", "species": "dog", "name": "Bo"}],
+      "expect": {"m_bo": {"state": "ALLERGY", "label": "Toxic for dogs", "codes_include": ["pet."], "matched_include": ["raisin"]}}
+    },
+    {
+      "name": "dog + macadamia nuts -> Toxic for dogs",
+      "tags": ["pet"],
+      "product": {"key": "test:pt-macadamia", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["macadamia nuts", "sea salt"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_bo", "type": "pet", "species": "dog", "name": "Bo"}],
+      "expect": {"m_bo": {"state": "ALLERGY", "label": "Toxic for dogs", "codes_include": ["pet."], "matched_include": ["macadamia"]}}
+    },
+    {
+      "name": "dog + coffee -> Toxic for dogs",
+      "tags": ["pet"],
+      "product": {"key": "test:pt-coffee", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["water", "coffee", "cane sugar"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_bo", "type": "pet", "species": "dog", "name": "Bo"}],
+      "expect": {"m_bo": {"state": "ALLERGY", "label": "Toxic for dogs", "codes_include": ["pet."], "matched_include": ["coffee"]}}
+    },
+    {
+      "name": "cat + onion powder -> Toxic for cats",
+      "tags": ["pet", "p0"],
+      "product": {"key": "test:pt-cat-onion", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["chicken broth", "onion powder", "salt"], "legibility": "full"},
+      "members": ["m_linh"],
+      "extra_members": [{"id": "m_mochi", "type": "pet", "species": "cat", "name": "Mochi"}],
+      "expect": {
+        "m_mochi": {"state": "ALLERGY", "label": "Toxic for cats", "codes_include": ["pet."], "matched_include": ["onion"]},
+        "m_linh": {"state": "RIPE"}
+      }
+    },
+    {
+      "name": "cat + garlic -> Toxic for cats",
+      "tags": ["pet"],
+      "product": {"key": "test:pt-cat-garlic", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["tuna", "garlic", "olive oil"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_mochi", "type": "pet", "species": "cat", "name": "Mochi"}],
+      "expect": {"m_mochi": {"state": "ALLERGY", "label": "Toxic for cats", "codes_include": ["pet."], "matched_include": ["garlic"]}}
+    },
+    {
+      "name": "dog + plain chicken and rice -> RIPE",
+      "tags": ["pet"],
+      "product": {"key": "test:pt-plain", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["chicken", "rice", "carrots"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_bo", "type": "pet", "species": "dog", "name": "Bo"}],
+      "expect": {"m_bo": {"state": "RIPE", "codes_exclude": ["pet."]}}
+    },
+    {
+      "name": "grapefruit + atorvastatin: pharmacist note, state unchanged",
+      "tags": ["med", "p0"],
+      "product": {"key": "test:md-grapefruit", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["grapefruit juice"], "legibility": "full"},
+      "members": ["m_linh"],
+      "extra_members": [{"id": "m_hai", "name": "Hai", "medications": ["atorvastatin 20 mg"]}],
+      "expect": {
+        "m_hai": {"state": "RIPE", "label": "Ripe", "notes_include": ["med."]},
+        "m_linh": {"state": "RIPE", "codes_exclude": ["med."]}
+      }
+    },
+    {
+      "name": "warfarin + vitamin K-rich kale: steady-intake note, state unchanged",
+      "tags": ["med"],
+      "product": {"key": "test:md-warfarin", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["kale", "spinach", "olive oil"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_wanda", "name": "Wanda", "medications": ["warfarin"]}],
+      "expect": {"m_wanda": {"state": "RIPE", "notes_include": ["med."]}}
+    },
+    {
+      "name": "a pharmacist note never softens an ALLERGY",
+      "tags": ["med", "allergen"],
+      "product": {"key": "test:md-allergy", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["grapefruit juice", "peanuts"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_hai", "name": "Hai", "medications": ["simvastatin"], "allergies": [{"id": "peanut", "level": "strict"}]}],
+      "expect": {"m_hai": {"state": "ALLERGY", "label": "Allergy", "codes_include": ["allergen.peanut"], "notes_include": ["med."]}}
+    },
+    {
+      "name": "medication with no interacting food -> no med note",
+      "tags": ["med"],
+      "product": {"key": "test:md-none", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["apples", "water"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_hai", "name": "Hai", "medications": ["atorvastatin"]}],
+      "expect": {"m_hai": {"state": "RIPE", "codes_exclude": ["med."]}}
+    },
+    {
+      "name": "supplement with a gelatin capsule: Leo Not vegan + supplement scope note",
+      "tags": ["supplement", "p0", "diet"],
+      "product": {"key": "test:sp-gelatin", "source": "photo", "photo_kind": "ingredients", "category": "supplement",
+                  "ingredients": ["fish oil", "gelatin", "water"], "legibility": "full"},
+      "members": ["m_linh", "m_leo"],
+      "expect": {
+        "m_leo": {"state": "DIET", "label": "Not vegan", "codes_include": ["diet.vegan", "supplement.scope"], "matched_include": ["gelatin"]},
+        "m_linh": {"state": "RIPE", "notes_include": ["supplement.scope"]}
+      }
+    },
+    {
+      "name": "supplement with shellfish-derived glucosamine -> strict shellfish ALLERGY",
+      "tags": ["supplement", "allergen"],
+      "product": {"key": "test:sp-glucosamine", "source": "photo", "photo_kind": "ingredients", "category": "supplement",
+                  "ingredients": ["glucosamine (from shellfish)", "cellulose"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_kai", "name": "Kai", "allergies": [{"id": "shellfish", "level": "strict"}]}],
+      "expect": {"m_kai": {"state": "ALLERGY", "codes_include": ["allergen.shellfish", "supplement.scope"], "matched_include": ["shellfish"]}}
+    },
+    {
+      "name": "supplement with fish oil -> strict fish ALLERGY",
+      "tags": ["supplement", "allergen"],
+      "product": {"key": "test:sp-fish-oil", "source": "photo", "photo_kind": "ingredients", "category": "supplement",
+                  "ingredients": ["fish oil (anchovy, sardine)", "gelatin", "water"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_finn", "name": "Finn", "allergies": [{"id": "fish", "level": "strict"}]}],
+      "expect": {"m_finn": {"state": "ALLERGY", "codes_include": ["allergen.fish"], "matched_include": ["fish"]}}
+    },
+    {
+      "name": "supplements get allergen and diet checks only (no dye signal for Mia)",
+      "tags": ["supplement", "dyes"],
+      "product": {"key": "test:sp-gummy-dye", "source": "photo", "photo_kind": "ingredients", "category": "supplement",
+                  "ingredients": ["sugar", "pectin", "ascorbic acid", "Red 40"], "legibility": "full"},
+      "members": ["m_mia"],
+      "expect": {"m_mia": {"state": "RIPE", "codes_exclude": ["signal."], "notes_include": ["supplement.scope"]}}
+    }
+  ]
+}

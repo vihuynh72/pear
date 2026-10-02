@@ -1,0 +1,8 @@
+{
+  "error": {
+    "code": "unreadable",
+    "message": "We couldn't read the ingredients. Try a closer photo of the ingredient panel?",
+    "next": "retake",
+    "request_id": null
+  }
+}

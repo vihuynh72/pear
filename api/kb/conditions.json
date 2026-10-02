@@ -1,0 +1,48 @@
+{
+  "version": "2026-10-02",
+  "options": {
+    "conditions": [
+      {"id": "high_blood_pressure", "aliases": ["hypertension", "hbp", "high_bp", "blood_pressure"], "label": {"en": "high blood pressure", "vi": "huyết áp cao", "es": "presión alta"},
+       "synonyms": {"en": ["hypertension", "high bp", "blood pressure"], "vi": ["cao huyết áp", "tăng huyết áp", "huyết áp"], "es": ["hipertensión", "presión arterial alta", "tensión alta"]}, "source": "niddk_ckd"},
+      {"id": "diabetes", "aliases": ["type_2_diabetes", "type_1_diabetes", "t2d", "diabetic"], "label": {"en": "diabetes", "vi": "tiểu đường", "es": "diabetes"},
+       "synonyms": {"en": ["type 2 diabetes", "type 1 diabetes", "diabetic", "blood sugar"], "vi": ["đái tháo đường", "bệnh tiểu đường", "đường huyết"], "es": ["diabético", "azúcar en la sangre"]}, "source": "fda_nutrition_dv"},
+      {"id": "prediabetes", "aliases": ["pre_diabetes", "pre-diabetes", "borderline_diabetes"], "label": {"en": "prediabetes", "vi": "tiền tiểu đường", "es": "prediabetes"},
+       "synonyms": {"en": ["pre-diabetes", "borderline diabetes", "insulin resistance"], "vi": ["tiền đái tháo đường"], "es": ["prediabético", "resistencia a la insulina"]}, "source": "fda_nutrition_dv"},
+      {"id": "high_cholesterol", "aliases": ["cholesterol", "hyperlipidemia", "high_ldl"], "label": {"en": "high cholesterol", "vi": "mỡ máu cao", "es": "colesterol alto"},
+       "synonyms": {"en": ["cholesterol", "hyperlipidemia", "high ldl"], "vi": ["cholesterol cao", "rối loạn mỡ máu", "mỡ máu"], "es": ["colesterol", "hipercolesterolemia"]}, "source": "fda_nutrition_dv"},
+      {"id": "kidney_disease", "aliases": ["ckd", "chronic_kidney_disease", "renal_disease", "kidney"], "label": {"en": "kidney disease", "vi": "bệnh thận", "es": "enfermedad renal"},
+       "synonyms": {"en": ["ckd", "chronic kidney disease", "renal", "dialysis"], "vi": ["suy thận", "thận", "chạy thận"], "es": ["enfermedad de los riñones", "insuficiencia renal", "diálisis", "riñón"]}, "source": "niddk_ckd"},
+      {"id": "kidney_potassium_limit", "aliases": ["low_potassium", "potassium_limit", "hyperkalemia"], "label": {"en": "kidney disease, potassium limit", "vi": "bệnh thận, hạn chế kali", "es": "enfermedad renal, límite de potasio"},
+       "synonyms": {"en": ["potassium limit", "low potassium diet", "hyperkalemia"], "vi": ["hạn chế kali", "kiêng kali"], "es": ["límite de potasio", "dieta baja en potasio", "hiperpotasemia"]}, "source": "niddk_ckd"},
+      {"id": "heart_disease", "aliases": ["heart", "cardiovascular_disease", "cvd", "heart_failure"], "label": {"en": "heart disease", "vi": "bệnh tim", "es": "enfermedad cardíaca"},
+       "synonyms": {"en": ["heart condition", "cardiovascular", "heart failure"], "vi": ["tim mạch", "bệnh tim mạch", "suy tim"], "es": ["enfermedad del corazón", "cardiopatía", "corazón"]}, "source": "fda_nutrition_dv"},
+      {"id": "pregnancy", "aliases": ["pregnant", "expecting"], "label": {"en": "pregnancy", "vi": "mang thai", "es": "embarazo"},
+       "synonyms": {"en": ["pregnant", "expecting"], "vi": ["có thai", "có bầu", "bầu"], "es": ["embarazada"]}, "source": "acog_pregnancy"}
+    ],
+    "less_of": [
+      {"id": "sugar", "aliases": ["less_sugar", "added_sugar", "sugars"], "label": {"en": "sugar", "vi": "đường", "es": "azúcar"},
+       "synonyms": {"en": ["added sugar", "less sugar", "sweets"], "vi": ["ít đường", "bớt đường"], "es": ["menos azúcar", "azúcar añadido"]}, "source": "fda_nutrition_dv"},
+      {"id": "sodium", "aliases": ["salt", "less_salt", "less_sodium"], "label": {"en": "sodium", "vi": "muối", "es": "sodio"},
+       "synonyms": {"en": ["salt", "less salt"], "vi": ["ít muối", "natri", "mặn"], "es": ["sal", "menos sal"]}, "source": "fda_nutrition_dv"},
+      {"id": "saturated_fat", "aliases": ["sat_fat", "fat"], "label": {"en": "saturated fat", "vi": "chất béo bão hòa", "es": "grasa saturada"},
+       "synonyms": {"en": ["sat fat", "fat", "fatty"], "vi": ["chất béo", "mỡ"], "es": ["grasas saturadas", "grasa"]}, "source": "fda_nutrition_dv"},
+      {"id": "caffeine", "aliases": ["less_caffeine", "coffee"], "label": {"en": "caffeine", "vi": "caffeine", "es": "cafeína"},
+       "synonyms": {"en": ["coffee", "energy drinks"], "vi": ["cà phê", "cafein"], "es": ["café"]}, "source": "acog_pregnancy"},
+      {"id": "artificial_dyes", "aliases": ["dyes", "food_dyes", "artificial_colors", "colors"], "label": {"en": "artificial dyes", "vi": "phẩm màu nhân tạo", "es": "colorantes artificiales"},
+       "synonyms": {"en": ["food dyes", "artificial colors", "red 40", "dyes"], "vi": ["phẩm màu", "màu thực phẩm"], "es": ["colorantes", "tintes"]}, "source": "cspi_dyes"},
+      {"id": "palm_oil", "aliases": ["palm"], "label": {"en": "palm oil", "vi": "dầu cọ", "es": "aceite de palma"},
+       "synonyms": {"en": ["palm"], "vi": ["dầu cọ"], "es": ["palma"]}, "source": "open_food_facts"}
+    ]
+  },
+  "signals": [
+    {"id": "sodium", "nutrient": "sodium", "weight": 25, "applies": {"conditions": ["high_blood_pressure", "kidney_disease", "heart_disease"], "less_of": ["sodium"]}, "categories": ["food"], "source": "fda_nutrition_dv"},
+    {"id": "added_sugars", "nutrient": "added_sugars", "weight": 25, "applies": {"conditions": ["diabetes", "prediabetes"], "less_of": ["sugar"]}, "categories": ["food"], "source": "fda_nutrition_dv"},
+    {"id": "fast_sugars", "kb_ids": ["fast_sugars"], "first_n": 3, "weight": 10, "applies": {"conditions": ["diabetes", "prediabetes"]}, "categories": ["food"], "source": "fda_nutrition_dv"},
+    {"id": "saturated_fat", "nutrient": "sat_fat", "weight": 20, "applies": {"conditions": ["high_cholesterol", "heart_disease"], "less_of": ["saturated_fat"]}, "categories": ["food"], "source": "fda_nutrition_dv"},
+    {"id": "phosphates", "kb_ids": ["phosphates"], "weight": 20, "applies": {"conditions": ["kidney_disease"]}, "categories": ["food"], "source": "nkf_phosphorus"},
+    {"id": "potassium_additives", "kb_ids": ["potassium_additives"], "weight": 30, "applies": {"conditions": ["kidney_potassium_limit"]}, "categories": ["food"], "source": "niddk_ckd"},
+    {"id": "dyes", "kb_ids": ["red_40", "yellow_5", "yellow_6", "blue_1", "blue_2", "green_3", "red_3", "citrus_red_2", "other_azo_dyes", "artificial_colors"], "weight": 15, "applies": {"dyes": true}, "categories": ["food", "cosmetic", "other"], "source": "cspi_dyes"},
+    {"id": "caffeine", "kb_ids": ["caffeine"], "nutrient": "caffeine", "weight": 15, "applies": {"pregnancy": true, "less_of": ["caffeine"]}, "categories": ["food"], "source": "acog_pregnancy"},
+    {"id": "palm_oil", "kb_ids": ["palm_oil"], "weight": 20, "applies": {"less_of": ["palm_oil"]}, "categories": ["food", "cosmetic", "other"], "source": "open_food_facts"}
+  ]
+}

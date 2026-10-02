@@ -1,0 +1,249 @@
+{
+  "cases": [
+    {
+      "name": "partial label + strict allergy + no allergen found -> UNSURE",
+      "tags": ["allergen", "p0", "confidence"],
+      "product": {"key": "test:cf-partial-none", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["rice", "water", "salt"], "legibility": "partial"},
+      "members": ["m_linh", "m_mia", "m_leo"],
+      "expect": {
+        "m_mia": {"state": "UNSURE", "label": "Unsure", "codes_include": ["confidence.unsure"]},
+        "m_linh": {"state": "RIPE"},
+        "m_leo": {"state": "RIPE"}
+      }
+    },
+    {
+      "name": "partial label + allergen found -> ALLERGY",
+      "tags": ["allergen", "p0", "confidence"],
+      "product": {"key": "test:cf-partial-found", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["rice", "sesame seeds", "sa"], "legibility": "partial"},
+      "members": ["m_linh", "m_mia"],
+      "expect": {
+        "m_mia": {"state": "ALLERGY", "label": "Allergy", "codes_include": ["allergen.sesame"], "matched_include": ["sesame"]},
+        "m_linh": {"state": "RIPE"}
+      }
+    },
+    {
+      "name": "partial label + may contain found -> ALLERGY May contain",
+      "tags": ["allergen", "confidence", "may_contain"],
+      "product": {"key": "test:cf-partial-mc", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["corn", "sugar"], "may_contain_text": "May contain peanuts.", "legibility": "partial"},
+      "members": ["m_mia"],
+      "expect": {"m_mia": {"state": "ALLERGY", "label": "May contain", "codes_include": ["allergen.peanut.may_contain"]}}
+    },
+    {
+      "name": "database product with no ingredient list + strict allergy -> UNSURE",
+      "tags": ["allergen", "p0", "confidence"],
+      "product": {"key": "off:0000000000116", "source": "open_food_facts", "name": "Mystery cookies",
+                  "ingredients": [], "legibility": "missing"},
+      "members": ["m_linh", "m_mia"],
+      "expect": {
+        "m_mia": {"state": "UNSURE", "label": "Unsure", "codes_include": ["confidence.unsure"]},
+        "m_linh": {"state": "RIPE"}
+      }
+    },
+    {
+      "name": "front-only photo matched by name: strict allergy never RIPE",
+      "tags": ["allergen", "p0", "confidence", "matched_by_name"],
+      "why": "pipeline.products.match_by_name returns the OFF product marked less_sure + ask_for_ingredients (plan 8.5.4).",
+      "product": {"key": "off:0000000000123", "source": "open_food_facts", "name": "Rice cakes", "matched_by": "name",
+                  "photo_kind": "front_only", "data_confidence": "medium",
+                  "ingredients": ["brown rice", "salt"], "legibility": "full"},
+      "product_overrides": {"less_sure": true, "ask_for_ingredients": true},
+      "members": ["m_linh", "m_mia"],
+      "expect": {
+        "m_mia": {"state": "UNSURE", "label": "Unsure", "codes_include": ["confidence.matched_by_name"]},
+        "m_linh": {"state": "RIPE"}
+      }
+    },
+    {
+      "name": "front-only photo matched by name with an allergen -> ALLERGY",
+      "tags": ["allergen", "confidence", "matched_by_name"],
+      "product": {"key": "off:0000000000130", "source": "open_food_facts", "name": "Sesame rice cakes", "matched_by": "name",
+                  "photo_kind": "front_only", "data_confidence": "medium",
+                  "ingredients": ["brown rice", "sesame seeds", "salt"], "legibility": "full"},
+      "product_overrides": {"less_sure": true, "ask_for_ingredients": true},
+      "members": ["m_mia"],
+      "expect": {"m_mia": {"state": "ALLERGY", "codes_include": ["allergen.sesame"]}}
+    },
+    {
+      "name": "Ingredients only (sensitive) milk + milk in the ingredients -> ALLERGY",
+      "tags": ["allergen", "p0", "sensitive", "milk"],
+      "product": {"key": "test:cf-sens-contains", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["wheat flour", "milk", "sugar"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_sam", "name": "Sam", "allergies": [{"id": "milk", "level": "sensitive"}]}],
+      "expect": {"m_sam": {"state": "ALLERGY", "label": "Allergy", "codes_include": ["allergen.milk"],
+                           "codes_exclude": ["allergen.milk.trace_note", "allergen.milk.sensitive"], "matched_include": ["milk"]}}
+    },
+    {
+      "name": "Ingredients only (sensitive) + may contain only -> trace note, not ALLERGY",
+      "tags": ["allergen", "p0", "sensitive", "may_contain"],
+      "product": {"key": "test:cf-sens-mc", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["cocoa mass", "sugar", "cocoa butter"], "may_contain_text": "May contain milk.",
+                  "legibility": "full"},
+      "members": [],
+      "extra_members": [
+        {"id": "m_sam", "name": "Sam", "allergies": [{"id": "milk", "level": "sensitive"}]},
+        {"id": "m_ana", "name": "Ana", "allergies": [{"id": "milk", "level": "strict"}]}
+      ],
+      "expect": {
+        "m_sam": {"state": "RIPE", "notes_include": ["allergen.milk.trace_note"],
+                  "codes_exclude": ["allergen.milk", "allergen.milk.may_contain", "allergen.milk.possible"]},
+        "m_ana": {"state": "ALLERGY", "label": "May contain", "codes_include": ["allergen.milk.may_contain"]}
+      }
+    },
+    {
+      "name": "Ingredients only (sensitive) + partial label with no allergen -> graded, not UNSURE",
+      "tags": ["allergen", "p0", "sensitive", "confidence"],
+      "product": {"key": "test:cf-sens-partial", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["rice", "water"], "legibility": "partial"},
+      "members": ["m_mia"],
+      "extra_members": [{"id": "m_sam", "name": "Sam", "allergies": [{"id": "milk", "level": "sensitive"}]}],
+      "expect": {
+        "m_sam": {"state": "RIPE", "codes_include": ["confidence.less_sure"], "codes_exclude": ["confidence.unsure"]},
+        "m_mia": {"state": "UNSURE", "codes_include": ["confidence.unsure"]}
+      }
+    },
+    {
+      "name": "Ingredients only (sensitive) + partial label with the allergen -> ALLERGY",
+      "tags": ["allergen", "sensitive", "confidence"],
+      "product": {"key": "test:cf-sens-partial-found", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["rice", "whey", "su"], "legibility": "partial"},
+      "members": [],
+      "extra_members": [{"id": "m_sam", "name": "Sam", "allergies": [{"id": "milk", "level": "sensitive"}]}],
+      "expect": {"m_sam": {"state": "ALLERGY", "codes_include": ["allergen.milk"], "matched_include": ["whey"]}}
+    },
+    {
+      "name": "Ingredients only (sensitive) + database product with no list -> less sure, not UNSURE",
+      "tags": ["allergen", "sensitive", "confidence"],
+      "product": {"key": "off:0000000000147", "source": "open_food_facts", "name": "Crackers",
+                  "ingredients": [], "legibility": "missing"},
+      "members": [],
+      "extra_members": [
+        {"id": "m_sam", "name": "Sam", "allergies": [{"id": "milk", "level": "sensitive"}]},
+        {"id": "m_ana", "name": "Ana", "allergies": [{"id": "milk", "level": "strict"}]}
+      ],
+      "expect": {
+        "m_sam": {"state": "RIPE", "codes_include": ["confidence.less_sure"], "codes_exclude": ["confidence.unsure"]},
+        "m_ana": {"state": "UNSURE", "codes_include": ["confidence.unsure"]}
+      }
+    },
+    {
+      "name": "Ingredients only (sensitive) + possible soy (lecithin) -> ALLERGY possible",
+      "tags": ["allergen", "sensitive", "possible"],
+      "product": {"key": "test:cf-sens-possible", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["sugar", "cocoa mass", "lecithin"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_sol", "name": "Sol", "allergies": [{"id": "soy", "level": "sensitive"}]}],
+      "expect": {"m_sol": {"state": "ALLERGY", "codes_include": ["allergen.soy.possible"]}}
+    },
+    {
+      "name": "Ingredients only (sensitive) + may contain sentence inside the ingredient list -> trace note",
+      "tags": ["allergen", "sensitive", "may_contain"],
+      "product": {"key": "test:cf-sens-embedded", "source": "open_food_facts",
+                  "ingredients": ["corn", "sunflower oil", "salt", "may contain traces of milk"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_sam", "name": "Sam", "allergies": [{"id": "milk", "level": "sensitive"}]}],
+      "expect": {"m_sam": {"state": "RIPE", "notes_include": ["allergen.milk.trace_note"],
+                           "codes_exclude": ["allergen.milk", "allergen.milk.may_contain"]}}
+    },
+    {
+      "name": "one member, strict peanut + sensitive milk, may contain both",
+      "tags": ["allergen", "sensitive", "may_contain"],
+      "product": {"key": "test:cf-mixed-levels", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["corn", "sugar", "salt"], "may_contain_text": "May contain peanuts and milk.",
+                  "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_ray", "name": "Ray", "allergies": [{"id": "peanut", "level": "strict"}, {"id": "milk", "level": "sensitive"}]}],
+      "expect": {"m_ray": {"state": "ALLERGY", "label": "May contain",
+                           "codes_include": ["allergen.peanut.may_contain", "allergen.milk.trace_note"],
+                           "codes_exclude": ["allergen.milk.may_contain", "allergen.milk"]}}
+    },
+    {
+      "name": "one member, strict peanut + sensitive milk, partial label, nothing found -> UNSURE",
+      "tags": ["allergen", "sensitive", "confidence"],
+      "product": {"key": "test:cf-mixed-partial", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["corn", "water"], "legibility": "partial"},
+      "members": [],
+      "extra_members": [{"id": "m_ray", "name": "Ray", "allergies": [{"id": "peanut", "level": "strict"}, {"id": "milk", "level": "sensitive"}]}],
+      "expect": {"m_ray": {"state": "UNSURE", "codes_include": ["confidence.unsure"]}}
+    },
+    {
+      "name": "database data + strict allergy -> Check the label note, still RIPE",
+      "tags": ["allergen", "confidence"],
+      "product": {"key": "off:0000000000154", "source": "open_food_facts", "name": "Apple sauce",
+                  "ingredients": ["apples", "water", "ascorbic acid"], "legibility": "full"},
+      "members": ["m_linh", "m_mia"],
+      "expect": {
+        "m_mia": {"state": "RIPE", "notes_include": ["confidence.check_label"]},
+        "m_linh": {"state": "RIPE", "codes_exclude": ["confidence.check_label"]}
+      }
+    },
+    {
+      "name": "USDA FDC data + strict allergy -> Check the label note",
+      "tags": ["allergen", "confidence"],
+      "product": {"key": "fdc:000000000161", "source": "usda_fdc", "name": "Apple sauce",
+                  "ingredients": ["apples", "water"], "legibility": "full"},
+      "members": ["m_mia"],
+      "expect": {"m_mia": {"state": "RIPE", "notes_include": ["confidence.check_label"]}}
+    },
+    {
+      "name": "photo of the ingredients + strict allergy -> no Check the label note",
+      "tags": ["allergen", "confidence"],
+      "product": {"key": "test:cf-photo-full", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["apples", "water", "ascorbic acid"], "legibility": "full"},
+      "members": ["m_mia"],
+      "expect": {"m_mia": {"state": "RIPE", "codes_exclude": ["confidence.check_label", "confidence.unsure"]}}
+    },
+    {
+      "name": "ingredients_text only (no split list) is still checked",
+      "tags": ["allergen", "confidence", "sesame"],
+      "product": {"key": "off:0000000000178", "source": "open_food_facts",
+                  "ingredients": [], "ingredients_text": "Wheat flour, sugar, sesame seeds, salt.", "legibility": "full"},
+      "members": ["m_mia"],
+      "expect": {"m_mia": {"state": "ALLERGY", "codes_include": ["allergen.sesame"], "matched_include": ["sesame"]}}
+    },
+    {
+      "name": "label merge: model kb_ids add sesame when the label only says seeds",
+      "tags": ["allergen", "p0", "merge"],
+      "product": {"key": "test:cf-merge-seeds", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["wheat flour", "seeds", "salt"], "model_kb_ids": [["wheat"], ["sesame"], []],
+                  "legibility": "full"},
+      "members": ["m_linh", "m_mia"],
+      "expect": {
+        "m_mia": {"state": "ALLERGY", "codes_include": ["allergen.sesame"], "matched_include": ["seeds"]},
+        "m_linh": {"state": "RIPE"}
+      }
+    },
+    {
+      "name": "label merge: the model omitting an allergen the kb finds still -> ALLERGY",
+      "tags": ["allergen", "p0", "merge"],
+      "product": {"key": "test:cf-merge-omit", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["chickpeas", "tahini", "lemon juice"], "model_kb_ids": [[], [], []], "legibility": "full"},
+      "members": ["m_mia"],
+      "expect": {"m_mia": {"state": "ALLERGY", "codes_include": ["allergen.sesame"], "matched_include": ["tahini"]}}
+    },
+    {
+      "name": "label merge: a non-allergen model id is ignored for a string the kb matched",
+      "tags": ["merge", "diet"],
+      "why": "kb matches honey, so the model's stray 'pork' on that string must not count (addendum 10).",
+      "product": {"key": "test:cf-merge-ignore", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["honey", "rolled oats"], "model_kb_ids": [["pork"], []], "legibility": "full"},
+      "members": ["m_leo"],
+      "extra_members": [{"id": "m_omar", "name": "Omar", "diets": ["halal"]}],
+      "expect": {
+        "m_omar": {"state": "RIPE", "codes_exclude": ["diet."]},
+        "m_leo": {"state": "DIET", "codes_include": ["diet.vegan"], "matched_include": ["honey"]}
+      }
+    },
+    {
+      "name": "label merge: a non-allergen model id counts for a string the kb did not match",
+      "tags": ["merge", "diet"],
+      "product": {"key": "test:cf-merge-unmatched", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["water", "spice extract"], "model_kb_ids": [[], ["natural_flavors"]], "legibility": "full"},
+      "members": ["m_leo"],
+      "expect": {"m_leo": {"state": "DIET", "label": "Maybe not vegan", "codes_include": ["diet.vegan.maybe"]}}
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "transcript": "Bà ăn cái này được không?",
+  "language": "vi",
+  "intent": "check",
+  "product_query": "",
+  "member_ids": [
+    "m_ba"
+  ],
+  "next": "result",
+  "answer": {
+    "text": "Không thấy vấn đề gì cho Bà.",
+    "language": "vi"
+  },
+  "scan_result": {
+    "product": {
+      "key": "off:0048121253196",
+      "name": "Everything Bagels",
+      "brand": "Thomas'",
+      "category": "food",
+      "product_type": null,
+      "image_url": "https://images.openfoodfacts.org/images/products/004/812/125/3196/front_en.129.400.jpg",
+      "source": "open_food_facts",
+      "photo_kind": null,
+      "data_confidence": "high",
+      "less_sure": false,
+      "ask_for_ingredients": false,
+      "ingredients": [
+        "ENRICHED WHEAT FLOUR (FLOUR",
+        "MALTED LEY FLOUR",
+        "REDUCED IRON",
+        "NIACIN",
+        "THIAMIN MONONTRATE (VITAMIN  B1)",
+        "RIBOFLAVIN (VITAMIN  B2)",
+        "FOLIC ACID",
+        "WATER",
+        "SUGAR",
+        "SUNFLOWER SEEDS",
+        "YEAST",
+        "WHEAT GLUTEN",
+        "SESAME SEEDS",
+        "ONION",
+        "SALT",
+        "CORNMEAL",
+        "CALCIUM PROPIONATE",
+        "SORBIC ACID",
+        "POPPY SEEDS",
+        "MONO AND DIGLYCERIDES",
+        "GARLIC",
+        "CITRIC ACID",
+        "GUAR GUM",
+        "MALTODEXTRIN",
+        "soybean OIL",
+        "CELLULOSE GUM",
+        "CORNSTARCH",
+        "ALGIN",
+        "SOY LECITHIN"
+      ],
+      "contains": [
+        "gluten",
+        "wheat",
+        "sesame",
+        "soy"
+      ],
+      "may_contain": [
+        "egg",
+        "milk",
+        "tree_nuts"
+      ],
+      "certifications": [],
+      "label_language": "en"
+    },
+    "verdicts": [
+      {
+        "member_id": "m_linh",
+        "state": "RIPE",
+        "label": "Ripe",
+        "reasons": [],
+        "score": null
+      },
+      {
+        "member_id": "m_ba",
+        "state": "RIPE",
+        "label": "Chín",
+        "reasons": [
+          {
+            "code": "health.sodium",
+            "text": "Hơi nhiều muối (16% nhu cầu mỗi ngày)",
+            "language": "vi",
+            "severity": "note",
+            "matched": [],
+            "source": "fda_nutrition_dv"
+          },
+          {
+            "code": "health.added_sugars",
+            "text": "Hơi nhiều đường (10% nhu cầu mỗi ngày)",
+            "language": "vi",
+            "severity": "note",
+            "matched": [],
+            "source": "fda_nutrition_dv"
+          }
+        ],
+        "score": null
+      },
+      {
+        "member_id": "m_mia",
+        "state": "ALLERGY",
+        "label": "Allergy",
+        "reasons": [
+          {
+            "code": "allergen.sesame",
+            "text": "Contains sesame (sesame seeds)",
+            "language": "en",
+            "severity": "hard",
+            "matched": [
+              "SESAME SEEDS"
+            ],
+            "source": "fda_major_allergens"
+          },
+          {
+            "code": "label.check",
+            "text": "Check the label",
+            "language": "en",
+            "severity": "note",
+            "matched": [],
+            "source": "pear_policy"
+          }
+        ],
+        "score": null
+      },
+      {
+        "member_id": "m_leo",
+        "state": "DIET",
+        "label": "Puede no ser vegano",
+        "reasons": [
+          {
+            "code": "diet.vegan.maybe.mono_diglycerides",
+            "text": "Puede no ser vegano: tiene mono y diglicéridos (mono and diglycerides, E471)",
+            "language": "es",
+            "severity": "soft",
+            "matched": [
+              "MONO AND DIGLYCERIDES",
+              "E471"
+            ],
+            "source": "vegan_society"
+          }
+        ],
+        "score": null
+      }
+    ],
+    "headline": {
+      "text": "Not for Mia: contains sesame. Fine for Linh and Bà.",
+      "language": "en"
+    },
+    "timings_ms": {
+      "lookup": 0,
+      "rules": 1,
+      "total": 1
+    }
+  }
+}

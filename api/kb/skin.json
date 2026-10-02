@@ -1,0 +1,24 @@
+{
+  "version": "2026-10-02",
+  "options": [
+    {"id": "eczema", "aliases": ["atopic_dermatitis", "dermatitis"], "label": {"en": "eczema", "vi": "chàm", "es": "eccema"},
+     "synonyms": {"en": ["atopic dermatitis", "dermatitis", "itchy skin"], "vi": ["chàm da", "viêm da cơ địa", "eczema"], "es": ["eczema", "dermatitis atópica", "dermatitis"]}, "source": "nea_contact_dermatitis"},
+    {"id": "psoriasis", "aliases": [], "label": {"en": "psoriasis", "vi": "vảy nến", "es": "psoriasis"},
+     "synonyms": {"en": [], "vi": ["bệnh vảy nến"], "es": ["soriasis"]}, "source": "aad_fragrance_free"},
+    {"id": "sensitive_skin", "aliases": ["sensitive"], "label": {"en": "sensitive skin", "vi": "da nhạy cảm", "es": "piel sensible"},
+     "synonyms": {"en": ["skin irritation", "reactive skin"], "vi": ["da dễ kích ứng"], "es": ["piel delicada", "piel reactiva"]}, "source": "nea_contact_dermatitis"},
+    {"id": "acne_prone", "aliases": ["acne"], "label": {"en": "acne-prone skin", "vi": "da dễ nổi mụn", "es": "piel con acné"},
+     "synonyms": {"en": ["acne", "breakouts", "pimples"], "vi": ["mụn", "da mụn"], "es": ["acné", "granos"]}, "source": "aad_fragrance_free"},
+    {"id": "rosacea", "aliases": [], "label": {"en": "rosacea", "vi": "chứng đỏ mặt (rosacea)", "es": "rosácea"},
+     "synonyms": {"en": ["facial redness"], "vi": ["rosacea", "đỏ mặt"], "es": ["rosacea", "enrojecimiento facial"]}, "source": "aad_fragrance_free"},
+    {"id": "fragrance_sensitivity", "aliases": ["fragrance_allergy", "perfume_allergy", "fragrance_sensitive"], "label": {"en": "fragrance sensitivity", "vi": "nhạy cảm với hương liệu", "es": "sensibilidad a fragancias"},
+     "synonyms": {"en": ["fragrance allergy", "perfume allergy", "scent sensitivity"], "vi": ["dị ứng hương liệu", "dị ứng nước hoa"], "es": ["alergia a fragancias", "alergia al perfume"]}, "source": "aad_fragrance_free"}
+  ],
+  "signals": [
+    {"id": "fragrance", "kb_ids": ["fragrance"], "weight": 20, "applies": {"skin": ["eczema", "sensitive_skin", "fragrance_sensitivity", "rosacea"]}, "categories": ["cosmetic", "other"], "source": "aad_fragrance_free"},
+    {"id": "methylisothiazolinone", "kb_ids": ["methylisothiazolinone", "methylchloroisothiazolinone"], "weight": 45, "applies": {"skin": ["eczema", "sensitive_skin"]}, "categories": ["cosmetic", "other"], "source": "nacdg_patch_test"},
+    {"id": "formaldehyde_releasers", "kb_ids": ["formaldehyde_releasers"], "weight": 45, "applies": {"skin": ["eczema", "sensitive_skin"]}, "categories": ["cosmetic", "other"], "source": "wa_formaldehyde_releasers"},
+    {"id": "sodium_lauryl_sulfate", "kb_ids": ["sodium_lauryl_sulfate"], "weight": 10, "applies": {"skin": ["eczema", "sensitive_skin"]}, "categories": ["cosmetic", "other"], "source": "nea_contact_dermatitis"},
+    {"id": "retinoids", "kb_ids": ["retinoids"], "weight": 45, "applies": {"pregnancy": true}, "categories": ["cosmetic", "other"], "source": "acog_pregnancy"}
+  ]
+}

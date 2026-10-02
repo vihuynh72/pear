@@ -1,0 +1,254 @@
+{
+  "cases": [
+    {
+      "name": "gelatin -> Leo Not vegan",
+      "tags": ["diet", "p0", "vegan"],
+      "product": {"key": "test:dt-gelatin", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["sugar", "glucose syrup", "gelatin", "citric acid"], "legibility": "full"},
+      "members": ["m_linh", "m_mia", "m_leo"],
+      "expect": {
+        "m_leo": {"state": "DIET", "label": "Not vegan", "codes_include": ["diet.vegan"], "codes_exclude": ["diet.vegan.maybe"],
+                  "matched_include": ["gelatin"]},
+        "m_linh": {"state": "RIPE"},
+        "m_mia": {"state": "RIPE"}
+      }
+    },
+    {
+      "name": "natural flavors without a cert -> Leo Maybe not vegan",
+      "tags": ["diet", "p0", "vegan", "maybe"],
+      "product": {"key": "test:dt-natflav", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["water", "cane sugar", "natural flavors"], "legibility": "full"},
+      "members": ["m_linh", "m_leo"],
+      "expect": {
+        "m_leo": {"state": "DIET", "label": "Maybe not vegan", "codes_include": ["diet.vegan.maybe"],
+                  "codes_exclude": ["diet.vegan"], "matched_include": ["natural flavor"]},
+        "m_linh": {"state": "RIPE"}
+      }
+    },
+    {
+      "name": "honey without a cert -> Leo Not vegan",
+      "tags": ["diet", "p0", "vegan"],
+      "product": {"key": "test:dt-honey", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["rolled oats", "honey", "sunflower oil"], "legibility": "full"},
+      "members": ["m_leo"],
+      "expect": {"m_leo": {"state": "DIET", "label": "Not vegan", "codes_include": ["diet.vegan"], "matched_include": ["honey"]}}
+    },
+    {
+      "name": "carmine -> Leo Not vegan",
+      "tags": ["diet", "vegan"],
+      "product": {"key": "test:dt-carmine", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["water", "sugar", "carmine"], "legibility": "full"},
+      "members": ["m_leo"],
+      "expect": {"m_leo": {"state": "DIET", "label": "Not vegan", "codes_include": ["diet.vegan"], "matched_include": ["carmine"]}}
+    },
+    {
+      "name": "E120 (carmine) as an E-number -> Leo Not vegan",
+      "tags": ["diet", "vegan", "e_number"],
+      "product": {"key": "test:dt-e120", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["sugar", "water", "colour (E120)"], "legibility": "full"},
+      "members": ["m_leo"],
+      "expect": {"m_leo": {"state": "DIET", "label": "Not vegan", "codes_include": ["diet.vegan"], "matched_include": ["e120"]}}
+    },
+    {
+      "name": "mono- and diglycerides -> Leo Maybe not vegan",
+      "tags": ["diet", "vegan", "maybe"],
+      "product": {"key": "test:dt-monodi", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["wheat flour", "water", "mono- and diglycerides"], "legibility": "full"},
+      "members": ["m_leo"],
+      "expect": {"m_leo": {"state": "DIET", "label": "Maybe not vegan", "codes_include": ["diet.vegan.maybe"],
+                           "codes_exclude": ["diet.vegan"], "matched_include": ["glycerides"]}}
+    },
+    {
+      "name": "eggs -> Leo Not vegan",
+      "tags": ["diet", "vegan"],
+      "product": {"key": "test:dt-eggs", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["rice noodles", "eggs", "salt"], "legibility": "full"},
+      "members": ["m_leo"],
+      "expect": {"m_leo": {"state": "DIET", "label": "Not vegan", "codes_include": ["diet.vegan"], "matched_include": ["egg"]}}
+    },
+    {
+      "name": "salmon -> Leo Not vegan, pescatarian fine",
+      "tags": ["diet", "vegan", "pescatarian"],
+      "product": {"key": "test:dt-salmon", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["salmon", "rice", "salt"], "legibility": "full"},
+      "members": ["m_leo"],
+      "extra_members": [{"id": "m_pia", "name": "Pia", "diets": ["pescatarian"]}],
+      "expect": {
+        "m_leo": {"state": "DIET", "label": "Not vegan", "codes_include": ["diet.vegan"], "matched_include": ["salmon"]},
+        "m_pia": {"state": "RIPE", "codes_exclude": ["diet."]}
+      }
+    },
+    {
+      "name": "halal: pork -> Not halal",
+      "tags": ["diet", "p0", "halal"],
+      "product": {"key": "test:dt-halal-pork", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["pork", "water", "salt"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_omar", "name": "Omar", "diets": ["halal"]}],
+      "expect": {"m_omar": {"state": "DIET", "label": "Not halal", "codes_include": ["diet.halal"],
+                            "codes_exclude": ["diet.halal.maybe"], "matched_include": ["pork"]}}
+    },
+    {
+      "name": "halal + no_pork: lard implies pork",
+      "tags": ["diet", "halal", "no_pork"],
+      "product": {"key": "test:dt-lard", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["wheat flour", "lard", "salt"], "legibility": "full"},
+      "members": [],
+      "extra_members": [
+        {"id": "m_omar", "name": "Omar", "diets": ["halal"]},
+        {"id": "m_noor", "name": "Noor", "diets": ["no_pork"]}
+      ],
+      "expect": {
+        "m_omar": {"state": "DIET", "label": "Not halal", "codes_include": ["diet.halal"], "matched_include": ["lard"]},
+        "m_noor": {"state": "DIET", "codes_include": ["diet.no_pork"], "matched_include": ["lard"]}
+      }
+    },
+    {
+      "name": "halal + no_alcohol: alcohol is a definite conflict",
+      "tags": ["diet", "halal", "no_alcohol"],
+      "product": {"key": "test:dt-alcohol", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["water", "sugar", "alcohol", "vanilla"], "legibility": "full"},
+      "members": [],
+      "extra_members": [
+        {"id": "m_omar", "name": "Omar", "diets": ["halal"]},
+        {"id": "m_ali", "name": "Ali", "diets": ["no_alcohol"]}
+      ],
+      "expect": {
+        "m_omar": {"state": "DIET", "label": "Not halal", "codes_include": ["diet.halal"], "codes_exclude": ["diet.halal.maybe"],
+                   "matched_include": ["alcohol"]},
+        "m_ali": {"state": "DIET", "codes_include": ["diet.no_alcohol"], "matched_include": ["alcohol"]}
+      }
+    },
+    {
+      "name": "halal: gelatin of unknown source -> Maybe not halal",
+      "tags": ["diet", "p0", "halal", "maybe"],
+      "product": {"key": "test:dt-halal-gelatin", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["sugar", "gelatin", "citric acid"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_omar", "name": "Omar", "diets": ["halal"]}],
+      "expect": {"m_omar": {"state": "DIET", "label": "Maybe not halal", "codes_include": ["diet.halal.maybe"],
+                            "codes_exclude": ["diet.halal"], "matched_include": ["gelatin"]}}
+    },
+    {
+      "name": "kosher: shellfish (shrimp) is a conflict",
+      "tags": ["diet", "kosher"],
+      "product": {"key": "test:dt-kosher-shrimp", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["shrimp", "garlic", "olive oil"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_dov", "name": "Dov", "diets": ["kosher"]}],
+      "expect": {"m_dov": {"state": "DIET", "codes_include": ["diet.kosher"], "matched_include": ["shrimp"]}}
+    },
+    {
+      "name": "kosher: pork is a conflict",
+      "tags": ["diet", "kosher"],
+      "product": {"key": "test:dt-kosher-pork", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["pork", "salt"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_dov", "name": "Dov", "diets": ["kosher"]}],
+      "expect": {"m_dov": {"state": "DIET", "codes_include": ["diet.kosher"], "matched_include": ["pork"]}}
+    },
+    {
+      "name": "no_beef: tallow is a conflict",
+      "tags": ["diet", "no_beef"],
+      "product": {"key": "test:dt-tallow", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["potatoes", "tallow", "salt"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_raj", "name": "Raj", "diets": ["no_beef"]}],
+      "expect": {"m_raj": {"state": "DIET", "codes_include": ["diet.no_beef"], "matched_include": ["tallow"]}}
+    },
+    {
+      "name": "pescatarian: chicken is a conflict",
+      "tags": ["diet", "pescatarian"],
+      "product": {"key": "test:dt-chicken", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["chicken", "rice", "salt"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_pia", "name": "Pia", "diets": ["pescatarian"]}],
+      "expect": {"m_pia": {"state": "DIET", "codes_include": ["diet.pescatarian"], "matched_include": ["chicken"]}}
+    },
+    {
+      "name": "jain: onion is a conflict",
+      "tags": ["diet", "jain"],
+      "product": {"key": "test:dt-jain-onion", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["rice", "onion", "cumin"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_jai", "name": "Jai", "diets": ["jain"]}],
+      "expect": {"m_jai": {"state": "DIET", "codes_include": ["diet.jain"], "matched_include": ["onion"]}}
+    },
+    {
+      "name": "jain: honey is a conflict",
+      "tags": ["diet", "jain"],
+      "product": {"key": "test:dt-jain-honey", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["rice", "honey", "cardamom"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_jai", "name": "Jai", "diets": ["jain"]}],
+      "expect": {"m_jai": {"state": "DIET", "codes_include": ["diet.jain"], "matched_include": ["honey"]}}
+    },
+    {
+      "name": "buddhist_vegetarian: garlic is flagged",
+      "tags": ["diet", "buddhist_vegetarian"],
+      "product": {"key": "test:dt-buddhist-garlic", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["tofu", "garlic", "salt"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_thu", "name": "Thu", "diets": ["buddhist_vegetarian"]}],
+      "expect": {"m_thu": {"state": "DIET", "codes_include": ["diet.buddhist_vegetarian"], "matched_include": ["garlic"]}}
+    },
+    {
+      "name": "gluten_free diet: barley malt extract is a conflict",
+      "tags": ["diet", "gluten_free"],
+      "product": {"key": "test:dt-gf-barley", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["rice", "barley malt extract", "salt"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_cel", "name": "Cel", "diets": ["gluten_free"]}],
+      "expect": {"m_cel": {"state": "DIET", "codes_include": ["diet.gluten_free"], "matched_include": ["barley"]}}
+    },
+    {
+      "name": "vegetarian: gelatin is a conflict",
+      "tags": ["diet", "vegetarian"],
+      "product": {"key": "test:dt-veg-gelatin", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["sugar", "gelatin", "citric acid"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_vera", "name": "Vera", "diets": ["vegetarian"]}],
+      "expect": {"m_vera": {"state": "DIET", "codes_include": ["diet.vegetarian"], "matched_include": ["gelatin"]}}
+    },
+    {
+      "name": "vegetarian: milk is fine",
+      "tags": ["diet", "vegetarian"],
+      "product": {"key": "test:dt-veg-milk", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["milk", "sugar", "cocoa"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_vera", "name": "Vera", "diets": ["vegetarian"]}],
+      "expect": {"m_vera": {"state": "RIPE", "codes_exclude": ["diet."]}}
+    },
+    {
+      "name": "precedence: ALLERGY beats DIET and every hit is listed",
+      "tags": ["diet", "allergen", "precedence"],
+      "product": {"key": "test:dt-prec-allergy", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["peanuts", "gelatin", "sugar"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_zoe", "name": "Zoe", "diets": ["vegan"], "allergies": [{"id": "peanut", "level": "strict"}]}],
+      "expect": {"m_zoe": {"state": "ALLERGY", "label": "Allergy", "codes_include": ["allergen.peanut", "diet.vegan"]}}
+    },
+    {
+      "name": "precedence: DIET beats a graded sodium hit",
+      "tags": ["diet", "precedence", "scoring"],
+      "product": {"key": "test:dt-prec-diet", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["beef broth", "gelatin", "salt"], "legibility": "full",
+                  "nutrition": {"sodium_mg": 1100, "sodium_dv": 48}},
+      "members": [],
+      "extra_members": [{"id": "m_vic", "name": "Vic", "diets": ["vegan"], "conditions": ["high_blood_pressure"]}],
+      "expect": {"m_vic": {"state": "DIET", "label": "Not vegan", "codes_include": ["diet.vegan", "signal."]}}
+    },
+    {
+      "name": "Mia allergy and Leo diet on the same product are independent",
+      "tags": ["diet", "allergen"],
+      "product": {"key": "test:dt-mia-leo", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["peanuts", "honey", "salt"], "legibility": "full"},
+      "members": ["m_linh", "m_mia", "m_leo"],
+      "expect": {
+        "m_mia": {"state": "ALLERGY", "codes_include": ["allergen.peanut"], "codes_exclude": ["diet."]},
+        "m_leo": {"state": "DIET", "label": "Not vegan", "codes_include": ["diet.vegan"], "codes_exclude": ["allergen."]},
+        "m_linh": {"state": "RIPE"}
+      }
+    }
+  ]
+}

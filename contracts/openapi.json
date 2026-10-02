@@ -1,0 +1,2534 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Pear API",
+    "description": "Scan once, know for the whole family. Contracts: contracts/README.md",
+    "version": "0.3.0"
+  },
+  "paths": {
+    "/health": {
+      "get": {
+        "tags": [
+          "health"
+        ],
+        "summary": "Health",
+        "operationId": "health_health_get",
+        "parameters": [
+          {
+            "name": "deep",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "default": 0,
+              "title": "Deep"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HealthResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/scan/barcode": {
+      "post": {
+        "tags": [
+          "scan"
+        ],
+        "summary": "Scan Barcode",
+        "operationId": "scan_barcode_v1_scan_barcode_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BarcodeRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ScanResult"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/scan/photo": {
+      "post": {
+        "tags": [
+          "scan"
+        ],
+        "summary": "Scan Photo",
+        "operationId": "scan_photo_v1_scan_photo_post",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "$ref": "#/components/schemas/Body_scan_photo_v1_scan_photo_post"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ScanResult"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/ask": {
+      "post": {
+        "tags": [
+          "ask"
+        ],
+        "summary": "Post Ask",
+        "operationId": "post_ask_v1_ask_post",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AskResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/profile/parse": {
+      "post": {
+        "tags": [
+          "profile"
+        ],
+        "summary": "Parse",
+        "operationId": "parse_v1_profile_parse_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProfileParseRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProfileParseResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/kb/search": {
+      "get": {
+        "tags": [
+          "kb"
+        ],
+        "summary": "Kb Search",
+        "operationId": "kb_search_v1_kb_search_get",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "maxLength": 80,
+              "default": "",
+              "title": "Q"
+            }
+          },
+          {
+            "name": "lang",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "en",
+              "title": "Lang"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 50,
+              "minimum": 1,
+              "default": 10,
+              "title": "Limit"
+            }
+          },
+          {
+            "name": "group",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Group"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/KbSearchResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/mock/health": {
+      "get": {
+        "tags": [
+          "mock"
+        ],
+        "summary": "Mock Health",
+        "operationId": "mock_health_mock_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/mock/fixtures": {
+      "get": {
+        "tags": [
+          "mock"
+        ],
+        "summary": "Mock Fixtures",
+        "operationId": "mock_fixtures_mock_fixtures_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/mock/v1/scan/barcode": {
+      "post": {
+        "tags": [
+          "mock"
+        ],
+        "summary": "Mock Scan Barcode",
+        "operationId": "mock_scan_barcode_mock_v1_scan_barcode_post",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/mock/v1/scan/photo": {
+      "post": {
+        "tags": [
+          "mock"
+        ],
+        "summary": "Mock Scan Photo",
+        "operationId": "mock_scan_photo_mock_v1_scan_photo_post",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/mock/v1/ask": {
+      "post": {
+        "tags": [
+          "mock"
+        ],
+        "summary": "Mock Ask",
+        "operationId": "mock_ask_mock_v1_ask_post",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/mock/v1/picks": {
+      "post": {
+        "tags": [
+          "mock"
+        ],
+        "summary": "Mock Picks",
+        "operationId": "mock_picks_mock_v1_picks_post",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/mock/v1/prices": {
+      "post": {
+        "tags": [
+          "mock"
+        ],
+        "summary": "Mock Prices",
+        "operationId": "mock_prices_mock_v1_prices_post",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/mock/v1/profile/parse": {
+      "post": {
+        "tags": [
+          "mock"
+        ],
+        "summary": "Mock Profile Parse",
+        "operationId": "mock_profile_parse_mock_v1_profile_parse_post",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/mock/v1/kb/search": {
+      "get": {
+        "tags": [
+          "mock"
+        ],
+        "summary": "Mock Kb Search",
+        "operationId": "mock_kb_search_mock_v1_kb_search_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/mock/v1/explain": {
+      "post": {
+        "tags": [
+          "mock"
+        ],
+        "summary": "Mock Explain",
+        "operationId": "mock_explain_mock_v1_explain_post",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/explain": {
+      "post": {
+        "tags": [
+          "explain"
+        ],
+        "summary": "Post Explain",
+        "operationId": "post_explain_v1_explain_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductKeyRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "SSE: data: ExplainEvent JSON per member, then event: done",
+            "content": {
+              "text/event-stream": {}
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/picks": {
+      "post": {
+        "tags": [
+          "picks"
+        ],
+        "summary": "Post Picks",
+        "operationId": "post_picks_v1_picks_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductKeyRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PicksResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/prices": {
+      "post": {
+        "tags": [
+          "prices"
+        ],
+        "summary": "Post Prices",
+        "operationId": "post_prices_v1_prices_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PricesRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PricesResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/debug/config": {
+      "get": {
+        "tags": [
+          "debug"
+        ],
+        "summary": "Debug Config",
+        "operationId": "debug_config_debug_config_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Debug Config Debug Config Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/debug/routes": {
+      "get": {
+        "tags": [
+          "debug"
+        ],
+        "summary": "Debug Routes",
+        "operationId": "debug_routes_debug_routes_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Debug Routes Debug Routes Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/debug/kb/match": {
+      "get": {
+        "tags": [
+          "debug"
+        ],
+        "summary": "Debug Kb Match",
+        "operationId": "debug_kb_match_debug_kb_match_get",
+        "parameters": [
+          {
+            "name": "text",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Text"
+            }
+          },
+          {
+            "name": "lang",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Lang"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Debug Kb Match Debug Kb Match Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/debug/evaluate": {
+      "post": {
+        "tags": [
+          "debug"
+        ],
+        "summary": "Debug Evaluate",
+        "description": "The \"why did Pear say X\" tool. Scores and engine debug are always included here.",
+        "operationId": "debug_evaluate_debug_evaluate_post",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Debug Evaluate Debug Evaluate Post"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/debug/demo_products": {
+      "get": {
+        "tags": [
+          "debug"
+        ],
+        "summary": "Debug Demo Products",
+        "operationId": "debug_demo_products_debug_demo_products_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Debug Demo Products Debug Demo Products Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/debug/product/{key}": {
+      "get": {
+        "tags": [
+          "debug"
+        ],
+        "summary": "Debug Product",
+        "operationId": "debug_product_debug_product__key__get",
+        "parameters": [
+          {
+            "name": "key",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Key"
+            }
+          },
+          {
+            "name": "full",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "default": 0,
+              "title": "Full"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Debug Product Debug Product  Key  Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/debug/off/{code}": {
+      "get": {
+        "tags": [
+          "debug"
+        ],
+        "summary": "Debug Off",
+        "operationId": "debug_off_debug_off__code__get",
+        "parameters": [
+          {
+            "name": "code",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Code"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Debug Off Debug Off  Code  Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/debug/background": {
+      "get": {
+        "tags": [
+          "debug"
+        ],
+        "summary": "Debug Background",
+        "operationId": "debug_background_debug_background_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Debug Background Debug Background Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/debug/inflight": {
+      "get": {
+        "tags": [
+          "debug"
+        ],
+        "summary": "Debug Inflight",
+        "operationId": "debug_inflight_debug_inflight_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Debug Inflight Debug Inflight Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/debug/label_reader": {
+      "post": {
+        "tags": [
+          "debug"
+        ],
+        "summary": "Debug Label Reader",
+        "description": "Raw label_reader JSON for prompt tuning. No normalization, no rules.",
+        "operationId": "debug_label_reader_debug_label_reader_post",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "$ref": "#/components/schemas/Body_debug_label_reader_debug_label_reader_post"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Debug Label Reader Debug Label Reader Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/debug/metrics": {
+      "get": {
+        "tags": [
+          "debug"
+        ],
+        "summary": "Debug Metrics",
+        "operationId": "debug_metrics_debug_metrics_get",
+        "parameters": [
+          {
+            "name": "reset",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "default": 0,
+              "title": "Reset"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Debug Metrics Debug Metrics Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Allergy": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "level": {
+            "type": "string",
+            "enum": [
+              "strict",
+              "sensitive"
+            ],
+            "title": "Level",
+            "default": "strict"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id"
+        ],
+        "title": "Allergy"
+      },
+      "Answer": {
+        "properties": {
+          "text": {
+            "type": "string",
+            "title": "Text"
+          },
+          "language": {
+            "type": "string",
+            "title": "Language"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "text",
+          "language"
+        ],
+        "title": "Answer"
+      },
+      "AskResponse": {
+        "properties": {
+          "transcript": {
+            "type": "string",
+            "title": "Transcript"
+          },
+          "language": {
+            "type": "string",
+            "title": "Language"
+          },
+          "intent": {
+            "type": "string",
+            "enum": [
+              "check",
+              "alternatives",
+              "unclear"
+            ],
+            "title": "Intent"
+          },
+          "product_query": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Product Query"
+          },
+          "member_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Member Ids"
+          },
+          "next": {
+            "type": "string",
+            "enum": [
+              "scan_needed",
+              "result"
+            ],
+            "title": "Next"
+          },
+          "answer": {
+            "$ref": "#/components/schemas/Answer"
+          },
+          "scan_result": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ScanResult"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "picks": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/PicksResponse"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "timings_ms": {
+            "additionalProperties": {
+              "type": "integer"
+            },
+            "type": "object",
+            "title": "Timings Ms"
+          },
+          "request_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Request Id"
+          },
+          "debug": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Debug"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "transcript",
+          "language",
+          "intent",
+          "next",
+          "answer"
+        ],
+        "title": "AskResponse"
+      },
+      "BarcodeRequest": {
+        "properties": {
+          "code": {
+            "type": "string",
+            "title": "Code"
+          },
+          "household": {
+            "$ref": "#/components/schemas/Household"
+          },
+          "member_ids": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Member Ids"
+          }
+        },
+        "type": "object",
+        "required": [
+          "code",
+          "household"
+        ],
+        "title": "BarcodeRequest"
+      },
+      "Body_debug_label_reader_debug_label_reader_post": {
+        "properties": {
+          "image": {
+            "type": "string",
+            "contentMediaType": "application/octet-stream",
+            "title": "Image"
+          },
+          "front_image": {
+            "anyOf": [
+              {
+                "type": "string",
+                "contentMediaType": "application/octet-stream"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Front Image"
+          }
+        },
+        "type": "object",
+        "required": [
+          "image"
+        ],
+        "title": "Body_debug_label_reader_debug_label_reader_post"
+      },
+      "Body_scan_photo_v1_scan_photo_post": {
+        "properties": {
+          "image": {
+            "anyOf": [
+              {
+                "type": "string",
+                "contentMediaType": "application/octet-stream"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Image"
+          },
+          "front_image": {
+            "anyOf": [
+              {
+                "type": "string",
+                "contentMediaType": "application/octet-stream"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Front Image"
+          },
+          "household": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Household"
+          },
+          "member_ids": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Member Ids"
+          }
+        },
+        "type": "object",
+        "title": "Body_scan_photo_v1_scan_photo_post"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "Headline": {
+        "properties": {
+          "text": {
+            "type": "string",
+            "title": "Text"
+          },
+          "language": {
+            "type": "string",
+            "title": "Language"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "text",
+          "language"
+        ],
+        "title": "Headline"
+      },
+      "HealthResponse": {
+        "properties": {
+          "ok": {
+            "type": "boolean",
+            "title": "Ok"
+          },
+          "service": {
+            "type": "string",
+            "title": "Service"
+          },
+          "version": {
+            "type": "string",
+            "title": "Version"
+          },
+          "env": {
+            "type": "string",
+            "title": "Env"
+          },
+          "region": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Region"
+          },
+          "store": {
+            "type": "string",
+            "title": "Store"
+          },
+          "gemini": {
+            "type": "string",
+            "title": "Gemini"
+          },
+          "auth": {
+            "type": "string",
+            "title": "Auth"
+          },
+          "ask_engine": {
+            "type": "string",
+            "title": "Ask Engine"
+          },
+          "kb_version": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Kb Version"
+          },
+          "uptime_s": {
+            "type": "integer",
+            "title": "Uptime S"
+          },
+          "features": {
+            "additionalProperties": {
+              "type": "boolean"
+            },
+            "type": "object",
+            "title": "Features"
+          },
+          "checks": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Checks"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "ok",
+          "service",
+          "version",
+          "env",
+          "region",
+          "store",
+          "gemini",
+          "auth",
+          "ask_engine",
+          "kb_version",
+          "uptime_s",
+          "features"
+        ],
+        "title": "HealthResponse"
+      },
+      "Household": {
+        "properties": {
+          "household_id": {
+            "type": "string",
+            "title": "Household Id",
+            "default": "hh_guest"
+          },
+          "owner_language": {
+            "type": "string",
+            "title": "Owner Language",
+            "default": "en"
+          },
+          "member_limit": {
+            "type": "integer",
+            "title": "Member Limit",
+            "default": 5
+          },
+          "members": {
+            "items": {
+              "$ref": "#/components/schemas/Member"
+            },
+            "type": "array",
+            "title": "Members"
+          }
+        },
+        "type": "object",
+        "title": "Household"
+      },
+      "KbSearchResponse": {
+        "properties": {
+          "query": {
+            "type": "string",
+            "title": "Query"
+          },
+          "suggestions": {
+            "items": {
+              "$ref": "#/components/schemas/KbSuggestion"
+            },
+            "type": "array",
+            "title": "Suggestions"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "query",
+          "suggestions"
+        ],
+        "title": "KbSearchResponse"
+      },
+      "KbSuggestion": {
+        "properties": {
+          "group": {
+            "type": "string",
+            "title": "Group"
+          },
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "label": {
+            "type": "string",
+            "title": "Label"
+          },
+          "labels": {
+            "additionalProperties": {
+              "type": "string"
+            },
+            "type": "object",
+            "title": "Labels"
+          },
+          "score": {
+            "type": "number",
+            "title": "Score",
+            "default": 0.0
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "group",
+          "id",
+          "label"
+        ],
+        "title": "KbSuggestion"
+      },
+      "Member": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "person",
+              "pet"
+            ],
+            "title": "Type",
+            "default": "person"
+          },
+          "species": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Species"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "age_group": {
+            "type": "string",
+            "enum": [
+              "baby",
+              "kid",
+              "teen",
+              "adult",
+              "senior"
+            ],
+            "title": "Age Group",
+            "default": "adult"
+          },
+          "languages": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Languages"
+          },
+          "allergies": {
+            "items": {
+              "$ref": "#/components/schemas/Allergy"
+            },
+            "type": "array",
+            "title": "Allergies"
+          },
+          "conditions": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Conditions"
+          },
+          "pregnant": {
+            "type": "boolean",
+            "title": "Pregnant",
+            "default": false
+          },
+          "skin": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Skin"
+          },
+          "diets": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Diets"
+          },
+          "less_of": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Less Of"
+          },
+          "avoid_dyes": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Avoid Dyes"
+          },
+          "medications": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Medications"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "name"
+        ],
+        "title": "Member"
+      },
+      "Nutrition": {
+        "properties": {
+          "basis": {
+            "type": "string",
+            "enum": [
+              "serving",
+              "100g"
+            ],
+            "title": "Basis",
+            "default": "serving"
+          },
+          "sodium_mg": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Sodium Mg"
+          },
+          "sodium_dv": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Sodium Dv"
+          },
+          "added_sugars_g": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Added Sugars G"
+          },
+          "added_sugars_dv": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Added Sugars Dv"
+          },
+          "sugars_g": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Sugars G"
+          },
+          "sat_fat_g": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Sat Fat G"
+          },
+          "sat_fat_dv": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Sat Fat Dv"
+          },
+          "caffeine_mg": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Caffeine Mg"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "Nutrition",
+        "description": "Per-serving values when the source has them; `basis` says which. Additive."
+      },
+      "PickItem": {
+        "properties": {
+          "product": {
+            "$ref": "#/components/schemas/PickProduct"
+          },
+          "verdicts": {
+            "items": {
+              "$ref": "#/components/schemas/PickVerdict"
+            },
+            "type": "array",
+            "title": "Verdicts"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "product",
+          "verdicts"
+        ],
+        "title": "PickItem"
+      },
+      "PickProduct": {
+        "properties": {
+          "key": {
+            "type": "string",
+            "title": "Key"
+          },
+          "name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Name"
+          },
+          "brand": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Brand"
+          },
+          "image_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Image Url"
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "food",
+              "cosmetic",
+              "supplement",
+              "other"
+            ],
+            "title": "Category",
+            "default": "food"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "key"
+        ],
+        "title": "PickProduct"
+      },
+      "PickVerdict": {
+        "properties": {
+          "member_id": {
+            "type": "string",
+            "title": "Member Id"
+          },
+          "state": {
+            "type": "string",
+            "enum": [
+              "RIPE",
+              "EASY",
+              "SKIP",
+              "ALLERGY",
+              "DIET",
+              "UNSURE"
+            ],
+            "title": "State"
+          },
+          "label": {
+            "type": "string",
+            "title": "Label"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "member_id",
+          "state",
+          "label"
+        ],
+        "title": "PickVerdict"
+      },
+      "PicksResponse": {
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/PickItem"
+            },
+            "type": "array",
+            "title": "Items"
+          },
+          "prefetched": {
+            "type": "boolean",
+            "title": "Prefetched"
+          },
+          "timings_ms": {
+            "additionalProperties": {
+              "type": "integer"
+            },
+            "type": "object",
+            "title": "Timings Ms"
+          },
+          "request_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Request Id"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "items",
+          "prefetched"
+        ],
+        "title": "PicksResponse"
+      },
+      "Price": {
+        "properties": {
+          "amount": {
+            "type": "number",
+            "title": "Amount"
+          },
+          "currency": {
+            "type": "string",
+            "title": "Currency",
+            "default": "USD"
+          },
+          "retailer": {
+            "type": "string",
+            "title": "Retailer"
+          },
+          "size": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Size"
+          },
+          "source_title": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Source Title"
+          },
+          "source_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Source Url"
+          },
+          "checked_at": {
+            "type": "string",
+            "title": "Checked At"
+          },
+          "source": {
+            "type": "string",
+            "const": "google_search",
+            "title": "Source",
+            "default": "google_search"
+          },
+          "search_entry_html": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Search Entry Html"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "amount",
+          "retailer",
+          "checked_at"
+        ],
+        "title": "Price"
+      },
+      "PricesRequest": {
+        "properties": {
+          "product_keys": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Product Keys"
+          },
+          "country": {
+            "type": "string",
+            "title": "Country",
+            "default": "US"
+          }
+        },
+        "type": "object",
+        "required": [
+          "product_keys"
+        ],
+        "title": "PricesRequest"
+      },
+      "PricesResponse": {
+        "properties": {
+          "prices": {
+            "additionalProperties": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/Price"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "type": "object",
+            "title": "Prices"
+          },
+          "timings_ms": {
+            "additionalProperties": {
+              "type": "integer"
+            },
+            "type": "object",
+            "title": "Timings Ms"
+          },
+          "request_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Request Id"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "prices"
+        ],
+        "title": "PricesResponse"
+      },
+      "Product": {
+        "properties": {
+          "key": {
+            "type": "string",
+            "title": "Key"
+          },
+          "name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Name"
+          },
+          "brand": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Brand"
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "food",
+              "cosmetic",
+              "supplement",
+              "other"
+            ],
+            "title": "Category",
+            "default": "food"
+          },
+          "product_type": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "leave_on",
+                  "rinse_off"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Product Type"
+          },
+          "image_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Image Url"
+          },
+          "source": {
+            "type": "string",
+            "enum": [
+              "open_food_facts",
+              "open_beauty_facts",
+              "usda_fdc",
+              "photo"
+            ],
+            "title": "Source"
+          },
+          "photo_kind": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "ingredients",
+                  "front_only",
+                  "other"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Photo Kind"
+          },
+          "data_confidence": {
+            "type": "string",
+            "enum": [
+              "high",
+              "medium",
+              "low"
+            ],
+            "title": "Data Confidence",
+            "default": "high"
+          },
+          "less_sure": {
+            "type": "boolean",
+            "title": "Less Sure",
+            "default": false
+          },
+          "ask_for_ingredients": {
+            "type": "boolean",
+            "title": "Ask For Ingredients",
+            "default": false
+          },
+          "ingredients": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Ingredients"
+          },
+          "contains": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Contains"
+          },
+          "may_contain": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "May Contain"
+          },
+          "certifications": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Certifications"
+          },
+          "label_language": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Label Language"
+          },
+          "code": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Code"
+          },
+          "quantity": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Quantity"
+          },
+          "nutrition": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Nutrition"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "matched_by": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "barcode",
+                  "name",
+                  "photo",
+                  "vector"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Matched By"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "key",
+          "source"
+        ],
+        "title": "Product"
+      },
+      "ProductKeyRequest": {
+        "properties": {
+          "product_key": {
+            "type": "string",
+            "title": "Product Key"
+          },
+          "household": {
+            "$ref": "#/components/schemas/Household"
+          },
+          "member_ids": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Member Ids"
+          }
+        },
+        "type": "object",
+        "required": [
+          "product_key",
+          "household"
+        ],
+        "title": "ProductKeyRequest",
+        "description": "Body for /v1/explain and /v1/picks."
+      },
+      "ProfileChip": {
+        "properties": {
+          "group": {
+            "type": "string",
+            "enum": [
+              "allergies",
+              "conditions",
+              "skin",
+              "diets",
+              "less_of",
+              "medications"
+            ],
+            "title": "Group"
+          },
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "level": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "strict",
+                  "sensitive"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Level"
+          },
+          "label": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Label"
+          },
+          "note": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Note"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "group",
+          "id"
+        ],
+        "title": "ProfileChip"
+      },
+      "ProfileParseRequest": {
+        "properties": {
+          "text": {
+            "type": "string",
+            "title": "Text"
+          },
+          "language": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Language"
+          }
+        },
+        "type": "object",
+        "required": [
+          "text"
+        ],
+        "title": "ProfileParseRequest"
+      },
+      "ProfileParseResponse": {
+        "properties": {
+          "chips": {
+            "items": {
+              "$ref": "#/components/schemas/ProfileChip"
+            },
+            "type": "array",
+            "title": "Chips"
+          },
+          "unmatched": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Unmatched"
+          },
+          "timings_ms": {
+            "additionalProperties": {
+              "type": "integer"
+            },
+            "type": "object",
+            "title": "Timings Ms"
+          },
+          "request_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Request Id"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "chips",
+          "unmatched"
+        ],
+        "title": "ProfileParseResponse"
+      },
+      "Reason": {
+        "properties": {
+          "code": {
+            "type": "string",
+            "title": "Code"
+          },
+          "text": {
+            "type": "string",
+            "title": "Text"
+          },
+          "language": {
+            "type": "string",
+            "title": "Language"
+          },
+          "severity": {
+            "type": "string",
+            "enum": [
+              "hard",
+              "soft",
+              "note"
+            ],
+            "title": "Severity"
+          },
+          "matched": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Matched"
+          },
+          "source": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Source"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "code",
+          "text",
+          "language",
+          "severity"
+        ],
+        "title": "Reason"
+      },
+      "ScanResult": {
+        "properties": {
+          "product": {
+            "$ref": "#/components/schemas/Product"
+          },
+          "verdicts": {
+            "items": {
+              "$ref": "#/components/schemas/Verdict"
+            },
+            "type": "array",
+            "title": "Verdicts"
+          },
+          "headline": {
+            "$ref": "#/components/schemas/Headline"
+          },
+          "timings_ms": {
+            "additionalProperties": {
+              "type": "integer"
+            },
+            "type": "object",
+            "title": "Timings Ms"
+          },
+          "request_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Request Id"
+          },
+          "debug": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Debug"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "product",
+          "verdicts",
+          "headline"
+        ],
+        "title": "ScanResult"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      },
+      "Verdict": {
+        "properties": {
+          "member_id": {
+            "type": "string",
+            "title": "Member Id"
+          },
+          "state": {
+            "type": "string",
+            "enum": [
+              "RIPE",
+              "EASY",
+              "SKIP",
+              "ALLERGY",
+              "DIET",
+              "UNSURE"
+            ],
+            "title": "State"
+          },
+          "label": {
+            "type": "string",
+            "title": "Label"
+          },
+          "reasons": {
+            "items": {
+              "$ref": "#/components/schemas/Reason"
+            },
+            "type": "array",
+            "title": "Reasons"
+          },
+          "score": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Score"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "member_id",
+          "state",
+          "label"
+        ],
+        "title": "Verdict"
+      }
+    }
+  }
+}

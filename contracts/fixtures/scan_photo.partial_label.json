@@ -1,0 +1,107 @@
+{
+  "product": {
+    "key": "photo:9a7e3c1d4b2f",
+    "name": "Garden Veggie Chips",
+    "brand": "Pear Demo Pantry",
+    "category": "food",
+    "product_type": null,
+    "image_url": null,
+    "source": "photo",
+    "photo_kind": "ingredients",
+    "data_confidence": "low",
+    "less_sure": true,
+    "ask_for_ingredients": true,
+    "ingredients": [
+      "potato starch",
+      "sunflower oil",
+      "spinach powder",
+      "tomato paste"
+    ],
+    "contains": [],
+    "may_contain": [],
+    "certifications": [],
+    "label_language": "en",
+    "code": null,
+    "quantity": null,
+    "nutrition": null,
+    "matched_by": "photo"
+  },
+  "verdicts": [
+    {
+      "member_id": "m_linh",
+      "state": "RIPE",
+      "label": "Ripe",
+      "reasons": [
+        {
+          "code": "confidence.less_sure",
+          "text": "Less sure: partial label",
+          "language": "en",
+          "severity": "note",
+          "matched": [],
+          "source": null
+        }
+      ],
+      "score": null
+    },
+    {
+      "member_id": "m_ba",
+      "state": "RIPE",
+      "label": "Ripe",
+      "reasons": [
+        {
+          "code": "confidence.less_sure",
+          "text": "Chưa chắc lắm: nhãn chưa đọc hết",
+          "language": "vi",
+          "severity": "note",
+          "matched": [],
+          "source": null
+        }
+      ],
+      "score": null
+    },
+    {
+      "member_id": "m_mia",
+      "state": "UNSURE",
+      "label": "Unsure",
+      "reasons": [
+        {
+          "code": "confidence.unsure",
+          "text": "Couldn't read the whole label to check for peanut and sesame",
+          "language": "en",
+          "severity": "hard",
+          "matched": [],
+          "source": null
+        }
+      ],
+      "score": null
+    },
+    {
+      "member_id": "m_leo",
+      "state": "RIPE",
+      "label": "Ripe",
+      "reasons": [
+        {
+          "code": "confidence.less_sure",
+          "text": "Con dudas: etiqueta incompleta",
+          "language": "es",
+          "severity": "note",
+          "matched": [],
+          "source": null
+        }
+      ],
+      "score": null
+    }
+  ],
+  "headline": {
+    "text": "Couldn't confirm for Mia. Retake the ingredients?",
+    "language": "en"
+  },
+  "timings_ms": {
+    "label_reader": 1720,
+    "normalize": 3,
+    "rules": 2,
+    "total": 1790
+  },
+  "request_id": null,
+  "debug": null
+}

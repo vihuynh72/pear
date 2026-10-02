@@ -1,0 +1,172 @@
+{
+  "cases": [
+    {
+      "name": "everyone ripe -> Ripe for everyone",
+      "tags": ["headline", "p0"],
+      "product": {"key": "test:hl-all-ripe", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["apples", "water", "ascorbic acid"], "legibility": "full"},
+      "expect": {
+        "m_linh": {"state": "RIPE", "label": "Ripe"},
+        "m_ba": {"state": "RIPE", "label": "Ripe"},
+        "m_mia": {"state": "RIPE", "label": "Ripe"},
+        "m_leo": {"state": "RIPE", "label": "Ripe"}
+      },
+      "expect_member_ids": ["m_linh", "m_ba", "m_mia", "m_leo"],
+      "headline_contains": ["Ripe for everyone"],
+      "headline_max_sentences": 2
+    },
+    {
+      "name": "everyone ripe on database data (notes only) is still Ripe for everyone",
+      "tags": ["headline"],
+      "product": {"key": "off:0000000000215", "source": "open_food_facts", "name": "Apple sauce",
+                  "ingredients": ["apples", "water", "ascorbic acid"], "legibility": "full"},
+      "expect": {"m_mia": {"state": "RIPE"}, "m_linh": {"state": "RIPE"}},
+      "headline_contains": ["Ripe for everyone"]
+    },
+    {
+      "name": "Not for Mia: contains sesame. Fine for Linh, Bà and Leo.",
+      "tags": ["headline", "p0", "allergen"],
+      "product": {"key": "test:hl-sesame", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["rice", "sesame seeds", "sea salt"], "legibility": "full"},
+      "expect": {
+        "m_mia": {"state": "ALLERGY", "label": "Allergy", "codes_include": ["allergen.sesame"]},
+        "m_linh": {"state": "RIPE"},
+        "m_ba": {"state": "RIPE"},
+        "m_leo": {"state": "RIPE"}
+      },
+      "headline_contains": ["Not for Mia", "sesame", "Fine for", "Linh", "Bà", "Leo"],
+      "headline_not_contains": ["Ripe for everyone"],
+      "headline_first_name": "Mia",
+      "headline_max_sentences": 2
+    },
+    {
+      "name": "owner language vi: headline in Vietnamese names Mia",
+      "tags": ["headline", "language", "vi"],
+      "owner_language": "vi",
+      "product": {"key": "test:hl-vi", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["rice", "sesame seeds", "sea salt"], "legibility": "full"},
+      "expect": {"m_mia": {"state": "ALLERGY", "reasons_language": "en"}, "m_ba": {"state": "RIPE"}},
+      "headline_contains": ["Mia"],
+      "headline_not_contains": ["an toàn", "Not for Mia"],
+      "headline_first_name": "Mia",
+      "headline_max_sentences": 2
+    },
+    {
+      "name": "owner language es: headline in Spanish names Mia",
+      "tags": ["headline", "language", "es"],
+      "owner_language": "es",
+      "product": {"key": "test:hl-es", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["rice", "sesame seeds", "sea salt"], "legibility": "full"},
+      "expect": {"m_mia": {"state": "ALLERGY"}},
+      "headline_contains": ["Mia"],
+      "headline_not_contains": ["seguro", "Not for Mia"],
+      "headline_first_name": "Mia",
+      "headline_max_sentences": 2
+    },
+    {
+      "name": "owner language vi, everyone ripe",
+      "tags": ["headline", "language", "vi"],
+      "owner_language": "vi",
+      "product": {"key": "test:hl-vi-ripe", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["apples", "water"], "legibility": "full"},
+      "expect": {"m_linh": {"state": "RIPE"}, "m_mia": {"state": "RIPE"}},
+      "headline_not_contains": ["an toàn", "Ripe for everyone"],
+      "headline_max_sentences": 2
+    },
+    {
+      "name": "Not vegan for Leo: gelatin",
+      "tags": ["headline", "diet"],
+      "product": {"key": "test:hl-leo-gelatin", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["water", "gelatin", "citric acid"], "legibility": "full"},
+      "members": ["m_linh", "m_leo"],
+      "expect": {"m_leo": {"state": "DIET", "label": "Not vegan"}, "m_linh": {"state": "RIPE"}},
+      "headline_contains": ["Leo", "vegan", "Fine for", "Linh"],
+      "headline_first_name": "Leo"
+    },
+    {
+      "name": "Couldn't confirm for Mia on a partial label",
+      "tags": ["headline", "allergen", "confidence"],
+      "product": {"key": "test:hl-unsure", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["rice", "water"], "legibility": "partial"},
+      "members": ["m_linh", "m_mia"],
+      "expect": {"m_mia": {"state": "UNSURE"}, "m_linh": {"state": "RIPE"}},
+      "headline_contains": ["Mia"],
+      "headline_not_contains": ["Ripe for everyone"],
+      "headline_first_name": "Mia"
+    },
+    {
+      "name": "Easy does it for Bà: high sodium",
+      "tags": ["headline", "scoring"],
+      "product": {"key": "test:hl-ba-easy", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["wheat flour", "palm oil", "salt"], "legibility": "full",
+                  "nutrition": {"sodium_mg": 874, "sodium_dv": 38}},
+      "members": ["m_linh", "m_ba"],
+      "expect": {"m_ba": {"state": "EASY"}, "m_linh": {"state": "RIPE"}},
+      "headline_contains": ["Easy does it for Bà", "Fine for", "Linh"],
+      "headline_first_name": "Bà"
+    },
+    {
+      "name": "Skip it for Mia: skin allergen",
+      "tags": ["headline", "scoring", "skin"],
+      "product": {"key": "test:hl-mia-skip", "source": "photo", "photo_kind": "ingredients", "category": "cosmetic",
+                  "product_type": "leave_on", "ingredients": ["Aqua", "Glycerin", "Methylisothiazolinone"], "legibility": "full"},
+      "members": ["m_linh", "m_mia"],
+      "expect": {"m_mia": {"state": "SKIP"}, "m_linh": {"state": "RIPE"}},
+      "headline_contains": ["Skip it for Mia", "Fine for", "Linh"],
+      "headline_first_name": "Mia"
+    },
+    {
+      "name": "the most serious clause leads: ALLERGY before DIET",
+      "tags": ["headline", "allergen", "diet"],
+      "product": {"key": "test:hl-order-allergy-diet", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["peanuts", "gelatin", "sugar"], "legibility": "full"},
+      "members": ["m_linh", "m_mia", "m_leo"],
+      "expect": {"m_mia": {"state": "ALLERGY"}, "m_leo": {"state": "DIET"}, "m_linh": {"state": "RIPE"}},
+      "headline_contains": ["Not for Mia"],
+      "headline_first_name": "Mia",
+      "headline_max_sentences": 2
+    },
+    {
+      "name": "the most serious clause leads: UNSURE before DIET",
+      "tags": ["headline", "allergen", "diet", "confidence"],
+      "product": {"key": "test:hl-order-unsure-diet", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["water", "gelatin", "sugar"], "legibility": "partial"},
+      "members": ["m_leo", "m_mia"],
+      "expect": {"m_mia": {"state": "UNSURE"}, "m_leo": {"state": "DIET"}},
+      "headline_contains": ["Mia"],
+      "headline_first_name": "Mia",
+      "headline_max_sentences": 2
+    },
+    {
+      "name": "nobody ripe -> no Fine for clause",
+      "tags": ["headline", "allergen"],
+      "product": {"key": "test:hl-nobody-fine", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["peanuts", "honey"], "legibility": "full"},
+      "members": ["m_mia", "m_leo"],
+      "expect": {"m_mia": {"state": "ALLERGY"}, "m_leo": {"state": "DIET"}},
+      "headline_not_contains": ["Fine for", "Ripe for everyone"],
+      "headline_first_name": "Mia"
+    },
+    {
+      "name": "member_ids filter: only Mia is evaluated",
+      "tags": ["headline", "member_ids", "allergen"],
+      "product": {"key": "test:hl-filter-mia", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["rice", "sesame seeds", "sea salt"], "legibility": "full"},
+      "member_ids": ["m_mia"],
+      "expect": {"m_mia": {"state": "ALLERGY", "codes_include": ["allergen.sesame"]}},
+      "expect_member_ids": ["m_mia"],
+      "headline_contains": ["Mia"],
+      "headline_not_contains": ["Linh", "Leo", "Bà", "Fine for"]
+    },
+    {
+      "name": "member_ids filter keeps family order (Linh before Leo)",
+      "tags": ["headline", "member_ids"],
+      "product": {"key": "test:hl-filter-order", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["water", "gelatin", "citric acid"], "legibility": "full"},
+      "member_ids": ["m_leo", "m_linh"],
+      "expect": {"m_leo": {"state": "DIET"}, "m_linh": {"state": "RIPE"}},
+      "expect_member_ids": ["m_linh", "m_leo"],
+      "headline_not_contains": ["Mia", "Bà"]
+    }
+  ]
+}

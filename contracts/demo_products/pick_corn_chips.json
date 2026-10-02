@@ -1,0 +1,56 @@
+{
+  "_comment": "DEMO ONLY: fake but well-formed EAN-13 / photo key, not a real product. Used by api/scripts/gen_fixtures.py and POST /debug/evaluate {\"demo\": \"<file stem>\"}.",
+  "key": "off:0000000000109",
+  "source": "open_food_facts",
+  "code": "0000000000109",
+  "name": "Sea Salt Corn Tortilla Chips",
+  "brand": "Pear Demo Pantry",
+  "category": "food",
+  "product_type": null,
+  "image_url": "https://placehold.co/600x600/png?text=Corn+Tortilla+Chips",
+  "quantity": "283 g",
+  "label_language": "en",
+  "photo_kind": null,
+  "matched_by": "barcode",
+  "ingredients": [
+    "whole grain corn",
+    "sunflower oil",
+    "sea salt"
+  ],
+  "ingredients_text": "Whole grain corn, sunflower oil, sea salt.",
+  "contains_text": null,
+  "may_contain_text": null,
+  "allergens_tags": [],
+  "traces_tags": [],
+  "additives_tags": [],
+  "analysis_tags": [
+    "en:palm-oil-free",
+    "en:vegan",
+    "en:vegetarian"
+  ],
+  "labels_tags": [
+    "en:gluten-free"
+  ],
+  "categories_tags": [
+    "en:snacks",
+    "en:salty-snacks",
+    "en:appetizers",
+    "en:chips-and-fries",
+    "en:tortilla-chips"
+  ],
+  "category_main": "en:tortilla-chips",
+  "nutrition": {
+    "basis": "serving",
+    "sodium_mg": 460,
+    "sodium_dv": 20,
+    "added_sugars_g": 0,
+    "added_sugars_dv": 0,
+    "sugars_g": 0,
+    "sat_fat_g": 1,
+    "sat_fat_dv": 5,
+    "caffeine_mg": null
+  },
+  "legibility": "full",
+  "data_confidence": "high",
+  "fetched_at": "2026-10-02T18:00:00Z"
+}

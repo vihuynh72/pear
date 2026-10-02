@@ -1,0 +1,24 @@
+{
+  "version": "2026-10-02",
+  "sources": [
+    {"id": "fda_major_allergens", "title": "FDA: Food Allergies (major food allergens, FALCPA and FASTER Act)", "url": "https://www.fda.gov/food/food-labeling-nutrition/food-allergies"},
+    {"id": "fda_allergen_guidance_2025", "title": "FDA Guidance: Questions and Answers Regarding Food Allergens, Edition 5 (2025, tree nut list; coconut and shea removed)", "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/guidance-industry-questions-and-answers-regarding-food-allergens-edition-5"},
+    {"id": "eu_fic_annex_ii", "title": "EU Regulation 1169/2011 Annex II: substances causing allergies or intolerances (mustard, celery, lupin, sulphites, molluscs)", "url": "https://eur-lex.europa.eu/eli/reg/2011/1169/oj"},
+    {"id": "fda_nutrition_dv", "title": "FDA: How to Understand and Use the Nutrition Facts Label (%DV, 5% low, 20% high)", "url": "https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label"},
+    {"id": "cspi_dyes", "title": "CSPI: FDA's plan to remove food dyes (voluntary phase-out)", "url": "https://www.cspi.org/cspi-news/fdas-plan-remove-food-dyes-industry-understanding"},
+    {"id": "niddk_ckd", "title": "NIDDK: Eating Right for Chronic Kidney Disease (sodium, phosphorus, potassium)", "url": "https://www.niddk.nih.gov/health-information/kidney-disease/chronic-kidney-disease-ckd/eating-nutrition"},
+    {"id": "nkf_phosphorus", "title": "National Kidney Foundation: Phosphorus and your diet (phosphate additives)", "url": "https://www.kidney.org/kidney-topics/phosphorus-and-your-diet"},
+    {"id": "nea_contact_dermatitis", "title": "National Eczema Association: Contact dermatitis (common allergens)", "url": "https://nationaleczema.org/types-of-eczema/contact-dermatitis/"},
+    {"id": "aad_fragrance_free", "title": "American Academy of Dermatology: eczema-friendly, fragrance-free products", "url": "https://www.aad.org/public/diseases/eczema/childhood/triggers/friendly-products"},
+    {"id": "nacdg_patch_test", "title": "North American Contact Dermatitis Group patch test results (MI/MCI, formaldehyde releasers)", "url": "https://pubmed.ncbi.nlm.nih.gov/42817757/"},
+    {"id": "wa_formaldehyde_releasers", "title": "Washington State formaldehyde releaser list (WSR 25-18-057)", "url": "https://lawfilesext.leg.wa.gov/Law/WSR/2025/18/25-18-057.htm"},
+    {"id": "acog_pregnancy", "title": "ACOG: skin care, retinoids and caffeine during pregnancy (ask your doctor)", "url": "https://www.acog.org/womens-health/faqs/skin-conditions-during-pregnancy"},
+    {"id": "fda_grapefruit", "title": "FDA: Grapefruit Juice and Some Drugs Don't Mix", "url": "https://www.fda.gov/consumers/consumer-updates/grapefruit-juice-and-some-drugs-dont-mix"},
+    {"id": "nih_vitamin_k", "title": "NIH Office of Dietary Supplements: Vitamin K (warfarin: keep intake steady)", "url": "https://ods.od.nih.gov/factsheets/VitaminK-Consumer/"},
+    {"id": "aspca_people_foods", "title": "ASPCA: People Foods to Avoid Feeding Your Pets", "url": "https://www.aspca.org/pet-care/aspca-poison-control/people-foods-avoid-feeding-your-pets"},
+    {"id": "open_food_facts", "title": "Open Food Facts taxonomies (allergens, additives, labels, ingredients analysis)", "url": "https://openfoodfacts.github.io/openfoodfacts-server/api/"},
+    {"id": "pear_diet_rules", "title": "Pear diet rules (common practice for each diet; ambiguous ingredients are 'maybe')", "url": "api/kb/README.md"},
+    {"id": "pear_matcher", "title": "Pear matcher neutral terms (block false matches)", "url": "api/kb/README.md"},
+    {"id": "pear_label_reader", "title": "Read from the label photo by Gemini, mapped to Pear kb ids", "url": "api/kb/README.md"}
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "transcript": "Can Mia have this?",
+  "language": "en",
+  "intent": "check",
+  "product_query": null,
+  "member_ids": [
+    "m_mia"
+  ],
+  "next": "scan_needed",
+  "answer": {
+    "text": "I'm not sure which product you mean. Scan it and I'll check it for everyone.",
+    "language": "en"
+  },
+  "scan_result": null,
+  "picks": null,
+  "timings_ms": {
+    "question_reader": 655,
+    "total": 668
+  },
+  "request_id": null,
+  "debug": null
+}

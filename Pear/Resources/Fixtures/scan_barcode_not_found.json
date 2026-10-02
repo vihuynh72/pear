@@ -1,0 +1,7 @@
+{
+  "error": {
+    "code": "not_found",
+    "message": "Not in the database yet. Snap the ingredients.",
+    "next": "take_photo"
+  }
+}

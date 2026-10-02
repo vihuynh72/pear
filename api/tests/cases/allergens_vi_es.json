@@ -1,0 +1,279 @@
+{
+  "cases": [
+    {
+      "name": "vi bột mì is wheat and implies gluten",
+      "tags": ["allergen", "p0", "vi", "wheat"],
+      "product": {"key": "test:vi-botmi", "source": "photo", "photo_kind": "ingredients", "label_language": "vi",
+                  "ingredients": ["bột mì", "nước", "muối", "men"], "legibility": "full"},
+      "members": [],
+      "extra_members": [
+        {"id": "m_wen", "name": "Wen", "allergies": [{"id": "wheat", "level": "strict"}]},
+        {"id": "m_gia", "name": "Gia", "allergies": [{"id": "gluten", "level": "strict"}]}
+      ],
+      "expect": {
+        "m_wen": {"state": "ALLERGY", "codes_include": ["allergen.wheat"], "matched_include": ["bột mì"]},
+        "m_gia": {"state": "ALLERGY", "codes_include": ["allergen.gluten"]}
+      }
+    },
+    {
+      "name": "vi đậu phộng is peanut",
+      "tags": ["allergen", "p0", "vi", "peanut"],
+      "product": {"key": "test:vi-dauphong", "source": "photo", "photo_kind": "ingredients", "label_language": "vi",
+                  "ingredients": ["đậu phộng rang", "đường", "muối"], "legibility": "full"},
+      "members": ["m_mia", "m_linh"],
+      "expect": {
+        "m_mia": {"state": "ALLERGY", "label": "Allergy", "codes_include": ["allergen.peanut"], "matched_include": ["đậu phộng"]},
+        "m_linh": {"state": "RIPE"}
+      }
+    },
+    {
+      "name": "vi lạc (northern word for peanut) is peanut",
+      "tags": ["allergen", "p0", "vi", "peanut"],
+      "product": {"key": "test:vi-lac", "source": "photo", "photo_kind": "ingredients", "label_language": "vi",
+                  "ingredients": ["lạc rang", "muối"], "legibility": "full"},
+      "members": ["m_mia"],
+      "expect": {"m_mia": {"state": "ALLERGY", "codes_include": ["allergen.peanut"], "matched_include": ["lạc"]}}
+    },
+    {
+      "name": "vi mè is sesame",
+      "tags": ["allergen", "p0", "vi", "sesame"],
+      "product": {"key": "test:vi-me", "source": "photo", "photo_kind": "ingredients", "label_language": "vi",
+                  "ingredients": ["bột gạo", "mè đen", "đường"], "legibility": "full"},
+      "members": ["m_mia"],
+      "expect": {"m_mia": {"state": "ALLERGY", "codes_include": ["allergen.sesame"], "matched_include": ["mè"]}}
+    },
+    {
+      "name": "vi vừng is sesame",
+      "tags": ["allergen", "p0", "vi", "sesame"],
+      "product": {"key": "test:vi-vung", "source": "photo", "photo_kind": "ingredients", "label_language": "vi",
+                  "ingredients": ["vừng", "đường", "mạch nha"], "legibility": "full"},
+      "members": ["m_mia"],
+      "expect": {"m_mia": {"state": "ALLERGY", "codes_include": ["allergen.sesame"], "matched_include": ["vừng"]}}
+    },
+    {
+      "name": "vi nước mắm is fish and not vegan",
+      "tags": ["allergen", "p0", "vi", "fish"],
+      "product": {"key": "test:vi-nuocmam", "source": "photo", "photo_kind": "ingredients", "label_language": "vi",
+                  "ingredients": ["nước mắm", "đường", "tỏi", "ớt"], "legibility": "full"},
+      "members": ["m_leo"],
+      "extra_members": [{"id": "m_finn", "name": "Finn", "allergies": [{"id": "fish", "level": "strict"}]}],
+      "expect": {
+        "m_finn": {"state": "ALLERGY", "codes_include": ["allergen.fish"], "matched_include": ["nước mắm"]},
+        "m_leo": {"state": "DIET", "codes_include": ["diet.vegan"], "reasons_language": "es"}
+      }
+    },
+    {
+      "name": "vi sữa is milk",
+      "tags": ["allergen", "p0", "vi", "milk"],
+      "product": {"key": "test:vi-sua", "source": "photo", "photo_kind": "ingredients", "label_language": "vi",
+                  "ingredients": ["sữa tươi", "đường"], "legibility": "full"},
+      "members": ["m_leo"],
+      "extra_members": [{"id": "m_ana", "name": "Ana", "allergies": [{"id": "milk", "level": "strict"}]}],
+      "expect": {
+        "m_ana": {"state": "ALLERGY", "codes_include": ["allergen.milk"], "matched_include": ["sữa"]},
+        "m_leo": {"state": "DIET", "codes_include": ["diet.vegan"]}
+      }
+    },
+    {
+      "name": "vi tôm is shellfish",
+      "tags": ["allergen", "p0", "vi", "shellfish"],
+      "product": {"key": "test:vi-tom", "source": "photo", "photo_kind": "ingredients", "label_language": "vi",
+                  "ingredients": ["tôm khô", "muối", "ớt"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_kai", "name": "Kai", "allergies": [{"id": "shellfish", "level": "strict"}]}],
+      "expect": {"m_kai": {"state": "ALLERGY", "codes_include": ["allergen.shellfish"], "matched_include": ["tôm"]}}
+    },
+    {
+      "name": "vi đậu nành is soy and vegan",
+      "tags": ["allergen", "p0", "vi", "soy"],
+      "product": {"key": "test:vi-daunanh", "source": "photo", "photo_kind": "ingredients", "label_language": "vi",
+                  "ingredients": ["đậu nành", "nước", "đường"], "legibility": "full"},
+      "members": ["m_leo"],
+      "extra_members": [{"id": "m_soo", "name": "Soo", "allergies": [{"id": "soy", "level": "strict"}]}],
+      "expect": {
+        "m_soo": {"state": "ALLERGY", "codes_include": ["allergen.soy"], "matched_include": ["đậu nành"]},
+        "m_leo": {"state": "RIPE"}
+      }
+    },
+    {
+      "name": "vi upper case ĐẬU PHỘNG still matches",
+      "tags": ["allergen", "vi", "peanut", "variants"],
+      "product": {"key": "test:vi-upper", "source": "photo", "photo_kind": "ingredients", "label_language": "vi",
+                  "ingredients": ["ĐẬU PHỘNG", "ĐƯỜNG"], "legibility": "full"},
+      "members": ["m_mia"],
+      "expect": {"m_mia": {"state": "ALLERGY", "codes_include": ["allergen.peanut"], "matched_include": ["đậu phộng"]}}
+    },
+    {
+      "name": "vi decomposed (NFD) đậu phộng still matches",
+      "tags": ["allergen", "vi", "peanut", "variants"],
+      "why": "OCR / iOS text can arrive in NFD; kb README says Vietnamese is matched with diacritics after NFC.",
+      "product": {"key": "test:vi-nfd", "source": "photo", "photo_kind": "ingredients", "label_language": "vi",
+                  "ingredients": ["\u0111a\u0323\u0302u pho\u0323\u0302ng", "muo\u0302\u0301i"], "legibility": "full"},
+      "members": ["m_mia"],
+      "expect": {"m_mia": {"state": "ALLERGY", "codes_include": ["allergen.peanut"], "matched_include": ["đậu phộng"]}}
+    },
+    {
+      "name": "vi may contain statement Có thể chứa mè và đậu phộng",
+      "tags": ["allergen", "p0", "vi", "may_contain"],
+      "product": {"key": "test:vi-mc", "source": "photo", "photo_kind": "ingredients", "label_language": "vi",
+                  "ingredients": ["bột gạo", "đường", "dầu cọ"], "may_contain_text": "Có thể chứa mè và đậu phộng.",
+                  "legibility": "full"},
+      "members": ["m_mia"],
+      "expect": {"m_mia": {"state": "ALLERGY", "label": "May contain",
+                           "codes_include": ["allergen.sesame.may_contain", "allergen.peanut.may_contain"],
+                           "codes_exclude": ["allergen.sesame", "allergen.peanut"]}}
+    },
+    {
+      "name": "vi contains statement Chứa sữa, đậu nành",
+      "tags": ["allergen", "vi", "statement"],
+      "product": {"key": "test:vi-contains", "source": "photo", "photo_kind": "ingredients", "label_language": "vi",
+                  "ingredients": ["bột gạo", "đường"], "contains_text": "Chứa: sữa, đậu nành.", "legibility": "full"},
+      "members": [],
+      "extra_members": [
+        {"id": "m_ana", "name": "Ana", "allergies": [{"id": "milk", "level": "strict"}]},
+        {"id": "m_soo", "name": "Soo", "allergies": [{"id": "soy", "level": "strict"}]}
+      ],
+      "expect": {
+        "m_ana": {"state": "ALLERGY", "label": "Allergy", "codes_include": ["allergen.milk"]},
+        "m_soo": {"state": "ALLERGY", "label": "Allergy", "codes_include": ["allergen.soy"]}
+      }
+    },
+    {
+      "name": "es cacahuate is peanut",
+      "tags": ["allergen", "p0", "es", "peanut"],
+      "product": {"key": "test:es-cacahuate", "source": "photo", "photo_kind": "ingredients", "label_language": "es",
+                  "ingredients": ["cacahuate", "sal", "chile"], "legibility": "full"},
+      "members": ["m_mia"],
+      "expect": {"m_mia": {"state": "ALLERGY", "codes_include": ["allergen.peanut"], "matched_include": ["cacahuate"]}}
+    },
+    {
+      "name": "es maní is peanut",
+      "tags": ["allergen", "p0", "es", "peanut"],
+      "product": {"key": "test:es-mani", "source": "photo", "photo_kind": "ingredients", "label_language": "es",
+                  "ingredients": ["maní tostado", "sal"], "legibility": "full"},
+      "members": ["m_mia"],
+      "expect": {"m_mia": {"state": "ALLERGY", "codes_include": ["allergen.peanut"], "matched_include": ["maní"]}}
+    },
+    {
+      "name": "es ajonjolí is sesame",
+      "tags": ["allergen", "p0", "es", "sesame"],
+      "product": {"key": "test:es-ajonjoli", "source": "photo", "photo_kind": "ingredients", "label_language": "es",
+                  "ingredients": ["harina de arroz", "ajonjolí", "sal"], "legibility": "full"},
+      "members": ["m_mia"],
+      "expect": {"m_mia": {"state": "ALLERGY", "codes_include": ["allergen.sesame"], "matched_include": ["ajonjolí"]}}
+    },
+    {
+      "name": "es sésamo is sesame",
+      "tags": ["allergen", "p0", "es", "sesame"],
+      "product": {"key": "test:es-sesamo", "source": "photo", "photo_kind": "ingredients", "label_language": "es",
+                  "ingredients": ["sésamo", "azúcar"], "legibility": "full"},
+      "members": ["m_mia"],
+      "expect": {"m_mia": {"state": "ALLERGY", "codes_include": ["allergen.sesame"], "matched_include": ["sésamo"]}}
+    },
+    {
+      "name": "es leche is milk and Leo's reasons are in Spanish",
+      "tags": ["allergen", "p0", "es", "milk", "language"],
+      "product": {"key": "test:es-leche", "source": "photo", "photo_kind": "ingredients", "label_language": "es",
+                  "ingredients": ["leche entera", "azúcar", "cacao"], "legibility": "full"},
+      "members": ["m_leo"],
+      "extra_members": [{"id": "m_ana", "name": "Ana", "allergies": [{"id": "milk", "level": "strict"}]}],
+      "expect": {
+        "m_ana": {"state": "ALLERGY", "codes_include": ["allergen.milk"], "matched_include": ["leche"], "reasons_language": "en"},
+        "m_leo": {"state": "DIET", "label": "Not vegan", "codes_include": ["diet.vegan"], "matched_include": ["leche"],
+                  "reasons_language": "es"}
+      }
+    },
+    {
+      "name": "es suero de leche (whey) is milk",
+      "tags": ["allergen", "es", "milk"],
+      "product": {"key": "test:es-suero", "source": "photo", "photo_kind": "ingredients", "label_language": "es",
+                  "ingredients": ["harina de maíz", "suero de leche", "sal"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_ana", "name": "Ana", "allergies": [{"id": "milk", "level": "strict"}]}],
+      "expect": {"m_ana": {"state": "ALLERGY", "codes_include": ["allergen.milk"], "matched_include": ["suero"]}}
+    },
+    {
+      "name": "es harina de trigo is wheat and gluten",
+      "tags": ["allergen", "p0", "es", "wheat"],
+      "product": {"key": "test:es-trigo", "source": "photo", "photo_kind": "ingredients", "label_language": "es",
+                  "ingredients": ["harina de trigo", "agua", "sal"], "legibility": "full"},
+      "members": [],
+      "extra_members": [
+        {"id": "m_wen", "name": "Wen", "allergies": [{"id": "wheat", "level": "strict"}]},
+        {"id": "m_gia", "name": "Gia", "allergies": [{"id": "gluten", "level": "strict"}]}
+      ],
+      "expect": {
+        "m_wen": {"state": "ALLERGY", "codes_include": ["allergen.wheat"], "matched_include": ["trigo"]},
+        "m_gia": {"state": "ALLERGY", "codes_include": ["allergen.gluten"]}
+      }
+    },
+    {
+      "name": "es huevo is egg",
+      "tags": ["allergen", "p0", "es", "egg"],
+      "product": {"key": "test:es-huevo", "source": "photo", "photo_kind": "ingredients", "label_language": "es",
+                  "ingredients": ["harina de arroz", "huevo entero", "azúcar"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_eli", "name": "Eli", "allergies": [{"id": "egg", "level": "strict"}]}],
+      "expect": {"m_eli": {"state": "ALLERGY", "codes_include": ["allergen.egg"], "matched_include": ["huevo"]}}
+    },
+    {
+      "name": "es lecitina de soja is soy",
+      "tags": ["allergen", "p0", "es", "soy"],
+      "product": {"key": "test:es-soja", "source": "photo", "photo_kind": "ingredients", "label_language": "es",
+                  "ingredients": ["azúcar", "cacao", "lecitina de soja"], "legibility": "full"},
+      "members": [],
+      "extra_members": [{"id": "m_soo", "name": "Soo", "allergies": [{"id": "soy", "level": "strict"}]}],
+      "expect": {"m_soo": {"state": "ALLERGY", "codes_include": ["allergen.soy"], "matched_include": ["soja"]}}
+    },
+    {
+      "name": "es may contain statement Puede contener trazas de cacahuate y ajonjolí",
+      "tags": ["allergen", "p0", "es", "may_contain"],
+      "product": {"key": "test:es-mc", "source": "photo", "photo_kind": "ingredients", "label_language": "es",
+                  "ingredients": ["harina de arroz", "azúcar", "aceite de girasol"],
+                  "may_contain_text": "Puede contener trazas de cacahuate y ajonjolí.", "legibility": "full"},
+      "members": ["m_mia"],
+      "expect": {"m_mia": {"state": "ALLERGY", "label": "May contain",
+                           "codes_include": ["allergen.peanut.may_contain", "allergen.sesame.may_contain"],
+                           "codes_exclude": ["allergen.peanut", "allergen.sesame"]}}
+    },
+    {
+      "name": "es contains statement Contiene leche y soja",
+      "tags": ["allergen", "es", "statement"],
+      "product": {"key": "test:es-contains", "source": "photo", "photo_kind": "ingredients", "label_language": "es",
+                  "ingredients": ["azúcar", "cacao"], "contains_text": "Contiene: leche y soja.", "legibility": "full"},
+      "members": [],
+      "extra_members": [
+        {"id": "m_ana", "name": "Ana", "allergies": [{"id": "milk", "level": "strict"}]},
+        {"id": "m_soo", "name": "Soo", "allergies": [{"id": "soy", "level": "strict"}]}
+      ],
+      "expect": {
+        "m_ana": {"state": "ALLERGY", "label": "Allergy", "codes_include": ["allergen.milk"]},
+        "m_soo": {"state": "ALLERGY", "label": "Allergy", "codes_include": ["allergen.soy"]}
+      }
+    },
+    {
+      "name": "Bà's reasons are in Vietnamese",
+      "tags": ["language", "scoring"],
+      "product": {"key": "test:vi-ba-noodles", "source": "photo", "photo_kind": "ingredients", "label_language": "vi",
+                  "ingredients": ["bột mì", "dầu cọ", "muối", "bột ngọt"], "legibility": "full",
+                  "nutrition": {"sodium_mg": 874, "sodium_dv": 38}},
+      "members": ["m_linh", "m_ba"],
+      "expect": {
+        "m_ba": {"state": "EASY", "label": "Easy does it", "codes_include": ["signal."], "reasons_language": "vi"},
+        "m_linh": {"state": "RIPE"}
+      }
+    },
+    {
+      "name": "Leo's gelatin reason is in Spanish, Linh's stays English",
+      "tags": ["language", "diet"],
+      "product": {"key": "test:es-leo-gelatin", "source": "photo", "photo_kind": "ingredients",
+                  "ingredients": ["sugar", "gelatin", "citric acid"], "legibility": "full"},
+      "members": ["m_linh", "m_leo"],
+      "expect": {
+        "m_leo": {"state": "DIET", "label": "Not vegan", "codes_include": ["diet.vegan"], "matched_include": ["gelatin"],
+                  "reasons_language": "es"},
+        "m_linh": {"state": "RIPE"}
+      }
+    }
+  ]
+}

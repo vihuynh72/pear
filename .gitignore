@@ -1,0 +1,24 @@
+# --- Python / backend ---
+api/.venv/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.env
+.env.*
+!.env.example
+
+# --- secrets: never commit (plan 7.9) ---
+GoogleService-Info.plist
+*service-account*.json
+*-key.json
+
+# --- Xcode ---
+xcuserdata/
+*.xcuserstate
+DerivedData/
+build/
+
+# --- macOS ---
+.DS_Store

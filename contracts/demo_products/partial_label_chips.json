@@ -1,0 +1,35 @@
+{
+  "_comment": "DEMO ONLY: fake but well-formed EAN-13 / photo key, not a real product. Used by api/scripts/gen_fixtures.py and POST /debug/evaluate {\"demo\": \"<file stem>\"}.",
+  "key": "photo:9a7e3c1d4b2f",
+  "source": "photo",
+  "code": null,
+  "name": "Garden Veggie Chips",
+  "brand": "Pear Demo Pantry",
+  "category": "food",
+  "product_type": null,
+  "image_url": null,
+  "quantity": null,
+  "label_language": "en",
+  "photo_kind": "ingredients",
+  "matched_by": "photo",
+  "ingredients": [
+    "potato starch",
+    "sunflower oil",
+    "spinach powder",
+    "tomato paste"
+  ],
+  "ingredients_text": "Potato starch, sunflower oil, spinach powder, tomato paste,",
+  "contains_text": null,
+  "may_contain_text": null,
+  "model_kb_ids": [
+    [],
+    [],
+    [],
+    []
+  ],
+  "certifications_text": [],
+  "nutrition": null,
+  "legibility": "partial",
+  "data_confidence": "low",
+  "fetched_at": "2026-10-02T18:00:00Z"
+}

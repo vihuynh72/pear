@@ -1,0 +1,111 @@
+{
+  "product": {
+    "key": "photo:62e0a9bb530a",
+    "name": "MÌ ĂN LIỀN HƯƠNG VỊ TÔM CHUA CAY",
+    "brand": "",
+    "category": "food",
+    "product_type": null,
+    "image_url": null,
+    "source": "photo",
+    "photo_kind": "ingredients",
+    "data_confidence": "high",
+    "less_sure": false,
+    "ask_for_ingredients": false,
+    "ingredients": [
+      "bột mì",
+      "dầu cọ",
+      "tinh bột khoai mì",
+      "muối",
+      "nước mắm",
+      "đường",
+      "muối",
+      "đường",
+      "bột ngọt (621)",
+      "tỏi",
+      "ớt",
+      "tôm khô",
+      "chất điều vị (627, 631)",
+      "màu tự nhiên (160c)"
+    ],
+    "contains": [
+      "fish",
+      "gluten",
+      "shellfish",
+      "wheat"
+    ],
+    "may_contain": [],
+    "certifications": [],
+    "label_language": "vi"
+  },
+  "verdicts": [
+    {
+      "member_id": "m_linh",
+      "state": "RIPE",
+      "label": "Ripe",
+      "reasons": [],
+      "score": null
+    },
+    {
+      "member_id": "m_ba",
+      "state": "EASY",
+      "label": "Vừa phải",
+      "reasons": [
+        {
+          "code": "health.sodium",
+          "text": "Rất nhiều muối (70% nhu cầu mỗi ngày)",
+          "language": "vi",
+          "severity": "soft",
+          "matched": [],
+          "source": "fda_nutrition_dv"
+        }
+      ],
+      "score": null
+    },
+    {
+      "member_id": "m_mia",
+      "state": "RIPE",
+      "label": "Ripe",
+      "reasons": [],
+      "score": null
+    },
+    {
+      "member_id": "m_leo",
+      "state": "DIET",
+      "label": "No es vegano",
+      "reasons": [
+        {
+          "code": "diet.vegan.fish",
+          "text": "No es vegano: tiene pescado (nước mắm, cá)",
+          "language": "es",
+          "severity": "hard",
+          "matched": [
+            "nước mắm",
+            "cá"
+          ],
+          "source": "fda_major_allergens"
+        },
+        {
+          "code": "diet.vegan.shellfish",
+          "text": "No es vegano: tiene mariscos (tôm khô, tôm)",
+          "language": "es",
+          "severity": "hard",
+          "matched": [
+            "tôm khô",
+            "tôm"
+          ],
+          "source": "fda_major_allergens"
+        }
+      ],
+      "score": null
+    }
+  ],
+  "headline": {
+    "text": "Not vegan for Leo: fish. Fine for Linh and Mia.",
+    "language": "en"
+  },
+  "timings_ms": {
+    "read": 2562,
+    "rules": 1,
+    "total": 2564
+  }
+}

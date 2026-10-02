@@ -1,0 +1,4834 @@
+{
+ "cases": [
+  {
+   "name": "macadamia nuts plural flags tree nut",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-0",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "Dry roasted macadamia nuts",
+     "Sea salt"
+    ],
+    "contains_text": "Contains: macadamia nuts"
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "tree_nut",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.tree_nut"
+     ]
+    }
+   },
+   "why": "pets.json term shadowed tree_nut"
+  },
+  {
+   "name": "Contains: MACADAMIA NUTS statement flags tree nut",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-1",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "Sugar"
+    ],
+    "contains_text": "CONTAINS: WHEAT, MILK, SOY, MACADAMIA NUTS, EGG"
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "tree_nut",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.tree_nut"
+     ]
+    }
+   }
+  },
+  {
+   "name": "fish species alone: Swai fillets",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-2",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "Swai fillets",
+     "Salt"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "fish",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.fish"
+     ]
+    }
+   }
+  },
+  {
+   "name": "fish species alone: Whiting fillets",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-3",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "Whiting fillets",
+     "Salt"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "fish",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.fish"
+     ]
+    }
+   }
+  },
+  {
+   "name": "fish species alone: Grouper",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-4",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "Grouper",
+     "Salt"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "fish",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.fish"
+     ]
+    }
+   }
+  },
+  {
+   "name": "fish species alone: Sea bass",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-5",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "Sea bass",
+     "Salt"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "fish",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.fish"
+     ]
+    }
+   }
+  },
+  {
+   "name": "fish species alone: Mahimahi",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-6",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "Mahimahi",
+     "Salt"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "fish",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.fish"
+     ]
+    }
+   }
+  },
+  {
+   "name": "fish species alone: Pacific rockfish fillets",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-7",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "Pacific rockfish fillets",
+     "Salt"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "fish",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.fish"
+     ]
+    }
+   }
+  },
+  {
+   "name": "fish species alone: Walleye",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-8",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "Walleye",
+     "Salt"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "fish",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.fish"
+     ]
+    }
+   }
+  },
+  {
+   "name": "fish species alone: Branzino",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-9",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "Branzino",
+     "Salt"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "fish",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.fish"
+     ]
+    }
+   }
+  },
+  {
+   "name": "fish species alone: Unagi",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-10",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "Unagi",
+     "Salt"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "fish",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.fish"
+     ]
+    }
+   }
+  },
+  {
+   "name": "fish species alone: Shark liver oil",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-11",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "Shark liver oil",
+     "Salt"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "fish",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.fish"
+     ]
+    }
+   }
+  },
+  {
+   "name": "fish species alone: Marine collagen",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-12",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "Marine collagen",
+     "Salt"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "fish",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.fish"
+     ]
+    }
+   }
+  },
+  {
+   "name": "fish species alone: lươn",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-13",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "lươn",
+     "Salt"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "fish",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.fish"
+     ]
+    }
+   }
+  },
+  {
+   "name": "shellfish species alone: Crawdads",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-14",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "Crawdads",
+     "Salt"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "shellfish",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.shellfish"
+     ]
+    }
+   }
+  },
+  {
+   "name": "shellfish species alone: Geoduck",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-15",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "Geoduck",
+     "Salt"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "shellfish",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.shellfish"
+     ]
+    }
+   }
+  },
+  {
+   "name": "shellfish species alone: Quahog",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-16",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "Quahog",
+     "Salt"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "shellfish",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.shellfish"
+     ]
+    }
+   }
+  },
+  {
+   "name": "shellfish species alone: jaiba",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-17",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "jaiba",
+     "Salt"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "shellfish",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.shellfish"
+     ]
+    }
+   }
+  },
+  {
+   "name": "shellfish species alone: bào ngư",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-18",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "bào ngư",
+     "Salt"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "shellfish",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.shellfish"
+     ]
+    }
+   }
+  },
+  {
+   "name": "peanuts newline Free from colors keeps peanut",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-19",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "Sugar",
+     "Salt"
+    ],
+    "contains_text": "Contains: milk, peanuts\nFree from artificial colors"
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "peanut",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.peanut"
+     ]
+    }
+   }
+  },
+  {
+   "name": "EGG newline FREE OF preservatives keeps egg",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-20",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "Sugar"
+    ],
+    "contains_text": "CONTAINS: WHEAT, EGG\nFREE OF ARTIFICIAL PRESERVATIVES"
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "egg",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.egg"
+     ]
+    }
+   }
+  },
+  {
+   "name": "milk free-range egg yolks keeps milk",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-21",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "Sugar"
+    ],
+    "contains_text": "Contains: milk free-range egg yolks"
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "milk",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.milk"
+     ]
+    }
+   }
+  },
+  {
+   "name": "lactose monohydrate flags milk",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-22",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "Calcium carbonate",
+     "Lactose monohydrate",
+     "Magnesium stearate"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "milk",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.milk"
+     ]
+    }
+   }
+  },
+  {
+   "name": "anhydrous lactose flags milk",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-23",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "Anhydrous lactose",
+     "Cellulose"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "milk",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.milk"
+     ]
+    }
+   }
+  },
+  {
+   "name": "possible peanut kept for Nut pieces",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-24",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "Sugar",
+     "Nut pieces"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "peanut",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.peanut"
+     ]
+    }
+   }
+  },
+  {
+   "name": "possible peanut kept for Nut butter",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-25",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "Sugar",
+     "Nut butter"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "peanut",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.peanut"
+     ]
+    }
+   }
+  },
+  {
+   "name": "possible peanut kept for Nut meal",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-26",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "Sugar",
+     "Nut meal"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "peanut",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.peanut"
+     ]
+    }
+   }
+  },
+  {
+   "name": "possible peanut kept for Nut paste",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-27",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "Sugar",
+     "Nut paste"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "peanut",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.peanut"
+     ]
+    }
+   }
+  },
+  {
+   "name": "possible peanut kept for Earth nut oil",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-28",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "Sugar",
+     "Earth nut oil"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "peanut",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.peanut"
+     ]
+    }
+   }
+  },
+  {
+   "name": "possible peanut kept for hạt dinh dưỡng",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-29",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "Sugar",
+     "hạt dinh dưỡng"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "peanut",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.peanut"
+     ]
+    }
+   }
+  },
+  {
+   "name": "traces_tags en:nuts reach peanut",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-30",
+    "source": "open_food_facts",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "sugar",
+     "cocoa"
+    ],
+    "traces_tags": [
+     "en:nuts"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "peanut",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.peanut.may_contain"
+     ]
+    }
+   }
+  },
+  {
+   "name": "compound term keeps sulfite: Red wine vinegar",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-31",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "Water",
+     "Red wine vinegar",
+     "Salt"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "sulfite",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.sulfite"
+     ]
+    }
+   }
+  },
+  {
+   "name": "compound term keeps sulfite: Cooking wine",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-32",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "Water",
+     "Cooking wine",
+     "Salt"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "sulfite",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.sulfite"
+     ]
+    }
+   }
+  },
+  {
+   "name": "compound term keeps wheat: Egg noodles",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-33",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "Water",
+     "Egg noodles",
+     "Salt"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "wheat",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.wheat"
+     ]
+    }
+   }
+  },
+  {
+   "name": "compound term keeps gluten: Egg pasta",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-34",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "Water",
+     "Egg pasta",
+     "Salt"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "gluten",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.gluten"
+     ]
+    }
+   }
+  },
+  {
+   "name": "compound term keeps fish: Seafood extract",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-35",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "Water",
+     "Seafood extract",
+     "Salt"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "fish",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.fish"
+     ]
+    }
+   }
+  },
+  {
+   "name": "compound term keeps corn: Glucose-fructose syrup",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-36",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "Water",
+     "Glucose-fructose syrup",
+     "Salt"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "corn",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.corn"
+     ]
+    }
+   }
+  },
+  {
+   "name": "compound term keeps fish: Surimi with egg white",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-37",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "Water",
+     "Surimi with egg white",
+     "Salt"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "fish",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.fish"
+     ]
+    }
+   }
+  },
+  {
+   "name": "compound term keeps milk: Cheese cultures and enzymes",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-38",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "Water",
+     "Cheese cultures and enzymes",
+     "Salt"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "milk",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.milk"
+     ]
+    }
+   }
+  },
+  {
+   "name": "footnote mark glued: Milk¹",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-39",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "Sugar",
+     "Milk¹",
+     "Salt"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "milk",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.milk"
+     ]
+    }
+   }
+  },
+  {
+   "name": "footnote mark glued: Peanuts2",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-40",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "Sugar",
+     "Peanuts2",
+     "Salt"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "peanut",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.peanut"
+     ]
+    }
+   }
+  },
+  {
+   "name": "footnote mark glued: Hazelnuts13%",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-41",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "Sugar",
+     "Hazelnuts13%",
+     "Salt"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "tree_nut",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.tree_nut"
+     ]
+    }
+   }
+  },
+  {
+   "name": "hyphenation / width: 'Pea-\\nnut butter'",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-42",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "Sugar",
+     "Pea-\nnut butter"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "peanut",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.peanut"
+     ]
+    }
+   }
+  },
+  {
+   "name": "hyphenation / width: 'PEA- NUT OIL'",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-43",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "Sugar",
+     "PEA- NUT OIL"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "peanut",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.peanut"
+     ]
+    }
+   }
+  },
+  {
+   "name": "hyphenation / width: 'Ses-\\name oil'",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-44",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "Sugar",
+     "Ses-\name oil"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "sesame",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.sesame"
+     ]
+    }
+   }
+  },
+  {
+   "name": "hyphenation / width: 'ＭＩＬＫ'",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-45",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "Sugar",
+     "ＭＩＬＫ"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "milk",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.milk"
+     ]
+    }
+   }
+  },
+  {
+   "name": "vocabulary: Orzo",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-46",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "Orzo",
+     "Salt"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "wheat",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.wheat"
+     ]
+    }
+   }
+  },
+  {
+   "name": "vocabulary: Tempura flakes",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-47",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "Tempura flakes",
+     "Salt"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "wheat",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.wheat"
+     ]
+    }
+   }
+  },
+  {
+   "name": "vocabulary: Phyllo dough",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-48",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "Phyllo dough",
+     "Salt"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "wheat",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.wheat"
+     ]
+    }
+   }
+  },
+  {
+   "name": "vocabulary: Pecorino Romano",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-49",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "Pecorino Romano",
+     "Salt"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "milk",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.milk"
+     ]
+    }
+   }
+  },
+  {
+   "name": "vocabulary: Labneh",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-50",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "Labneh",
+     "Salt"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "milk",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.milk"
+     ]
+    }
+   }
+  },
+  {
+   "name": "vocabulary: Gianduia",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-51",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "Gianduia",
+     "Salt"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "tree_nut",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.tree_nut"
+     ]
+    }
+   }
+  },
+  {
+   "name": "vocabulary: Zein",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-52",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "Zein",
+     "Salt"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "corn",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.corn"
+     ]
+    }
+   }
+  },
+  {
+   "name": "vocabulary: Golden raisins (sulfured)",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-53",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "Golden raisins (sulfured)",
+     "Salt"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "sulfite",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.sulfite"
+     ]
+    }
+   }
+  },
+  {
+   "name": "vocabulary: Liquid aminos",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-54",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "Liquid aminos",
+     "Salt"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "soy",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.soy"
+     ]
+    }
+   }
+  },
+  {
+   "name": "vocabulary: Gochujang",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-55",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "Gochujang",
+     "Salt"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "soy",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.soy"
+     ]
+    }
+   }
+  },
+  {
+   "name": "vocabulary: Gomashio",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-56",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "Gomashio",
+     "Salt"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "sesame",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.sesame"
+     ]
+    }
+   }
+  },
+  {
+   "name": "vocabulary: Chinese gooseberry",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-57",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "Chinese gooseberry",
+     "Salt"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "kiwi",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.kiwi"
+     ]
+    }
+   }
+  },
+  {
+   "name": "vocabulary: Kecap manis",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-58",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "Kecap manis",
+     "Salt"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "soy",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.soy"
+     ]
+    }
+   }
+  },
+  {
+   "name": "OFF may-contain line before list keeps wheat contains (sensitive)",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-59",
+    "source": "open_food_facts",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [],
+    "ingredients_text": "May contain traces of peanuts\nIngredients: sugar, wheat flour, milk, eggs"
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "wheat",
+       "level": "sensitive"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.wheat"
+     ]
+    }
+   }
+  },
+  {
+   "name": "may-contain then Ingredients: header without period",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-60",
+    "source": "open_food_facts",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [],
+    "ingredients_text": "May contain milk Ingredients: sugar, peanuts"
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "peanut",
+       "level": "sensitive"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.peanut"
+     ]
+    }
+   }
+  },
+  {
+   "name": "vi header resets may region",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-61",
+    "source": "open_food_facts",
+    "category": "food",
+    "legibility": "full",
+    "label_language": "vi",
+    "ingredients": [],
+    "ingredients_text": "Có thể chứa sữa Thành phần: đường, đậu phộng"
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "vi"
+     ],
+     "allergies": [
+      {
+       "id": "peanut",
+       "level": "sensitive"
+      }
+     ]
+    }
+   ],
+   "owner_language": "vi",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.peanut"
+     ]
+    }
+   }
+  },
+  {
+   "name": "photo may-contain item does not soften later items",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-62",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "Sugar",
+     "May contain traces of nuts",
+     "Whole milk powder"
+    ],
+    "ingredients_text": "Sugar; May contain traces of nuts; Whole milk powder",
+    "model_kb_ids": [
+     [],
+     [
+      "tree_nut"
+     ],
+     [
+      "milk"
+     ]
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "milk",
+       "level": "sensitive"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.milk"
+     ]
+    }
+   }
+  },
+  {
+   "name": "photo may item with comma-joined text: model ids keep contains",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-63",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "Sugar",
+     "Made in a facility that also processes peanuts",
+     "Wheat flour",
+     "Eggs"
+    ],
+    "ingredients_text": "Sugar, Made in a facility that also processes peanuts, Wheat flour, Eggs",
+    "model_kb_ids": [
+     [],
+     [
+      "peanut"
+     ],
+     [
+      "wheat"
+     ],
+     [
+      "egg"
+     ]
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "wheat",
+       "level": "sensitive"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.wheat"
+     ]
+    }
+   }
+  },
+  {
+   "name": "vi factory address is not a may-contain warning",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-64",
+    "source": "open_food_facts",
+    "category": "food",
+    "legibility": "full",
+    "label_language": "vi",
+    "ingredients": [],
+    "ingredients_text": "Sản xuất tại nhà máy Acecook Việt Nam, thành phần: bột mì, sữa bột, trứng"
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "vi"
+     ],
+     "allergies": [
+      {
+       "id": "milk",
+       "level": "sensitive"
+      }
+     ]
+    }
+   ],
+   "owner_language": "vi",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.milk"
+     ]
+    }
+   }
+  },
+  {
+   "name": "es authorized establishment is not a may-contain warning",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-65",
+    "source": "open_food_facts",
+    "category": "food",
+    "legibility": "full",
+    "label_language": "es",
+    "ingredients": [],
+    "ingredients_text": "Elaborado y envasado en establecimiento autorizado, ingredientes: harina de trigo, leche, huevo"
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "es"
+     ],
+     "allergies": [
+      {
+       "id": "egg",
+       "level": "sensitive"
+      }
+     ]
+    }
+   ],
+   "owner_language": "es",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.egg"
+     ]
+    }
+   }
+  },
+  {
+   "name": "Choco Pie unaccented vi: wheat",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-66",
+    "source": "open_food_facts",
+    "category": "food",
+    "legibility": "full",
+    "label_language": "vi",
+    "ingredients": [],
+    "ingredients_text": "Bột mi, duong, glucose sirup, shortening thuc vật, bot cacao, sura bot nguyen kem, trung, gelatin, muoi, chát nhu hóa (lecithin dâu nanh (E322)), huong vani tong hop, protein sua."
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "vi"
+     ],
+     "allergies": [
+      {
+       "id": "wheat",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "vi",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.wheat"
+     ]
+    }
+   }
+  },
+  {
+   "name": "Choco Pie unaccented vi: egg (trung)",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-67",
+    "source": "open_food_facts",
+    "category": "food",
+    "legibility": "full",
+    "label_language": "vi",
+    "ingredients": [],
+    "ingredients_text": "Bột mi, duong, glucose sirup, shortening thuc vật, bot cacao, sura bot nguyen kem, trung, gelatin, muoi, chát nhu hóa (lecithin dâu nanh (E322)), huong vani tong hop, protein sua."
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "vi"
+     ],
+     "allergies": [
+      {
+       "id": "egg",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "vi",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.egg"
+     ]
+    }
+   }
+  },
+  {
+   "name": "vi variant: SUA BOT",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-68",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "label_language": "vi",
+    "ingredients": [
+     "SUA BOT",
+     "muối"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "vi"
+     ],
+     "allergies": [
+      {
+       "id": "milk",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "vi",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.milk"
+     ]
+    }
+   }
+  },
+  {
+   "name": "vi variant: trung ga",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-69",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "label_language": "vi",
+    "ingredients": [
+     "trung ga",
+     "muối"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "vi"
+     ],
+     "allergies": [
+      {
+       "id": "egg",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "vi",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.egg"
+     ]
+    }
+   }
+  },
+  {
+   "name": "vi variant: tom kho",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-70",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "label_language": "vi",
+    "ingredients": [
+     "tom kho",
+     "muối"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "vi"
+     ],
+     "allergies": [
+      {
+       "id": "shellfish",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "vi",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.shellfish"
+     ]
+    }
+   }
+  },
+  {
+   "name": "vi variant: me rang",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-71",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "label_language": "vi",
+    "ingredients": [
+     "me rang",
+     "muối"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "vi"
+     ],
+     "allergies": [
+      {
+       "id": "sesame",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "vi",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.sesame"
+     ]
+    }
+   }
+  },
+  {
+   "name": "vi variant: lac rang",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-72",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "label_language": "vi",
+    "ingredients": [
+     "lac rang",
+     "muối"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "vi"
+     ],
+     "allergies": [
+      {
+       "id": "peanut",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "vi",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.peanut"
+     ]
+    }
+   }
+  },
+  {
+   "name": "vi variant: nuoc tuong",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-73",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "label_language": "vi",
+    "ingredients": [
+     "nuoc tuong",
+     "muối"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "vi"
+     ],
+     "allergies": [
+      {
+       "id": "soy",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "vi",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.soy"
+     ]
+    }
+   }
+  },
+  {
+   "name": "vi variant: bột mỳ",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-74",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "label_language": "vi",
+    "ingredients": [
+     "bột mỳ",
+     "muối"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "vi"
+     ],
+     "allergies": [
+      {
+       "id": "wheat",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "vi",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.wheat"
+     ]
+    }
+   }
+  },
+  {
+   "name": "vi variant: lúa mỳ",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-75",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "label_language": "vi",
+    "ingredients": [
+     "lúa mỳ",
+     "muối"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "vi"
+     ],
+     "allergies": [
+      {
+       "id": "wheat",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "vi",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.wheat"
+     ]
+    }
+   }
+  },
+  {
+   "name": "vi variant: đậu phọng rang",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-76",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "label_language": "vi",
+    "ingredients": [
+     "đậu phọng rang",
+     "muối"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "vi"
+     ],
+     "allergies": [
+      {
+       "id": "peanut",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "vi",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.peanut"
+     ]
+    }
+   }
+  },
+  {
+   "name": "vi variant: bơ đậu phọng",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-77",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "label_language": "vi",
+    "ingredients": [
+     "bơ đậu phọng",
+     "muối"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "vi"
+     ],
+     "allergies": [
+      {
+       "id": "peanut",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "vi",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.peanut"
+     ]
+    }
+   }
+  },
+  {
+   "name": "vi variant: dầu phộng",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-78",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "label_language": "vi",
+    "ingredients": [
+     "dầu phộng",
+     "muối"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "vi"
+     ],
+     "allergies": [
+      {
+       "id": "peanut",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "vi",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.peanut"
+     ]
+    }
+   }
+  },
+  {
+   "name": "vi variant: phomai",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-79",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "label_language": "vi",
+    "ingredients": [
+     "phomai",
+     "muối"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "vi"
+     ],
+     "allergies": [
+      {
+       "id": "milk",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "vi",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.milk"
+     ]
+    }
+   }
+  },
+  {
+   "name": "vi variant: đậu hủ",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-80",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "label_language": "vi",
+    "ingredients": [
+     "đậu hủ",
+     "muối"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "vi"
+     ],
+     "allergies": [
+      {
+       "id": "soy",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "vi",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.soy"
+     ]
+    }
+   }
+  },
+  {
+   "name": "vi variant: đại mạch",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-81",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "label_language": "vi",
+    "ingredients": [
+     "đại mạch",
+     "muối"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "vi"
+     ],
+     "allergies": [
+      {
+       "id": "gluten",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "vi",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.gluten"
+     ]
+    }
+   }
+  },
+  {
+   "name": "vi variant: ÐẬU PHỘNG",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-82",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "label_language": "vi",
+    "ingredients": [
+     "ÐẬU PHỘNG",
+     "muối"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "vi"
+     ],
+     "allergies": [
+      {
+       "id": "peanut",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "vi",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.peanut"
+     ]
+    }
+   }
+  },
+  {
+   "name": "bare INS code: chất bảo quản (220)",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-83",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "đường",
+     "chất bảo quản (220)"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "sulfite",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.sulfite"
+     ]
+    }
+   }
+  },
+  {
+   "name": "bare INS code: Preservative (220)",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-84",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "đường",
+     "Preservative (220)"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "sulfite",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.sulfite"
+     ]
+    }
+   }
+  },
+  {
+   "name": "bare INS code: chất nhũ hóa (322)",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-85",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "đường",
+     "chất nhũ hóa (322)"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "soy",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.soy"
+     ]
+    }
+   }
+  },
+  {
+   "name": "bare INS code: Emulsifier (322, 471)",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-86",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "đường",
+     "Emulsifier (322, 471)"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "soy",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.soy"
+     ]
+    }
+   }
+  },
+  {
+   "name": "bare INS code: chất bảo quản: 224",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-87",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "đường",
+     "chất bảo quản: 224"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "sulfite",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.sulfite"
+     ]
+    }
+   }
+  },
+  {
+   "name": "es variant: metabisulfito",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-88",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "label_language": "es",
+    "ingredients": [
+     "metabisulfito"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "es"
+     ],
+     "allergies": [
+      {
+       "id": "sulfite",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "es",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.sulfite"
+     ]
+    }
+   }
+  },
+  {
+   "name": "es variant: bisulfito",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-89",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "label_language": "es",
+    "ingredients": [
+     "bisulfito"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "es"
+     ],
+     "allergies": [
+      {
+       "id": "sulfite",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "es",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.sulfite"
+     ]
+    }
+   }
+  },
+  {
+   "name": "es variant: suero",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-90",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "label_language": "es",
+    "ingredients": [
+     "suero"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "es"
+     ],
+     "allergies": [
+      {
+       "id": "milk",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "es",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.milk"
+     ]
+    }
+   }
+  },
+  {
+   "name": "es variant: grasa butírica",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-91",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "label_language": "es",
+    "ingredients": [
+     "grasa butírica"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "es"
+     ],
+     "allergies": [
+      {
+       "id": "milk",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "es",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.milk"
+     ]
+    }
+   }
+  },
+  {
+   "name": "es variant: marañón",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-92",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "label_language": "es",
+    "ingredients": [
+     "marañón"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "es"
+     ],
+     "allergies": [
+      {
+       "id": "tree_nut",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "es",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.tree_nut"
+     ]
+    }
+   }
+  },
+  {
+   "name": "es variant: ATUN",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-93",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "label_language": "es",
+    "ingredients": [
+     "ATUN"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "es"
+     ],
+     "allergies": [
+      {
+       "id": "fish",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "es",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.fish"
+     ]
+    }
+   }
+  },
+  {
+   "name": "es variant: CAMARON",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-94",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "label_language": "es",
+    "ingredients": [
+     "CAMARON"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "es"
+     ],
+     "allergies": [
+      {
+       "id": "shellfish",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "es",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.shellfish"
+     ]
+    }
+   }
+  },
+  {
+   "name": "es variant: SEMOLA",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-95",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "label_language": "es",
+    "ingredients": [
+     "SEMOLA"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "es"
+     ],
+     "allergies": [
+      {
+       "id": "wheat",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "es",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.wheat"
+     ]
+    }
+   }
+  },
+  {
+   "name": "es variant: CASEINA",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-96",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "label_language": "es",
+    "ingredients": [
+     "CASEINA"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "es"
+     ],
+     "allergies": [
+      {
+       "id": "milk",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "es",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.milk"
+     ]
+    }
+   }
+  },
+  {
+   "name": "es variant: DIOXIDO DE AZUFRE",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-97",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "label_language": "es",
+    "ingredients": [
+     "DIOXIDO DE AZUFRE"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "es"
+     ],
+     "allergies": [
+      {
+       "id": "sulfite",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "es",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.sulfite"
+     ]
+    }
+   }
+  },
+  {
+   "name": "unaccented OFF tag fr:celeri",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-98",
+    "source": "open_food_facts",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "Sugar",
+     "salt"
+    ],
+    "allergens_tags": [
+     "fr:celeri"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "celery",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.celery"
+     ]
+    }
+   }
+  },
+  {
+   "name": "unaccented OFF tag fr:crustaces",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-99",
+    "source": "open_food_facts",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "Sugar",
+     "salt"
+    ],
+    "allergens_tags": [
+     "fr:crustaces"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "shellfish",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.shellfish"
+     ]
+    }
+   }
+  },
+  {
+   "name": "unaccented OFF tag de:erdnusse",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-100",
+    "source": "open_food_facts",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "Sugar",
+     "salt"
+    ],
+    "allergens_tags": [
+     "de:erdnusse"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "peanut",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.peanut"
+     ]
+    }
+   }
+  },
+  {
+   "name": "unaccented OFF tag fr:ble",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-101",
+    "source": "open_food_facts",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "Sugar",
+     "salt"
+    ],
+    "allergens_tags": [
+     "fr:ble"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "wheat",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.wheat"
+     ]
+    }
+   }
+  },
+  {
+   "name": "front_only photo with words is never Ripe for strict",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-102",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "photo_kind": "front_only",
+    "ingredients": [
+     "Whole grain oats",
+     "Honey"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "sesame",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "UNSURE"
+    }
+   }
+  },
+  {
+   "name": "custom allergy plural folding: strawberry vs strawberries",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-103",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "sugar",
+     "strawberries",
+     "pectin"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "strawberry",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.strawberry"
+     ]
+    }
+   }
+  },
+  {
+   "name": "custom strict allergy with no literal hit is UNSURE",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-104",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "sugar",
+     "pectin"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "en"
+     ],
+     "allergies": [
+      {
+       "id": "strawberry",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "UNSURE"
+    }
+   }
+  },
+  {
+   "name": "vi accented me is tamarind, unaccented label me rang is sesame",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rt-105",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "label_language": "vi",
+    "ingredients": [
+     "me rang"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Mia",
+     "languages": [
+      "vi"
+     ],
+     "allergies": [
+      {
+       "id": "sesame",
+       "level": "strict"
+      }
+     ]
+    }
+   ],
+   "owner_language": "vi",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.sesame"
+     ]
+    }
+   }
+  },
+  {
+   "name": "no list: product name gives possible peanut and dog toxin",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rtx-106",
+    "source": "open_food_facts",
+    "category": "food",
+    "legibility": "missing",
+    "name": "Peanut Butter Chocolate Cups",
+    "ingredients": [],
+    "data_confidence": "low"
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Nam",
+     "allergies": [
+      {
+       "id": "peanut",
+       "level": "sensitive"
+      }
+     ]
+    },
+    {
+     "id": "m_d",
+     "name": "Bun",
+     "type": "pet",
+     "species": "dog"
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.peanut.possible"
+     ]
+    },
+    "m_d": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "pet."
+     ]
+    }
+   }
+  },
+  {
+   "name": "celiac disease typed as a condition is a strict gluten allergy",
+   "tags": [
+    "allergen",
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rtx-107",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "wheat flour",
+     "salt"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Bà",
+     "languages": [
+      "vi"
+     ],
+     "conditions": [
+      "celiac disease"
+     ]
+    }
+   ],
+   "owner_language": "vi",
+   "expect": {
+    "m_x": {
+     "state": "ALLERGY",
+     "codes_include": [
+      "allergen.gluten"
+     ]
+    }
+   }
+  },
+  {
+   "name": "unknown condition gets a note",
+   "tags": [
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rtx-108",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "sugar"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Ed",
+     "conditions": [
+      "gout"
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "RIPE",
+     "notes_include": [
+      "condition.gout.unknown"
+     ]
+    }
+   }
+  },
+  {
+   "name": "INCI shea butter parenthetical is not milk or non-vegan",
+   "tags": [
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rtx-109",
+    "source": "open_beauty_facts",
+    "category": "cosmetic",
+    "legibility": "full",
+    "product_type": "leave_on",
+    "ingredients": [
+     "Aqua",
+     "Butyrospermum Parkii (Shea) Butter",
+     "Cocos Nucifera (Coconut) Milk"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Ana",
+     "allergies": [
+      {
+       "id": "milk"
+      }
+     ]
+    },
+    {
+     "id": "m_l",
+     "name": "Leo",
+     "diets": [
+      "vegan"
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "RIPE",
+     "codes_exclude": [
+      "allergen.milk*"
+     ]
+    },
+    "m_l": {
+     "state": "RIPE"
+    }
+   }
+  },
+  {
+   "name": "negated vegan text is not a certification",
+   "tags": [
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rtx-110",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "sugar",
+     "natural flavors"
+    ],
+    "certifications_text": [
+     "Not vegan"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Leo",
+     "diets": [
+      "vegan"
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "DIET",
+     "codes_exclude": [
+      "cert."
+     ]
+    }
+   }
+  },
+  {
+   "name": "microbial rennet is not a definite non-vegan hit",
+   "tags": [
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rtx-111",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "pasteurized cultured milk",
+     "microbial rennet"
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Jai",
+     "diets": [
+      "jain"
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state_in": [
+      "RIPE",
+      "DIET"
+     ],
+     "codes_exclude": [
+      "diet.jain.animal_rennet"
+     ]
+    }
+   }
+  },
+  {
+   "name": "Jain alcohol rule skips cosmetics",
+   "tags": [
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rtx-112",
+    "source": "open_beauty_facts",
+    "category": "cosmetic",
+    "legibility": "full",
+    "product_type": "leave_on",
+    "ingredients": [
+     "Aqua",
+     "Alcohol Denat."
+    ]
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Jai",
+     "diets": [
+      "jain"
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "RIPE"
+    }
+   }
+  },
+  {
+   "name": "cross-contact sentence with 'contain' stays may_contain",
+   "tags": [
+    "redteam"
+   ],
+   "product": {
+    "key": "test:rtx-113",
+    "source": "photo",
+    "category": "food",
+    "legibility": "full",
+    "ingredients": [
+     "sugar",
+     "cocoa"
+    ],
+    "may_contain_text": "Made in a facility that also processes products that contain peanuts."
+   },
+   "members": [],
+   "extra_members": [
+    {
+     "id": "m_x",
+     "name": "Nam",
+     "allergies": [
+      {
+       "id": "peanut",
+       "level": "sensitive"
+      }
+     ]
+    }
+   ],
+   "owner_language": "en",
+   "expect": {
+    "m_x": {
+     "state": "RIPE",
+     "notes_include": [
+      "allergen.peanut.trace_note"
+     ]
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,40 @@
+{
+  "chips": [
+    {
+      "group": "allergies",
+      "id": "peanut",
+      "level": "strict",
+      "label": "peanut",
+      "note": null
+    },
+    {
+      "group": "allergies",
+      "id": "sesame",
+      "level": "strict",
+      "label": "sesame",
+      "note": null
+    },
+    {
+      "group": "skin",
+      "id": "eczema",
+      "level": null,
+      "label": "eczema",
+      "note": null
+    },
+    {
+      "group": "less_of",
+      "id": "artificial_dyes",
+      "level": null,
+      "label": "artificial dyes",
+      "note": "Red 40 is an artificial dye"
+    }
+  ],
+  "unmatched": [
+    "latex"
+  ],
+  "timings_ms": {
+    "gemini": 820,
+    "total": 836
+  },
+  "request_id": null
+}

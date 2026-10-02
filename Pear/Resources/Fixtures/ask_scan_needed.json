@@ -1,0 +1,13 @@
+{
+  "transcript": "Is it okay?",
+  "language": "en",
+  "intent": "check",
+  "product_query": "",
+  "member_ids": [],
+  "next": "scan_needed",
+  "answer": {
+    "text": "Scan it and I'll check.",
+    "language": "en"
+  },
+  "scan_result": null
+}

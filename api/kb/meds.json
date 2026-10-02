@@ -1,0 +1,43 @@
+{
+  "version": "2026-10-02",
+  "items": [
+    {"id": "grapefruit", "label": {"en": "grapefruit", "vi": "bưởi chùm", "es": "toronja"},
+     "terms": {"en": ["grapefruit", "grapefruit juice", "grapefruit extract", "grapefruit peel", "pink grapefruit", "citrus paradisi"], "vi": ["bưởi chùm", "nước bưởi chùm"],
+               "es": ["toronja", "jugo de toronja", "pomelo rosado", "zumo de pomelo"]},
+     "source": "fda_grapefruit"},
+    {"id": "seville_orange", "label": {"en": "Seville orange", "vi": "cam đắng", "es": "naranja amarga"},
+     "terms": {"en": ["seville orange", "seville oranges", "bitter orange", "sour orange", "citrus aurantium", "seville orange marmalade"], "vi": ["cam đắng", "cam chua"], "es": ["naranja amarga", "naranja agria"]},
+     "source": "fda_grapefruit"},
+    {"id": "pomelo", "label": {"en": "pomelo", "vi": "bưởi", "es": "pomelo"},
+     "terms": {"en": ["pomelo", "pummelo", "citrus maxima", "citrus grandis"], "vi": ["bưởi", "nước bưởi"], "es": ["pomelo", "pummelo"]},
+     "source": "fda_grapefruit"},
+    {"id": "tangelo", "label": {"en": "tangelo", "vi": "tangelo", "es": "tangelo"},
+     "terms": {"en": ["tangelo", "tangelos", "minneola"], "es": ["tangelo"], "vi": ["tangelo"]},
+     "source": "fda_grapefruit"},
+    {"id": "vitamin_k_foods", "label": {"en": "vitamin K-rich greens", "vi": "rau giàu vitamin K", "es": "verduras ricas en vitamina K"},
+     "terms": {"en": ["kale", "spinach", "collard greens", "collards", "turnip greens", "mustard greens", "swiss chard", "chard", "broccoli", "brussels sprouts", "natto", "parsley", "beet greens", "vitamin k", "vitamin k1", "phylloquinone"],
+               "vi": ["cải xoăn", "rau bina", "cải bó xôi", "bông cải xanh", "súp lơ xanh", "cải bruxen", "mùi tây", "rau ngót", "rau muống", "vitamin k"],
+               "es": ["col rizada", "kale", "espinaca", "espinacas", "acelga", "acelgas", "brócoli", "coles de bruselas", "perejil", "berza", "vitamina k"]},
+     "source": "nih_vitamin_k"}
+  ],
+  "notes": [
+    {"id": "grapefruit_statins", "med_terms": ["statin", "statins", "atorvastatin", "simvastatin", "lovastatin", "lipitor", "zocor", "mevacor", "altoprev"],
+     "kb_ids": ["grapefruit", "seville_orange", "pomelo", "tangelo"],
+     "text": {"en": "Grapefruit and similar citrus can interact with some statins. Ask your pharmacist.",
+              "vi": "Bưởi chùm và các loại cam bưởi tương tự có thể tương tác với một số thuốc statin. Hãy hỏi dược sĩ.",
+              "es": "La toronja y cítricos parecidos pueden interactuar con algunas estatinas. Pregunta a tu farmacéutico."},
+     "source": "fda_grapefruit"},
+    {"id": "grapefruit_bp", "med_terms": ["nifedipine", "felodipine", "nisoldipine", "nicardipine", "procardia", "adalat", "plendil", "sular", "blood pressure medicine", "blood pressure medication", "thuốc huyết áp", "medicina para la presión"],
+     "kb_ids": ["grapefruit", "seville_orange", "pomelo", "tangelo"],
+     "text": {"en": "Grapefruit and similar citrus can interact with some blood pressure medicines. Ask your pharmacist.",
+              "vi": "Bưởi chùm và các loại cam bưởi tương tự có thể tương tác với một số thuốc huyết áp. Hãy hỏi dược sĩ.",
+              "es": "La toronja y cítricos parecidos pueden interactuar con algunos medicamentos para la presión. Pregunta a tu farmacéutico."},
+     "source": "fda_grapefruit"},
+    {"id": "vitamin_k_warfarin", "med_terms": ["warfarin", "coumadin", "jantoven", "warfarina"],
+     "kb_ids": ["vitamin_k_foods"],
+     "text": {"en": "Rich in vitamin K. With warfarin, keep vitamin K intake steady rather than avoiding it. Ask your pharmacist.",
+              "vi": "Giàu vitamin K. Khi dùng warfarin, nên giữ lượng vitamin K đều đặn, không cần kiêng hẳn. Hãy hỏi dược sĩ.",
+              "es": "Rico en vitamina K. Con warfarina, mantén estable la vitamina K en vez de evitarla. Pregunta a tu farmacéutico."},
+     "source": "nih_vitamin_k"}
+  ]
+}

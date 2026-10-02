@@ -1,0 +1,71 @@
+{
+  "items": [
+    {
+      "product": {
+        "key": "off:0071314008754",
+        "name": "Whole Grain Bagels",
+        "brand": "Aunt Millie's",
+        "image_url": null,
+        "category": "food"
+      },
+      "verdicts": [
+        {
+          "member_id": "m_linh",
+          "state": "RIPE",
+          "label": "Ripe"
+        },
+        {
+          "member_id": "m_ba",
+          "state": "RIPE",
+          "label": "Chín"
+        },
+        {
+          "member_id": "m_mia",
+          "state": "RIPE",
+          "label": "Ripe"
+        },
+        {
+          "member_id": "m_leo",
+          "state": "RIPE",
+          "label": "Madura"
+        }
+      ]
+    },
+    {
+      "product": {
+        "key": "off:0099482474058",
+        "name": "Plain Bagels",
+        "brand": "Whole Foods Market",
+        "image_url": "https://images.openfoodfacts.org/images/products/009/948/247/4058/front_en.19.400.jpg",
+        "category": "food"
+      },
+      "verdicts": [
+        {
+          "member_id": "m_linh",
+          "state": "RIPE",
+          "label": "Ripe"
+        },
+        {
+          "member_id": "m_ba",
+          "state": "EASY",
+          "label": "Vừa phải"
+        },
+        {
+          "member_id": "m_mia",
+          "state": "RIPE",
+          "label": "Ripe"
+        },
+        {
+          "member_id": "m_leo",
+          "state": "RIPE",
+          "label": "Madura"
+        }
+      ]
+    }
+  ],
+  "prefetched": true,
+  "timings_ms": {
+    "wait": 0,
+    "total": 0
+  }
+}

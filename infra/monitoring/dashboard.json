@@ -1,0 +1,503 @@
+{
+  "displayName": "Pear API",
+  "mosaicLayout": {
+    "columns": 48,
+    "tiles": [
+      {
+        "xPos": 0,
+        "yPos": 0,
+        "width": 24,
+        "height": 16,
+        "widget": {
+          "title": "Server latency p50 by path (timings_ms.total)",
+          "xyChart": {
+            "dataSets": [
+              {
+                "timeSeriesQuery": {
+                  "timeSeriesFilter": {
+                    "filter": "metric.type=\"logging.googleapis.com/user/pear_request_latency\" resource.type=\"cloud_run_revision\"",
+                    "aggregation": {
+                      "alignmentPeriod": "60s",
+                      "perSeriesAligner": "ALIGN_DELTA",
+                      "crossSeriesReducer": "REDUCE_PERCENTILE_50",
+                      "groupByFields": [
+                        "metric.label.\"path\""
+                      ]
+                    }
+                  }
+                },
+                "plotType": "LINE",
+                "legendTemplate": "p50 ${metric.labels.path}",
+                "targetAxis": "Y1"
+              }
+            ],
+            "timeshiftDuration": "0s",
+            "yAxis": {
+              "label": "ms",
+              "scale": "LINEAR"
+            }
+          }
+        }
+      },
+      {
+        "xPos": 24,
+        "yPos": 0,
+        "width": 24,
+        "height": 16,
+        "widget": {
+          "title": "Server latency p95 by path (timings_ms.total)",
+          "xyChart": {
+            "dataSets": [
+              {
+                "timeSeriesQuery": {
+                  "timeSeriesFilter": {
+                    "filter": "metric.type=\"logging.googleapis.com/user/pear_request_latency\" resource.type=\"cloud_run_revision\"",
+                    "aggregation": {
+                      "alignmentPeriod": "60s",
+                      "perSeriesAligner": "ALIGN_DELTA",
+                      "crossSeriesReducer": "REDUCE_PERCENTILE_95",
+                      "groupByFields": [
+                        "metric.label.\"path\""
+                      ]
+                    }
+                  }
+                },
+                "plotType": "LINE",
+                "legendTemplate": "p95 ${metric.labels.path}",
+                "targetAxis": "Y1"
+              }
+            ],
+            "timeshiftDuration": "0s",
+            "yAxis": {
+              "label": "ms",
+              "scale": "LINEAR"
+            }
+          }
+        }
+      },
+      {
+        "xPos": 0,
+        "yPos": 16,
+        "width": 24,
+        "height": 16,
+        "widget": {
+          "title": "Requests by status (Pear request log)",
+          "xyChart": {
+            "dataSets": [
+              {
+                "timeSeriesQuery": {
+                  "timeSeriesFilter": {
+                    "filter": "metric.type=\"logging.googleapis.com/user/pear_request_count\" resource.type=\"cloud_run_revision\"",
+                    "aggregation": {
+                      "alignmentPeriod": "60s",
+                      "perSeriesAligner": "ALIGN_DELTA",
+                      "crossSeriesReducer": "REDUCE_SUM",
+                      "groupByFields": [
+                        "metric.label.\"status\""
+                      ]
+                    }
+                  }
+                },
+                "plotType": "STACKED_BAR",
+                "legendTemplate": "${metric.labels.status}",
+                "targetAxis": "Y1"
+              }
+            ],
+            "timeshiftDuration": "0s",
+            "yAxis": {
+              "label": "requests / min",
+              "scale": "LINEAR"
+            }
+          }
+        }
+      },
+      {
+        "xPos": 24,
+        "yPos": 16,
+        "width": 24,
+        "height": 16,
+        "widget": {
+          "title": "Requests by path",
+          "xyChart": {
+            "dataSets": [
+              {
+                "timeSeriesQuery": {
+                  "timeSeriesFilter": {
+                    "filter": "metric.type=\"logging.googleapis.com/user/pear_request_count\" resource.type=\"cloud_run_revision\"",
+                    "aggregation": {
+                      "alignmentPeriod": "60s",
+                      "perSeriesAligner": "ALIGN_DELTA",
+                      "crossSeriesReducer": "REDUCE_SUM",
+                      "groupByFields": [
+                        "metric.label.\"path\""
+                      ]
+                    }
+                  }
+                },
+                "plotType": "STACKED_BAR",
+                "legendTemplate": "${metric.labels.path}",
+                "targetAxis": "Y1"
+              }
+            ],
+            "timeshiftDuration": "0s",
+            "yAxis": {
+              "label": "requests / min",
+              "scale": "LINEAR"
+            }
+          }
+        }
+      },
+      {
+        "xPos": 0,
+        "yPos": 32,
+        "width": 24,
+        "height": 16,
+        "widget": {
+          "title": "Stage latency p50",
+          "xyChart": {
+            "dataSets": [
+              {
+                "timeSeriesQuery": {
+                  "timeSeriesFilter": {
+                    "filter": "metric.type=\"logging.googleapis.com/user/pear_stage_lookup\" resource.type=\"cloud_run_revision\"",
+                    "aggregation": {
+                      "alignmentPeriod": "60s",
+                      "perSeriesAligner": "ALIGN_DELTA",
+                      "crossSeriesReducer": "REDUCE_PERCENTILE_50"
+                    }
+                  }
+                },
+                "plotType": "LINE",
+                "legendTemplate": "lookup",
+                "targetAxis": "Y1"
+              },
+              {
+                "timeSeriesQuery": {
+                  "timeSeriesFilter": {
+                    "filter": "metric.type=\"logging.googleapis.com/user/pear_stage_cache_get\" resource.type=\"cloud_run_revision\"",
+                    "aggregation": {
+                      "alignmentPeriod": "60s",
+                      "perSeriesAligner": "ALIGN_DELTA",
+                      "crossSeriesReducer": "REDUCE_PERCENTILE_50"
+                    }
+                  }
+                },
+                "plotType": "LINE",
+                "legendTemplate": "cache_get",
+                "targetAxis": "Y1"
+              },
+              {
+                "timeSeriesQuery": {
+                  "timeSeriesFilter": {
+                    "filter": "metric.type=\"logging.googleapis.com/user/pear_stage_label_reader\" resource.type=\"cloud_run_revision\"",
+                    "aggregation": {
+                      "alignmentPeriod": "60s",
+                      "perSeriesAligner": "ALIGN_DELTA",
+                      "crossSeriesReducer": "REDUCE_PERCENTILE_50"
+                    }
+                  }
+                },
+                "plotType": "LINE",
+                "legendTemplate": "label_reader",
+                "targetAxis": "Y1"
+              },
+              {
+                "timeSeriesQuery": {
+                  "timeSeriesFilter": {
+                    "filter": "metric.type=\"logging.googleapis.com/user/pear_stage_question_reader\" resource.type=\"cloud_run_revision\"",
+                    "aggregation": {
+                      "alignmentPeriod": "60s",
+                      "perSeriesAligner": "ALIGN_DELTA",
+                      "crossSeriesReducer": "REDUCE_PERCENTILE_50"
+                    }
+                  }
+                },
+                "plotType": "LINE",
+                "legendTemplate": "question_reader",
+                "targetAxis": "Y1"
+              },
+              {
+                "timeSeriesQuery": {
+                  "timeSeriesFilter": {
+                    "filter": "metric.type=\"logging.googleapis.com/user/pear_stage_rules\" resource.type=\"cloud_run_revision\"",
+                    "aggregation": {
+                      "alignmentPeriod": "60s",
+                      "perSeriesAligner": "ALIGN_DELTA",
+                      "crossSeriesReducer": "REDUCE_PERCENTILE_50"
+                    }
+                  }
+                },
+                "plotType": "LINE",
+                "legendTemplate": "rules",
+                "targetAxis": "Y1"
+              },
+              {
+                "timeSeriesQuery": {
+                  "timeSeriesFilter": {
+                    "filter": "metric.type=\"logging.googleapis.com/user/pear_stage_picks_wait\" resource.type=\"cloud_run_revision\"",
+                    "aggregation": {
+                      "alignmentPeriod": "60s",
+                      "perSeriesAligner": "ALIGN_DELTA",
+                      "crossSeriesReducer": "REDUCE_PERCENTILE_50"
+                    }
+                  }
+                },
+                "plotType": "LINE",
+                "legendTemplate": "picks_wait",
+                "targetAxis": "Y1"
+              }
+            ],
+            "timeshiftDuration": "0s",
+            "yAxis": {
+              "label": "ms",
+              "scale": "LINEAR"
+            }
+          }
+        }
+      },
+      {
+        "xPos": 24,
+        "yPos": 32,
+        "width": 24,
+        "height": 16,
+        "widget": {
+          "title": "Stage latency p95",
+          "xyChart": {
+            "dataSets": [
+              {
+                "timeSeriesQuery": {
+                  "timeSeriesFilter": {
+                    "filter": "metric.type=\"logging.googleapis.com/user/pear_stage_lookup\" resource.type=\"cloud_run_revision\"",
+                    "aggregation": {
+                      "alignmentPeriod": "60s",
+                      "perSeriesAligner": "ALIGN_DELTA",
+                      "crossSeriesReducer": "REDUCE_PERCENTILE_95"
+                    }
+                  }
+                },
+                "plotType": "LINE",
+                "legendTemplate": "lookup",
+                "targetAxis": "Y1"
+              },
+              {
+                "timeSeriesQuery": {
+                  "timeSeriesFilter": {
+                    "filter": "metric.type=\"logging.googleapis.com/user/pear_stage_cache_get\" resource.type=\"cloud_run_revision\"",
+                    "aggregation": {
+                      "alignmentPeriod": "60s",
+                      "perSeriesAligner": "ALIGN_DELTA",
+                      "crossSeriesReducer": "REDUCE_PERCENTILE_95"
+                    }
+                  }
+                },
+                "plotType": "LINE",
+                "legendTemplate": "cache_get",
+                "targetAxis": "Y1"
+              },
+              {
+                "timeSeriesQuery": {
+                  "timeSeriesFilter": {
+                    "filter": "metric.type=\"logging.googleapis.com/user/pear_stage_label_reader\" resource.type=\"cloud_run_revision\"",
+                    "aggregation": {
+                      "alignmentPeriod": "60s",
+                      "perSeriesAligner": "ALIGN_DELTA",
+                      "crossSeriesReducer": "REDUCE_PERCENTILE_95"
+                    }
+                  }
+                },
+                "plotType": "LINE",
+                "legendTemplate": "label_reader",
+                "targetAxis": "Y1"
+              },
+              {
+                "timeSeriesQuery": {
+                  "timeSeriesFilter": {
+                    "filter": "metric.type=\"logging.googleapis.com/user/pear_stage_question_reader\" resource.type=\"cloud_run_revision\"",
+                    "aggregation": {
+                      "alignmentPeriod": "60s",
+                      "perSeriesAligner": "ALIGN_DELTA",
+                      "crossSeriesReducer": "REDUCE_PERCENTILE_95"
+                    }
+                  }
+                },
+                "plotType": "LINE",
+                "legendTemplate": "question_reader",
+                "targetAxis": "Y1"
+              },
+              {
+                "timeSeriesQuery": {
+                  "timeSeriesFilter": {
+                    "filter": "metric.type=\"logging.googleapis.com/user/pear_stage_rules\" resource.type=\"cloud_run_revision\"",
+                    "aggregation": {
+                      "alignmentPeriod": "60s",
+                      "perSeriesAligner": "ALIGN_DELTA",
+                      "crossSeriesReducer": "REDUCE_PERCENTILE_95"
+                    }
+                  }
+                },
+                "plotType": "LINE",
+                "legendTemplate": "rules",
+                "targetAxis": "Y1"
+              },
+              {
+                "timeSeriesQuery": {
+                  "timeSeriesFilter": {
+                    "filter": "metric.type=\"logging.googleapis.com/user/pear_stage_picks_wait\" resource.type=\"cloud_run_revision\"",
+                    "aggregation": {
+                      "alignmentPeriod": "60s",
+                      "perSeriesAligner": "ALIGN_DELTA",
+                      "crossSeriesReducer": "REDUCE_PERCENTILE_95"
+                    }
+                  }
+                },
+                "plotType": "LINE",
+                "legendTemplate": "picks_wait",
+                "targetAxis": "Y1"
+              }
+            ],
+            "timeshiftDuration": "0s",
+            "yAxis": {
+              "label": "ms",
+              "scale": "LINEAR"
+            }
+          }
+        }
+      },
+      {
+        "xPos": 0,
+        "yPos": 48,
+        "width": 24,
+        "height": 16,
+        "widget": {
+          "title": "Cloud Run request latency p50 / p95 (includes network)",
+          "xyChart": {
+            "dataSets": [
+              {
+                "timeSeriesQuery": {
+                  "timeSeriesFilter": {
+                    "filter": "metric.type=\"run.googleapis.com/request_latencies\" resource.type=\"cloud_run_revision\" resource.label.\"service_name\"=\"pear-api\"",
+                    "aggregation": {
+                      "alignmentPeriod": "60s",
+                      "perSeriesAligner": "ALIGN_DELTA",
+                      "crossSeriesReducer": "REDUCE_PERCENTILE_50"
+                    }
+                  }
+                },
+                "plotType": "LINE",
+                "legendTemplate": "p50",
+                "targetAxis": "Y1"
+              },
+              {
+                "timeSeriesQuery": {
+                  "timeSeriesFilter": {
+                    "filter": "metric.type=\"run.googleapis.com/request_latencies\" resource.type=\"cloud_run_revision\" resource.label.\"service_name\"=\"pear-api\"",
+                    "aggregation": {
+                      "alignmentPeriod": "60s",
+                      "perSeriesAligner": "ALIGN_DELTA",
+                      "crossSeriesReducer": "REDUCE_PERCENTILE_95"
+                    }
+                  }
+                },
+                "plotType": "LINE",
+                "legendTemplate": "p95",
+                "targetAxis": "Y1"
+              }
+            ],
+            "timeshiftDuration": "0s",
+            "yAxis": {
+              "label": "ms",
+              "scale": "LINEAR"
+            }
+          }
+        }
+      },
+      {
+        "xPos": 24,
+        "yPos": 48,
+        "width": 24,
+        "height": 16,
+        "widget": {
+          "title": "Cloud Run requests by response class",
+          "xyChart": {
+            "dataSets": [
+              {
+                "timeSeriesQuery": {
+                  "timeSeriesFilter": {
+                    "filter": "metric.type=\"run.googleapis.com/request_count\" resource.type=\"cloud_run_revision\" resource.label.\"service_name\"=\"pear-api\"",
+                    "aggregation": {
+                      "alignmentPeriod": "60s",
+                      "perSeriesAligner": "ALIGN_RATE",
+                      "crossSeriesReducer": "REDUCE_SUM",
+                      "groupByFields": [
+                        "metric.label.\"response_code_class\""
+                      ]
+                    }
+                  }
+                },
+                "plotType": "STACKED_BAR",
+                "legendTemplate": "${metric.labels.response_code_class}",
+                "targetAxis": "Y1"
+              }
+            ],
+            "timeshiftDuration": "0s",
+            "yAxis": {
+              "label": "requests / s",
+              "scale": "LINEAR"
+            }
+          }
+        }
+      },
+      {
+        "xPos": 0,
+        "yPos": 64,
+        "width": 24,
+        "height": 16,
+        "widget": {
+          "title": "Instances",
+          "xyChart": {
+            "dataSets": [
+              {
+                "timeSeriesQuery": {
+                  "timeSeriesFilter": {
+                    "filter": "metric.type=\"run.googleapis.com/container/instance_count\" resource.type=\"cloud_run_revision\" resource.label.\"service_name\"=\"pear-api\"",
+                    "aggregation": {
+                      "alignmentPeriod": "60s",
+                      "perSeriesAligner": "ALIGN_MAX",
+                      "crossSeriesReducer": "REDUCE_SUM",
+                      "groupByFields": [
+                        "metric.label.\"state\""
+                      ]
+                    }
+                  }
+                },
+                "plotType": "LINE",
+                "legendTemplate": "${metric.labels.state}",
+                "targetAxis": "Y1"
+              }
+            ],
+            "timeshiftDuration": "0s",
+            "yAxis": {
+              "label": "instances",
+              "scale": "LINEAR"
+            }
+          }
+        }
+      },
+      {
+        "xPos": 24,
+        "yPos": 64,
+        "width": 24,
+        "height": 16,
+        "widget": {
+          "title": "Warnings and errors",
+          "logsPanel": {
+            "filter": "resource.type=\"cloud_run_revision\"\nresource.labels.service_name=\"pear-api\"\nseverity>=WARNING",
+            "resourceNames": [
+              "projects/pear-510410"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

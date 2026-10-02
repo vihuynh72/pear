@@ -1,0 +1,8 @@
+{
+  "error": {
+    "code": "bad_request",
+    "message": "Invalid request: body.household: Field required",
+    "next": null,
+    "request_id": null
+  }
+}

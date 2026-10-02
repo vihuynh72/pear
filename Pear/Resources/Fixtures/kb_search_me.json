@@ -1,0 +1,92 @@
+[
+  {
+    "group": "allergies",
+    "id": "sesame",
+    "label": {
+      "en": "Sesame",
+      "vi": "Mè",
+      "es": "Sésamo"
+    }
+  },
+  {
+    "group": "less_of",
+    "id": "sugar",
+    "label": {
+      "en": "Less sugar",
+      "vi": "Ít đường",
+      "es": "Menos azúcar"
+    }
+  },
+  {
+    "group": "less_of",
+    "id": "sodium",
+    "label": {
+      "en": "Less sodium",
+      "vi": "Ít muối",
+      "es": "Menos sodio"
+    }
+  },
+  {
+    "group": "less_of",
+    "id": "saturated_fat",
+    "label": {
+      "en": "Less saturated fat",
+      "vi": "Ít chất béo bão hòa",
+      "es": "Menos grasa saturada"
+    }
+  },
+  {
+    "group": "less_of",
+    "id": "caffeine",
+    "label": {
+      "en": "Less caffeine",
+      "vi": "Ít caffeine",
+      "es": "Menos cafeína"
+    }
+  },
+  {
+    "group": "less_of",
+    "id": "palm_oil",
+    "label": {
+      "en": "Less palm oil",
+      "vi": "Ít dầu cọ",
+      "es": "Menos aceite de palma"
+    }
+  },
+  {
+    "group": "allergies",
+    "id": "tree_nuts",
+    "label": {
+      "en": "Tree nuts",
+      "vi": "Các loại hạt",
+      "es": "Nueces de árbol"
+    }
+  },
+  {
+    "group": "allergies",
+    "id": "egg",
+    "label": {
+      "en": "Egg",
+      "vi": "Trứng",
+      "es": "Huevo"
+    }
+  },
+  {
+    "group": "allergies",
+    "id": "fish",
+    "label": {
+      "en": "Fish",
+      "vi": "Cá",
+      "es": "Pescado"
+    }
+  },
+  {
+    "group": "allergies",
+    "id": "molluscs",
+    "label": {
+      "en": "Molluscs",
+      "vi": "Nhuyễn thể",
+      "es": "Moluscos"
+    }
+  }
+]

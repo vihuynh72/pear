@@ -1,0 +1,8 @@
+{
+  "error": {
+    "code": "too_blurry",
+    "message": "Too blurry. Retake?",
+    "next": "retake",
+    "request_id": null
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "products",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "category", "order": "ASCENDING" },
+        { "fieldPath": "embedding", "vectorConfig": { "dimension": 768, "flat": {} } }
+      ]
+    }
+  ],
+  "fieldOverrides": []
+}

@@ -1,0 +1,55 @@
+{
+  "_comment": "DEMO ONLY: fake but well-formed EAN-13 / photo key, not a real product. Used by api/scripts/gen_fixtures.py and POST /debug/evaluate {\"demo\": \"<file stem>\"}.",
+  "key": "off:0000000000062",
+  "source": "open_food_facts",
+  "code": "0000000000062",
+  "name": "Lightly Salted Brown Rice Cakes",
+  "brand": "Pear Demo Pantry",
+  "category": "food",
+  "product_type": null,
+  "image_url": "https://placehold.co/600x600/png?text=Brown+Rice+Cakes",
+  "quantity": "139 g",
+  "label_language": "en",
+  "photo_kind": null,
+  "matched_by": "barcode",
+  "ingredients": [
+    "whole grain brown rice",
+    "salt"
+  ],
+  "ingredients_text": "Whole grain brown rice, salt.",
+  "contains_text": null,
+  "may_contain_text": null,
+  "allergens_tags": [],
+  "traces_tags": [],
+  "additives_tags": [],
+  "analysis_tags": [
+    "en:palm-oil-free",
+    "en:vegan",
+    "en:vegetarian"
+  ],
+  "labels_tags": [
+    "en:vegan",
+    "en:gluten-free"
+  ],
+  "categories_tags": [
+    "en:snacks",
+    "en:salty-snacks",
+    "en:puffed-rice-cakes",
+    "en:rice-cakes"
+  ],
+  "category_main": "en:rice-cakes",
+  "nutrition": {
+    "basis": "serving",
+    "sodium_mg": 50,
+    "sodium_dv": 2,
+    "added_sugars_g": 0,
+    "added_sugars_dv": 0,
+    "sugars_g": 0,
+    "sat_fat_g": 0,
+    "sat_fat_dv": 0,
+    "caffeine_mg": null
+  },
+  "legibility": "full",
+  "data_confidence": "high",
+  "fetched_at": "2026-10-02T18:00:00Z"
+}

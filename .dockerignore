@@ -1,0 +1,48 @@
+# Docker build context filter (local `docker build` AND the Cloud Build step behind
+# `gcloud run deploy --source .`). Keep: api/ and contracts/ (fixtures, demo_products,
+# kb_index.json). Everything else is either the iOS app, docs, caches or secrets.
+# Debug: `docker build --no-cache --progress=plain .` and look at the "transferring context" size.
+
+# --- iOS app (developed separately; never shipped to Cloud Run) ---
+Pear
+Pear.xcodeproj
+contracts/swift
+**/*.xcodeproj
+**/xcuserdata
+**/DerivedData
+
+# --- VCS / tooling ---
+.git
+.github
+.claude
+.idea
+.vscode
+**/.DS_Store
+
+# --- Python caches and envs ---
+api/.venv
+**/.venv
+**/__pycache__
+**/*.pyc
+**/*.pyo
+**/.pytest_cache
+**/.ruff_cache
+**/.mypy_cache
+
+# --- docs, infra, local-only files ---
+docs
+infra
+Makefile
+Dockerfile
+.dockerignore
+.gcloudignore
+
+# --- secrets: never in the image (plan 7.9) ---
+**/.env
+**/.env.*
+**/*.plist
+**/GoogleService-Info.plist
+**/*service-account*.json
+**/*-key.json
+**/*.pem
+**/*.p12

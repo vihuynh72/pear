@@ -1,0 +1,79 @@
+{
+  "version": 1,
+  "about": "Selection table for the /mock API (api/routes/mock.py). Edit freely: the mock reloads this file and every fixture when its mtime changes, no restart needed. Every value is a file name in this folder. Override any endpoint with ?fixture=<name> (with or without .json), force an error with ?error=<code>, add latency with ?delay_ms=N.",
+  "defaults": {
+    "health": "health.default.json",
+    "scan_barcode": "scan_barcode.sesame_crackers.json",
+    "scan_photo": "scan_photo.lotion.json",
+    "ask": "ask.scan_needed.json",
+    "ask_audio": "ask.check_vi.json",
+    "picks": "picks.default.json",
+    "prices": "prices.default.json",
+    "explain": "explain.sse.txt",
+    "profile_parse": "profile_parse.default.json",
+    "kb_search": "kb_search.default.json"
+  },
+  "scan_barcode_by_code": {
+    "0000000000017": "scan_barcode.sesame_crackers.json",
+    "0000000000024": "scan_barcode.noodles_vi.json",
+    "0000000000062": "scan_barcode.ripe.json",
+    "0000000000031": "scan_barcode.gummy_candy.json",
+    "0000000000055": "scan_barcode.body_wash.json"
+  },
+  "ask_keywords": [
+    {
+      "fixture": "ask.alternatives.json",
+      "patterns": [
+        "\\binstead\\b",
+        "\\balternative",
+        "\\bsomething else\\b",
+        "\\bother (option|one|choice)",
+        "\\bthay\\b",
+        "\\bkhác\\b",
+        "\\botr[oa]s?\\b",
+        "\\ben vez\\b",
+        "\\ben lugar\\b"
+      ]
+    },
+    {
+      "fixture": "ask.check_vi.json",
+      "patterns": [
+        "\\bmì\\b",
+        "noodle",
+        "ramen",
+        "được không",
+        "duoc khong"
+      ]
+    }
+  ],
+  "errors": {
+    "not_found": "error.not_found.json",
+    "too_blurry": "error.too_blurry.json",
+    "unreadable": "error.unreadable.json",
+    "rate_limited": "error.rate_limited.json",
+    "internal": "error.internal.json",
+    "unauthorized": "error.unauthorized.json",
+    "unavailable": "error.unavailable.json",
+    "bad_request": "error.bad_request.json"
+  },
+  "scenarios": {
+    "scan_barcode": [
+      "scan_barcode.sesame_crackers.json",
+      "scan_barcode.ripe.json",
+      "scan_barcode.noodles_vi.json",
+      "scan_barcode.gummy_candy.json",
+      "scan_barcode.body_wash.json"
+    ],
+    "scan_photo": [
+      "scan_photo.lotion.json",
+      "scan_photo.front_only.json",
+      "scan_photo.partial_label.json",
+      "scan_photo.honey_vegan_bar.json"
+    ],
+    "ask": [
+      "ask.check_vi.json",
+      "ask.alternatives.json",
+      "ask.scan_needed.json"
+    ]
+  }
+}
