@@ -1,0 +1,39 @@
+{
+  "cases": [
+    {
+      "name": "rinse-off acne cleanser with salicylic acid is Skip it for eczema",
+      "why": "Salicylic acid and benzoyl peroxide irritate eczema-prone skin; weight 90 x rinse-off 0.5 = 45 keeps a wash at SKIP (Vi, 2026-10-02)",
+      "product": {"key": "test:acne_wash", "source": "photo", "category": "cosmetic", "product_type": "rinse_off",
+                  "ingredients": ["Water", "Sodium Laureth Sulfate", "Cocamidopropyl Betaine", "Salicylic Acid", "Glycerin"]},
+      "members": ["m_mia", "m_linh"],
+      "expect": {
+        "m_mia": {"state": "SKIP", "codes_include": ["signal.acne_actives"], "matched_include": ["Salicylic Acid"]},
+        "m_linh": {"state": "RIPE"}
+      }
+    },
+    {
+      "name": "leave-on benzoyl peroxide spot treatment is Skip it for eczema",
+      "product": {"key": "test:bp_gel", "source": "photo", "category": "cosmetic", "product_type": "leave_on",
+                  "ingredients": ["Water", "Benzoyl Peroxide 2.5%", "Carbomer", "Glycerin"]},
+      "members": ["m_mia"],
+      "expect": {"m_mia": {"state": "SKIP", "codes_include": ["signal.acne_actives"], "matched_include": ["Benzoyl Peroxide"]}}
+    },
+    {
+      "name": "acne cleanser stays Ripe for acne-prone skin (that's who it is for)",
+      "product": {"key": "test:acne_wash_2", "source": "photo", "category": "cosmetic", "product_type": "rinse_off",
+                  "ingredients": ["Water", "Salicylic Acid", "Glycerin"]},
+      "members": [],
+      "extra_members": [{"id": "m_teen", "name": "An", "age_group": "teen", "languages": ["en"], "skin": ["acne_prone"]}],
+      "expect": {"m_teen": {"state": "RIPE", "codes_exclude": ["signal.acne_actives"]}}
+    },
+    {
+      "name": "Vietnamese label: axit salicylic flags sensitive skin",
+      "product": {"key": "test:acne_vi", "source": "photo", "category": "cosmetic", "product_type": "rinse_off",
+                  "label_language": "vi", "ingredients": ["Nước", "Axit salicylic", "Glycerin"]},
+      "members": [],
+      "extra_members": [{"id": "m_sens", "name": "Bình", "age_group": "adult", "languages": ["vi"], "skin": ["sensitive_skin"]}],
+      "owner_language": "vi",
+      "expect": {"m_sens": {"state": "SKIP", "codes_include": ["signal.acne_actives"], "reasons_language": "vi"}}
+    }
+  ]
+}

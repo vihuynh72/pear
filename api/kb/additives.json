@@ -1087,6 +1087,47 @@
      "sin parabenos"
     ]
    }
+  },
+  {
+   "id": "acne_actives",
+   "label": {
+    "en": "acne active",
+    "vi": "hoạt chất trị mụn",
+    "es": "activo antiacné"
+   },
+   "terms": {
+    "en": [
+     "salicylic acid",
+     "beta hydroxy acid",
+     "benzoyl peroxide",
+     "glycolic acid",
+     "mandelic acid",
+     "sulfur",
+     "sulphur",
+     "resorcinol"
+    ],
+    "vi": [
+     "axit salicylic",
+     "acid salicylic",
+     "benzoyl peroxide",
+     "axit glycolic",
+     "lưu huỳnh"
+    ],
+    "es": [
+     "ácido salicílico",
+     "peróxido de benzoilo",
+     "ácido glicólico",
+     "azufre"
+    ],
+    "inci": [
+     "salicylic acid",
+     "benzoyl peroxide",
+     "glycolic acid",
+     "sulfur",
+     "resorcinol"
+    ]
+   },
+   "source": "aad_fragrance_free"
   }
  ]
 }

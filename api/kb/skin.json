@@ -19,6 +19,7 @@
     {"id": "methylisothiazolinone", "kb_ids": ["methylisothiazolinone", "methylchloroisothiazolinone"], "weight": 45, "applies": {"skin": ["eczema", "sensitive_skin"]}, "categories": ["cosmetic", "other"], "source": "nacdg_patch_test"},
     {"id": "formaldehyde_releasers", "kb_ids": ["formaldehyde_releasers"], "weight": 45, "applies": {"skin": ["eczema", "sensitive_skin"]}, "categories": ["cosmetic", "other"], "source": "wa_formaldehyde_releasers"},
     {"id": "sodium_lauryl_sulfate", "kb_ids": ["sodium_lauryl_sulfate"], "weight": 10, "applies": {"skin": ["eczema", "sensitive_skin"]}, "categories": ["cosmetic", "other"], "source": "nea_contact_dermatitis"},
+    {"id": "acne_actives", "kb_ids": ["acne_actives"], "weight": 90, "applies": {"skin": ["eczema", "sensitive_skin", "rosacea", "psoriasis"]}, "categories": ["cosmetic", "other"], "source": "aad_fragrance_free"},
     {"id": "retinoids", "kb_ids": ["retinoids"], "weight": 45, "applies": {"pregnancy": true}, "categories": ["cosmetic", "other"], "source": "acog_pregnancy"}
   ]
 }

@@ -64,6 +64,7 @@ methylchloroisothiazolinone: methylchloroisothiazolinone
 formaldehyde_releasers: formaldehyde releaser
 sodium_lauryl_sulfate: sodium lauryl sulfate
 retinoids: retinoid
+acne_actives: acne active
 xylitol: xylitol
 chocolate: chocolate
 grape: grapes or raisins
