@@ -103,7 +103,9 @@ name: Pear story
     text: "Type a barcode"
     optional: true
 - inputText: "0070662010013"
-- hideKeyboard
+- tapOn:
+    text: "Demo products|No camera here"
+    optional: true
 - tapOn:
     text: "Check"
     optional: true

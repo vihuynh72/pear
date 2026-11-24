@@ -82,10 +82,12 @@ jobs:
           maestro --device "$UDID" test ../.maestro/add-member.yaml --debug-output ../maestro-debug-add || echo "add-member flow failed"
           cd ..
           find . -path ./build -prune -o -name '*.png' -newer sim.env -print | grep -v '^./ci-screenshots/' | grep -v 'Pear/Assets' | head -80 || true
-          i=0
-          for f in $(find .maestro maestro-debug-story maestro-debug-add -name '*.png' 2>/dev/null | sort); do
-            b=$(basename "$f"); d=$(echo "$f" | tr '/' '_')
-            case "$f" in .maestro/*) cp "$f" "ci-screenshots/$b" ;; *) cp "$f" "ci-screenshots/debug_$d" ;; esac
+          find .maestro maestro-debug-story maestro-debug-add -name '*.png' -print0 2>/dev/null | while IFS= read -r -d '' f; do
+            b=$(basename "$f")
+            case "$f" in
+              */takeScreenshot/*) tag=$(echo "$f" | grep -q maestro-debug-add && echo add || echo story); cp "$f" "ci-screenshots/${b}" ;;
+              *) d=$(echo "$f" | sed -E 's#.*/(Pear [a-z ]+)/screenshots/#\1_#; s# #_#g'); cp "$f" "ci-screenshots/debug_$d" ;;
+            esac
           done
           ls -la ci-screenshots
 
