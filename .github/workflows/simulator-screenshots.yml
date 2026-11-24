@@ -28,9 +28,13 @@ jobs:
       - name: Build Pear for the simulator
         run: |
           set -o pipefail
+          # The project is saved by a newer Xcode (object version 110); the runner has Xcode 26.
+          # Lower the version on this runner's working copy only (never committed).
+          sed -i '' 's/objectVersion = 110;/objectVersion = 77;/' Pear.xcodeproj/project.pbxproj
           xcodebuild -project Pear.xcodeproj -scheme Pear \
             -destination 'generic/platform=iOS Simulator' \
             -derivedDataPath build CODE_SIGNING_ALLOWED=NO \
+            IPHONEOS_DEPLOYMENT_TARGET=26.0 \
             build 2>&1 | tail -n 120
           find build -name 'Pear.app' -maxdepth 6
 
@@ -91,6 +95,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          mkdir -p ci-screenshots
           git add -f ci-screenshots
           if git diff --cached --quiet; then echo "no screenshots"; exit 0; fi
           git commit -m "ci: simulator screenshots from run ${{ github.run_id }}"
