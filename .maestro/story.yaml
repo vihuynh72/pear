@@ -1,0 +1,99 @@
+appId: com.PearBuild.Pear
+name: Pear story
+---
+- launchApp:
+    clearState: true
+    permissions:
+      all: allow
+- extendedWaitUntil:
+    visible: "Look around with a demo family"
+    timeout: 60000
+- takeScreenshot: 01-welcome
+- tapOn: "Look around with a demo family"
+- extendedWaitUntil:
+    visible: "Continue"
+    timeout: 15000
+- takeScreenshot: 02-language
+- tapOn: "Continue"
+- extendedWaitUntil:
+    visible: "Add someone"
+    timeout: 15000
+- takeScreenshot: 03-family
+- tapOn: "Mia.*"
+- extendedWaitUntil:
+    visible: "Continue"
+    timeout: 15000
+- takeScreenshot: 04-member-basics
+- tapOn: "Continue"
+- extendedWaitUntil:
+    visible: "Any allergies for Mia?"
+    timeout: 15000
+- takeScreenshot: 05-allergies-mia
+- tapOn:
+    text: "Skip"
+    optional: true
+- tapOn:
+    text: "Skip"
+    optional: true
+- tapOn:
+    text: "Skip"
+    optional: true
+- tapOn:
+    text: "Skip"
+    optional: true
+- tapOn:
+    text: "Done"
+    optional: true
+- tapOn:
+    text: "Continue"
+    optional: true
+- extendedWaitUntil:
+    visible: "What are we checking today?"
+    timeout: 15000
+- takeScreenshot: 06-home
+- tapOn: "Scan a label"
+- extendedWaitUntil:
+    visible: "Demo products|No camera here"
+    timeout: 20000
+- takeScreenshot: 07-scan-demo
+- tapOn: "Thomas.*Everything Bagels.*"
+- extendedWaitUntil:
+    visible: "Details"
+    timeout: 90000
+- takeScreenshot: 08-verdict
+- swipe:
+    direction: UP
+    duration: 600
+- takeScreenshot: 09-verdict-scrolled
+- tapOn:
+    text: "Details"
+    optional: true
+- takeScreenshot: 10-product-details
+- swipe:
+    direction: UP
+    duration: 600
+- takeScreenshot: 11-product-details-ingredients
+- tapOn:
+    text: "Back"
+    optional: true
+- tapOn:
+    text: "Scan another"
+    optional: true
+- tapOn:
+    text: "Whole Foods Plain.*"
+    optional: true
+- extendedWaitUntil:
+    visible: "Details"
+    timeout: 90000
+    optional: true
+- takeScreenshot: 12-verdict-fits-everyone
+- tapOn:
+    text: "Scan another"
+    optional: true
+- tapOn:
+    text: "Close"
+    optional: true
+- tapOn:
+    text: "Edit"
+    optional: true
+- takeScreenshot: 13-household

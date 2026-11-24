@@ -1,0 +1,52 @@
+appId: com.PearBuild.Pear
+name: Pear add a member
+---
+- launchApp:
+    clearState: true
+- extendedWaitUntil:
+    visible: "Look around with a demo family"
+    timeout: 60000
+- tapOn: "Look around with a demo family"
+- tapOn: "Continue"
+- extendedWaitUntil:
+    visible: "Add someone"
+    timeout: 15000
+- tapOn: "Add someone"
+- extendedWaitUntil:
+    visible: "Who’s joining?"
+    timeout: 15000
+- tapOn: "Like Mia or Bà"
+- inputText: "Sam"
+- hideKeyboard
+- tapOn:
+    text: "Adult"
+    optional: true
+- takeScreenshot: 20-new-member-sam
+- tapOn: "Continue"
+- extendedWaitUntil:
+    visible: "Any allergies for Sam?"
+    timeout: 15000
+- tapOn:
+    text: "Peanut"
+    optional: true
+- takeScreenshot: 21-sam-peanut-allergy
+- tapOn:
+    text: "Skip"
+    optional: true
+- tapOn:
+    text: "Skip"
+    optional: true
+- tapOn:
+    text: "Continue"
+    optional: true
+- tapOn:
+    text: "Vegan"
+    optional: true
+- takeScreenshot: 22-sam-vegan
+- tapOn:
+    text: "Skip"
+    optional: true
+- tapOn:
+    text: "Add to family"
+    optional: true
+- takeScreenshot: 23-family-with-sam

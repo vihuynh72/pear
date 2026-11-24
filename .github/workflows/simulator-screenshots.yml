@@ -1,0 +1,98 @@
+name: Simulator screenshots
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ci/simulator-screenshots]
+    paths-ignore:
+      - "ci-screenshots/**"
+
+permissions:
+  contents: write
+
+jobs:
+  shots:
+    runs-on: macos-26
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Pick Xcode
+        run: |
+          ls /Applications | grep -E '^Xcode' || true
+          X=$(ls -d /Applications/Xcode_*.app 2>/dev/null | sort -V | tail -1)
+          if [ -n "$X" ]; then sudo xcode-select -s "$X"; fi
+          xcodebuild -version
+          xcrun simctl list runtimes
+
+      - name: Build Pear for the simulator
+        run: |
+          set -o pipefail
+          xcodebuild -project Pear.xcodeproj -scheme Pear \
+            -destination 'generic/platform=iOS Simulator' \
+            -derivedDataPath build CODE_SIGNING_ALLOWED=NO \
+            build 2>&1 | tail -n 120
+          find build -name 'Pear.app' -maxdepth 6
+
+      - name: Boot a simulator and install
+        run: |
+          python3 - <<'PY' > sim.env
+          import json, subprocess
+          rt = json.loads(subprocess.check_output(["xcrun","simctl","list","runtimes","-j"]))["runtimes"]
+          rt = [r for r in rt if r.get("isAvailable") and r["identifier"].split(".")[-1].startswith("iOS")]
+          rt.sort(key=lambda r: [int(x) for x in r["version"].split(".")])
+          r = rt[-1]
+          dts = json.loads(subprocess.check_output(["xcrun","simctl","list","devicetypes","-j"]))["devicetypes"]
+          iph = [d for d in dts if "iPhone" in d["name"] and "Pro" in d["name"] and "Max" not in d["name"]]
+          dt = iph[-1] if iph else [d for d in dts if "iPhone" in d["name"]][-1]
+          print(f"RUNTIME={r['identifier']}\nDEVTYPE={dt['identifier']}")
+          PY
+          cat sim.env
+          source sim.env
+          UDID=$(xcrun simctl create pear-ci "$DEVTYPE" "$RUNTIME")
+          echo "UDID=$UDID" >> $GITHUB_ENV
+          xcrun simctl boot "$UDID"
+          xcrun simctl bootstatus "$UDID" -b
+          APP=$(find build -name 'Pear.app' -path '*iphonesimulator*' | head -1)
+          xcrun simctl install "$UDID" "$APP"
+          xcrun simctl privacy "$UDID" grant camera com.PearBuild.Pear || true
+          mkdir -p ci-screenshots
+          xcrun simctl launch "$UDID" com.PearBuild.Pear
+          sleep 8
+          xcrun simctl io "$UDID" screenshot ci-screenshots/00-simctl-launch.png
+
+      - name: Install Maestro
+        run: |
+          curl -fsSL "https://get.maestro.mobile.dev" | bash
+          echo "$HOME/.maestro/bin" >> $GITHUB_PATH
+          java -version
+
+      - name: Drive the app
+        continue-on-error: true
+        run: |
+          export PATH="$HOME/.maestro/bin:$PATH"
+          cd ci-screenshots
+          maestro --device "$UDID" test ../.maestro/story.yaml --debug-output ../maestro-debug-story || echo "story flow failed"
+          maestro --device "$UDID" test ../.maestro/add-member.yaml --debug-output ../maestro-debug-add || echo "add-member flow failed"
+          ls -la
+
+      - name: Upload artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pear-simulator-screenshots
+          path: |
+            ci-screenshots
+            maestro-debug-*
+          if-no-files-found: warn
+
+      - name: Commit screenshots back to the branch
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f ci-screenshots
+          if git diff --cached --quiet; then echo "no screenshots"; exit 0; fi
+          git commit -m "ci: simulator screenshots from run ${{ github.run_id }}"
+          git pull --rebase origin "${{ github.ref_name }}" || true
+          git push origin "HEAD:${{ github.ref_name }}"
