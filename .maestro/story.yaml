@@ -58,7 +58,7 @@ name: Pear story
 - takeScreenshot: 07-scan-demo
 - tapOn: "Thomas.*Everything Bagels.*"
 - extendedWaitUntil:
-    visible: "Details"
+    visible: "Scan another|Details|Try again|OK|Snap the ingredients"
     timeout: 90000
 - takeScreenshot: 08-verdict
 - swipe:
@@ -90,6 +90,28 @@ name: Pear story
 - tapOn:
     text: "Scan another"
     optional: true
+- tapOn:
+    text: "Close"
+    optional: true
+- tapOn:
+    text: "Close"
+    optional: true
+- tapOn:
+    text: "Scan a label"
+    optional: true
+- tapOn:
+    text: "Type a barcode"
+    optional: true
+- inputText: "0070662010013"
+- hideKeyboard
+- tapOn:
+    text: "Check"
+    optional: true
+- extendedWaitUntil:
+    visible: "Details"
+    timeout: 90000
+    optional: true
+- takeScreenshot: 14-typed-barcode-ramen-verdict
 - tapOn:
     text: "Close"
     optional: true

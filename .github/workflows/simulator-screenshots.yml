@@ -60,6 +60,8 @@ jobs:
           APP=$(find build -name 'Pear.app' -path '*iphonesimulator*' | head -1)
           xcrun simctl install "$UDID" "$APP"
           xcrun simctl privacy "$UDID" grant camera com.PearBuild.Pear || true
+          xcrun simctl status_bar "$UDID" override --time 9:41 --batteryState charged --batteryLevel 100 --wifiBars 3 --cellularBars 4 || true
+          xcrun simctl location "$UDID" set 37.7749,-122.4194 || true
           mkdir -p ci-screenshots
           xcrun simctl launch "$UDID" com.PearBuild.Pear
           sleep 8
@@ -78,7 +80,14 @@ jobs:
           cd ci-screenshots
           maestro --device "$UDID" test ../.maestro/story.yaml --debug-output ../maestro-debug-story || echo "story flow failed"
           maestro --device "$UDID" test ../.maestro/add-member.yaml --debug-output ../maestro-debug-add || echo "add-member flow failed"
-          ls -la
+          cd ..
+          find . -path ./build -prune -o -name '*.png' -newer sim.env -print | grep -v '^./ci-screenshots/' | grep -v 'Pear/Assets' | head -80 || true
+          i=0
+          for f in $(find .maestro maestro-debug-story maestro-debug-add -name '*.png' 2>/dev/null | sort); do
+            b=$(basename "$f"); d=$(echo "$f" | tr '/' '_')
+            case "$f" in .maestro/*) cp "$f" "ci-screenshots/$b" ;; *) cp "$f" "ci-screenshots/debug_$d" ;; esac
+          done
+          ls -la ci-screenshots
 
       - name: Upload artifacts
         if: always()
@@ -96,6 +105,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           mkdir -p ci-screenshots
+          git checkout -- Pear.xcodeproj || true
           git add -f ci-screenshots
           if git diff --cached --quiet; then echo "no screenshots"; exit 0; fi
           git commit -m "ci: simulator screenshots from run ${{ github.run_id }}"
