@@ -24,7 +24,7 @@ name: Pear add a member
 - takeScreenshot: 20-new-member-sam
 - tapOn: "Continue"
 - extendedWaitUntil:
-    visible: "Any allergies for Sam?"
+    visible: "Any allergies.*"
     timeout: 15000
 - tapOn:
     text: "Peanut"

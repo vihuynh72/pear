@@ -39,6 +39,9 @@ nonisolated final class PearAPI: Sendable {
             cfg.timeoutIntervalForResource = 30
             cfg.requestCachePolicy = .reloadIgnoringLocalCacheData
             cfg.urlCache = nil
+            #if DEBUG
+            if PearFixtureProtocol.isEnabled { cfg.protocolClasses = [PearFixtureProtocol.self] }
+            #endif
             self.session = URLSession(configuration: cfg)
         }
     }

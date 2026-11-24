@@ -3,6 +3,8 @@ name: Pear story
 ---
 - launchApp:
     clearState: true
+    arguments:
+      -PearFixtures: "1"
     permissions:
       all: allow
 - extendedWaitUntil:
@@ -102,7 +104,7 @@ name: Pear story
 - tapOn:
     text: "Type a barcode"
     optional: true
-- inputText: "0070662010013"
+- inputText: "048121253196"
 - tapOn:
     text: "Demo products|No camera here"
     optional: true
@@ -113,7 +115,7 @@ name: Pear story
     visible: "Details"
     timeout: 90000
     optional: true
-- takeScreenshot: 14-typed-barcode-ramen-verdict
+- takeScreenshot: 14-typed-barcode-verdict
 - tapOn:
     text: "Close"
     optional: true
